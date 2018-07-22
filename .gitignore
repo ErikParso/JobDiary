@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MyJobDiary Client/.vs
+/MyJobDiary Client/Droid/bin
+/MyJobDiary Client/Droid/obj
+/MyJobDiary Client/iOS/bin
+/MyJobDiary Client/iOS/obj
+/MyJobDiary Client/MyJobDiary/bin
+/MyJobDiary Client/MyJobDiary/obj
+/MyJobDiary Client/UWP/obj
+/MyJobDiary Service/.vs
+/MyJobDiary Service/MyJobDiaryService/bin
+/MyJobDiary Service/MyJobDiaryService/obj
+/MyJobDiary Service/packages

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                xmlns:local="clr-namespace:MyJobDiary" 
+				x:Class="MyJobDiary.TodoList"
+				Title="Azure Todo"
+                BackgroundColor="Black">
+    <Grid RowSpacing="0">
+        <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator"/>
+        <ListView x:Name="shiftList" IsPullToRefreshEnabled="true" Refreshing="OnRefresh"
+                  Margin="5" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.yy HH:mm}'}" 
+                                   TextColor="White" FontSize="Micro" LineBreakMode="WordWrap"
+                                   Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Label Text="{Binding TimeTo, StringFormat='\{0:dd.MM.yy HH:mm}'}" Grid.Column="1"
+                                   TextColor="White" FontSize="Micro" LineBreakMode="WordWrap"
+                                   VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Location}" Grid.Column="2"                                 
+                                   TextColor="White" FontSize="Micro" 
+                                   VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Job}" Grid.Column="3"
+                                   TextColor="White" FontSize="Micro" 
+                                   VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <Image Source="sunny.png" Grid.Column="4" 
+                                   VerticalOptions="Center" HorizontalOptions="Center">
+                                <Image.Triggers>
+                                    <DataTrigger TargetType="Image" Binding="{Binding IsNightShift}" Value="True">
+                                        <Setter Property="Source" Value="moon.png"></Setter>
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
