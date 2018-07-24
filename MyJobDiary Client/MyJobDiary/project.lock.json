@@ -4583,23 +4583,27 @@
     ".NETStandard,Version=v1.4": []
   },
   "packageFolders": {
-    "C:\\Users\\Rado\\.nuget\\packages\\": {}
+    "C:\\Users\\parso\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rado\\Desktop\\MyJobDiary Client\\MyJobDiary\\MyJobDiary.csproj",
+      "projectUniqueName": "C:\\Users\\parso\\Source\\Repos\\JobDiary\\MyJobDiary Client\\MyJobDiary\\MyJobDiary.csproj",
       "projectName": "MyJobDiary",
-      "projectPath": "C:\\Users\\Rado\\Desktop\\MyJobDiary Client\\MyJobDiary\\MyJobDiary.csproj",
-      "projectJsonPath": "C:\\Users\\Rado\\Desktop\\MyJobDiary Client\\MyJobDiary\\project.json",
-      "packagesPath": "C:\\Users\\Rado\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rado\\Desktop\\MyJobDiary Client\\MyJobDiary\\obj\\",
+      "projectPath": "C:\\Users\\parso\\Source\\Repos\\JobDiary\\MyJobDiary Client\\MyJobDiary\\MyJobDiary.csproj",
+      "projectJsonPath": "C:\\Users\\parso\\Source\\Repos\\JobDiary\\MyJobDiary Client\\MyJobDiary\\project.json",
+      "packagesPath": "C:\\Users\\parso\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\parso\\Source\\Repos\\JobDiary\\MyJobDiary Client\\MyJobDiary\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
-        "C:\\Users\\Rado\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\parso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\parso\\Documents\\Nuget": {},
+        "D:\\Devexpress\\Components\\System\\Components\\Packages": {},
+        "\\\\wiki\\nugetserver": {},
         "https://api.nuget.org/v3/index.json": {}
       }
     },

@@ -1,4 +1,5 @@
 ﻿using MyJobDiary.Services;
+using MyJobDiary.View;
 using MyJobDiary.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,11 @@ namespace MyJobDiary
         private async void ShiftList_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new TodoList());
+        }
+
+        private async void ShiftForm_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ShiftFormContentPage());
         }
 
         protected override void OnAppearing()

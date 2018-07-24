@@ -3,6 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyJobDiary.MainPage"
              BackgroundColor="Black">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonDisabling" TargetType="Button">
+                <Style.Triggers>
+                    <DataTrigger TargetType="Button" Binding="{Binding IsAuthenticated}" Value="True">
+                        <Setter Property="IsEnabled" Value="True"/>
+                        <Setter Property="Opacity" Value="1"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Button" Binding="{Binding IsAuthenticated}" Value="False">
+                        <Setter Property="IsEnabled" Value="False"/>
+                        <Setter Property="Opacity" Value="0.5"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -15,10 +33,11 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Grid.Row="0" Image="stopwatch.png" HorizontalOptions="End" VerticalOptions="End" Margin="5"
                     BackgroundColor="Black" BorderWidth="1" 
-                    IsEnabled="{Binding IsAuthenticated}"/>
+                    Style="{StaticResource buttonDisabling}"
+                    Clicked="ShiftForm_Clicked"/>
             <Button Grid.Column="1" Grid.Row="0" Image="clipboard.png" HorizontalOptions="Start" VerticalOptions="End" Margin="5"
                     BackgroundColor="Black" BorderWidth="1" 
-                    IsEnabled="{Binding IsAuthenticated}"
+                    Style="{StaticResource buttonDisabling}"
                     Clicked="ShiftList_Clicked"/>
             <Button Grid.ColumnSpan="2" Grid.Row="1" Image="google.png" HorizontalOptions="Center" VerticalOptions="End" Margin="5"
                     BackgroundColor="Black" Text="Login" TextColor="LightBlue" BorderWidth="1"

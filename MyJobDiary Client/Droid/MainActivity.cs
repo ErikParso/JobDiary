@@ -35,6 +35,9 @@ namespace MyJobDiary.Droid
 			// Initialize Xamarin Forms
 			Forms.Init (this, bundle);
 
+            //Init App services
+            App.InitLoginService(new AndroidLoginService(this));
+
             // Load the main application
             LoadApplication (new App ());
 		}
