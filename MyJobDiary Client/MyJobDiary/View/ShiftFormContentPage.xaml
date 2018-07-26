@@ -4,31 +4,17 @@
              x:Class="MyJobDiary.View.ShiftFormContentPage" 
              BackgroundColor="Black">
     <ContentPage.Content>
-        <StackLayout>
-            <Grid RowSpacing="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Label Text="Začiatok smeny" Grid.Row="0" Grid.ColumnSpan="2" TextColor="LightBlue" BackgroundColor="LightGray"/>
-                <DatePicker Date="{Binding DateFrom}" Grid.Row="1" HorizontalOptions="Fill"
-                            BackgroundColor="DarkGray" TextColor="LightBlue"/>
-                <TimePicker Time="{Binding TimeFrom}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Fill"
-                            BackgroundColor="DarkGray" TextColor="LightBlue"/>
-                <Label Text="Koniec smeny" Grid.Row="2" Grid.ColumnSpan="2" TextColor="LightBlue" BackgroundColor="LightGray"/>
-                <DatePicker Date="{Binding DateTo}" Grid.Row="3"  HorizontalOptions="Fill"
-                            BackgroundColor="DarkGray" TextColor="LightBlue"/>
-                <TimePicker Time="{Binding TimeTo}" Grid.Row="3" Grid.Column="1" HorizontalOptions="Fill"
-                            BackgroundColor="DarkGray" TextColor="LightBlue" Format=""/>
-            </Grid>
-            <Label Text="This is label"/>
-            <TimePicker HorizontalOptions="Fill" BackgroundColor="White" Format="HH:mm"></TimePicker>
+        <StackLayout Spacing="0">
+            <Label Text="Začiatok smeny" TextColor="LightBlue" Margin="5"/>
+            <DatePicker Date="{Binding DateFrom}" HorizontalOptions="Fill" Margin="5" 
+                        TextColor="LightBlue" BackgroundColor="Gray"/>
+            <TimePicker Time="{Binding TimeFrom}" HorizontalOptions="Fill" Margin="5" 
+                        TextColor="LightBlue" BackgroundColor="Gray"/>
+            <Label Text="Koniec smeny" TextColor="LightBlue" Margin="5"/>
+            <DatePicker Date="{Binding DateTo}" HorizontalOptions="Fill" Margin="5"
+                        TextColor="LightBlue" BackgroundColor="Gray"/>
+            <TimePicker Time="{Binding TimeTo}" HorizontalOptions="Fill" Margin="5"
+                        TextColor="LightBlue" BackgroundColor="Gray"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
