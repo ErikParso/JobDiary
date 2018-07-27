@@ -31,11 +31,11 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Grid.Row="0" Image="stopwatch.png" HorizontalOptions="End" VerticalOptions="End" Margin="5"
+            <Button Grid.Column="0" Grid.Row="0" Image="calendar_add.png" HorizontalOptions="End" VerticalOptions="End" Margin="5"
                     BackgroundColor="Black" BorderWidth="1" 
                     Style="{StaticResource buttonDisabling}"
                     Clicked="ShiftForm_Clicked"/>
-            <Button Grid.Column="1" Grid.Row="0" Image="clipboard.png" HorizontalOptions="Start" VerticalOptions="End" Margin="5"
+            <Button Grid.Column="1" Grid.Row="0" Image="calendar.png" HorizontalOptions="Start" VerticalOptions="End" Margin="5"
                     BackgroundColor="Black" BorderWidth="1" 
                     Style="{StaticResource buttonDisabling}"
                     Clicked="ShiftList_Clicked"/>
