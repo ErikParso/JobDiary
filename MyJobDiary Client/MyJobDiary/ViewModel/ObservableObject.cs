@@ -15,6 +15,11 @@ namespace MyJobDiary.ViewModel
         protected void SetField<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
         {
             field = value;
+            RaisePropertyChanged(propertyName);
+        }
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }

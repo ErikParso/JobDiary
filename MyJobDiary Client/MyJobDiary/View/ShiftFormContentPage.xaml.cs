@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyJobDiary.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace MyJobDiary.View
 		public ShiftFormContentPage ()
 		{
 			InitializeComponent ();
+            BindingContext = new ShiftFormViewModel(FormMode.Add);
 		}
 
         protected override async void OnAppearing()

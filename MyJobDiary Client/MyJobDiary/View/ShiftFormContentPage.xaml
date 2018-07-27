@@ -3,18 +3,77 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyJobDiary.View.ShiftFormContentPage" 
              BackgroundColor="Black">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="FrameBackground">#202020</Color>
+            <Color x:Key="FrameColor">#1C1C1C</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout Spacing="0">
-            <Label Text="Začiatok smeny" TextColor="LightBlue" Margin="5"/>
-            <DatePicker Date="{Binding DateFrom}" HorizontalOptions="Fill" Margin="5" 
-                        TextColor="LightBlue" BackgroundColor="Gray"/>
-            <TimePicker Time="{Binding TimeFrom}" HorizontalOptions="Fill" Margin="5" 
-                        TextColor="LightBlue" BackgroundColor="Gray"/>
-            <Label Text="Koniec smeny" TextColor="LightBlue" Margin="5"/>
-            <DatePicker Date="{Binding DateTo}" HorizontalOptions="Fill" Margin="5"
-                        TextColor="LightBlue" BackgroundColor="Gray"/>
-            <TimePicker Time="{Binding TimeTo}" HorizontalOptions="Fill" Margin="5"
-                        TextColor="LightBlue" BackgroundColor="Gray"/>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Spacing="0">
+
+                <Frame Margin="10" BackgroundColor="{StaticResource FrameBackground}" OutlineColor="{StaticResource FrameColor}">
+                    <StackLayout>
+                        <!--date from-->
+                        <Label Text="Začiatok smeny" TextColor="LightBlue"/>
+                        <DatePicker Date="{Binding DateFrom}" Format="dd.MM.yyyy"
+                                        HorizontalOptions="Fill"
+                                        TextColor="LightBlue"/>
+                        <TimePicker Time="{Binding TimeFrom}" Format="HH:mm" 
+                                        HorizontalOptions="Fill"
+                                        TextColor="LightBlue"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Margin="10" BackgroundColor="{StaticResource FrameBackground}" OutlineColor="{StaticResource FrameColor}">
+                    <StackLayout>
+                        <!--is closed-->
+                        <Label Text="Uzávierka" TextColor="LightBlue"/>
+                        <Switch IsToggled="{Binding IsClosed}"
+                                HorizontalOptions="Start"/>
+                        <!--date to-->
+                        <Label Text="Koniec smeny" IsVisible="{Binding IsClosed}"
+                                    TextColor="LightBlue"/>
+                        <DatePicker Date="{Binding DateTo}" IsVisible="{Binding IsClosed}" Format="dd.MM.yyyy"
+                                    HorizontalOptions="Fill"
+                                    TextColor="LightBlue"/>
+                        <TimePicker Time="{Binding TimeTo}" IsVisible="{Binding IsClosed}" Format="HH:mm"
+                                    HorizontalOptions="Fill"
+                                    TextColor="LightBlue"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Margin="10" BackgroundColor="{StaticResource FrameBackground}" OutlineColor="{StaticResource FrameColor}">
+                    <StackLayout>
+                        <!--location-->
+                        <Label Text="Lokalita" TextColor="LightBlue"/>
+                        <Entry Text="{Binding Location}"
+                       HorizontalOptions="Fill"
+                       TextColor="LightBlue"/>
+                        <!--description-->
+                        <Label Text="Popis práce" TextColor="LightBlue"/>
+                        <Editor Text="{Binding Job}"
+                                HorizontalOptions="Fill" 
+                                TextColor="LightBlue"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Margin="10" BackgroundColor="{StaticResource FrameBackground}" OutlineColor="{StaticResource FrameColor}">
+                    <StackLayout>
+                        <!--is night shift-->
+                        <Label Text="Nočná" TextColor="LightBlue"/>
+                        <Switch IsToggled="{Binding IsNightShift}"
+                                HorizontalOptions="Start"/>
+                    </StackLayout>
+                </Frame>
+
+                <Button Image="plus.png" Command="{Binding SaveCommand}" 
+                    BackgroundColor="Black"
+                    HorizontalOptions="End" Margin="5"/>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -44,8 +44,10 @@
     </Compile>
     <Compile Include="Constants.cs" />
     <Compile Include="TodoItemManager.cs" />
+    <Compile Include="ViewModel\FormMode.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="ViewModel\ObservableObject.cs" />
+    <Compile Include="ViewModel\ShiftFormViewModel.cs" />
     <Compile Include="View\ShiftFormContentPage.xaml.cs">
       <DependentUpon>ShiftFormContentPage.xaml</DependentUpon>
     </Compile>
