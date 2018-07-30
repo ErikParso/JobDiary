@@ -26,7 +26,9 @@ namespace MyJobDiary.ViewModel
 
         public async void Login()
         {
+            App.LoadingService.StartLoading("prebieha prihlasovanie");
             IsAuthenticated = await App.LoginService.Authenticate();
+            App.LoadingService.StopLoading();
         }
     }
 }

@@ -1,30 +1,22 @@
-﻿using System;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-
 using Microsoft.WindowsAzure.MobileServices;
-
+using MyJobDiary.Droid.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-using System.Threading.Tasks;
-using MyJobDiary.Services;
-
 namespace MyJobDiary.Droid
 {
-	[Activity (Label = "MyJobDiary.Droid",
+    [Activity (Label = "MyJobDiary.Droid",
 		Icon = "@drawable/icon",
 		MainLauncher = true,
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
 		Theme = "@android:style/Theme.Holo.Light")]
 	public class MainActivity : FormsApplicationActivity
-    {     
+    {    
+        
+
         protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -36,7 +28,8 @@ namespace MyJobDiary.Droid
 			Forms.Init (this, bundle);
 
             //Init App services
-            App.InitLoginService(new AndroidLoginService(this));
+            App.InitLoginService(new LoginService(this));
+            App.InitLoadingService(new LoadingService(this));
 
             // Load the main application
             LoadApplication (new App ());

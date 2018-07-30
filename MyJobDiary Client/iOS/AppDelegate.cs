@@ -30,7 +30,7 @@ namespace MyJobDiary.iOS
                 // Sign in with Facebook login using a server-managed flow.
                 if (User == null)
                 {
-                    User = await TodoItemManager.DefaultManager.CurrentClient
+                    User = await TodoItemManager.Current.Value.CurrentClient
                         .LoginAsync(UIApplication.SharedApplication.KeyWindow.RootViewController,
                         MobileServiceAuthenticationProvider.Google, "myjobdiary");
                     if (User != null)
@@ -54,7 +54,7 @@ namespace MyJobDiary.iOS
 
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         {
-            return TodoItemManager.DefaultManager.CurrentClient.ResumeWithURL(url);
+            return TodoItemManager.Current.Value.CurrentClient.ResumeWithURL(url);
         }
 
         public override bool FinishedLaunching (UIApplication app, NSDictionary options)

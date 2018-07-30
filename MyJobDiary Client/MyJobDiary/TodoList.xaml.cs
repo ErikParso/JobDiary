@@ -12,8 +12,7 @@ namespace MyJobDiary
         public TodoList()
         {
             InitializeComponent();
-
-            manager = TodoItemManager.DefaultManager;
+            manager = TodoItemManager.Current.Value;
         }
 
         protected override async void OnAppearing()

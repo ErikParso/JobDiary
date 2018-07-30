@@ -15,5 +15,7 @@ namespace MyJobDiary.Model
         public bool IsNightShift { get; set; }
 
         public string Job { get; set; }
+
+        public bool IsClosed { get; set; }
     }
 }

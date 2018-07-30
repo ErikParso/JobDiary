@@ -1,4 +1,5 @@
-﻿using MyJobDiary.ViewModel;
+﻿using MyJobDiary.Model;
+using MyJobDiary.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,11 @@ namespace MyJobDiary.View
 		public ShiftFormContentPage ()
 		{
 			InitializeComponent ();
-            BindingContext = new ShiftFormViewModel(FormMode.Add);
+            BindingContext = new ShiftFormViewModel(TodoItemManager.Current.Value, new Shift()
+            {
+                TimeFrom = DateTime.Now,
+                TimeTo = DateTime.Today
+            });
 		}
 
         protected override async void OnAppearing()

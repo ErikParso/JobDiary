@@ -9,7 +9,6 @@
             <Color x:Key="FrameColor">#1C1C1C</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
-
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="0">

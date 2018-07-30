@@ -5,8 +5,8 @@
 				x:Class="MyJobDiary.TodoList"
 				Title="Azure Todo"
                 BackgroundColor="Black">
-    <Grid RowSpacing="0">
-        <ActivityIndicator Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator"/>
+    <Grid>
+        <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator"/>
         <ListView x:Name="shiftList" IsPullToRefreshEnabled="true" Refreshing="OnRefresh"
                   Margin="5" HasUnevenRows="True">
             <ListView.ItemTemplate>

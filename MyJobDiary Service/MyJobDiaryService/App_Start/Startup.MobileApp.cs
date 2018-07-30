@@ -26,7 +26,7 @@ namespace MyJobDiaryService
                 .ApplyTo(config);
 
             // Use Entity Framework Code First to create database tables based on your DbContext
-            Database.SetInitializer(new MyJobDiaryInitializer());
+            // Database.SetInitializer(new MyJobDiaryInitializer());
 
             // To prevent Entity Framework from modifying your database schema, use a null database initializer
             // Database.SetInitializer<MyJobDiaryContext>(null);
@@ -49,39 +49,39 @@ namespace MyJobDiaryService
         }
     }
 
-    public class MyJobDiaryInitializer : CreateDatabaseIfNotExists<MyJobDiaryContext>
-    {
-        protected override void Seed(MyJobDiaryContext context)
-        {
-            List<Shift> shiftItems = new List<Shift>
-            {
-                new Shift
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    IsNightShift = new Random().Next() > 0.5,
-                    Job = "Oprava stroja",
-                    Location = "PB",
-                    TimeFrom = DateTime.Now,
-                    TimeTo = DateTime.Now.AddHours(12),
-                },
-                new Shift
-                {
-                    Id = Guid.NewGuid().ToString(),
-                    IsNightShift = new Random().Next() > 0.5,
-                    Job = "Oprava stroja",
-                    Location = "BA",
-                    TimeFrom = DateTime.Now.AddDays(1),
-                    TimeTo = DateTime.Now.AddHours(12).AddDays(1),
-                },
-            };
+    //public class MyJobDiaryInitializer : CreateDatabaseIfNotExists<MyJobDiaryContext>
+    //{
+    //    protected override void Seed(MyJobDiaryContext context)
+    //    {
+    //        List<Shift> shiftItems = new List<Shift>
+    //        {
+    //            new Shift
+    //            {
+    //                Id = Guid.NewGuid().ToString(),
+    //                IsNightShift = new Random().Next() > 0.5,
+    //                Job = "Oprava stroja",
+    //                Location = "PB",
+    //                TimeFrom = DateTime.Now,
+    //                TimeTo = DateTime.Now.AddHours(12),
+    //            },
+    //            new Shift
+    //            {
+    //                Id = Guid.NewGuid().ToString(),
+    //                IsNightShift = new Random().Next() > 0.5,
+    //                Job = "Oprava stroja",
+    //                Location = "BA",
+    //                TimeFrom = DateTime.Now.AddDays(1),
+    //                TimeTo = DateTime.Now.AddHours(12).AddDays(1),
+    //            },
+    //        };
 
-            foreach (Shift todoItem in shiftItems)
-            {
-                context.Set<Shift>().Add(todoItem);
-            }
+    //        foreach (Shift todoItem in shiftItems)
+    //        {
+    //            context.Set<Shift>().Add(todoItem);
+    //        }
 
-            base.Seed(context);
-        }
-    }
+    //        base.Seed(context);
+    //    }
+    //}
 }
 

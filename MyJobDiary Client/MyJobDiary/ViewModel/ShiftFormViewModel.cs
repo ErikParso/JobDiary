@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyJobDiary.Model;
+using System;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -6,76 +7,116 @@ namespace MyJobDiary.ViewModel
 {
     public class ShiftFormViewModel : ObservableObject
     {
-        public FormMode FormMode
-        {
-            get; private set;
-        }
+        private Shift _shift;
+        private TodoItemManager _manager;
 
-        private DateTime _dateFrom = DateTime.Now;
+        #region Bindable
+
         public DateTime DateFrom
         {
-            get => _dateFrom;
-            set => SetField(ref _dateFrom, value.Date.Add(_dateFrom.TimeOfDay));
+            get => _shift.TimeFrom;
+            set
+            {
+                _shift.TimeFrom = value.Date.Add(_shift.TimeFrom.TimeOfDay);
+                RaisePropertyChanged("DateFrom");
+            }
         }
 
-        private DateTime _dateTo = DateTime.Now.AddHours(8);
         public DateTime DateTo
         {
-            get => _dateTo;
-            set => SetField(ref _dateTo, value.Date.Add(_dateTo.TimeOfDay));
+            get => _shift.TimeFrom;
+            set
+            {
+                _shift.TimeTo = value.Date.Add(_shift.TimeTo.TimeOfDay);
+                RaisePropertyChanged("DateTo");
+            }
         }
 
         public TimeSpan TimeFrom
         {
-            get => _dateFrom.TimeOfDay;
-            set => SetField(ref _dateFrom, _dateFrom.Date.Add(value));
+            get => _shift.TimeFrom.TimeOfDay;
+            set
+            {
+                _shift.TimeFrom = _shift.TimeFrom.Date.Add(value);
+                RaisePropertyChanged("TimeFrom");
+            }
         }
 
         public TimeSpan TimeTo
         {
-            get => _dateTo.TimeOfDay;
-            set => SetField(ref _dateTo, _dateTo.Date.Add(value));
+            get => _shift.TimeTo.TimeOfDay;
+            set
+            {
+                _shift.TimeTo = _shift.TimeTo.Date.Add(value);
+                RaisePropertyChanged("TimeTo");
+            }
         }
 
-        private string _location;
         public string Location
         {
-            get => _location;
-            set => SetField(ref _location, value);
+            get => _shift.Location;
+            set
+            {
+                _shift.Location = value;
+                RaisePropertyChanged("Location");
+            }
         }
 
-        private string _job;
         public string Job
         {
-            get => _job;
-            set => SetField(ref _job, value);
+            get => _shift.Job;
+            set
+            {
+                _shift.Job = value;
+                RaisePropertyChanged("Job");
+            }
         }
 
-        private bool _isNightShift;
         public bool IsNightShift
         {
-            get => _isNightShift;
-            set => SetField(ref _isNightShift, value);
+            get => _shift.IsNightShift;
+            set
+            {
+                _shift.IsNightShift = value;
+                RaisePropertyChanged("IsNightShift");
+            }
         }
 
-        private bool _isClosed;
         public bool IsClosed
         {
-            get => _isClosed;
-            set => SetField(ref _isClosed, value);
+            get => _shift.IsClosed;
+            set
+            {
+                _shift.IsClosed = value;
+                RaisePropertyChanged("IsClosed");
+            }
         }
+
 
         public ICommand SaveCommand { get; private set; }
 
-        public ShiftFormViewModel(FormMode mode)
+        private bool _isProcessing;
+        public bool IsProcessing
         {
-            SaveCommand = new Command(Save);
-            FormMode = mode;
+            get => _isProcessing;
+            set => SetField(ref _isProcessing, value);
         }
 
-        private void Save(object obj)
+        #endregion
+
+        public ShiftFormViewModel(TodoItemManager manager, Shift shift)
         {
-            
+            SaveCommand = new Command(Save);
+            _manager = manager;
+            _shift = shift;
+        }
+
+        private async void Save(object obj)
+        {
+            App.LoadingService.StartLoading("odosielam");
+            await _manager.SaveTaskAsync(_shift);
+            App.LoadingService.StopLoading();
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
     }
 }

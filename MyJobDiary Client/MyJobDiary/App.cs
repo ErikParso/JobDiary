@@ -8,6 +8,7 @@ namespace MyJobDiary
 	{
 
         public static ILoginService LoginService { get; private set; }
+        public static ILoadingService LoadingService { get; private set; }
 
         public App ()
 		{
@@ -18,6 +19,11 @@ namespace MyJobDiary
         public static void InitLoginService(ILoginService loginService)
         {
             LoginService = loginService;
+        }
+
+        public static void InitLoadingService(ILoadingService loadingService)
+        {
+            LoadingService = loadingService;
         }
 
         protected override void OnStart ()

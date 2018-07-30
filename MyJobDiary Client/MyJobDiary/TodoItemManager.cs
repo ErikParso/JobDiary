@@ -1,12 +1,3 @@
-/*
- * To add Offline Sync Support:
- *  1) Add the NuGet package Microsoft.Azure.Mobile.Client.SQLiteStore (and dependencies) to all client projects
- *  2) Uncomment the #define OFFLINE_SYNC_ENABLED
- *
- * For more information, see: http://go.microsoft.com/fwlink/?LinkId=620342
- */
-//#define OFFLINE_SYNC_ENABLED
-
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,38 +10,17 @@ namespace MyJobDiary
 {
     public partial class TodoItemManager
     {
-        IMobileServiceTable<Shift> todoTable;
+        public static Lazy<TodoItemManager> Current = new Lazy<TodoItemManager>(() => new TodoItemManager());
+
+        private IMobileServiceTable<Shift> todoTable;
+
+        public MobileServiceClient CurrentClient { get; private set; }
 
         private TodoItemManager()
         {
-            this.Client = new MobileServiceClient(Constants.ApplicationURL);
-            this.todoTable = Client.GetTable<Shift>();
+            this.CurrentClient = new MobileServiceClient(Constants.ApplicationURL);
+            this.todoTable = CurrentClient.GetTable<Shift>();
         }
-
-        public static TodoItemManager DefaultManager
-        {
-            get
-            {
-                return DefaultInstance;
-            }
-            private set
-            {
-                DefaultInstance = value;
-            }
-        }
-
-        public MobileServiceClient CurrentClient
-        {
-            get { return Client; }
-        }
-
-        public bool IsOfflineEnabled
-        {
-            get { return todoTable is Microsoft.WindowsAzure.MobileServices.Sync.IMobileServiceSyncTable<Shift>; }
-        }
-
-        public static TodoItemManager DefaultInstance { get; set; } = new TodoItemManager();
-        public MobileServiceClient Client { get; set; }
 
         public async Task<ObservableCollection<Shift>> GetTodoItemsAsync(bool syncItems = false)
         {
