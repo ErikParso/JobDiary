@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace MyJobDiary.ViewModel
 {
-    public class MainPageViewModel: ObservableObject
+    public class MainPageViewModel : ObservableObject
     {
         private bool _isAutenthicated;
         public bool IsAuthenticated
@@ -27,7 +27,14 @@ namespace MyJobDiary.ViewModel
         public async void Login()
         {
             App.LoadingService.StartLoading("prebieha prihlasovanie");
-            IsAuthenticated = await App.LoginService.Authenticate();
+            try
+            {
+                IsAuthenticated = await App.LoginService.Authenticate();
+            }
+            catch (Exception e)
+            {
+                App.DialogService.ShowDialog("Nepodarilo sa autentifikovať", e.Message);
+            }
             App.LoadingService.StopLoading();
         }
     }

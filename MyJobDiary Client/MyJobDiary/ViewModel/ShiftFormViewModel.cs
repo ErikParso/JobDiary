@@ -114,7 +114,14 @@ namespace MyJobDiary.ViewModel
         private async void Save(object obj)
         {
             App.LoadingService.StartLoading("odosielam");
-            await _manager.SaveTaskAsync(_shift);
+            try
+            {
+                await _manager.SaveTaskAsync(_shift);
+            }
+            catch (Exception e)
+            {
+                App.DialogService.ShowDialog("Nepodarilo sa odoslať", e.Message);
+            }
             App.LoadingService.StopLoading();
             await Application.Current.MainPage.Navigation.PopAsync();
         }

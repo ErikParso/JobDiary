@@ -20,21 +20,10 @@ namespace MyJobDiary.Droid.Services
 
         public async Task<bool> Authenticate()
         {
-            var success = false;
-            var message = string.Empty;
-            try
-            {
-                // Sign in with Facebook login using a server-managed flow.
-                User = await TodoItemManager.Current.Value.CurrentClient.LoginAsync(_mainActivity,
-                    MobileServiceAuthenticationProvider.Google, "myjobdiary");
-                if (User != null)
-                {
-                    success = true;
-                }
-            }
-            catch (Exception) { }
-
-            return success;
+            // Sign in with Facebook login using a server-managed flow.
+            User = await TodoItemManager.Current.Value.CurrentClient.LoginAsync(_mainActivity,
+                MobileServiceAuthenticationProvider.Google, "myjobdiary");
+            return (User != null);
         }
     }
 }

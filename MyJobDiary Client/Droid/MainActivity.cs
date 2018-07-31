@@ -16,7 +16,6 @@ namespace MyJobDiary.Droid
 	public class MainActivity : FormsApplicationActivity
     {    
         
-
         protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -28,8 +27,9 @@ namespace MyJobDiary.Droid
 			Forms.Init (this, bundle);
 
             //Init App services
-            App.InitLoginService(new LoginService(this));
-            App.InitLoadingService(new LoadingService(this));
+            App.SetLoginService(new LoginService(this));
+            App.SetLoadingService(new LoadingService(this));
+            App.SetDialogService(new DialogService(this));
 
             // Load the main application
             LoadApplication (new App ());
