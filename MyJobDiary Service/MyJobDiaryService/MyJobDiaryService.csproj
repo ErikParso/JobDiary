@@ -152,11 +152,6 @@
     <Compile Include="Controllers\ShiftController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataObjects\Shift.cs" />
-    <Compile Include="Migrations\201807301138351_initialMigration.cs" />
-    <Compile Include="Migrations\201807301138351_initialMigration.Designer.cs">
-      <DependentUpon>201807301138351_initialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyJobDiaryContext.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,11 +167,6 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807301138351_initialMigration.resx">
-      <DependentUpon>201807301138351_initialMigration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\MyJobDiary - Web Deploy.pubxml" />

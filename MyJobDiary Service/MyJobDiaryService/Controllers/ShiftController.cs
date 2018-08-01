@@ -40,6 +40,7 @@ namespace MyJobDiaryService.Controllers
         // POST tables/TodoItem
         public async Task<IHttpActionResult> PostTodoItem(Shift item)
         {
+            item.UserId = User.Identity.Name;
             Shift current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }

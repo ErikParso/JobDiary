@@ -5,6 +5,8 @@ namespace MyJobDiaryService.DataObjects
 {
     public class Shift : EntityData
     {
+        public string UserId { get; set; }
+
         public DateTime TimeFrom { get; set; }
 
         public DateTime TimeTo { get; set; }
