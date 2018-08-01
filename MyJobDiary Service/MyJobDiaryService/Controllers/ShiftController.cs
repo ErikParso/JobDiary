@@ -1,4 +1,6 @@
 ﻿using System.Linq;
+using System.Security.Claims;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
@@ -22,7 +24,8 @@ namespace MyJobDiaryService.Controllers
         // GET tables/TodoItem
         public IQueryable<Shift> GetAllTodoItems()
         {
-            return Query();
+            string userId = GetUserId(User);
+            return Query().Where(s => s.UserId == userId);
         }
 
         // GET tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
@@ -40,7 +43,7 @@ namespace MyJobDiaryService.Controllers
         // POST tables/TodoItem
         public async Task<IHttpActionResult> PostTodoItem(Shift item)
         {
-            item.UserId = User.Identity.Name;
+            item.UserId = GetUserId(User);
             Shift current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
@@ -49,6 +52,13 @@ namespace MyJobDiaryService.Controllers
         public Task DeleteTodoItem(string id)
         {
             return DeleteAsync(id);
+        }
+
+        private string GetUserId(IPrincipal user)
+        {
+            ClaimsPrincipal claimsUser = (ClaimsPrincipal)user;
+            string sid = claimsUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            return sid;
         }
     }
 }
