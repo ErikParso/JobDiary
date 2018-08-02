@@ -2,53 +2,55 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:contentview="clr-namespace:MyJobDiary.UserControl"
+             xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries" 
              x:Class="MyJobDiary.View.ShiftFormContentPage" 
              BackgroundColor="Black">
     <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="FrameBackground">#202020</Color>
-            <Color x:Key="FrameColor">#1C1C1C</Color>
-            <Color x:Key="IconColor">#03A9F4</Color>
-        </ResourceDictionary>
+        <theme:BlackAndBlue/>
     </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="0">
 
-                <Frame Margin="10" BackgroundColor="{StaticResource FrameBackground}" OutlineColor="{StaticResource FrameColor}">
+                <Frame Margin="10" BackgroundColor="{StaticResource FrameColor}">
                     <StackLayout>
                         <!--date from-->
-                        <contentview:LinePictureLabel Color="{StaticResource IconColor}" Icon="clock_start_24px.png" Text="Začiatok šichty"/>
+                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_start_20}" Text="Začiatok šichty"/>
                         <DatePicker Date="{Binding DateFrom}" Format="dd.MM.yyyy" TextColor="White"/>
                         <TimePicker Time="{Binding TimeFrom}" Format="HH:mm" TextColor="White"/>
                     </StackLayout>
                 </Frame>
 
-                <Frame Margin="10" BackgroundColor="{StaticResource FrameBackground}" OutlineColor="{StaticResource FrameColor}">
+                <Frame Margin="10" BackgroundColor="{StaticResource FrameColor}">
                     <StackLayout>
                         <!--date to-->
-                        <contentview:LinePictureLabel Color="{StaticResource IconColor}" Icon="clock_end_24px.png" Text="Koniec šichty"/>
+                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_end_20}" Text="Koniec šichty"/>
                         <Switch IsToggled="{Binding IsClosed}" HorizontalOptions="Start"/>
                         <DatePicker Date="{Binding DateTo}" IsVisible="{Binding IsClosed}" Format="dd.MM.yyyy" TextColor="White"/>
                         <TimePicker Time="{Binding TimeTo}" IsVisible="{Binding IsClosed}" Format="HH:mm" TextColor="White"/>
                     </StackLayout>
                 </Frame>
 
-                <Frame Margin="10" BackgroundColor="{StaticResource FrameBackground}" OutlineColor="{StaticResource FrameColor}">
+                <Frame Margin="10" BackgroundColor="{StaticResource FrameColor}">
                     <StackLayout>
                         <!--location-->
-                        <contentview:LinePictureLabel Color="{StaticResource IconColor}" Icon="location_city_24px.png" Text="Miesto práce"/>
+                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource city_20}" Text="Miesto práce"/>
                         <Entry Text="{Binding Location}" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Margin="10" BackgroundColor="{StaticResource FrameColor}">
+                    <StackLayout>
                         <!--description-->
-                        <contentview:LinePictureLabel Color="{StaticResource IconColor}" Icon="work_24px.png" Text="Popis práce"/>
+                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource work_20}" Text="Popis práce"/>
                         <Editor Text="{Binding Job}" TextColor="White" HeightRequest="100"/>
                     </StackLayout>
                 </Frame>
 
-                <Frame Margin="10" BackgroundColor="{StaticResource FrameBackground}" OutlineColor="{StaticResource FrameColor}">
+                <Frame Margin="10" BackgroundColor="{StaticResource FrameColor}">
                     <StackLayout>
                         <!--is night shift-->
-                        <contentview:LinePictureLabel Color="{StaticResource IconColor}" Icon="moon_o_24px.png" Text="Nočná šichta"/>
+                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource moon_20}" Text="Nočná šichta"/>
                         <Switch IsToggled="{Binding IsNightShift}" HorizontalOptions="Start"/>
                     </StackLayout>
                 </Frame>
