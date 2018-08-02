@@ -1,5 +1,5 @@
 ﻿using MyJobDiary.Services;
-using System;
+using MyJobDiary.View;
 using Xamarin.Forms;
 
 namespace MyJobDiary

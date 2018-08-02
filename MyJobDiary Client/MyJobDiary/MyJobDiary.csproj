@@ -38,7 +38,7 @@
     <Compile Include="UserControl\LinePictureLabel.xaml.cs">
       <DependentUpon>LinePictureLabel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Shift.cs" />
@@ -47,11 +47,11 @@
     <Compile Include="Services\IDialogService.cs" />
     <Compile Include="Services\ILoadingService.cs" />
     <Compile Include="Services\ILoginService.cs" />
-    <Compile Include="TodoList.xaml.cs">
+    <Compile Include="View\TodoList.xaml.cs">
       <DependentUpon>TodoList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Constants.cs" />
-    <Compile Include="TodoItemManager.cs" />
+    <Compile Include="Services\TodoItemManager.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="ViewModel\ObservableObject.cs" />
     <Compile Include="ViewModel\ShiftFormViewModel.cs" />
@@ -64,12 +64,12 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TodoList.xaml">
+    <EmbeddedResource Include="View\TodoList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainPage.xaml">
+    <EmbeddedResource Include="View\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -3,7 +3,7 @@ using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MyJobDiary
+namespace MyJobDiary.View
 {
     public partial class TodoList : ContentPage
     {
