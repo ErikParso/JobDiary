@@ -1,7 +1,6 @@
-﻿using Android.App;
-using Microsoft.WindowsAzure.MobileServices;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using MyJobDiary.Managers;
 using MyJobDiary.Services;
-using System;
 using System.Threading.Tasks;
 using Xamarin.Forms.Platform.Android;
 
@@ -21,7 +20,7 @@ namespace MyJobDiary.Droid.Services
         public async Task<bool> Authenticate()
         {
             // Sign in with Facebook login using a server-managed flow.
-            User = await TodoItemManager.Current.Value.CurrentClient.LoginAsync(_mainActivity,
+            User = await ShiftItemManager.Current.Value.CurrentClient.LoginAsync(_mainActivity,
                 MobileServiceAuthenticationProvider.Google, "myjobdiary");
             return (User != null);
         }

@@ -1,4 +1,5 @@
-﻿using MyJobDiary.Model;
+﻿using MyJobDiary.Managers;
+using MyJobDiary.Model;
 using System;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -8,7 +9,7 @@ namespace MyJobDiary.ViewModel
     public class ShiftFormViewModel : ObservableObject
     {
         private Shift _shift;
-        private TodoItemManager _manager;
+        private ShiftItemManager _manager;
 
         #region Bindable
 
@@ -104,7 +105,7 @@ namespace MyJobDiary.ViewModel
 
         #endregion
 
-        public ShiftFormViewModel(TodoItemManager manager, Shift shift)
+        public ShiftFormViewModel(ShiftItemManager manager, Shift shift)
         {
             SaveCommand = new Command(Save);
             _manager = manager;

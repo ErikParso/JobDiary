@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
 using MyJobDiary.Model;
 
-namespace MyJobDiary
+namespace MyJobDiary.Managers
 {
-    public partial class TodoItemManager
+    public partial class ShiftItemManager
     {
-        public static Lazy<TodoItemManager> Current = new Lazy<TodoItemManager>(() => new TodoItemManager());
+        public static Lazy<ShiftItemManager> Current = new Lazy<ShiftItemManager>(() => new ShiftItemManager());
 
         private IMobileServiceTable<Shift> todoTable;
 
         public MobileServiceClient CurrentClient { get; private set; }
 
-        private TodoItemManager()
+        private ShiftItemManager()
         {
             this.CurrentClient = new MobileServiceClient(Constants.ApplicationURL);
             this.todoTable = CurrentClient.GetTable<Shift>();

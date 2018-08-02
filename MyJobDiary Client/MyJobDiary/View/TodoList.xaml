@@ -3,7 +3,7 @@
 				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
                 xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries" 
                 xmlns:local="clr-namespace:MyJobDiary" 
-				x:Class="MyJobDiary.View.TodoList"
+				x:Class="MyJobDiary.View.ShiftListContentPage"
 				Title="Azure Todo"
                 BackgroundColor="Black">
     <ContentPage.Resources>

@@ -1,18 +1,19 @@
-﻿using MyJobDiary.Model;
+﻿using MyJobDiary.Managers;
+using MyJobDiary.Model;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace MyJobDiary.View
 {
-    public partial class TodoList : ContentPage
+    public partial class ShiftListContentPage : ContentPage
     {
-        TodoItemManager manager;
+        ShiftItemManager manager;
 
-        public TodoList()
+        public ShiftListContentPage()
         {
             InitializeComponent();
-            manager = TodoItemManager.Current.Value;
+            manager = ShiftItemManager.Current.Value;
         }
 
         protected override async void OnAppearing()

@@ -16,7 +16,7 @@ namespace MyJobDiary.View
 
         private async void ShiftList_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new TodoList());
+            await Navigation.PushAsync(new ShiftListContentPage());
         }
 
         private async void ShiftForm_Clicked(object sender, EventArgs e)
