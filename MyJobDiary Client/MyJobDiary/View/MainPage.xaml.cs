@@ -1,4 +1,6 @@
-﻿using MyJobDiary.ViewModel;
+﻿using MyJobDiary.Managers;
+using MyJobDiary.Model;
+using MyJobDiary.ViewModel;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -16,12 +18,20 @@ namespace MyJobDiary.View
 
         private async void ShiftList_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShiftListContentPage());
+            ShiftListViewModel viewModel = new ShiftListViewModel(ShiftItemManager.Current.Value);
+            ShiftListContentPage shiftList = new ShiftListContentPage(viewModel);
+            await Navigation.PushAsync(shiftList);
         }
 
         private async void ShiftForm_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShiftFormContentPage());
+            var shiftFormViewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, new Shift
+            {
+                TimeFrom = DateTime.Now,
+                TimeTo = DateTime.Now.AddHours(8),
+                IsNightShift = DateTime.Now.Hour < 24 && DateTime.Now.Hour > 18
+            });
+            await Navigation.PushAsync(new ShiftFormContentPage(shiftFormViewModel));
         }
 
         protected override void OnAppearing()

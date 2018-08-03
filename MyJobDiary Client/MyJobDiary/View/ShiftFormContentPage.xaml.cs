@@ -11,14 +11,10 @@ namespace MyJobDiary.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ShiftFormContentPage : ContentPage
 	{
-		public ShiftFormContentPage ()
+		public ShiftFormContentPage(ShiftFormViewModel viewModel)
 		{
 			InitializeComponent ();
-            BindingContext = new ShiftFormViewModel(ShiftItemManager.Current.Value, new Shift()
-            {
-                TimeFrom = DateTime.Now,
-                TimeTo = DateTime.Today
-            });
+            BindingContext = viewModel;
 		}
 
         protected override async void OnAppearing()

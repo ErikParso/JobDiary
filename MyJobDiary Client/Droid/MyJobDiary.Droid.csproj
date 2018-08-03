@@ -125,5 +125,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\blue_moon_24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\red_alert_20.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>

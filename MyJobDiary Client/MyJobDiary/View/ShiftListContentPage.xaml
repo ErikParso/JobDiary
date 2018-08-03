@@ -10,25 +10,23 @@
     <ContentPage.Resources>
         <theme:BlackAndBlue/>
     </ContentPage.Resources>
-    <Grid>
-        <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True" x:Name="syncIndicator"/>
-        <ListView x:Name="shiftList" IsPullToRefreshEnabled="true" Refreshing="OnRefresh"
-                  Margin="5" HasUnevenRows="True">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.ContextActions>
-                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
-                            <MenuItem Clicked="OnEdit" CommandParameter="{Binding .}" Text="Uprav"/>
-                        </ViewCell.ContextActions>
-                        <Grid BackgroundColor="{StaticResource AppBackground}" Padding="5">
-                            <Frame BackgroundColor="{StaticResource FrameColor}">
-                                <usercontrol:ShiftListItem/>
-                            </Frame>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </Grid>
+
+    <ListView x:Name="shiftList" Margin="5" HasUnevenRows="True" ItemsSource="{Binding ShiftItems}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
+                        <MenuItem Clicked="OnEdit" CommandParameter="{Binding .}" Text="Uprav"/>
+                    </ViewCell.ContextActions>
+                    <Grid BackgroundColor="{StaticResource AppBackground}" Padding="5">
+                        <Frame BackgroundColor="{StaticResource FrameColor}">
+                            <usercontrol:ShiftListItem/>
+                        </Frame>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
 </ContentPage>

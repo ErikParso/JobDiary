@@ -19,18 +19,27 @@
                 <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource clock_start_20}"/>
                 <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.yy HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" IsVisible="{Binding IsClosed}">
                 <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource clock_end_20}"/>
                 <Label Text="{Binding TimeTo, StringFormat='\{0:dd.MM.yy HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}"/>
             </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource alert_20}"/>
+                <Label Text="bez uzávierky" TextColor="{StaticResource ErrorTextColor}"/>
+                <StackLayout.Triggers>
+                    <DataTrigger TargetType="StackLayout" Binding="{Binding IsClosed}" Value="True">
+                        <Setter Property="IsVisible" Value="False"/>
+                    </DataTrigger>
+                </StackLayout.Triggers>
+            </StackLayout>
         </StackLayout>
-        <!--job description--> 
+        <!--job description-->
         <Label Text="{Binding Job}" TextColor="{StaticResource SecondaryTextColor}" Grid.Column="1" 
                HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,5,0"/>
         <!--location-->
         <Label Text="{Binding Location}" TextColor="{StaticResource PrimaryTextColor}" Grid.Column="2"
                HorizontalOptions="Center" VerticalOptions="Center"/>
-        <!--night shift--> 
+        <!--night shift-->
         <Image Source="{StaticResource sun_24}" Grid.Column="3" 
                VerticalOptions="Center" HorizontalOptions="Center">
             <Image.Triggers>

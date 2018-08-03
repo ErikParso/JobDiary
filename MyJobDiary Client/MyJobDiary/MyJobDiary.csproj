@@ -41,6 +41,8 @@
     <Compile Include="UserControl\ShiftListItem.xaml.cs">
       <DependentUpon>ShiftListItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\ShiftListViewModel.cs" />
+    <Compile Include="View\InverseBooleanConverter.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

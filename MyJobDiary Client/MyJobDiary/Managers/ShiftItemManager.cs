@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
 using MyJobDiary.Model;
@@ -27,7 +28,7 @@ namespace MyJobDiary.Managers
             try
             {
                 IEnumerable<Shift> items = await todoTable.ToEnumerableAsync();
-                return new ObservableCollection<Shift>(items);
+                return new ObservableCollection<Shift>(items.OrderBy(s => s.TimeFrom));
             }
             catch (MobileServiceInvalidOperationException msioe)
             {
@@ -50,6 +51,12 @@ namespace MyJobDiary.Managers
             {
                 await todoTable.UpdateAsync(item);
             }
+        }
+
+        public async Task DeleteAsync(Shift item)
+        {
+            await todoTable.DeleteAsync(item);
+            int deleted = 1;
         }
     }
 }
