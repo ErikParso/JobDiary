@@ -38,6 +38,9 @@
     <Compile Include="UserControl\LinePictureLabel.xaml.cs">
       <DependentUpon>LinePictureLabel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ShiftListItem.xaml.cs">
+      <DependentUpon>ShiftListItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -47,8 +50,8 @@
     <Compile Include="Services\IDialogService.cs" />
     <Compile Include="Services\ILoadingService.cs" />
     <Compile Include="Services\ILoginService.cs" />
-    <Compile Include="View\TodoList.xaml.cs">
-      <DependentUpon>TodoList.xaml</DependentUpon>
+    <Compile Include="View\ShiftListContentPage.xaml.cs">
+      <DependentUpon>ShiftListContentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Constants.cs" />
     <Compile Include="Managers\ShiftItemManager.cs" />
@@ -64,7 +67,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\TodoList.xaml">
+    <EmbeddedResource Include="View\ShiftListContentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -93,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ThemeDictionaries\BlackAndBlue.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UserControl\ShiftListItem.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

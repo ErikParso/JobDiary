@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
+             x:Class="MyJobDiary.UserControl.ShiftListItem">
+    <ContentView.Resources>
+        <theme:BlackAndBlue/>
+    </ContentView.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <!--dates-->
+        <StackLayout Grid.Column="0" VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal">
+                <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource clock_start_20}"/>
+                <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.yy HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource clock_end_20}"/>
+                <Label Text="{Binding TimeTo, StringFormat='\{0:dd.MM.yy HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}"/>
+            </StackLayout>
+        </StackLayout>
+        <!--job description--> 
+        <Label Text="{Binding Job}" TextColor="{StaticResource SecondaryTextColor}" Grid.Column="1" 
+               HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,5,0"/>
+        <!--location-->
+        <Label Text="{Binding Location}" TextColor="{StaticResource PrimaryTextColor}" Grid.Column="2"
+               HorizontalOptions="Center" VerticalOptions="Center"/>
+        <!--night shift--> 
+        <Image Source="{StaticResource sun_24}" Grid.Column="3" 
+               VerticalOptions="Center" HorizontalOptions="Center">
+            <Image.Triggers>
+                <DataTrigger TargetType="Image" Binding="{Binding IsNightShift}" Value="True">
+                    <Setter Property="Source" Value="{StaticResource moon_24}"/>
+                </DataTrigger>
+            </Image.Triggers>
+        </Image>
+    </Grid>
+</ContentView>
