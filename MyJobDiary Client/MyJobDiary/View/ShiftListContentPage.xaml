@@ -17,6 +17,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
+                            <MenuItem Clicked="OnEdit" CommandParameter="{Binding .}" Text="Uprav"/>
+                        </ViewCell.ContextActions>
                         <Grid BackgroundColor="{StaticResource AppBackground}" Padding="5">
                             <Frame BackgroundColor="{StaticResource FrameColor}">
                                 <usercontrol:ShiftListItem/>

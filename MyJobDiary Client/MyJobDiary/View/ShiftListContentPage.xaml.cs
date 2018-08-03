@@ -119,6 +119,16 @@ namespace MyJobDiary.View
                 }             
             }
         }
+
+        private void OnEdit(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnDelete(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class InverseBooleanConverter : IValueConverter
