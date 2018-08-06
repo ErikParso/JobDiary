@@ -11,7 +11,8 @@
         <theme:BlackAndBlue/>
     </ContentPage.Resources>
 
-    <ListView x:Name="shiftList" Margin="5" HasUnevenRows="True" ItemsSource="{Binding ShiftItems}">
+    <ListView x:Name="shiftList" Margin="5" HasUnevenRows="True" ItemsSource="{Binding ShiftItems}"
+              ItemSelected="shiftList_ItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -20,11 +21,9 @@
                         <MenuItem Clicked="OnCopy" CommandParameter="{Binding .}" Text="Kopíruj"/>
                         <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
                     </ViewCell.ContextActions>
-                    <Grid BackgroundColor="{StaticResource AppBackground}" Padding="5">
-                        <Frame BackgroundColor="{StaticResource FrameColor}">
-                            <usercontrol:ShiftListItem/>
-                        </Frame>
-                    </Grid>
+                    <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5">
+                        <usercontrol:ShiftListItem/>
+                    </Frame>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

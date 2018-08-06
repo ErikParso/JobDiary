@@ -56,6 +56,11 @@ namespace MyJobDiary.View
             NavigationPage.SetHasNavigationBar(this, false);
             _model.Refresh();
         }
+
+        private void shiftList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            shiftList.SelectedItem = null;
+        }
     }
 }
 

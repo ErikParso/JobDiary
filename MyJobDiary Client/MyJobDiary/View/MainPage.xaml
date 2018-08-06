@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyJobDiary.View.MainPage"
              BackgroundColor="Black">
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="buttonDisabling" TargetType="Button">
@@ -20,7 +20,7 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -32,11 +32,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Grid.Row="0" Image="calendar_add.png" HorizontalOptions="End" VerticalOptions="End" Margin="5"
-                    BackgroundColor="Black" BorderWidth="1" 
+                    BackgroundColor="Black" BorderWidth="1"
                     Style="{StaticResource buttonDisabling}"
                     Clicked="ShiftForm_Clicked"/>
             <Button Grid.Column="1" Grid.Row="0" Image="calendar.png" HorizontalOptions="Start" VerticalOptions="End" Margin="5"
-                    BackgroundColor="Black" BorderWidth="1" 
+                    BackgroundColor="Black" BorderWidth="1"
                     Style="{StaticResource buttonDisabling}"
                     Clicked="ShiftList_Clicked"/>
             <Button Grid.ColumnSpan="2" Grid.Row="1" Image="google.png" HorizontalOptions="Center" VerticalOptions="End" Margin="5"
