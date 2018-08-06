@@ -1107,32 +1107,32 @@ namespace MyJobDiary.Droid
 		public partial class Color
 		{
 			
+			// aapt resource value: 0x7f0b004b
+			public const int abc_background_cache_hint_selector_material_dark = 2131427403;
+			
 			// aapt resource value: 0x7f0b004c
-			public const int abc_background_cache_hint_selector_material_dark = 2131427404;
+			public const int abc_background_cache_hint_selector_material_light = 2131427404;
 			
 			// aapt resource value: 0x7f0b004d
-			public const int abc_background_cache_hint_selector_material_light = 2131427405;
-			
-			// aapt resource value: 0x7f0b004e
-			public const int abc_color_highlight_material = 2131427406;
+			public const int abc_color_highlight_material = 2131427405;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int abc_input_method_navigation_guard = 2131427332;
 			
+			// aapt resource value: 0x7f0b004e
+			public const int abc_primary_text_disable_only_material_dark = 2131427406;
+			
 			// aapt resource value: 0x7f0b004f
-			public const int abc_primary_text_disable_only_material_dark = 2131427407;
+			public const int abc_primary_text_disable_only_material_light = 2131427407;
 			
 			// aapt resource value: 0x7f0b0050
-			public const int abc_primary_text_disable_only_material_light = 2131427408;
+			public const int abc_primary_text_material_dark = 2131427408;
 			
 			// aapt resource value: 0x7f0b0051
-			public const int abc_primary_text_material_dark = 2131427409;
+			public const int abc_primary_text_material_light = 2131427409;
 			
 			// aapt resource value: 0x7f0b0052
-			public const int abc_primary_text_material_light = 2131427410;
-			
-			// aapt resource value: 0x7f0b0053
-			public const int abc_search_url_text = 2131427411;
+			public const int abc_search_url_text = 2131427410;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int abc_search_url_text_normal = 2131427333;
@@ -1143,11 +1143,11 @@ namespace MyJobDiary.Droid
 			// aapt resource value: 0x7f0b0007
 			public const int abc_search_url_text_selected = 2131427335;
 			
-			// aapt resource value: 0x7f0b0054
-			public const int abc_secondary_text_material_dark = 2131427412;
+			// aapt resource value: 0x7f0b0053
+			public const int abc_secondary_text_material_dark = 2131427411;
 			
-			// aapt resource value: 0x7f0b0055
-			public const int abc_secondary_text_material_light = 2131427413;
+			// aapt resource value: 0x7f0b0054
+			public const int abc_secondary_text_material_light = 2131427412;
 			
 			// aapt resource value: 0x7f0b0008
 			public const int accent_material_dark = 2131427336;
@@ -1166,6 +1166,9 @@ namespace MyJobDiary.Droid
 			
 			// aapt resource value: 0x7f0b000d
 			public const int background_material_light = 2131427341;
+			
+			// aapt resource value: 0x7f0b0049
+			public const int blue = 2131427401;
 			
 			// aapt resource value: 0x7f0b000e
 			public const int bright_foreground_disabled_material_dark = 2131427342;
@@ -1202,6 +1205,12 @@ namespace MyJobDiary.Droid
 			
 			// aapt resource value: 0x7f0b0003
 			public const int cardview_shadow_start_color = 2131427331;
+			
+			// aapt resource value: 0x7f0b004a
+			public const int dark_blue = 2131427402;
+			
+			// aapt resource value: 0x7f0b0048
+			public const int dark_gray = 2131427400;
 			
 			// aapt resource value: 0x7f0b003e
 			public const int design_fab_shadow_end_color = 2131427390;
@@ -1299,18 +1308,6 @@ namespace MyJobDiary.Droid
 			// aapt resource value: 0x7f0b002b
 			public const int material_grey_900 = 2131427371;
 			
-			// aapt resource value: 0x7f0b0048
-			public const int my_blue = 2131427400;
-			
-			// aapt resource value: 0x7f0b004b
-			public const int my_gray = 2131427403;
-			
-			// aapt resource value: 0x7f0b0049
-			public const int my_green = 2131427401;
-			
-			// aapt resource value: 0x7f0b004a
-			public const int my_purple = 2131427402;
-			
 			// aapt resource value: 0x7f0b002c
 			public const int primary_dark_material_dark = 2131427372;
 			
@@ -1359,11 +1356,11 @@ namespace MyJobDiary.Droid
 			// aapt resource value: 0x7f0b003b
 			public const int switch_thumb_disabled_material_light = 2131427387;
 			
-			// aapt resource value: 0x7f0b0056
-			public const int switch_thumb_material_dark = 2131427414;
+			// aapt resource value: 0x7f0b0055
+			public const int switch_thumb_material_dark = 2131427413;
 			
-			// aapt resource value: 0x7f0b0057
-			public const int switch_thumb_material_light = 2131427415;
+			// aapt resource value: 0x7f0b0056
+			public const int switch_thumb_material_light = 2131427414;
 			
 			// aapt resource value: 0x7f0b003c
 			public const int switch_thumb_normal_material_dark = 2131427388;

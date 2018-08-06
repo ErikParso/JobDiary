@@ -12,7 +12,7 @@
     </ContentPage.Resources>
 
     <ListView x:Name="shiftList" Margin="5" HasUnevenRows="True" ItemsSource="{Binding ShiftItems}"
-              ItemSelected="shiftList_ItemSelected">
+              ItemSelected="shiftList_ItemSelected" SeparatorVisibility="None">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -22,7 +22,7 @@
                         <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
                     </ViewCell.ContextActions>
                     <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5">
-                        <usercontrol:ShiftListItem/>
+                        <usercontrol:ShiftListItem Margin="5"/>
                     </Frame>
                 </ViewCell>
             </DataTemplate>
