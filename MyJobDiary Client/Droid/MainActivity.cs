@@ -12,7 +12,7 @@ namespace MyJobDiary.Droid
 		Icon = "@drawable/icon",
 		MainLauncher = true,
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
-		Theme = "@android:style/Theme.Material")]
+		Theme = "@style/MyCustomTheme")]
 	public class MainActivity : FormsApplicationActivity
     {
 
