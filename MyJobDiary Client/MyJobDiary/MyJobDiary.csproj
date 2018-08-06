@@ -32,6 +32,7 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ShiftExtension.cs" />
     <Compile Include="ThemeDictionaries\BlackAndBlue.xaml.cs">
       <DependentUpon>BlackAndBlue.xaml</DependentUpon>
     </Compile>

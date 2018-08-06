@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
-				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-                xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries" 
+<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms"
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
                 xmlns:local="clr-namespace:MyJobDiary.View"
                 xmlns:usercontrol="clr-namespace:MyJobDiary.UserControl"
                 x:Class="MyJobDiary.View.ShiftListContentPage"
@@ -16,8 +16,9 @@
             <DataTemplate>
                 <ViewCell>
                     <ViewCell.ContextActions>
-                        <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
                         <MenuItem Clicked="OnEdit" CommandParameter="{Binding .}" Text="Uprav"/>
+                        <MenuItem Clicked="OnCopy" CommandParameter="{Binding .}" Text="Kopíruj"/>
+                        <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
                     </ViewCell.ContextActions>
                     <Grid BackgroundColor="{StaticResource AppBackground}" Padding="5">
                         <Frame BackgroundColor="{StaticResource FrameColor}">

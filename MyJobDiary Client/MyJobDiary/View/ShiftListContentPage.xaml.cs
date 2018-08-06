@@ -1,4 +1,5 @@
-﻿using MyJobDiary.Managers;
+﻿using MyJobDiary.Extensions;
+using MyJobDiary.Managers;
 using MyJobDiary.Model;
 using MyJobDiary.ViewModel;
 using System;
@@ -35,6 +36,18 @@ namespace MyJobDiary.View
             await _model.Manager.DeleteAsync(item);
             App.LoadingService.StopLoading();
             _model.Refresh();
+        }
+
+        private async void OnCopy(object sender, EventArgs e)
+        {
+            var menuItem = sender as MenuItem;
+            var item = menuItem.CommandParameter as Shift;
+            var copy = item.CopyCreate();
+            copy.TimeFrom = DateTime.Now.Date.Add(item.TimeFrom.TimeOfDay);
+            copy.TimeTo = DateTime.Now.Date.Add(item.TimeTo.TimeOfDay);
+            ShiftFormViewModel viewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, copy);
+            ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
+            await Navigation.PushAsync(shiftForm);
         }
 
         protected override void OnAppearing()
