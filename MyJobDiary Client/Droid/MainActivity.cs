@@ -12,10 +12,10 @@ namespace MyJobDiary.Droid
 		Icon = "@drawable/icon",
 		MainLauncher = true,
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
-		Theme = "@android:style/Theme.Holo.Light")]
+		Theme = "@android:style/Theme.Material")]
 	public class MainActivity : FormsApplicationActivity
-    {    
-        
+    {
+
         protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
