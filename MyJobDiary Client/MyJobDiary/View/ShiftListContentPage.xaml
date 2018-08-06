@@ -22,7 +22,7 @@
                         <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
                     </ViewCell.ContextActions>
                     <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5">
-                        <usercontrol:ShiftListItem Margin="5"/>
+                        <usercontrol:ShiftListItem/>
                     </Frame>
                 </ViewCell>
             </DataTemplate>
