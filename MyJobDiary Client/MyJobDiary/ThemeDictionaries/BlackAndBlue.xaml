@@ -20,7 +20,10 @@
     <x:String x:Key="moon_24">blue_moon_24.png</x:String>
     <x:String x:Key="sun_24">blue_sun_24.png</x:String>
 
-    <x:String x:Key="alert_20">red_alert_20.png</x:String> f10039
+    <x:String x:Key="left_24">blue_left_24.png</x:String>
+    <x:String x:Key="right_24">blue_right_24.png</x:String>
+
+    <x:String x:Key="alert_20">red_alert_20.png</x:String>
 
 
 </ResourceDictionary>

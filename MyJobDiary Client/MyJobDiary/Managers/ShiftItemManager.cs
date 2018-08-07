@@ -23,12 +23,11 @@ namespace MyJobDiary.Managers
             this.todoTable = CurrentClient.GetTable<Shift>();
         }
 
-        public async Task<ObservableCollection<Shift>> GetTodoItemsAsync(bool syncItems = false)
+        public async Task<IEnumerable<Shift>> GetTodoItemsAsync()
         {
             try
             {
-                IEnumerable<Shift> items = await todoTable.ToEnumerableAsync();
-                return new ObservableCollection<Shift>(items.OrderBy(s => s.TimeFrom));
+                return await todoTable.ToEnumerableAsync();
             }
             catch (MobileServiceInvalidOperationException msioe)
             {
@@ -56,7 +55,6 @@ namespace MyJobDiary.Managers
         public async Task DeleteAsync(Shift item)
         {
             await todoTable.DeleteAsync(item);
-            int deleted = 1;
         }
     }
 }

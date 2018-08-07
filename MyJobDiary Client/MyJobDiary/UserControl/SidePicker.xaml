@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
+             x:Class="MyJobDiary.UserControl.SidePicker">
+    <ContentView.Resources>
+        <theme:BlackAndBlue/>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button Image="{StaticResource left_24}" WidthRequest="40" HeightRequest="40" Grid.Column="0" Grid.Row="0"
+                    Command="{Binding LeftCommand}" HorizontalOptions="Center" VerticalOptions="Center"
+                    BackgroundColor="Transparent"/>
+            <Label Text="{Binding Value}" Grid.Column="1" Grid.Row="0" TextColor="{StaticResource SecondaryTextColor}" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Image="{StaticResource right_24}" WidthRequest="40" HeightRequest="40" Grid.Column="2" Grid.Row="0"
+                    Command="{Binding RightCommand}" HorizontalOptions="Center" VerticalOptions="Center"
+                    BackgroundColor="Transparent"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

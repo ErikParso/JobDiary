@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MyJobDiary.Managers;
+using MyJobDiary.Model;
+using System;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -34,6 +32,20 @@ namespace MyJobDiary.ViewModel
             catch (Exception e)
             {
                 App.DialogService.ShowDialog("Nepodarilo sa autentifikovať", e.Message);
+            }
+            App.LoadingService.StopLoading();
+        }
+
+        public async void SaveAsync(Shift model)
+        {
+            App.LoadingService.StartLoading("odosielam");
+            try
+            {
+                await ShiftItemManager.Current.Value.SaveTaskAsync(model);
+            }
+            catch (Exception e)
+            {
+                App.DialogService.ShowDialog("Nepodarilo sa odoslať", e.Message);
             }
             App.LoadingService.StopLoading();
         }

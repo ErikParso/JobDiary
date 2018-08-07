@@ -28,14 +28,11 @@ namespace MyJobDiary.View
             await Navigation.PushAsync(shiftForm);
         }
 
-        private async void OnDelete(object sender, EventArgs e)
+        private async void  OnDelete(object sender, EventArgs e)
         {
-            App.LoadingService.StartLoading("Mažem záznam");
             var menuItem = sender as MenuItem;
             var item = menuItem.CommandParameter as Shift;
-            await _model.Manager.DeleteAsync(item);
-            App.LoadingService.StopLoading();
-            _model.Refresh();
+            _model.Delete(item);
         }
 
         private async void OnCopy(object sender, EventArgs e)
@@ -48,13 +45,14 @@ namespace MyJobDiary.View
             ShiftFormViewModel viewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, copy);
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
             await Navigation.PushAsync(shiftForm);
+
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             NavigationPage.SetHasNavigationBar(this, false);
-            _model.Refresh();
+            _model.LoadItems();
         }
 
         private void shiftList_ItemSelected(object sender, SelectedItemChangedEventArgs e)

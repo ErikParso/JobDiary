@@ -11,22 +11,38 @@
         <theme:BlackAndBlue/>
     </ContentPage.Resources>
 
-    <ListView x:Name="shiftList" Margin="5" HasUnevenRows="True" ItemsSource="{Binding ShiftItems}"
-              ItemSelected="shiftList_ItemSelected" SeparatorVisibility="None">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <ViewCell.ContextActions>
-                        <MenuItem Clicked="OnEdit" CommandParameter="{Binding .}" Text="Uprav"/>
-                        <MenuItem Clicked="OnCopy" CommandParameter="{Binding .}" Text="Kopíruj"/>
-                        <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
-                    </ViewCell.ContextActions>
-                    <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5">
-                        <usercontrol:ShiftListItem/>
-                    </Frame>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="shiftList" Margin="5" HasUnevenRows="True" ItemsSource="{Binding ShiftItems}"
+              ItemSelected="shiftList_ItemSelected" SeparatorVisibility="None" Grid.Row="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="OnEdit" CommandParameter="{Binding .}" Text="Uprav"/>
+                            <MenuItem Clicked="OnCopy" CommandParameter="{Binding .}" Text="Kopíruj"/>
+                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
+                        </ViewCell.ContextActions>
+                        <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5">
+                            <usercontrol:ShiftListItem/>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Grid.Row="1" Margin="0" Spacing="0">
+            <BoxView HeightRequest="1" BackgroundColor="{StaticResource IconColor}" Margin="0"/>
+            <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource FrameColor}" Margin="0">
+                <usercontrol:SidePicker BindingContext="{Binding YearPicker}" HorizontalOptions="Center"/>
+                <usercontrol:SidePicker BindingContext="{Binding MonthPicker}" HorizontalOptions="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
 
 </ContentPage>

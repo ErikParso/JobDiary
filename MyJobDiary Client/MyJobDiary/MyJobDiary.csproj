@@ -42,7 +42,11 @@
     <Compile Include="UserControl\ShiftListItem.xaml.cs">
       <DependentUpon>ShiftListItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\SidePicker.xaml.cs">
+      <DependentUpon>SidePicker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\ShiftListViewModel.cs" />
+    <Compile Include="ViewModel\SidePickerViewModel.cs" />
     <Compile Include="View\InverseBooleanConverter.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -105,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UserControl\ShiftListItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UserControl\SidePicker.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
