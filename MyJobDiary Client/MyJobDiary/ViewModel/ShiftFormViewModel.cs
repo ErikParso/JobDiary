@@ -11,6 +11,7 @@ namespace MyJobDiary.ViewModel
         private Shift _shift;
         private ShiftItemManager _manager;
 
+
         #region Bindable
 
         public DateTime DateFrom
@@ -93,17 +94,10 @@ namespace MyJobDiary.ViewModel
             }
         }
 
-
         public ICommand SaveCommand { get; private set; }
 
-        private bool _isProcessing;
-        public bool IsProcessing
-        {
-            get => _isProcessing;
-            set => SetField(ref _isProcessing, value);
-        }
-
         #endregion
+
 
         public ShiftFormViewModel(ShiftItemManager manager, Shift shift)
         {
@@ -112,19 +106,28 @@ namespace MyJobDiary.ViewModel
             _shift = shift;
         }
 
+        public Action OnSucces { get; set; }
+
         private async void Save(object obj)
         {
+            bool result;
             App.LoadingService.StartLoading("odosielam");
             try
             {
                 await _manager.SaveTaskAsync(_shift);
+                result = true;
             }
             catch (Exception e)
             {
                 App.DialogService.ShowDialog("Nepodarilo sa odoslať", e.Message);
+                result = false;
             }
             App.LoadingService.StopLoading();
             await Application.Current.MainPage.Navigation.PopAsync();
+            if (result)
+            {
+                OnSucces?.Invoke();
+            }
         }
     }
 }

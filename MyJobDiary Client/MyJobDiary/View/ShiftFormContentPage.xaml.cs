@@ -11,8 +11,6 @@ namespace MyJobDiary.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ShiftFormContentPage : ContentPage
 	{
-
-
 		public ShiftFormContentPage(ShiftFormViewModel viewModel)
 		{
 			InitializeComponent ();

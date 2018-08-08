@@ -16,7 +16,8 @@ namespace MyJobDiary.ViewModel
         public IEnumerable<Shift> ShiftItems
         {
             get => _shiftItems.Where(i => i.TimeFrom.Year == YearPicker.Value &&
-                                          i.TimeFrom.Month == MonthPicker.Value);
+                                          i.TimeFrom.Month == MonthPicker.Value)
+                              .OrderBy(i => i.TimeFrom);
             set => SetField(ref _shiftItems, value.ToList());
         }
 
@@ -28,9 +29,18 @@ namespace MyJobDiary.ViewModel
             LoadItems();
         }
 
-        internal Action Save(Shift item)
+        public async void LoadItems()
         {
-            throw new NotImplementedException();
+            App.LoadingService.StartLoading("Aktualizujem zoznam");
+            try
+            {
+                ShiftItems = await _manager.GetTodoItemsAsync();
+            }
+            catch (Exception e)
+            {
+                App.DialogService.ShowDialog("Načítanie zlyhalo", e.Message);
+            }
+            App.LoadingService.StopLoading();
         }
 
 
@@ -59,7 +69,7 @@ namespace MyJobDiary.ViewModel
         private void YearLeft()
         {
             YearPicker.Value--;
-            RaisePropertyChanged("ShiftItems");
+            RefreshCollection();
         }
 
         private void MonthLeft()
@@ -72,15 +82,14 @@ namespace MyJobDiary.ViewModel
             else
             {
                 MonthPicker.Value--;
-                RaisePropertyChanged("ShiftItems");
             }
-
+            RefreshCollection();
         }
 
         private void YearRight()
         {
             YearPicker.Value++;
-            RaisePropertyChanged("ShiftItems");
+            RefreshCollection();
         }
 
         private void MonthRight()
@@ -93,28 +102,32 @@ namespace MyJobDiary.ViewModel
             else
             {
                 MonthPicker.Value++;
-                RaisePropertyChanged("ShiftItems");
             }
+            RefreshCollection();
         }
 
         #endregion
 
 
-        public async void LoadItems()
+        private void RefreshCollection()
         {
-            App.LoadingService.StartLoading("Aktualizujem zoznam");
-            try
-            {
-                ShiftItems = await _manager.GetTodoItemsAsync();
-            }
-            catch (Exception e)
-            {
-                App.DialogService.ShowDialog("Načítanie zlyhalo", e.Message);
-            }
-            App.LoadingService.StopLoading();
+            RaisePropertyChanged(nameof(ShiftItems));
         }
 
-        public async void Delete(Shift item)
+        public void ItemEdited(Shift original, Shift editCopy)
+        {
+            _shiftItems.Remove(original);
+            _shiftItems.Add(editCopy);
+            RefreshCollection();
+        }
+
+        internal void CopyCreated(Shift copy)
+        {
+            _shiftItems.Add(copy);
+            RefreshCollection();
+        }
+
+        public async void ItemDeleted(Shift item)
         {
             App.LoadingService.StartLoading("Mažem záznam");
             try
