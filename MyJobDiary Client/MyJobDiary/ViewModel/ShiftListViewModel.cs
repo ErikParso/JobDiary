@@ -12,19 +12,17 @@ namespace MyJobDiary.ViewModel
     {
         private readonly ShiftItemManager _manager;
 
-        private List<Shift> _shiftItems;
+        private List<Shift> _allItems;
         public IEnumerable<Shift> ShiftItems
         {
-            get => _shiftItems.Where(i => i.TimeFrom.Year == YearPicker.Value &&
-                                          i.TimeFrom.Month == MonthPicker.Value)
-                              .OrderBy(i => i.TimeFrom);
-            set => SetField(ref _shiftItems, value.ToList());
+            get => Filter(_allItems);
+            set => SetField(ref _allItems, value.ToList());
         }
 
         public ShiftListViewModel(ShiftItemManager manager)
         {
             _manager = manager;
-            _shiftItems = new List<Shift>();
+            _allItems = new List<Shift>();
             InitFilter();
             LoadItems();
         }
@@ -106,6 +104,10 @@ namespace MyJobDiary.ViewModel
             RefreshCollection();
         }
 
+        private IEnumerable<Shift> Filter(IEnumerable<Shift> allItems)
+            => allItems.Where(i => i.TimeFrom.Year == YearPicker.Value && i.TimeFrom.Month == MonthPicker.Value)
+                       .OrderBy(i => i.TimeFrom);
+
         #endregion
 
 
@@ -116,14 +118,14 @@ namespace MyJobDiary.ViewModel
 
         public void ItemEdited(Shift original, Shift editCopy)
         {
-            _shiftItems.Remove(original);
-            _shiftItems.Add(editCopy);
+            _allItems.Remove(original);
+            _allItems.Add(editCopy);
             RefreshCollection();
         }
 
         internal void CopyCreated(Shift copy)
         {
-            _shiftItems.Add(copy);
+            _allItems.Add(copy);
             RefreshCollection();
         }
 
@@ -133,8 +135,8 @@ namespace MyJobDiary.ViewModel
             try
             {
                 await _manager.DeleteAsync(item);
-                _shiftItems.Remove(item);
-                RaisePropertyChanged("ShiftItems");
+                _allItems.Remove(item);
+                RefreshCollection();
             }
             catch (Exception e)
             {
@@ -142,6 +144,7 @@ namespace MyJobDiary.ViewModel
             }
             App.LoadingService.StopLoading();
         }
+
     }
 
 }
