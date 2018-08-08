@@ -39,7 +39,7 @@ namespace MyJobDiary.ViewModel
             get => _shift.TimeFrom.TimeOfDay;
             set
             {
-                _shift.TimeFrom = _shift.TimeFrom.Date.Add(value);
+                _shift.TimeFrom = _shift.TimeFrom.Date.Add(TruncTime(value));
                 RaisePropertyChanged("TimeFrom");
             }
         }
@@ -49,7 +49,7 @@ namespace MyJobDiary.ViewModel
             get => _shift.TimeTo.TimeOfDay;
             set
             {
-                _shift.TimeTo = _shift.TimeTo.Date.Add(value);
+                _shift.TimeTo = _shift.TimeTo.Date.Add(TruncTime(value));
                 RaisePropertyChanged("TimeTo");
             }
         }
@@ -129,5 +129,8 @@ namespace MyJobDiary.ViewModel
                 OnSucces?.Invoke();
             }
         }
+
+        private TimeSpan TruncTime(TimeSpan timeSpan)
+            => TimeSpan.FromMinutes(Math.Round(timeSpan.TotalMinutes / 5) * 5);
     }
 }
