@@ -26,7 +26,7 @@ namespace MyJobDiary.ViewModel
 
         public DateTime DateTo
         {
-            get => _shift.TimeFrom;
+            get => _shift.TimeTo;
             set
             {
                 _shift.TimeTo = value.Date.Add(_shift.TimeTo.TimeOfDay);
