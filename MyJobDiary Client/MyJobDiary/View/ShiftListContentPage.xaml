@@ -2,7 +2,6 @@
 <ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms"
 				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
-                xmlns:local="clr-namespace:MyJobDiary.View"
                 xmlns:usercontrol="clr-namespace:MyJobDiary.UserControl"
                 x:Class="MyJobDiary.View.ShiftListContentPage"
 				Title="Azure Todo"

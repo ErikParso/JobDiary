@@ -27,6 +27,6 @@
     <x:String x:Key="alert_20">red_alert_20.png</x:String>
 
     <view:DayOfWeekValueConverter x:Key="dayOfWeekConverter"/>
-
+    <view:TimeWorkedConverter x:Key="timeWorkedConverter"/>
 
 </ResourceDictionary>

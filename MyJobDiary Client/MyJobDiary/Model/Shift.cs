@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace MyJobDiary.Model
 {
@@ -17,5 +18,8 @@ namespace MyJobDiary.Model
         public string Job { get; set; }
 
         public bool IsClosed { get; set; }
+
+        [JsonIgnore]
+        public TimeSpan TimeWorked { get => TimeTo - TimeFrom; }
     }
 }
