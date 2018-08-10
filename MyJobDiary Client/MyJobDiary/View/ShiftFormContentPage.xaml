@@ -16,7 +16,11 @@
                     <StackLayout>
                         <!--date from-->
                         <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_start_20}" Text="Začiatok práce"/>
-                        <DatePicker Date="{Binding DateFrom}" Format="dd.MM.yyyy" TextColor="White"/>
+                        <Grid>
+                            <DatePicker Date="{Binding DateFrom}" Format="dd.MM.yyyy" TextColor="White"/>
+                            <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
+                                Text="{Binding Path=DateFrom, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
+                        </Grid>
                         <TimePicker Time="{Binding TimeFrom}" Format="HH:mm" TextColor="White"/>
                     </StackLayout>
                 </Frame>
@@ -26,7 +30,11 @@
                         <!--date to-->
                         <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_end_20}" Text="Koniec práce"/>
                         <Switch IsToggled="{Binding IsClosed}" HorizontalOptions="Start"/>
-                        <DatePicker Date="{Binding DateTo}" IsVisible="{Binding IsClosed}" Format="dd.MM.yyyy" TextColor="White"/>
+                        <Grid IsVisible="{Binding IsClosed}">
+                            <DatePicker Date="{Binding DateTo}" Format="dd.MM.yyyy" TextColor="White"/>
+                            <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
+                                Text="{Binding Path=DateTo, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
+                        </Grid>
                         <TimePicker Time="{Binding TimeTo}" IsVisible="{Binding IsClosed}" Format="HH:mm" TextColor="White"/>
                     </StackLayout>
                 </Frame>

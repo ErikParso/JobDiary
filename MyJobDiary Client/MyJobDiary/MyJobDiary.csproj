@@ -47,6 +47,7 @@
     </Compile>
     <Compile Include="ViewModel\ShiftListViewModel.cs" />
     <Compile Include="ViewModel\SidePickerViewModel.cs" />
+    <Compile Include="View\DayOfWeekValueConverter.cs" />
     <Compile Include="View\InverseBooleanConverter.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
