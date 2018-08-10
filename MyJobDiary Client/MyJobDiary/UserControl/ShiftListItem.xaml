@@ -15,8 +15,10 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <!--date-->
-        <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}"
-               Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0">
+            <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}"/>
+            <Label TextColor="{StaticResource IconColor}" Text="{Binding Path=TimeFrom, Converter={StaticResource dayOfWeekConverter}}"/>
+        </StackLayout>
         <!--times-->
         <StackLayout Grid.Column="1" VerticalOptions="Center">
             <StackLayout Orientation="Horizontal">
