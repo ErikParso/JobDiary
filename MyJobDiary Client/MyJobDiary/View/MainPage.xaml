@@ -37,7 +37,7 @@
                     BackgroundColor="Black" BorderWidth="1" IsVisible="{Binding IsAuthenticated}" Clicked="ShiftList_Clicked"/>
             <Button Grid.ColumnSpan="2" Grid.Row="1" Image="google.png" HorizontalOptions="Center" VerticalOptions="End" Margin="5"
                     BackgroundColor="Black" Text="Login" TextColor="LightBlue" BorderWidth="1"
-                    Command="{Binding LoginCommand}">
+                    Command="{Binding LoginCommand}" IsEnabled="{Binding IsLoginAvailable}">
                 <Button.Triggers>
                     <DataTrigger TargetType="Button" Binding="{Binding IsAuthenticated}" Value="True">
                         <Setter Property="IsVisible" Value="False"/>

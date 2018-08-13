@@ -1,6 +1,4 @@
-﻿using MyJobDiary.Managers;
-using MyJobDiary.Model;
-using System;
+﻿using System;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -15,15 +13,24 @@ namespace MyJobDiary.ViewModel
             set => SetField(ref _isAutenthicated, value);
         }
 
+        private bool _isLoginAvailable;
+        public bool IsLoginAvailable
+        {
+            get => _isLoginAvailable;
+            set => SetField(ref _isLoginAvailable, value);
+        }
+
         public ICommand LoginCommand { get; private set; }
 
         public MainPageViewModel()
         {
             LoginCommand = new Command(Login);
+            IsLoginAvailable = true;
         }
 
         public async void Login()
         {
+            IsLoginAvailable = false;
             App.LoadingService.StartLoading("prebieha prihlasovanie");
             try
             {
@@ -34,6 +41,7 @@ namespace MyJobDiary.ViewModel
                 App.DialogService.ShowDialog("Nepodarilo sa autentifikovať", e.Message);
             }
             App.LoadingService.StopLoading();
+            IsLoginAvailable = true;
         }
     }
 }
