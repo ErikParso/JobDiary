@@ -35,19 +35,5 @@ namespace MyJobDiary.ViewModel
             }
             App.LoadingService.StopLoading();
         }
-
-        public async void SaveAsync(Shift model)
-        {
-            App.LoadingService.StartLoading("odosielam");
-            try
-            {
-                await ShiftItemManager.Current.Value.SaveTaskAsync(model);
-            }
-            catch (Exception e)
-            {
-                App.DialogService.ShowDialog("Nepodarilo sa odoslať", e.Message);
-            }
-            App.LoadingService.StopLoading();
-        }
     }
 }

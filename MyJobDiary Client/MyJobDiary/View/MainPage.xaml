@@ -32,13 +32,9 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Grid.Row="0" Image="calendar_add.png" HorizontalOptions="End" VerticalOptions="End" Margin="5"
-                    BackgroundColor="Black" BorderWidth="1"
-                    Style="{StaticResource buttonDisabling}"
-                    Clicked="ShiftForm_Clicked"/>
+                    BackgroundColor="Black" BorderWidth="1" IsVisible="{Binding IsAuthenticated}" Clicked="ShiftForm_Clicked"/>
             <Button Grid.Column="1" Grid.Row="0" Image="calendar.png" HorizontalOptions="Start" VerticalOptions="End" Margin="5"
-                    BackgroundColor="Black" BorderWidth="1"
-                    Style="{StaticResource buttonDisabling}"
-                    Clicked="ShiftList_Clicked"/>
+                    BackgroundColor="Black" BorderWidth="1" IsVisible="{Binding IsAuthenticated}" Clicked="ShiftList_Clicked"/>
             <Button Grid.ColumnSpan="2" Grid.Row="1" Image="google.png" HorizontalOptions="Center" VerticalOptions="End" Margin="5"
                     BackgroundColor="Black" Text="Login" TextColor="LightBlue" BorderWidth="1"
                     Command="{Binding LoginCommand}">
