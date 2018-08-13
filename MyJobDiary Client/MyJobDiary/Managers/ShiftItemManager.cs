@@ -25,19 +25,7 @@ namespace MyJobDiary.Managers
 
         public async Task<IEnumerable<Shift>> GetTodoItemsAsync()
         {
-            try
-            {
-                return await todoTable.ToEnumerableAsync();
-            }
-            catch (MobileServiceInvalidOperationException msioe)
-            {
-                Debug.WriteLine(@"Invalid sync operation: {0}", msioe.Message);
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine(@"Sync error: {0}", e.Message);
-            }
-            return null;
+            return await todoTable.ToEnumerableAsync();
         }
 
         public async Task SaveTaskAsync(Shift item)

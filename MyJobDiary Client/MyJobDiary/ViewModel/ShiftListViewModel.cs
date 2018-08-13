@@ -1,5 +1,4 @@
-﻿using MyJobDiary.Extensions;
-using MyJobDiary.Managers;
+﻿using MyJobDiary.Managers;
 using MyJobDiary.Model;
 using System;
 using System.Collections.Generic;
