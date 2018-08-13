@@ -44,6 +44,9 @@
                     </DataTrigger>
                 </Button.Triggers>
             </Button>
+            <Label Grid.ColumnSpan="2" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="End" Margin="5"
+                   Text="{Binding UserName}" TextColor="White" IsVisible="{Binding IsAuthenticated}">
+            </Label>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

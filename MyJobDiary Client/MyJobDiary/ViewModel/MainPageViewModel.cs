@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyJobDiary.Managers;
+using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -42,6 +44,7 @@ namespace MyJobDiary.ViewModel
             try
             {
                 IsAuthenticated = await App.LoginService.Authenticate();
+                UserName = await GetUserName();
             }
             catch (Exception e)
             {
@@ -49,6 +52,13 @@ namespace MyJobDiary.ViewModel
             }
             App.LoadingService.StopLoading();
             IsLoginAvailable = true;
+        }
+
+        private async Task<string> GetUserName()
+        {
+            var res = await ShiftItemManager.Current.Value.CurrentClient.InvokeApiAsync("/.auth/me");
+            var ret = res[0]["user_claims"][3]["val"];
+            return ret.ToString();
         }
     }
 }
