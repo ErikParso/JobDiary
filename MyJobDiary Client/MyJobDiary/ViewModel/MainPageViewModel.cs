@@ -20,6 +20,13 @@ namespace MyJobDiary.ViewModel
             set => SetField(ref _isLoginAvailable, value);
         }
 
+        private string _userName;
+        public string UserName
+        {
+            get => _userName;
+            set => SetField(ref _userName, value);
+        }
+
         public ICommand LoginCommand { get; private set; }
 
         public MainPageViewModel()

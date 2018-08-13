@@ -150,7 +150,6 @@
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
     <Compile Include="Controllers\ShiftController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataObjects\Shift.cs" />
     <Compile Include="Models\MyJobDiaryContext.cs" />
     <Compile Include="Startup.cs" />
