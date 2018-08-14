@@ -23,9 +23,9 @@
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.ContextActions>
-                            <MenuItem Clicked="OnEdit" CommandParameter="{Binding .}" Text="Uprav"/>
-                            <MenuItem Clicked="OnCopy" CommandParameter="{Binding .}" Text="Kopíruj"/>
-                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Zmaž"/>
+                            <MenuItem Clicked="OnEdit" CommandParameter="{Binding .}" Icon="{StaticResource edit_32}"/>
+                            <MenuItem Clicked="OnCopy" CommandParameter="{Binding .}" Icon="{StaticResource copy_32}"/>
+                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Icon="{StaticResource delete_32}"/>
                         </ViewCell.ContextActions>
                         <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5">
                             <usercontrol:ShiftListItem/>

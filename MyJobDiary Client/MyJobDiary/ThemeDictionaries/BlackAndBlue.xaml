@@ -26,6 +26,11 @@
 
     <x:String x:Key="alert_20">red_alert_20.png</x:String>
 
+    <x:String x:Key="ok_32">blue_ok_32.png</x:String>
+    <x:String x:Key="edit_32">blue_edit_32.png</x:String>
+    <x:String x:Key="delete_32">blue_delete_32.png</x:String>
+    <x:String x:Key="copy_32">blue_copy_32.png</x:String>
+
     <view:DayOfWeekValueConverter x:Key="dayOfWeekConverter"/>
     <view:TimeWorkedConverter x:Key="timeWorkedConverter"/>
     <view:InverseBooleanConverter x:Key="inverseBooleanConverter"/>

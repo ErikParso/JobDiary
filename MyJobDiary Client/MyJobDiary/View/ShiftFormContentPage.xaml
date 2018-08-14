@@ -63,7 +63,7 @@
                     </StackLayout>
                 </Frame>
 
-                <Button Image="plus.png" Command="{Binding SaveCommand}" BackgroundColor="Transparent" HorizontalOptions="End" Margin="5"/>
+                <Button Image="{StaticResource ok_32}" Command="{Binding SaveCommand}" BackgroundColor="Transparent" HorizontalOptions="End" Margin="5"/>
 
             </StackLayout>
         </ScrollView>
