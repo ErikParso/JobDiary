@@ -28,5 +28,6 @@
 
     <view:DayOfWeekValueConverter x:Key="dayOfWeekConverter"/>
     <view:TimeWorkedConverter x:Key="timeWorkedConverter"/>
+    <view:InverseBooleanConverter x:Key="inverseBooleanConverter"/>
 
 </ResourceDictionary>

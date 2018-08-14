@@ -17,12 +17,17 @@ namespace MyJobDiary.Droid.Services
             _mainActivity = mainActivity;
         }
 
-        public async Task<bool> Authenticate()
+        public async Task<bool> Login()
         {
-            // Sign in with Facebook login using a server-managed flow.
             User = await ShiftItemManager.Current.Value.CurrentClient.LoginAsync(_mainActivity,
                 MobileServiceAuthenticationProvider.Google, "myjobdiary");
             return (User != null);
+        }
+
+        public async Task Logout()
+        {
+            await ShiftItemManager.Current.Value.CurrentClient.LogoutAsync();
+            User = null;
         }
     }
 }

@@ -1,24 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
              x:Class="MyJobDiary.View.MainPage"
              BackgroundColor="Black">
 
     <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="buttonDisabling" TargetType="Button">
-                <Style.Triggers>
-                    <DataTrigger TargetType="Button" Binding="{Binding IsAuthenticated}" Value="True">
-                        <Setter Property="IsEnabled" Value="True"/>
-                        <Setter Property="Opacity" Value="1"/>
-                    </DataTrigger>
-                    <DataTrigger TargetType="Button" Binding="{Binding IsAuthenticated}" Value="False">
-                        <Setter Property="IsEnabled" Value="False"/>
-                        <Setter Property="Opacity" Value="0.5"/>
-                    </DataTrigger>
-                </Style.Triggers>
-            </Style>
-        </ResourceDictionary>
+        <theme:BlackAndBlue/>
     </ContentPage.Resources>
 
     <ContentPage.Content>
@@ -35,18 +23,19 @@
                     BackgroundColor="Black" BorderWidth="1" IsVisible="{Binding IsAuthenticated}" Clicked="ShiftForm_Clicked"/>
             <Button Grid.Column="1" Grid.Row="0" Image="calendar.png" HorizontalOptions="Start" VerticalOptions="End" Margin="5"
                     BackgroundColor="Black" BorderWidth="1" IsVisible="{Binding IsAuthenticated}" Clicked="ShiftList_Clicked"/>
-            <Button Grid.ColumnSpan="2" Grid.Row="1" Image="google.png" HorizontalOptions="Center" VerticalOptions="End" Margin="5"
-                    BackgroundColor="Black" Text="Login" TextColor="LightBlue" BorderWidth="1"
-                    Command="{Binding LoginCommand}" IsEnabled="{Binding IsLoginAvailable}">
-                <Button.Triggers>
-                    <DataTrigger TargetType="Button" Binding="{Binding IsAuthenticated}" Value="True">
-                        <Setter Property="IsVisible" Value="False"/>
-                    </DataTrigger>
-                </Button.Triggers>
-            </Button>
-            <Label Grid.ColumnSpan="2" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="End" Margin="5"
-                   Text="{Binding UserName}" TextColor="White" IsVisible="{Binding IsAuthenticated}">
-            </Label>
+            <Button Grid.ColumnSpan="2" Grid.Row="1" Image="google.png" HorizontalOptions="Center"
+                    VerticalOptions="End" Margin="5" BackgroundColor="Transparent" Text="Login"
+                    TextColor="{StaticResource PrimaryTextColor}"
+                    Command="{Binding LoginCommand}"
+                    IsEnabled="{Binding WorkInProgress, Converter={StaticResource inverseBooleanConverter}}"
+                    IsVisible="{Binding IsAuthenticated, Converter={StaticResource inverseBooleanConverter}}"/>
+            <StackLayout Grid.ColumnSpan="2" Grid.Row="1" VerticalOptions="End" IsVisible="{Binding IsAuthenticated}">
+                <Label TextColor="{StaticResource PrimaryTextColor}" Text="{Binding UserName}" Margin="5" HorizontalOptions="Center"/>
+                <Button Image="google.png"  Margin="5" BackgroundColor="Transparent" HorizontalOptions="Center" Text="Logout"
+                    TextColor="{StaticResource PrimaryTextColor}"
+                    Command="{Binding LogoutCommand}"
+                    IsEnabled="{Binding WorkInProgress, Converter={StaticResource inverseBooleanConverter}}"/>
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
