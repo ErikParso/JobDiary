@@ -7,7 +7,7 @@ namespace MyJobDiary.View
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            return Math.Round(((TimeSpan)value).TotalHours) + "H " + (((TimeSpan)value).Minutes) + "m";
+            return Math.Floor(((TimeSpan)value).TotalHours) + "H " + (((TimeSpan)value).Minutes) + "m";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
