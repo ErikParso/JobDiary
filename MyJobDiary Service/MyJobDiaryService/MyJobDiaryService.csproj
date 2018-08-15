@@ -149,8 +149,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
+    <Compile Include="Controllers\DietRecordController.cs" />
     <Compile Include="Controllers\ShiftController.cs" />
+    <Compile Include="DataObjects\DietRecord.cs" />
     <Compile Include="DataObjects\Shift.cs" />
+    <Compile Include="Migrations\201808151410057_initialMigration.cs" />
+    <Compile Include="Migrations\201808151410057_initialMigration.Designer.cs">
+      <DependentUpon>201808151410057_initialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808151433215_initDietRecordTable.cs" />
+    <Compile Include="Migrations\201808151433215_initDietRecordTable.Designer.cs">
+      <DependentUpon>201808151433215_initDietRecordTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyJobDiaryContext.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,6 +180,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\MyJobDiary - Web Deploy.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808151410057_initialMigration.resx">
+      <DependentUpon>201808151410057_initialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808151433215_initDietRecordTable.resx">
+      <DependentUpon>201808151433215_initDietRecordTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
