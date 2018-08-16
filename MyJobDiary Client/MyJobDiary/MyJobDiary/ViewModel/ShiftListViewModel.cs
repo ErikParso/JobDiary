@@ -7,16 +7,10 @@ using Xamarin.Forms;
 
 namespace MyJobDiary.ViewModel
 {
-    public class ShiftListViewModel: ObservableObject
+    public class ShiftListViewModel : ObservableObject
     {
         private readonly ShiftItemManager _manager;
-
         private List<Shift> _allItems;
-        public IEnumerable<Shift> ShiftItems
-        {
-            get => Filter(_allItems);
-            set => SetField(ref _allItems, value.ToList());
-        }
 
         public ShiftListViewModel(ShiftItemManager manager)
         {
@@ -25,7 +19,6 @@ namespace MyJobDiary.ViewModel
             InitFilter();
             LoadItems();
         }
-
         public async void LoadItems()
         {
             App.LoadingService.StartLoading("Aktualizujem zoznam");
@@ -38,6 +31,12 @@ namespace MyJobDiary.ViewModel
                 App.DialogService.ShowDialog("Načítanie zlyhalo", e.Message);
             }
             App.LoadingService.StopLoading();
+        }
+
+        public IEnumerable<Shift> ShiftItems
+        {
+            get => Filter(_allItems);
+            set => SetField(ref _allItems, value.ToList());
         }
 
 
@@ -110,10 +109,7 @@ namespace MyJobDiary.ViewModel
         #endregion
 
 
-        private void RefreshCollection()
-        {
-            RaisePropertyChanged(nameof(ShiftItems));
-        }
+        #region item manipulation
 
         public void ItemEdited(Shift original, Shift editCopy)
         {
@@ -143,6 +139,12 @@ namespace MyJobDiary.ViewModel
             }
             App.LoadingService.StopLoading();
         }
+
+        #endregion
+
+
+        private void RefreshCollection()
+            => RaisePropertyChanged(nameof(ShiftItems));
 
     }
 

@@ -14,7 +14,6 @@ namespace MyJobDiary.Droid
             base.OnCreate(savedInstanceState, persistentState);
         }
 
-        // Launches the startup task
         protected override void OnResume()
         {
             base.OnResume();

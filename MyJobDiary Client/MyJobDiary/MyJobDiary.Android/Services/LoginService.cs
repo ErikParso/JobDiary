@@ -1,5 +1,4 @@
 ﻿using Microsoft.WindowsAzure.MobileServices;
-using MyJobDiary.Managers;
 using MyJobDiary.Services;
 using System.Threading.Tasks;
 using Xamarin.Forms.Platform.Android;

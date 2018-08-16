@@ -1,6 +1,6 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using MyJobDiary.Services;
+using System;
 using Xamarin.Forms.Platform.Android;
 
 namespace MyJobDiary.Droid.Services

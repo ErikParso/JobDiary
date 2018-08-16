@@ -1,5 +1,4 @@
-﻿
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using MyJobDiary.Droid.Services;
@@ -14,12 +13,15 @@ namespace MyJobDiary.Droid
         {
             base.OnCreate(savedInstanceState);
             Forms.Init(this, savedInstanceState);
+            SetServices();
+            LoadApplication(new App());
+        }
 
+        private void SetServices()
+        {
             App.SetLoginService(new LoginService(this));
             App.SetLoadingService(new LoadingService(this));
             App.SetDialogService(new DialogService(this));
-
-            LoadApplication(new App());
         }
     }
 }

@@ -1,8 +1,4 @@
-﻿using MyJobDiary.Managers;
-using MyJobDiary.Model;
-using MyJobDiary.ViewModel;
-using System;
-
+﻿using MyJobDiary.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

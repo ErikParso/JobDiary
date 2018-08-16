@@ -19,25 +19,17 @@ namespace MyJobDiary.Managers
         }
 
         public async Task<IEnumerable<Shift>> GetTodoItemsAsync()
-        {
-            return await todoTable.ToEnumerableAsync();
-        }
+            => await todoTable.ToEnumerableAsync();
 
         public async Task SaveTaskAsync(Shift item)
         {
             if (item.Id == null)
-            {
                 await todoTable.InsertAsync(item);
-            }
             else
-            {
                 await todoTable.UpdateAsync(item);
-            }
         }
 
         public async Task DeleteAsync(Shift item)
-        {
-            await todoTable.DeleteAsync(item);
-        }
+            => await todoTable.DeleteAsync(item);
     }
 }

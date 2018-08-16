@@ -18,7 +18,6 @@ namespace MyJobDiary.View
             _viewModel = model;
         }
 
-
         private async void OnEdit(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
@@ -56,7 +55,6 @@ namespace MyJobDiary.View
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
             await Navigation.PushAsync(shiftForm);
         }
-
 
         protected override void OnAppearing()
         {

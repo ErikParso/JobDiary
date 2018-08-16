@@ -1,5 +1,4 @@
-﻿using MyJobDiary.Managers;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -8,19 +7,18 @@ namespace MyJobDiary.ViewModel
 {
     public class MainPageViewModel : ObservableObject
     {
-        private bool _workInProgress;
-        public bool WorkInProgress
-        {
-            get => _workInProgress;
-            set => SetField(ref _workInProgress, value);
-        }
-
         public MainPageViewModel()
         {
             LoginCommand = new Command(Login);
             LogoutCommand = new Command(Logout);
         }
 
+        private bool _workInProgress;
+        public bool WorkInProgress
+        {
+            get => _workInProgress;
+            set => SetField(ref _workInProgress, value);
+        }
 
         #region Login
 

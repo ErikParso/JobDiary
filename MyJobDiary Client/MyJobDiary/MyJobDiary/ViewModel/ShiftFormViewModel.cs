@@ -11,6 +11,13 @@ namespace MyJobDiary.ViewModel
         private Shift _shift;
         private ShiftItemManager _manager;
 
+        public ShiftFormViewModel(ShiftItemManager manager, Shift shift)
+        {
+            SaveCommand = new Command(Save);
+            _manager = manager;
+            _shift = shift;
+        }
+
 
         #region Bindable
 
@@ -99,13 +106,6 @@ namespace MyJobDiary.ViewModel
         #endregion
 
 
-        public ShiftFormViewModel(ShiftItemManager manager, Shift shift)
-        {
-            SaveCommand = new Command(Save);
-            _manager = manager;
-            _shift = shift;
-        }
-
         public Action OnSucces { get; set; }
 
         private async void Save(object obj)
@@ -130,7 +130,12 @@ namespace MyJobDiary.ViewModel
             }
         }
 
+
+        #region private helpers
+
         private TimeSpan TruncTime(TimeSpan timeSpan)
             => TimeSpan.FromMinutes(Math.Round(timeSpan.TotalMinutes / 5) * 5);
+
+        #endregion
     }
 }
