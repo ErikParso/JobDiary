@@ -16,3 +16,10 @@
 /MyJobDiary Service/packages
 /MyJobDiary Client/MyJobDiary/MyJobDiary.csproj.user
 /MyJobDiary Client/Droid/MyJobDiary.Droid.csproj.user
+/MyJobDiary Client/MyJobDiary/MyJobDiary/bin/Debug/netstandard2.0
+/MyJobDiary Client/MyJobDiary/MyJobDiary/obj
+/MyJobDiary Client/MyJobDiary/MyJobDiary.Android/bin/Debug
+/MyJobDiary Client/MyJobDiary/MyJobDiary.Android/obj/.cache/com.companyname.flag
+/MyJobDiary Client/MyJobDiary/MyJobDiary.Android/obj/Debug/MonoAndroid81
+/MyJobDiary Client/MyJobDiary/MyJobDiary.Android/obj
+/MyJobDiary Client/MyJobDiary/MyJobDiary.Android/MyJobDiary.Android.csproj.user
