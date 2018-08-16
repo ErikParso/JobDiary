@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
 using MyJobDiary.Model;
@@ -11,16 +8,14 @@ namespace MyJobDiary.Managers
 {
     public partial class ShiftItemManager
     {
-        public static Lazy<ShiftItemManager> Current = new Lazy<ShiftItemManager>(() => new ShiftItemManager());
+        public static Lazy<ShiftItemManager> Current =
+            new Lazy<ShiftItemManager>(() => new ShiftItemManager());
 
         private IMobileServiceTable<Shift> todoTable;
 
-        public MobileServiceClient CurrentClient { get; private set; }
-
         private ShiftItemManager()
         {
-            this.CurrentClient = new MobileServiceClient(Constants.ApplicationURL);
-            this.todoTable = CurrentClient.GetTable<Shift>();
+            todoTable = MyClient.Current.Value.GetTable<Shift>();
         }
 
         public async Task<IEnumerable<Shift>> GetTodoItemsAsync()

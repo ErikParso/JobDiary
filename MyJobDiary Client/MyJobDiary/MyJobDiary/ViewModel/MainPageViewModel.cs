@@ -77,7 +77,7 @@ namespace MyJobDiary.ViewModel
 
         private async Task<string> GetUserName()
         {
-            var res = await ShiftItemManager.Current.Value.CurrentClient.InvokeApiAsync("/.auth/me");
+            var res = await MyClient.Current.Value.InvokeApiAsync("/.auth/me");
             var ret = res[0]["user_claims"][3]["val"];
             return ret.ToString();
         }

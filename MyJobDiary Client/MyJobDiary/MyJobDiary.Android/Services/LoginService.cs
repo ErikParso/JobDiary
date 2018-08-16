@@ -19,14 +19,14 @@ namespace MyJobDiary.Droid.Services
 
         public async Task<bool> Login()
         {
-            User = await ShiftItemManager.Current.Value.CurrentClient.LoginAsync(_mainActivity,
+            User = await MyClient.Current.Value.LoginAsync(_mainActivity,
                 MobileServiceAuthenticationProvider.Google, "myjobdiary");
             return (User != null);
         }
 
         public async Task Logout()
         {
-            await ShiftItemManager.Current.Value.CurrentClient.LogoutAsync();
+            await MyClient.Current.Value.LogoutAsync();
             User = null;
         }
     }
