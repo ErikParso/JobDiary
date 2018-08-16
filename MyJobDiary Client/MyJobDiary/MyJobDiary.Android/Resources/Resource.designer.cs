@@ -3364,14 +3364,14 @@ namespace MyJobDiary.Droid
 			// aapt resource value: 0x7f090061
 			public const int list_item = 2131296353;
 			
-			// aapt resource value: 0x7f0900cb
-			public const int masked = 2131296459;
+			// aapt resource value: 0x7f0900c9
+			public const int masked = 2131296457;
 			
 			// aapt resource value: 0x7f0900ba
 			public const int media_actions = 2131296442;
 			
-			// aapt resource value: 0x7f0900c9
-			public const int message = 2131296457;
+			// aapt resource value: 0x7f0900c7
+			public const int message = 2131296455;
 			
 			// aapt resource value: 0x7f090031
 			public const int middle = 2131296305;
@@ -3580,9 +3580,6 @@ namespace MyJobDiary.Droid
 			// aapt resource value: 0x7f090025
 			public const int showTitle = 2131296293;
 			
-			// aapt resource value: 0x7f0900c7
-			public const int sliding_tabs = 2131296455;
-			
 			// aapt resource value: 0x7f09008c
 			public const int smallLabel = 2131296396;
 			
@@ -3661,9 +3658,6 @@ namespace MyJobDiary.Droid
 			// aapt resource value: 0x7f09006f
 			public const int title_template = 2131296367;
 			
-			// aapt resource value: 0x7f0900c8
-			public const int toolbar = 2131296456;
-			
 			// aapt resource value: 0x7f09003e
 			public const int top = 2131296318;
 			
@@ -3700,8 +3694,8 @@ namespace MyJobDiary.Droid
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f0900ca
-			public const int visible = 2131296458;
+			// aapt resource value: 0x7f0900c8
+			public const int visible = 2131296456;
 			
 			// aapt resource value: 0x7f0900ac
 			public const int volume_item_container = 2131296428;
@@ -3998,13 +3992,7 @@ namespace MyJobDiary.Droid
 			public const int support_simple_spinner_dropdown_item = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int Tabbar = 2130968642;
-			
-			// aapt resource value: 0x7f040043
-			public const int Toolbar = 2130968643;
-			
-			// aapt resource value: 0x7f040044
-			public const int tooltip = 2130968644;
+			public const int tooltip = 2130968642;
 			
 			static Layout()
 			{
@@ -4261,8 +4249,8 @@ namespace MyJobDiary.Droid
 			// aapt resource value: 0x7f0c016e
 			public const int Animation_Design_BottomSheetDialog = 2131493230;
 			
-			// aapt resource value: 0x7f0c0191
-			public const int AppCompatDialogStyle = 2131493265;
+			// aapt resource value: 0x7f0c018f
+			public const int AppTheme = 2131493263;
 			
 			// aapt resource value: 0x7f0c00a9
 			public const int Base_AlertDialog_AppCompat = 2131493033;
@@ -4764,12 +4752,6 @@ namespace MyJobDiary.Droid
 			
 			// aapt resource value: 0x7f0c000e
 			public const int CardView_Light = 2131492878;
-			
-			// aapt resource value: 0x7f0c018f
-			public const int MainTheme = 2131493263;
-			
-			// aapt resource value: 0x7f0c0190
-			public const int MainTheme_Base = 2131493264;
 			
 			// aapt resource value: 0x7f0c002d
 			public const int Platform_AppCompat = 2131492909;
