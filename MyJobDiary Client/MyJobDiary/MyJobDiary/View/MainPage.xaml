@@ -11,6 +11,7 @@
 
     <ContentPage.Content>
         <Grid>
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -19,6 +20,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            <Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="orange.png" HorizontalOptions="Center" VerticalOptions="Center"
+                   IsVisible="{Binding IsAuthenticated, Converter={StaticResource inverseBooleanConverter}}"/>
             <Button Grid.Column="0" Grid.Row="0" Image="calendar_add.png" HorizontalOptions="End" VerticalOptions="End" Margin="5"
                     BackgroundColor="Black" BorderWidth="1" IsVisible="{Binding IsAuthenticated}" Clicked="ShiftForm_Clicked"/>
             <Button Grid.Column="1" Grid.Row="0" Image="calendar.png" HorizontalOptions="Start" VerticalOptions="End" Margin="5"
