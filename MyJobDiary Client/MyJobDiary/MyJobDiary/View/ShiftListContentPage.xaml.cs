@@ -64,10 +64,6 @@ namespace MyJobDiary.View
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private void ViewCell_Tapped(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
