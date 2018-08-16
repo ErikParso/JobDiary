@@ -17,11 +17,10 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <ListView x:Name="shiftList" Margin="5" HasUnevenRows="True" ItemsSource="{Binding ShiftItems}"
-              ItemSelected="shiftList_ItemSelected" SeparatorVisibility="None" Grid.Row="0">
+        <ListView x:Name="shiftList" Margin="5" HasUnevenRows="True" ItemsSource="{Binding ShiftItems}" SeparatorVisibility="None" Grid.Row="0">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
+                    <ViewCell Tapped="ViewCell_Tapped">
                         <ViewCell.ContextActions>
                             <MenuItem Clicked="OnEdit" CommandParameter="{Binding .}" Icon="{StaticResource edit_32}"/>
                             <MenuItem Clicked="OnCopy" CommandParameter="{Binding .}" Icon="{StaticResource copy_32}"/>

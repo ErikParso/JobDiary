@@ -7,8 +7,15 @@
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
 
+    <item name="android:colorPressedHighlight">@android:color/transparent</item>
+    <item name="android:colorLongPressedHighlight">@android:color/transparent</item>
+    <item name="android:colorFocusedHighlight">@android:color/transparent</item>
+    <item name="android:colorActivatedHighlight">@android:color/transparent</item>
+    <item name="android:activatedBackgroundIndicator">@android:color/transparent</item>
+
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
+
 
   </style>
 
