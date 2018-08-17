@@ -31,13 +31,16 @@
                     TextColor="{StaticResource PrimaryTextColor}"
                     Command="{Binding LoginCommand}"
                     IsEnabled="{Binding WorkInProgress, Converter={StaticResource inverseBooleanConverter}}"
-                    IsVisible="{Binding IsAuthenticated, Converter={StaticResource inverseBooleanConverter}}"/>
-            <StackLayout Grid.ColumnSpan="2" Grid.Row="1" VerticalOptions="End" IsVisible="{Binding IsAuthenticated}">
-                <Label TextColor="{StaticResource PrimaryTextColor}" Text="{Binding UserName}" Margin="5" HorizontalOptions="Center"/>
-                <Button Image="google.png"  Margin="5" BackgroundColor="Transparent" HorizontalOptions="Center" Text="Logout"
-                    TextColor="{StaticResource PrimaryTextColor}"
-                    Command="{Binding LogoutCommand}"
-                    IsEnabled="{Binding WorkInProgress, Converter={StaticResource inverseBooleanConverter}}"/>
+                    IsVisible="{Binding IsAuthenticated, Converter={StaticResource inverseBooleanConverter}}">
+            </Button>
+            <StackLayout Grid.ColumnSpan="2" Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center" Spacing="0"
+                         IsVisible="{Binding IsAuthenticated}" Orientation="Horizontal" Margin="5">
+                <Image Source="{Binding Photo}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Button BackgroundColor="Transparent" VerticalOptions="Center" Text="Logout"
+                        TextColor="{StaticResource PrimaryTextColor}"
+                        Command="{Binding LogoutCommand}"
+                        IsEnabled="{Binding WorkInProgress, Converter={StaticResource inverseBooleanConverter}}">
+                </Button>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyJobDiary.Model;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -36,6 +38,13 @@ namespace MyJobDiary.ViewModel
             set => SetField(ref _userName, value);
         }
 
+        private ImageSource _photo;
+        public ImageSource Photo
+        {
+            get => _photo;
+            set => SetField(ref _photo, value);
+        }
+
         public ICommand LoginCommand { get; private set; }
         public ICommand LogoutCommand { get; private set; }
 
@@ -46,7 +55,7 @@ namespace MyJobDiary.ViewModel
             try
             {
                 IsAuthenticated = await App.LoginService.Login();
-                UserName = await GetUserName();
+                await SetUserInfo();
             }
             catch (Exception e)
             {
@@ -73,11 +82,11 @@ namespace MyJobDiary.ViewModel
             WorkInProgress = false;
         }
 
-        private async Task<string> GetUserName()
+        private async Task SetUserInfo()
         {
-            var res = await MyClient.Current.Value.InvokeApiAsync("/.auth/me");
-            var ret = res[0]["user_claims"][3]["val"];
-            return ret.ToString();
+            var res = await MyClient.Current.Value.InvokeApiAsync<List<AppServiceIdentity>>("/.auth/me");
+            UserName = res[0].UserClaims[3].Value;
+            Photo = ImageSource.FromUri(new Uri(res[0].UserClaims[10].Value));
         }
 
         #endregion
