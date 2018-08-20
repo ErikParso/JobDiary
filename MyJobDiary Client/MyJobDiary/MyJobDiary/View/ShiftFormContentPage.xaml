@@ -20,7 +20,7 @@
                     </Grid.ColumnDefinitions>
                     <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="0">
                         <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource DietLabelColor}" Icon="{StaticResource food_20}" Text="stravné"/>
+                            <contentview:LinePictureLabel Color="{StaticResource IconColor}" Icon="{StaticResource food_20}" Text="stravné"/>
                             <Switch IsToggled="{Binding WithDiets}" HorizontalOptions="Start"/>
                         </StackLayout>
                     </Frame>
@@ -40,10 +40,10 @@
                     </Grid.ColumnDefinitions>
                     <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="0" IsVisible="{Binding WithDiets}">
                         <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource DietLabelColor}" Text="Odchod" Icon="{StaticResource bed_20}"/>
+                            <contentview:LinePictureLabel Color="{StaticResource IconColor}" Text="Odchod" Icon="{StaticResource bed_20}"/>
                             <Grid>
                                 <DatePicker Date="{Binding DepartureDate}" Format="dd.MM.yyyy" TextColor="White" FontSize="Micro"/>
-                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource DietLabelColor}"
+                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
                                 Text="{Binding Path=DepartureDate, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
                             </Grid>
                             <TimePicker Time="{Binding DepartureTime}" Format="HH:mm" TextColor="White"/>
@@ -92,10 +92,10 @@
                     </Frame>
                     <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="1" IsVisible="{Binding WithDiets}">
                         <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource DietLabelColor}" Text="Príchod" Icon="{StaticResource bed_20}"/>
+                            <contentview:LinePictureLabel Color="{StaticResource IconColor}" Text="Príchod" Icon="{StaticResource bed_20}"/>
                             <Grid>
                                 <DatePicker Date="{Binding ArrivalDate}" Format="dd.MM.yyyy" TextColor="White" FontSize="Micro"/>
-                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource DietLabelColor}"
+                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
                                 Text="{Binding Path=ArrivalDate, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
                             </Grid>
                             <TimePicker Time="{Binding ArrivalTime}" Format="HH:mm" TextColor="White"/>
@@ -112,7 +112,7 @@
                     </Grid.ColumnDefinitions>
                     <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" IsVisible="{Binding WithDiets}" Grid.Column="0">
                         <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource DietLabelColor}" Icon="{StaticResource home_20}" Text="Odchod"/>
+                            <contentview:LinePictureLabel Color="{StaticResource IconColor}" Icon="{StaticResource home_20}" Text="Odchod"/>
                             <Entry Text="{Binding DepartureLocation}" TextColor="White" FontSize="Micro"/>
                         </StackLayout>
                     </Frame>
@@ -130,7 +130,7 @@
                     </Frame>
                     <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" IsVisible="{Binding WithDiets}" Grid.Column="2">
                         <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource DietLabelColor}" Icon="{StaticResource home_20}" Text="Príchod"/>
+                            <contentview:LinePictureLabel Color="{StaticResource IconColor}" Icon="{StaticResource home_20}" Text="Príchod"/>
                             <Entry Text="{Binding ArrivalLocation}" TextColor="White" FontSize="Micro"/>
                         </StackLayout>
                     </Frame>

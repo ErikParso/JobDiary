@@ -29,7 +29,6 @@
                         <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5">
                             <Grid>
                                 <usercontrol:ShiftListItem/>
-                                <!--<usercontrol:DietsItem/>-->
                             </Grid>
                         </Frame>
                     </ViewCell>
