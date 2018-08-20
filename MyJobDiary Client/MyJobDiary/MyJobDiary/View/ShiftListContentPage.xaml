@@ -27,7 +27,10 @@
                             <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Icon="{StaticResource delete_32}"/>
                         </ViewCell.ContextActions>
                         <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5">
-                            <usercontrol:ShiftListItem/>
+                            <Grid>
+                                <usercontrol:ShiftListItem/>
+                                <!--<usercontrol:DietsItem/>-->
+                            </Grid>
                         </Frame>
                     </ViewCell>
                 </DataTemplate>

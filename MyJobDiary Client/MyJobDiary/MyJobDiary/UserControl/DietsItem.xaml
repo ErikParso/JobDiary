@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime"
+             x:Class="MyJobDiary.UserControl.DietsItem">
+    <ContentView.Resources>
+        <theme:BlackAndBlue/>
+    </ContentView.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+        <!--date-->
+        <StackLayout HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" Margin="5,0,5,0">
+            <Label TextColor="{StaticResource IconColor}" HorizontalOptions="Center"
+                   Text="{Binding Path=TimeFrom, Converter={StaticResource dayOfWeekConverter}}">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label" Binding="{Binding TimeFrom.DayOfWeek}" Value="{x:Static system:DayOfWeek.Sunday}">
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Label" Binding="{Binding TimeFrom.DayOfWeek}" Value="{x:Static system:DayOfWeek.Saturday}">
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+            <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}"/>
+        </StackLayout>
+        <!--times-->
+        <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="5,0,5,0">
+            <StackLayout Orientation="Horizontal">
+                <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource clock_start_20}"/>
+                <Label Text="{Binding DepartureTime, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="-" TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="{Binding TimeFrom, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource clock_end_20}"/>
+                <Label Text="{Binding TimeTo, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding IsClosed}"/>
+                <Label Text="-" TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="{Binding ArrivalTime, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource SecondaryTextColor}" IsVisible="{Binding IsClosed}"/>
+            </StackLayout>
+        </StackLayout>
+        <!--location-->
+        <StackLayout Grid.Column="2" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,5,0">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding DepartureLocation}" TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="-" TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="{Binding Location}" TextColor="{StaticResource PrimaryTextColor}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Location}" TextColor="{StaticResource PrimaryTextColor}"/>
+                <Label Text="-" TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="{Binding ArrivalLocation}" TextColor="{StaticResource SecondaryTextColor}"/>
+            </StackLayout>
+        </StackLayout>
+        <!--night shift-->
+        <StackLayout Grid.Column="3" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="{StaticResource sun_24}" HorizontalOptions="Center">
+                <Image.Triggers>
+                    <DataTrigger TargetType="Image" Binding="{Binding IsNightShift}" Value="True">
+                        <Setter Property="Source" Value="{StaticResource moon_24}"/>
+                    </DataTrigger>
+                </Image.Triggers>
+            </Image>
+            <Label TextColor="{StaticResource IconColor}" Text="{Binding TimeWorked, Converter={StaticResource timeWorkedConverter}}"
+                   HorizontalOptions="Center" IsVisible="{Binding IsClosed}" FontSize="Micro"/>
+        </StackLayout>
+
+        <!--job description-->
+        <StackLayout Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1">
+            <BoxView BackgroundColor="{StaticResource IconColor}" HeightRequest="0.5" HorizontalOptions="Fill"/>
+            <Label Text="{Binding Job}" TextColor="{StaticResource SecondaryTextColor}" HorizontalOptions="Start" Margin="5,0,5,0"/>
+        </StackLayout>
+    </Grid>
+</ContentView>
