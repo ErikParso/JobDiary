@@ -12,50 +12,141 @@
         <ScrollView>
             <StackLayout Spacing="0">
 
-                <Frame Margin="10" BackgroundColor="{StaticResource FrameColor}">
-                    <StackLayout>
-                        <!--date from-->
-                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_start_20}" Text="Začiatok práce"/>
-                        <Grid>
-                            <DatePicker Date="{Binding DateFrom}" Format="dd.MM.yyyy" TextColor="White"/>
-                            <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
+                <!--link with vouchers / is finished-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="0">
+                        <StackLayout>
+                            <contentview:LinePictureLabel Color="{StaticResource DietLabelColor}" Icon="{StaticResource food_20}" Text="stravné"/>
+                            <Switch IsToggled="{Binding WithDiets}" HorizontalOptions="Start"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="1">
+                        <StackLayout>
+                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_end_20}" Text="Ukončená"/>
+                            <Switch IsToggled="{Binding IsClosed}" HorizontalOptions="Start"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+
+                <!--work start times-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="0" IsVisible="{Binding WithDiets}">
+                        <StackLayout>
+                            <!--date from-->
+                            <contentview:LinePictureLabel Color="{StaticResource DietLabelColor}" Text="Odchod" Icon="{StaticResource bed_20}"/>
+                            <Grid>
+                                <DatePicker Date="{Binding DepartureDate}" Format="dd.MM.yyyy" TextColor="White"/>
+                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource DietLabelColor}"
+                                Text="{Binding Path=DepartureDate, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
+                            </Grid>
+                            <TimePicker Time="{Binding DepartureTime}" Format="HH:mm" TextColor="White"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="1">
+                        <Frame.Triggers>
+                            <DataTrigger TargetType="Frame" Binding="{Binding WithDiets}" Value="False">
+                                <Setter Property="Grid.Column" Value="0"/>
+                                <Setter Property="Grid.ColumnSpan" Value="2"/>
+                            </DataTrigger>
+                        </Frame.Triggers>
+                        <StackLayout>
+                            <!--date from-->
+                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_start_20}" Text="Začiatok"/>
+                            <Grid>
+                                <DatePicker Date="{Binding DateFrom}" Format="dd.MM.yyyy" TextColor="White"/>
+                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
                                 Text="{Binding Path=DateFrom, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
-                        </Grid>
-                        <TimePicker Time="{Binding TimeFrom}" Format="HH:mm" TextColor="White"/>
-                    </StackLayout>
-                </Frame>
+                            </Grid>
+                            <TimePicker Time="{Binding TimeFrom}" Format="HH:mm" TextColor="White"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
 
-                <Frame Margin="10" BackgroundColor="{StaticResource FrameColor}">
-                    <StackLayout>
-                        <!--date to-->
-                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_end_20}" Text="Koniec práce"/>
-                        <Switch IsToggled="{Binding IsClosed}" HorizontalOptions="Start"/>
-                        <Grid IsVisible="{Binding IsClosed}">
-                            <DatePicker Date="{Binding DateTo}" Format="dd.MM.yyyy" TextColor="White"/>
-                            <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
+                <!--work end times-->
+                <Grid IsVisible="{Binding IsClosed}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="0">
+                        <Frame.Triggers>
+                            <DataTrigger TargetType="Frame" Binding="{Binding WithDiets}" Value="False">
+                                <Setter Property="Grid.ColumnSpan" Value="2"/>
+                            </DataTrigger>
+                        </Frame.Triggers>
+                        <StackLayout>
+                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_end_20}" Text="Koniec"/>
+                            <Grid>
+                                <DatePicker Date="{Binding DateTo}" Format="dd.MM.yyyy" TextColor="White"/>
+                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
                                 Text="{Binding Path=DateTo, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
-                        </Grid>
-                        <TimePicker Time="{Binding TimeTo}" IsVisible="{Binding IsClosed}" Format="HH:mm" TextColor="White"/>
-                    </StackLayout>
-                </Frame>
+                            </Grid>
+                            <TimePicker Time="{Binding TimeTo}" Format="HH:mm" TextColor="White"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="1" IsVisible="{Binding WithDiets}">
+                        <StackLayout>
+                            <contentview:LinePictureLabel Color="{StaticResource DietLabelColor}" Text="Príchod" Icon="{StaticResource bed_20}"/>
+                            <Grid>
+                                <DatePicker Date="{Binding ArrivalDate}" Format="dd.MM.yyyy" TextColor="White"/>
+                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource DietLabelColor}"
+                                Text="{Binding Path=ArrivalDate, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
+                            </Grid>
+                            <TimePicker Time="{Binding ArrivalTime}" Format="HH:mm" TextColor="White"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
 
-                <Frame Margin="10" BackgroundColor="{StaticResource FrameColor}">
-                    <StackLayout>
-                        <!--location-->
-                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource city_20}" Text="Miesto práce"/>
-                        <Entry Text="{Binding Location}" TextColor="White"/>
-                    </StackLayout>
-                </Frame>
+                <!--locations-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" IsVisible="{Binding WithDiets}" Grid.Column="0">
+                        <StackLayout>
+                            <contentview:LinePictureLabel Color="{StaticResource DietLabelColor}" Icon="{StaticResource home_20}" Text="Odchod"/>
+                            <Entry Text="{Binding DepartureLocation}" TextColor="White"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="1">
+                        <Frame.Triggers>
+                            <DataTrigger TargetType="Frame" Binding="{Binding WithDiets}" Value="False">
+                                <Setter Property="Grid.ColumnSpan" Value="3"/>
+                                <Setter Property="Grid.Column" Value="0"/>
+                            </DataTrigger>
+                        </Frame.Triggers>
+                        <StackLayout>
+                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource city_20}" Text="Práca v"/>
+                            <Entry Text="{Binding Location}" TextColor="White"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" IsVisible="{Binding WithDiets}" Grid.Column="2">
+                        <StackLayout>
+                            <contentview:LinePictureLabel Color="{StaticResource DietLabelColor}" Icon="{StaticResource home_20}" Text="Príchod"/>
+                            <Entry Text="{Binding ArrivalLocation}" TextColor="White"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
 
-                <Frame Margin="10" BackgroundColor="{StaticResource FrameColor}">
+                <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}">
                     <StackLayout>
                         <!--description-->
                         <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource work_20}" Text="Popis práce"/>
-                        <Editor Text="{Binding Job}" TextColor="White" HeightRequest="100"/>
+                        <Entry Text="{Binding Job}" TextColor="White"/>
                     </StackLayout>
                 </Frame>
 
-                <Frame Margin="10" BackgroundColor="{StaticResource FrameColor}">
+                <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}">
                     <StackLayout>
                         <!--is night shift-->
                         <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource moon_20}" Text="Nočná šichta"/>

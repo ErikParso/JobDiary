@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyJobDiary.UserControl.LinePictureLabel">
   <ContentView.Content>
@@ -12,7 +12,7 @@
             </Grid.ColumnDefinitions>
             <BoxView HeightRequest="0.5" VerticalOptions="Center" HorizontalOptions="Fill" Grid.Column="0" Color="{Binding Color}"/>
             <Image Source="{Binding Icon}" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Label Text="{Binding Text}" TextColor="{Binding Color}" Grid.Column="2" VerticalOptions="Center"/>
+            <Label Text="{Binding Text}" TextColor="{Binding Color}" Grid.Column="2" VerticalOptions="Center" FontSize="Micro"/>
             <BoxView HeightRequest="0.5" VerticalOptions="Center" HorizontalOptions="Fill" Grid.Column="3" Color="{Binding Color}"/>
         </Grid>
     </ContentView.Content>

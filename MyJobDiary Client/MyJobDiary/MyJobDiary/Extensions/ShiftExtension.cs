@@ -14,7 +14,12 @@ namespace MyJobDiary.Extensions
                 Job = original.Job,
                 Location = original.Location,
                 TimeFrom = original.TimeFrom,
-                TimeTo = original.TimeTo
+                TimeTo = original.TimeTo,
+                ArrivalLocation = original.ArrivalLocation,
+                ArrivalTime = original.ArrivalTime,
+                DepartureLocation = original.DepartureLocation,
+                DepartureTime = original.DepartureTime,
+                WithDiets = original.WithDiets
             };
         }
     }

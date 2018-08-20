@@ -18,5 +18,15 @@ namespace MyJobDiaryService.DataObjects
         public string Job { get; set; }
 
         public bool IsClosed { get; set; }
+
+        public bool WithDiets { get; set; }
+
+        public DateTime DepartureTime { get; set; }
+
+        public DateTime ArrivalTime { get; set; }
+
+        public string ArrivalLocation { get; set; }
+
+        public string DepartureLocation { get; set; }
     }
 }

@@ -27,8 +27,10 @@ namespace MyJobDiary.View
         {
             var shiftFormViewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, new Shift
             {
+                DepartureTime = DateTime.Now,
                 TimeFrom = DateTime.Now,
                 TimeTo = DateTime.Now.AddHours(8),
+                ArrivalTime = DateTime.Now.AddHours(8),
                 IsNightShift = DateTime.Now.Hour < 24 && DateTime.Now.Hour > 18
             });
             await Navigation.PushAsync(new ShiftFormContentPage(shiftFormViewModel));

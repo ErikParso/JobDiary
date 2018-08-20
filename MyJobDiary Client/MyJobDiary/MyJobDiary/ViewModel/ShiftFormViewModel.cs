@@ -41,6 +41,26 @@ namespace MyJobDiary.ViewModel
             }
         }
 
+        public DateTime DepartureDate
+        {
+            get => _shift.DepartureTime;
+            set
+            {
+                _shift.DepartureTime = value.Date.Add(_shift.DepartureTime.TimeOfDay);
+                RaisePropertyChanged("DepartureDate");
+            }
+        }
+
+        public DateTime ArrivalDate
+        {
+            get => _shift.ArrivalTime;
+            set
+            {
+                _shift.ArrivalTime = value.Date.Add(_shift.ArrivalTime.TimeOfDay);
+                RaisePropertyChanged("ArrivalDate");
+            }
+        }
+
         public TimeSpan TimeFrom
         {
             get => _shift.TimeFrom.TimeOfDay;
@@ -61,6 +81,26 @@ namespace MyJobDiary.ViewModel
             }
         }
 
+        public TimeSpan DepartureTime
+        {
+            get => _shift.DepartureTime.TimeOfDay;
+            set
+            {
+                _shift.DepartureTime = _shift.DepartureTime.Date.Add(TruncTime(value));
+                RaisePropertyChanged("DepartureTime");
+            }
+        }
+
+        public TimeSpan ArrivalTime
+        {
+            get => _shift.ArrivalTime.TimeOfDay;
+            set
+            {
+                _shift.ArrivalTime = _shift.ArrivalTime.Date.Add(TruncTime(value));
+                RaisePropertyChanged("ArrivalTime");
+            }
+        }
+
         public string Location
         {
             get => _shift.Location;
@@ -68,6 +108,26 @@ namespace MyJobDiary.ViewModel
             {
                 _shift.Location = value;
                 RaisePropertyChanged("Location");
+            }
+        }
+
+        public string DepartureLocation
+        {
+            get => _shift.DepartureLocation;
+            set
+            {
+                _shift.DepartureLocation = value;
+                RaisePropertyChanged("DepartureLocation");
+            }
+        }
+
+        public string ArrivalLocation
+        {
+            get => _shift.ArrivalLocation;
+            set
+            {
+                _shift.ArrivalLocation = value;
+                RaisePropertyChanged("ArrivalLocation");
             }
         }
 
@@ -88,6 +148,16 @@ namespace MyJobDiary.ViewModel
             {
                 _shift.IsNightShift = value;
                 RaisePropertyChanged("IsNightShift");
+            }
+        }
+
+        public bool WithDiets
+        {
+            get => _shift.WithDiets;
+            set
+            {
+                _shift.WithDiets = value;
+                RaisePropertyChanged("WithDiets");
             }
         }
 

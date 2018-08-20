@@ -161,6 +161,10 @@
     <Compile Include="Migrations\201808151433215_initDietRecordTable.Designer.cs">
       <DependentUpon>201808151433215_initDietRecordTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808201617287_dietsInfo.cs" />
+    <Compile Include="Migrations\201808201617287_dietsInfo.Designer.cs">
+      <DependentUpon>201808201617287_dietsInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyJobDiaryContext.cs" />
     <Compile Include="Startup.cs" />
@@ -187,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808151433215_initDietRecordTable.resx">
       <DependentUpon>201808151433215_initDietRecordTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808201617287_dietsInfo.resx">
+      <DependentUpon>201808201617287_dietsInfo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
