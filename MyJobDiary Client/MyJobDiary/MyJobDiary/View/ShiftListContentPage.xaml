@@ -4,7 +4,8 @@
                 xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
                 xmlns:usercontrol="clr-namespace:MyJobDiary.UserControl"
                 x:Class="MyJobDiary.View.ShiftListContentPage"
-				Title="Azure Todo"
+                xmlns:b="clr-namespace:Xamarin.Behaviors;assembly=Xamarin.Behaviors"
+				Title="Azure Todo" x:Name="shiftListPage"
                 BackgroundColor="Black">
     <ContentPage.Resources>
         <theme:BlackAndBlue/>
@@ -27,9 +28,11 @@
                             <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Icon="{StaticResource delete_32}"/>
                         </ViewCell.ContextActions>
                         <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5">
-                            <Grid>
-                                <usercontrol:ShiftListItem/>
-                            </Grid>
+                            <StackLayout>
+                                <usercontrol:ShiftListItem IsVisible="{Binding ShowsDiets, Source={x:Reference shiftListPage},
+                                    Converter={StaticResource inverseBooleanConverter}}"/>
+                                <usercontrol:DietsItem IsVisible="{Binding ShowsDiets, Source={x:Reference shiftListPage}}"/>
+                            </StackLayout>
                         </Frame>
                     </ViewCell>
                 </DataTemplate>

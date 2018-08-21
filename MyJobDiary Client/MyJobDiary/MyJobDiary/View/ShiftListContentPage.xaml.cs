@@ -11,9 +11,12 @@ namespace MyJobDiary.View
     {
         private ShiftListViewModel _viewModel;
 
-        public ShiftListContentPage(ShiftListViewModel model)
+        public bool ShowsDiets { get; private set; }
+
+        public ShiftListContentPage(ShiftListViewModel model, bool showsDiets)
         {
             InitializeComponent();
+            ShowsDiets = showsDiets;
             BindingContext = model;
             _viewModel = model;
         }
@@ -47,7 +50,7 @@ namespace MyJobDiary.View
             var copy = original.CopyCreate();
             int dayDifference = (DateTime.Now - original.TimeFrom).Days;
             copy.TimeFrom = original.TimeFrom.AddDays(dayDifference);
-            copy.TimeTo= original.TimeTo.AddDays(dayDifference);
+            copy.TimeTo = original.TimeTo.AddDays(dayDifference);
             copy.DepartureTime = original.DepartureTime.AddDays(dayDifference);
             copy.ArrivalTime = original.ArrivalTime.AddDays(dayDifference);
             ShiftFormViewModel viewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, copy);

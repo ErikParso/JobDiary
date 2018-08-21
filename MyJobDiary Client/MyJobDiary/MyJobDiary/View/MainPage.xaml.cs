@@ -19,7 +19,14 @@ namespace MyJobDiary.View
         private async void ShiftList_Clicked(object sender, EventArgs e)
         {
             ShiftListViewModel viewModel = new ShiftListViewModel(ShiftItemManager.Current.Value);
-            ShiftListContentPage shiftList = new ShiftListContentPage(viewModel);
+            ShiftListContentPage shiftList = new ShiftListContentPage(viewModel, false);
+            await Navigation.PushAsync(shiftList);
+        }
+
+        private async void Diets_Clicked(object sender, EventArgs e)
+        {
+            ShiftListViewModel viewModel = new ShiftListViewModel(ShiftItemManager.Current.Value);
+            ShiftListContentPage shiftList = new ShiftListContentPage(viewModel, true);
             await Navigation.PushAsync(shiftList);
         }
 

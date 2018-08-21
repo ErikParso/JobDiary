@@ -39,6 +39,8 @@ namespace MyJobDiary.ViewModel
             set => SetField(ref _allItems, value.ToList());
         }
 
+        public bool ShowDiets { get; set; } = false;
+
 
         #region Filter
 
