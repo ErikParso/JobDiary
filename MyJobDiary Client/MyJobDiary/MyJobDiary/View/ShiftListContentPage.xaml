@@ -4,7 +4,6 @@
                 xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
                 xmlns:usercontrol="clr-namespace:MyJobDiary.UserControl"
                 x:Class="MyJobDiary.View.ShiftListContentPage"
-                xmlns:b="clr-namespace:Xamarin.Behaviors;assembly=Xamarin.Behaviors"
 				Title="Azure Todo" x:Name="shiftListPage"
                 BackgroundColor="Black">
     <ContentPage.Resources>
@@ -27,13 +26,21 @@
                             <MenuItem Clicked="OnCopy" CommandParameter="{Binding .}" Icon="{StaticResource copy_32}"/>
                             <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Icon="{StaticResource delete_32}"/>
                         </ViewCell.ContextActions>
-                        <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5">
-                            <StackLayout>
-                                <usercontrol:ShiftListItem IsVisible="{Binding ShowsDiets, Source={x:Reference shiftListPage},
-                                    Converter={StaticResource inverseBooleanConverter}}"/>
-                                <usercontrol:DietsItem IsVisible="{Binding ShowsDiets, Source={x:Reference shiftListPage}}"/>
+                        <StackLayout>
+                            <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5" IsVisible="{Binding ShowsDiets, Source={x:Reference shiftListPage},
+                                    Converter={StaticResource inverseBooleanConverter}}">
+                                <usercontrol:ShiftListItem/>
+                            </Frame>
+                            <StackLayout IsVisible="{Binding ShowsDiets, Source={x:Reference shiftListPage}}">
+                                <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5" IsVisible="{Binding WithDiets}">
+                                    <usercontrol:DietsItem/>
+                                </Frame>
+                                <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5" Opacity="0.5"
+                                       IsVisible="{Binding WithDiets, Converter={StaticResource inverseBooleanConverter}}">
+                                    <usercontrol:ShiftListItem/>
+                                </Frame>
                             </StackLayout>
-                        </Frame>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -43,22 +43,31 @@
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource clock_end_20}"/>
-                <Label Text="{Binding TimeTo, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding IsClosed}"/>
-                <Label Text="-" TextColor="{StaticResource SecondaryTextColor}"/>
-                <Label Text="{Binding ArrivalTime, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource SecondaryTextColor}" IsVisible="{Binding IsClosed}"/>
+                <Label IsVisible="{Binding IsClosed}" Text="{Binding TimeTo, StringFormat='\{0:HH:mm}'}"
+                       TextColor="{StaticResource PrimaryTextColor}"/>
+                <Label IsVisible="{Binding IsClosed}" Text="-"
+                       TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label IsVisible="{Binding IsClosed}" Text="{Binding ArrivalTime, StringFormat='\{0:HH:mm}'}"
+                       TextColor="{StaticResource SecondaryTextColor}"/>
             </StackLayout>
         </StackLayout>
         <!--location-->
-        <StackLayout Grid.Column="2" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,5,0">
+        <StackLayout Grid.Column="2" Grid.Row="0" Margin="5,0,5,0" VerticalOptions="Start">
             <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding DepartureLocation}" TextColor="{StaticResource SecondaryTextColor}"/>
-                <Label Text="-" TextColor="{StaticResource SecondaryTextColor}"/>
-                <Label Text="{Binding Location}" TextColor="{StaticResource PrimaryTextColor}"/>
+                <Label Text="{Binding DepartureLocation}"
+                       TextColor="{StaticResource SecondaryTextColor}" LineBreakMode="NoWrap"/>
+                <Label Text="-"
+                       TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="{Binding Location}"
+                       TextColor="{StaticResource PrimaryTextColor}" LineBreakMode="NoWrap"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding Location}" TextColor="{StaticResource PrimaryTextColor}"/>
-                <Label Text="-" TextColor="{StaticResource SecondaryTextColor}"/>
-                <Label Text="{Binding ArrivalLocation}" TextColor="{StaticResource SecondaryTextColor}"/>
+            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                <Label IsVisible="{Binding IsClosed}" Text="{Binding Location}"
+                       TextColor="{StaticResource PrimaryTextColor}" LineBreakMode="NoWrap"/>
+                <Label IsVisible="{Binding IsClosed}" Text="-"
+                       TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label IsVisible="{Binding IsClosed}" Text="{Binding ArrivalLocation}"
+                       TextColor="{StaticResource SecondaryTextColor}" LineBreakMode="NoWrap"/>
             </StackLayout>
         </StackLayout>
         <!--night shift-->
