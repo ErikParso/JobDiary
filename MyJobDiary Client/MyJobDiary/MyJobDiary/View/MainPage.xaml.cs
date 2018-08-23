@@ -1,7 +1,9 @@
 ﻿using MyJobDiary.Managers;
 using MyJobDiary.Model;
+using MyJobDiary.Services;
 using MyJobDiary.ViewModel;
 using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -47,6 +49,14 @@ namespace MyJobDiary.View
         {
             base.OnAppearing();
             NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+        private async void Attendance_Click(object sender, EventArgs e)
+        {
+            AttendanceListViewModel viewModel = new AttendanceListViewModel();
+            var shifts = await ShiftItemManager.Current.Value.GetTodoItemsAsync();
+            viewModel.Days = new AttendanceBuilder(shifts).BuildAttendance(DateTime.Now.Year, DateTime.Now.Month);
+            await Navigation.PushAsync(new AttendanceList(viewModel));
         }
     }
 }

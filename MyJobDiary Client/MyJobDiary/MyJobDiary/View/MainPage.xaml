@@ -29,6 +29,8 @@
                 <BoxView HeightRequest="1" HorizontalOptions="Fill" IsVisible="{Binding IsAuthenticated}" BackgroundColor="{StaticResource IconColor}"/>
                 <Button Image="voucher.png" HorizontalOptions="Center" VerticalOptions="End" Margin="5"
                     BackgroundColor="Black" BorderWidth="1" IsVisible="{Binding IsAuthenticated}" Clicked="Diets_Clicked"/>
+                <Button Text="dochádzka" HorizontalOptions="Center" VerticalOptions="End" Margin="5"
+                    BackgroundColor="Black" BorderWidth="1" Clicked="Attendance_Click" IsVisible="{Binding IsAuthenticated}"/>
             </StackLayout>
 
 

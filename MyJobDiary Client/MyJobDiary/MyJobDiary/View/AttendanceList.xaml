@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
+             xmlns:usercontrol="clr-namespace:MyJobDiary.UserControl"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime"
+             x:Class="MyJobDiary.View.AttendanceList"
+             BackgroundColor="Black">
+    <ContentPage.Resources>
+        <theme:BlackAndBlue/>
+    </ContentPage.Resources>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ListView HasUnevenRows="True" ItemsSource="{Binding Days}" Grid.Row="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label TextColor="{StaticResource IconColor}" Grid.Column="0"
+                                       VerticalOptions="Center" HorizontalOptions="Center"
+                                       Text="{Binding Path=Day, Converter={StaticResource dayOfWeekConverter}}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Day.DayOfWeek}" Value="{x:Static system:DayOfWeek.Sunday}">
+                                            <Setter Property="FontAttributes" Value="Bold"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Day.DayOfWeek}" Value="{x:Static system:DayOfWeek.Saturday}">
+                                            <Setter Property="FontAttributes" Value="Bold"/>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <Label Text="{Binding Day, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}"
+                                       Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                <usercontrol:AttendanceDay HeightRequest="10" Grid.Column="2"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+</ContentPage>
