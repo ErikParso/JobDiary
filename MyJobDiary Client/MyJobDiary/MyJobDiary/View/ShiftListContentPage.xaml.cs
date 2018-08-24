@@ -48,11 +48,11 @@ namespace MyJobDiary.View
             var menuItem = sender as MenuItem;
             var original = menuItem.CommandParameter as Shift;
             var copy = original.CopyCreate();
-            int dayDifference = (DateTime.Now - original.TimeFrom).Days;
-            copy.TimeFrom = original.TimeFrom.AddDays(dayDifference);
-            copy.TimeTo = original.TimeTo.AddDays(dayDifference);
-            copy.DepartureTime = original.DepartureTime.AddDays(dayDifference);
-            copy.ArrivalTime = original.ArrivalTime.AddDays(dayDifference);
+            //int dayDifference = (DateTime.Now - original.TimeFrom).Days;
+            //copy.TimeFrom = original.TimeFrom.AddDays(dayDifference);
+            //copy.TimeTo = original.TimeTo.AddDays(dayDifference);
+            //copy.DepartureTime = original.DepartureTime.AddDays(dayDifference);
+            //copy.ArrivalTime = original.ArrivalTime.AddDays(dayDifference);
             ShiftFormViewModel viewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, copy);
             viewModel.OnSucces = () =>
             {

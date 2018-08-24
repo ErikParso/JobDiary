@@ -26,11 +26,23 @@
                     </Frame>
                     <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="1">
                         <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_end_20}" Text="Ukončená"/>
+                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource stop_20}" Text="Ukončená"/>
                             <Switch IsToggled="{Binding IsClosed}" HorizontalOptions="Start"/>
                         </StackLayout>
                     </Frame>
                 </Grid>
+
+                <!--day-->
+                <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}">
+                    <StackLayout>
+                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource calendar_20}" Text="Pracovný deň"/>
+                        <Grid>
+                            <DatePicker Date="{Binding DateFrom}" Format="dd.MM.yyyy" TextColor="White"/>
+                            <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
+                                Text="{Binding Path=DateFrom, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
 
                 <!--work start times-->
                 <Grid>
@@ -40,13 +52,12 @@
                     </Grid.ColumnDefinitions>
                     <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="0" IsVisible="{Binding WithDiets}">
                         <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Text="Odchod" Icon="{StaticResource bed_20}"/>
+                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Text="Odchod" Icon="{StaticResource car_20}"/>
                             <Grid>
-                                <DatePicker Date="{Binding DepartureDate}" Format="dd.MM.yyyy" TextColor="White" FontSize="Micro"/>
+                                <TimePicker Time="{Binding DepartureTime}" Format="HH:mm" TextColor="White"/>
                                 <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
-                                Text="{Binding Path=DepartureDate, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
+                                       Text="{Binding Path=DepartureDate, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
                             </Grid>
-                            <TimePicker Time="{Binding DepartureTime}" Format="HH:mm" TextColor="White"/>
                             <Entry Text="{Binding DepartureLocation}" TextColor="White" FontSize="Micro"/>
                         </StackLayout>
                     </Frame>
@@ -60,11 +71,10 @@
                         <StackLayout>
                             <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_start_20}" Text="Začiatok"/>
                             <Grid>
-                                <DatePicker Date="{Binding DateFrom}" Format="dd.MM.yyyy" TextColor="White" FontSize="Micro"/>
+                                <TimePicker Time="{Binding TimeFrom}" Format="HH:mm" TextColor="White"/>
                                 <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
                                 Text="{Binding Path=DateFrom, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
                             </Grid>
-                            <TimePicker Time="{Binding TimeFrom}" Format="HH:mm" TextColor="White"/>
                             <Entry Text="{Binding Location}" TextColor="White" FontSize="Micro"/>
                         </StackLayout>
                     </Frame>
@@ -85,23 +95,21 @@
                         <StackLayout>
                             <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_end_20}" Text="Koniec"/>
                             <Grid>
-                                <DatePicker Date="{Binding DateTo}" Format="dd.MM.yyyy" TextColor="White" FontSize="Micro"/>
+                                <TimePicker Time="{Binding TimeTo}" Format="HH:mm" TextColor="White"/>
                                 <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
                                        Text="{Binding Path=DateTo, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
                             </Grid>
-                            <TimePicker Time="{Binding TimeTo}" Format="HH:mm" TextColor="White"/>
                             <Entry Text="{Binding Location}" TextColor="White" FontSize="Micro"/>
                         </StackLayout>
                     </Frame>
                     <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="1" IsVisible="{Binding WithDiets}">
                         <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Text="Príchod" Icon="{StaticResource bed_20}"/>
+                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Text="Príchod" Icon="{StaticResource car_20}"/>
                             <Grid>
-                                <DatePicker Date="{Binding ArrivalDate}" Format="dd.MM.yyyy" TextColor="White" FontSize="Micro"/>
+                                <TimePicker Time="{Binding ArrivalTime}" Format="HH:mm" TextColor="White"/>
                                 <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
                                 Text="{Binding Path=ArrivalDate, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
                             </Grid>
-                            <TimePicker Time="{Binding ArrivalTime}" Format="HH:mm" TextColor="White"/>
                             <Entry Text="{Binding ArrivalLocation}" TextColor="White" FontSize="Micro"/>
                         </StackLayout>
                     </Frame>

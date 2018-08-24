@@ -27,38 +27,23 @@ namespace MyJobDiary.ViewModel
             set
             {
                 _shift.TimeFrom = value.Date.Add(_shift.TimeFrom.TimeOfDay);
-                RaisePropertyChanged("DateFrom");
+                AdjustDates();
             }
         }
 
         public DateTime DateTo
         {
             get => _shift.TimeTo;
-            set
-            {
-                _shift.TimeTo = value.Date.Add(_shift.TimeTo.TimeOfDay);
-                RaisePropertyChanged("DateTo");
-            }
         }
 
         public DateTime DepartureDate
         {
             get => _shift.DepartureTime;
-            set
-            {
-                _shift.DepartureTime = value.Date.Add(_shift.DepartureTime.TimeOfDay);
-                RaisePropertyChanged("DepartureDate");
-            }
         }
 
         public DateTime ArrivalDate
         {
             get => _shift.ArrivalTime;
-            set
-            {
-                _shift.ArrivalTime = value.Date.Add(_shift.ArrivalTime.TimeOfDay);
-                RaisePropertyChanged("ArrivalDate");
-            }
         }
 
         public TimeSpan TimeFrom
@@ -67,7 +52,7 @@ namespace MyJobDiary.ViewModel
             set
             {
                 _shift.TimeFrom = _shift.TimeFrom.Date.Add(TruncTime(value));
-                RaisePropertyChanged("TimeFrom");
+                AdjustDates();
             }
         }
 
@@ -77,7 +62,7 @@ namespace MyJobDiary.ViewModel
             set
             {
                 _shift.TimeTo = _shift.TimeTo.Date.Add(TruncTime(value));
-                RaisePropertyChanged("TimeTo");
+                AdjustDates();
             }
         }
 
@@ -87,7 +72,7 @@ namespace MyJobDiary.ViewModel
             set
             {
                 _shift.DepartureTime = _shift.DepartureTime.Date.Add(TruncTime(value));
-                RaisePropertyChanged("DepartureTime");
+                AdjustDates();
             }
         }
 
@@ -97,8 +82,36 @@ namespace MyJobDiary.ViewModel
             set
             {
                 _shift.ArrivalTime = _shift.ArrivalTime.Date.Add(TruncTime(value));
-                RaisePropertyChanged("ArrivalTime");
+                AdjustDates();
             }
+        }
+
+        private void AdjustDates()
+        {
+            if (_shift.DepartureTime.TimeOfDay > _shift.TimeFrom.TimeOfDay)
+                _shift.DepartureTime = _shift.TimeFrom.Date.AddDays(-1).Add(_shift.DepartureTime.TimeOfDay);
+            else
+                _shift.DepartureTime = _shift.TimeFrom.Date.Add(_shift.DepartureTime.TimeOfDay);
+
+            if (_shift.TimeFrom.TimeOfDay > _shift.TimeTo.TimeOfDay)
+                _shift.TimeTo = _shift.TimeFrom.Date.AddDays(1).Add(_shift.TimeTo.TimeOfDay);
+            else
+                _shift.TimeTo = _shift.TimeFrom.Date.Add(_shift.TimeTo.TimeOfDay);
+
+            if (_shift.TimeTo.TimeOfDay > _shift.ArrivalTime.TimeOfDay)
+                _shift.ArrivalTime = _shift.TimeTo.Date.AddDays(1).Add(_shift.ArrivalTime.TimeOfDay);
+            else
+                _shift.ArrivalTime = _shift.TimeTo.Date.Add(_shift.ArrivalTime.TimeOfDay);
+
+            RaisePropertyChanged(nameof(DepartureDate));
+            RaisePropertyChanged(nameof(DateFrom));
+            RaisePropertyChanged(nameof(DateTo));
+            RaisePropertyChanged(nameof(ArrivalDate));
+
+            RaisePropertyChanged(nameof(DepartureTime));
+            RaisePropertyChanged(nameof(TimeFrom));
+            RaisePropertyChanged(nameof(TimeTo));
+            RaisePropertyChanged(nameof(ArrivalTime));
         }
 
         public string Location

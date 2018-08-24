@@ -21,6 +21,9 @@
     <x:String x:Key="bed_20">white_bed_20.png</x:String>
     <x:String x:Key="food_20">white_food_20.png</x:String>
     <x:String x:Key="home_20">white_home_20.png</x:String>
+    <x:String x:Key="car_20">white_car_20.png</x:String>
+    <x:String x:Key="calendar_20">white_calendar_20.png</x:String>
+    <x:String x:Key="stop_20">white_stop_20.png</x:String>
 
     <x:String x:Key="moon_24">blue_moon_24.png</x:String>
     <x:String x:Key="sun_24">blue_sun_24.png</x:String>
