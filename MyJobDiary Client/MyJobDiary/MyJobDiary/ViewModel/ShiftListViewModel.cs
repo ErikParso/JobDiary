@@ -16,21 +16,9 @@ namespace MyJobDiary.ViewModel
         {
             _manager = manager;
             _allItems = new List<Shift>();
-            InitFilter();
+            MonthNavigationViewModel = new MonthNavigationViewModel();
+            MonthNavigationViewModel.MonthChanged += RefreshCollection;
             LoadItems();
-        }
-        public async void LoadItems()
-        {
-            App.LoadingService.StartLoading("Aktualizujem zoznam");
-            try
-            {
-                ShiftItems = await _manager.GetTodoItemsAsync();
-            }
-            catch (Exception e)
-            {
-                App.DialogService.ShowDialog("Načítanie zlyhalo", e.Message);
-            }
-            App.LoadingService.StopLoading();
         }
 
         public IEnumerable<Shift> ShiftItems
@@ -39,76 +27,7 @@ namespace MyJobDiary.ViewModel
             set => SetField(ref _allItems, value.ToList());
         }
 
-        public bool ShowDiets { get; set; } = false;
-
-
-        #region Filter
-
-        public SidePickerViewModel YearPicker { get; private set; }
-
-        public SidePickerViewModel MonthPicker { get; private set; }
-
-        private void InitFilter()
-        {
-            YearPicker = new SidePickerViewModel()
-            {
-                Value = DateTime.Now.Year,
-                LeftCommand = new Command(YearLeft),
-                RightCommand = new Command(YearRight)
-            };
-            MonthPicker = new SidePickerViewModel()
-            {
-                Value = DateTime.Now.Month,
-                LeftCommand = new Command(MonthLeft),
-                RightCommand = new Command(MonthRight)
-            };
-        }
-
-        private void YearLeft()
-        {
-            YearPicker.Value--;
-            RefreshCollection();
-        }
-
-        private void MonthLeft()
-        {
-            if (MonthPicker.Value == 1)
-            {
-                MonthPicker.Value = 12;
-                YearPicker.Value--;
-            }
-            else
-            {
-                MonthPicker.Value--;
-            }
-            RefreshCollection();
-        }
-
-        private void YearRight()
-        {
-            YearPicker.Value++;
-            RefreshCollection();
-        }
-
-        private void MonthRight()
-        {
-            if (MonthPicker.Value == 12)
-            {
-                MonthPicker.Value = 1;
-                YearPicker.Value++;
-            }
-            else
-            {
-                MonthPicker.Value++;
-            }
-            RefreshCollection();
-        }
-
-        private IEnumerable<Shift> Filter(IEnumerable<Shift> allItems)
-            => allItems.Where(i => i.TimeFrom.Year == YearPicker.Value && i.TimeFrom.Month == MonthPicker.Value)
-                       .OrderBy(i => i.TimeFrom);
-
-        #endregion
+        public MonthNavigationViewModel MonthNavigationViewModel { get; private set; }
 
 
         #region item manipulation
@@ -145,8 +64,31 @@ namespace MyJobDiary.ViewModel
         #endregion
 
 
+        #region private helpers
+
+        private async void LoadItems()
+        {
+            App.LoadingService.StartLoading("Aktualizujem zoznam");
+            try
+            {
+                ShiftItems = await _manager.GetTodoItemsAsync();
+            }
+            catch (Exception e)
+            {
+                App.DialogService.ShowDialog("Načítanie zlyhalo", e.Message);
+            }
+            App.LoadingService.StopLoading();
+        }
+
         private void RefreshCollection()
             => RaisePropertyChanged(nameof(ShiftItems));
+
+        private IEnumerable<Shift> Filter(IEnumerable<Shift> allItems)
+            => allItems.Where(i => i.TimeFrom.Year == MonthNavigationViewModel.YearPicker.Value &&
+                                   i.TimeFrom.Month == MonthNavigationViewModel.MonthPicker.Value)
+                       .OrderBy(i => i.TimeFrom);
+
+        #endregion
 
     }
 

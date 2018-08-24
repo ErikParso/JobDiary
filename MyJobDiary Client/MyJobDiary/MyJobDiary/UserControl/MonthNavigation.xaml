@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:usercontrol="clr-namespace:MyJobDiary.UserControl"
+             xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
+             x:Class="MyJobDiary.UserControl.MonthNavigation">
+    <ContentView.Resources>
+        <theme:BlackAndBlue/>
+    </ContentView.Resources>
+    <StackLayout Margin="0" Spacing="0">
+        <BoxView HeightRequest="1" BackgroundColor="{StaticResource IconColor}" Margin="0"/>
+        <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource FrameColor}" Margin="0">
+            <usercontrol:SidePicker BindingContext="{Binding YearPicker}" HorizontalOptions="Center"/>
+            <usercontrol:SidePicker BindingContext="{Binding MonthPicker}" HorizontalOptions="Center"/>
+        </StackLayout>
+    </StackLayout>
+</ContentView>

@@ -13,7 +13,6 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
@@ -46,13 +45,8 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <StackLayout Grid.Row="1" Margin="0" Spacing="0">
-            <BoxView HeightRequest="1" BackgroundColor="{StaticResource IconColor}" Margin="0"/>
-            <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource FrameColor}" Margin="0">
-                <usercontrol:SidePicker BindingContext="{Binding YearPicker}" HorizontalOptions="Center"/>
-                <usercontrol:SidePicker BindingContext="{Binding MonthPicker}" HorizontalOptions="Center"/>
-            </StackLayout>
-        </StackLayout>
+        <usercontrol:MonthNavigation Grid.Row="1" BindingContext="{Binding MonthNavigationViewModel}"/>
+
     </Grid>
 
 </ContentPage>
