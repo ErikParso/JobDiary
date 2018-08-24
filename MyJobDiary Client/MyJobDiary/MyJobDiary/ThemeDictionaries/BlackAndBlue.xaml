@@ -9,7 +9,7 @@
     <Color x:Key="SecondaryTextColor">#999999</Color>
     <Color x:Key="FrameColor">#222222</Color>
     <Color x:Key="IconColor">#0097F7</Color>
-    <Color x:Key="TransferColor">"#004C7C"</Color>
+    <Color x:Key="TransferColor">#004C7C</Color>
     <Color x:Key="FrameLabelColor">#FFFFFF</Color>
     <Color x:Key="ErrorTextColor">#F10039</Color>
 
