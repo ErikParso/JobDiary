@@ -47,6 +47,8 @@
             </ListView.ItemTemplate>
         </ListView>
 
+        <usercontrol:MonthNavigation Grid.Row="1" BindingContext="{Binding MonthNavigationViewModel}"/>
+
     </Grid>
 
 </ContentPage>

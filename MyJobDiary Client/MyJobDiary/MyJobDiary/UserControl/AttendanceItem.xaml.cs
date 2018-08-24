@@ -42,6 +42,8 @@ namespace MyJobDiary.UserControl
         private void DrawAttendance(object sender, EventArgs e)
         {
             Model.AttendanceItem day = BindingContext as Model.AttendanceItem;
+            if (day == null)
+                return;
 
             double fullDay = TimeSpan.FromHours(24).TotalSeconds;
             TimeSpan counter = TimeSpan.FromHours(0);

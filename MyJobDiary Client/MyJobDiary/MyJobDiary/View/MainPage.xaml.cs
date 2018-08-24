@@ -53,9 +53,8 @@ namespace MyJobDiary.View
 
         private async void Attendance_Click(object sender, EventArgs e)
         {
-            AttendanceListViewModel viewModel = new AttendanceListViewModel();
             var shifts = await ShiftItemManager.Current.Value.GetTodoItemsAsync();
-            viewModel.Days = AttendanceBuilder.BuildAttendance(DateTime.Now.Year, DateTime.Now.Month, shifts);
+            AttendanceListViewModel viewModel = new AttendanceListViewModel(shifts);
             await Navigation.PushAsync(new AttendanceList(viewModel));
         }
     }
