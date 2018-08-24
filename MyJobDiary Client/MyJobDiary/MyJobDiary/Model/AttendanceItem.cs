@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace MyJobDiary.Model
 {
-    public class AttendanceDayModel
+    public class AttendanceItem
     {
-        public IEnumerable<(TimeSpan Time, Color Color)> Items { get; set; }
+        public IEnumerable<(TimeSpan Time, AttendanceSection Section)> Items { get; set; }
 
         public DateTime Day { get; set; }
 

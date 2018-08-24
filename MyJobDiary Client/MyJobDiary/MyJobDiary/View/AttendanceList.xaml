@@ -40,7 +40,7 @@
                                 </Label>
                                 <Label Text="{Binding Day, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}"
                                        Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
-                                <usercontrol:AttendanceDay HeightRequest="10" Grid.Column="2"/>
+                                <usercontrol:AttendanceItem HeightRequest="10" Grid.Column="2" WorkColor="{StaticResource IconColor}" TransferColor="{StaticResource TransferColor}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
