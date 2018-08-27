@@ -230,7 +230,7 @@ namespace MyJobDiary.ViewModel
 
         private void ShowOverlappingError(DateTime day)
         {
-            var detail = $"Časový interval sa prekrýva. Skontrolujte a opravte položky z dňa {day.ToString("dd.mm.")}. Prekrývajúce sa obdobia môžu spôsobiť problémy v dochádzke a výpočtoch.";
+            var detail = $"Časový interval sa prekrýva. Skontrolujte a opravte položky z dňa {day.ToString("dd.mm.yyyy")}. Prekrývajúce sa obdobia môžu spôsobiť problémy v dochádzke a výpočtoch.";
             App.DialogService.ShowDialog("Prekrývanie období", detail);
         }
 
