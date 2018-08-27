@@ -1,6 +1,8 @@
 ﻿using MyJobDiary.Managers;
 using MyJobDiary.Model;
+using MyJobDiary.Services;
 using System;
+using System.Linq;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -10,14 +12,15 @@ namespace MyJobDiary.ViewModel
     {
         private Shift _shift;
         private ShiftItemManager _manager;
+        private ValidationService _validationService;
 
         public ShiftFormViewModel(ShiftItemManager manager, Shift shift)
         {
             SaveCommand = new Command(Save);
             _manager = manager;
             _shift = shift;
+            _validationService = new ValidationService();
         }
-
 
         #region Bindable
 
@@ -197,12 +200,18 @@ namespace MyJobDiary.ViewModel
             App.LoadingService.StartLoading("odosielam");
             try
             {
+                var items = await _manager.GetTodoItemsAsync();
+                var overlappedItems = _validationService.CheckOverlapping(items, _shift);
+                if (overlappedItems.Count() > 0)
+                {
+                    ShowOverlappingError(_shift.TimeFrom);
+                }
                 await _manager.SaveTaskAsync(_shift);
                 result = true;
             }
             catch (Exception e)
             {
-                App.DialogService.ShowDialog("Nepodarilo sa odoslať", e.Message);
+                App.DialogService.ShowDialog("Chyba spojenia", e.Message);
                 result = false;
             }
             App.LoadingService.StopLoading();
@@ -218,6 +227,12 @@ namespace MyJobDiary.ViewModel
 
         private TimeSpan TruncTime(TimeSpan timeSpan)
             => TimeSpan.FromMinutes(Math.Round(timeSpan.TotalMinutes / 5) * 5);
+
+        private void ShowOverlappingError(DateTime day)
+        {
+            var detail = $"Časový interval sa prekrýva. Skontrolujte položky z dňa {day.ToString("dd.mm.")} v docházdke.";
+            App.DialogService.ShowDialog("Prekrývanie období", detail);
+        }
 
         #endregion
     }
