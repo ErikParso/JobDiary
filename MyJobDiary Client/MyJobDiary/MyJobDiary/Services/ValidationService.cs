@@ -8,8 +8,7 @@ namespace MyJobDiary.Services
     public class ValidationService
     {
         public IEnumerable<Shift> CheckOverlapping(IEnumerable<Shift> shifts, Shift newShift)
-            => shifts.Where(s => s.Id != newShift.Id &&
-               (CheckOverlapping(s, newShift) || CheckOverlapping(newShift, s)));
+            => shifts.Where(s => s.Id != newShift.Id && CheckOverlapping(s, newShift));
 
         private bool CheckOverlapping(Shift shift1, Shift shift2)
         {
