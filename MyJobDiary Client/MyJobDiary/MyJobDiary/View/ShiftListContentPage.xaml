@@ -32,7 +32,7 @@
                             </Frame>
                             <StackLayout IsVisible="{Binding ShowsDiets, Source={x:Reference shiftListPage}}">
                                 <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5" IsVisible="{Binding WithDiets}">
-                                    <usercontrol:DietsItem/>
+                                    <usercontrol:DietListItem/>
                                 </Frame>
                                 <Frame BackgroundColor="{StaticResource FrameColor}" Margin="5" Opacity="0.5"
                                        IsVisible="{Binding WithDiets, Converter={StaticResource inverseBooleanConverter}}">

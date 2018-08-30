@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace MyJobDiary.UserControl
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DietsItem : ContentView
+	public partial class DietListItem : ContentView
 	{
-		public DietsItem ()
+		public DietListItem ()
 		{
 			InitializeComponent ();
 		}
