@@ -4,11 +4,11 @@ namespace MyJobDiary.Extensions
 {
     public static class ShiftExtension
     {
-        public static Shift CopyCreate(this Shift original)
+        public static Shift CopyCreate(this Shift original, bool copyId)
         {
             return new Shift()
             {
-                Id = null,
+                Id = copyId ? original.Id : null,
                 IsClosed = original.IsClosed,
                 IsNightShift = original.IsNightShift,
                 Job = original.Job,

@@ -24,42 +24,28 @@ namespace MyJobDiary.View
         private async void OnEdit(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
-            var original = menuItem.CommandParameter as Shift;
-            var editCopy = original.CopyCreate();
-            editCopy.Id = original.Id;
-            ShiftFormViewModel viewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, editCopy);
-            viewModel.OnSucces = () =>
-            {
-                _viewModel.ItemEdited(original, editCopy);
-            };
+            var copy = (menuItem.CommandParameter as Shift).CopyCreate(true);
+            ShiftFormViewModel viewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, copy);
+            viewModel.OnSaved = _viewModel.ReloadItems;
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
             await Navigation.PushAsync(shiftForm);
         }
-
-        private void OnDelete(object sender, EventArgs e)
-        {
-            var menuItem = sender as MenuItem;
-            var original = menuItem.CommandParameter as Shift;
-            _viewModel.ItemDeleted(original);
-        }
-
         private async void OnCopy(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
-            var original = menuItem.CommandParameter as Shift;
-            var copy = original.CopyCreate();
-            //int dayDifference = (DateTime.Now - original.TimeFrom).Days;
-            //copy.TimeFrom = original.TimeFrom.AddDays(dayDifference);
-            //copy.TimeTo = original.TimeTo.AddDays(dayDifference);
-            //copy.DepartureTime = original.DepartureTime.AddDays(dayDifference);
-            //copy.ArrivalTime = original.ArrivalTime.AddDays(dayDifference);
+            var copy = (menuItem.CommandParameter as Shift).CopyCreate(false);
             ShiftFormViewModel viewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, copy);
-            viewModel.OnSucces = () =>
-            {
-                _viewModel.CopyCreated(copy);
-            };
+            viewModel.OnSaved = _viewModel.ReloadItems;
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
             await Navigation.PushAsync(shiftForm);
+        }
+
+        private async void OnDelete(object sender, EventArgs e)
+        {
+            var menuItem = sender as MenuItem;
+            var original = menuItem.CommandParameter as Shift;
+            await ShiftItemManager.Current.Value.DeleteAsync(original);
+            _viewModel.ReloadItems();
         }
 
         protected override void OnAppearing()

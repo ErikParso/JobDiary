@@ -10,78 +10,32 @@ namespace MyJobDiary.ViewModel
     public class ShiftListViewModel : ObservableObject
     {
         private readonly ShiftItemManager _manager;
-        private List<Shift> _allItems;
+        private IEnumerable<Shift> _allItems;
 
         public ShiftListViewModel(ShiftItemManager manager)
         {
             _manager = manager;
             _allItems = new List<Shift>();
             MonthNavigationViewModel = new MonthNavigationViewModel();
-            MonthNavigationViewModel.MonthChanged += RefreshCollection;
-            LoadItems();
+            MonthNavigationViewModel.MonthChanged += ReloadItems;
+            ReloadItems();
         }
 
         public IEnumerable<Shift> ShiftItems
         {
             get => Filter(_allItems);
-            set => SetField(ref _allItems, value.ToList());
+            set => SetField(ref _allItems, value);
         }
 
         public MonthNavigationViewModel MonthNavigationViewModel { get; private set; }
 
-
-        #region item manipulation
-
-        public void ItemEdited(Shift original, Shift editCopy)
+        public async void ReloadItems()
         {
-            _allItems.Remove(original);
-            _allItems.Add(editCopy);
-            RefreshCollection();
+            ShiftItems = await _manager.GetTodoItemsAsync();
         }
-
-        internal void CopyCreated(Shift copy)
-        {
-            _allItems.Add(copy);
-            RefreshCollection();
-        }
-
-        public async void ItemDeleted(Shift item)
-        {
-            App.LoadingService.StartLoading("Mažem záznam");
-            try
-            {
-                await _manager.DeleteAsync(item);
-                _allItems.Remove(item);
-                RefreshCollection();
-            }
-            catch (Exception e)
-            {
-                App.DialogService.ShowDialog("Položku sa nepodarilo odstrániť", e.Message);
-            }
-            App.LoadingService.StopLoading();
-        }
-
-        #endregion
 
 
         #region private helpers
-
-        private async void LoadItems()
-        {
-            App.LoadingService.StartLoading("Aktualizujem zoznam");
-            try
-            {
-                ShiftItems = await _manager.GetTodoItemsAsync();
-            }
-            catch (Exception e)
-            {
-                App.DialogService.ShowDialog("Načítanie zlyhalo", e.Message);
-            }
-            App.LoadingService.StopLoading();
-        }
-
-        private void RefreshCollection()
-            => RaisePropertyChanged(nameof(ShiftItems));
 
         private IEnumerable<Shift> Filter(IEnumerable<Shift> allItems)
             => allItems.Where(i => i.TimeFrom.Year == MonthNavigationViewModel.YearPicker.Value &&

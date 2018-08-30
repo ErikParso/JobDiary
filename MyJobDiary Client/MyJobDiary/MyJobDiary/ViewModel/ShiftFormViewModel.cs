@@ -192,34 +192,18 @@ namespace MyJobDiary.ViewModel
         #endregion
 
 
-        public Action OnSucces { get; set; }
+        public Action OnSaved { get; set; }
 
         private async void Save(object obj)
         {
-            bool result;
-            App.LoadingService.StartLoading("odosielam");
-            try
-            {
-                var items = await _manager.GetTodoItemsAsync();
-                var overlappedItems = _validationService.CheckOverlapping(items, _shift);
-                if (overlappedItems.Count() > 0)
-                {
-                    ShowOverlappingError(_shift.TimeFrom);
-                }
-                await _manager.SaveTaskAsync(_shift);
-                result = true;
-            }
-            catch (Exception e)
-            {
-                App.DialogService.ShowDialog("Chyba spojenia", e.Message);
-                result = false;
-            }
-            App.LoadingService.StopLoading();
+            var items = await _manager.GetTodoItemsAsync();
+            var overlappedItems = _validationService.CheckOverlapping(items, _shift);
+            if (overlappedItems.Count() > 0)
+                ShowOverlappingError(_shift.TimeFrom);
+
+            await _manager.SaveTaskAsync(_shift);
             await Application.Current.MainPage.Navigation.PopAsync();
-            if (result)
-            {
-                OnSucces?.Invoke();
-            }
+            OnSaved?.Invoke();
         }
 
 
