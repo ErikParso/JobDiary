@@ -10,7 +10,7 @@
         <theme:BlackAndBlue/>
     </ContentPage.Resources>
 
-    <Grid>
+    <Grid RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
