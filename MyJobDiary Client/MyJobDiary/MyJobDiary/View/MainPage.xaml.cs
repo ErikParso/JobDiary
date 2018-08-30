@@ -20,21 +20,24 @@ namespace MyJobDiary.View
 
         private async void ShiftList_Clicked(object sender, EventArgs e)
         {
-            ShiftListViewModel viewModel = new ShiftListViewModel(ShiftItemManager.Current.Value);
+            var manager = CachedTableManager<Shift>.Current.Value;
+            ShiftListViewModel viewModel = new ShiftListViewModel(manager);
             ShiftListContentPage shiftList = new ShiftListContentPage(viewModel, false);
             await Navigation.PushAsync(shiftList);
         }
 
         private async void Diets_Clicked(object sender, EventArgs e)
         {
-            ShiftListViewModel viewModel = new ShiftListViewModel(ShiftItemManager.Current.Value);
+            var manager = CachedTableManager<Shift>.Current.Value;
+            ShiftListViewModel viewModel = new ShiftListViewModel(manager);
             ShiftListContentPage shiftList = new ShiftListContentPage(viewModel, true);
             await Navigation.PushAsync(shiftList);
         }
 
         private async void ShiftForm_Clicked(object sender, EventArgs e)
         {
-            var shiftFormViewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, new Shift
+            var manager = CachedTableManager<Shift>.Current.Value;
+            var shiftFormViewModel = new ShiftFormViewModel(manager, new Shift
             {
                 DepartureTime = DateTime.Now,
                 TimeFrom = DateTime.Now,
@@ -53,8 +56,9 @@ namespace MyJobDiary.View
 
         private async void Attendance_Click(object sender, EventArgs e)
         {
-            var shifts = await ShiftItemManager.Current.Value.GetTodoItemsAsync();
-            AttendanceListViewModel viewModel = new AttendanceListViewModel(shifts);
+            var manager = CachedTableManager<Shift>.Current.Value;
+            var items = await manager.GetAsync();
+            AttendanceListViewModel viewModel = new AttendanceListViewModel(items);
             await Navigation.PushAsync(new AttendanceList(viewModel));
         }
 

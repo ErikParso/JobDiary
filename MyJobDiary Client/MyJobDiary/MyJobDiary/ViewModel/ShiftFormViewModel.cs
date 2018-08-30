@@ -11,10 +11,10 @@ namespace MyJobDiary.ViewModel
     public class ShiftFormViewModel : ObservableObject
     {
         private Shift _shift;
-        private ShiftItemManager _manager;
+        private CachedTableManager<Shift> _manager;
         private ValidationService _validationService;
 
-        public ShiftFormViewModel(ShiftItemManager manager, Shift shift)
+        public ShiftFormViewModel(CachedTableManager<Shift> manager, Shift shift)
         {
             SaveCommand = new Command(Save);
             _manager = manager;
@@ -196,12 +196,12 @@ namespace MyJobDiary.ViewModel
 
         private async void Save(object obj)
         {
-            var items = await _manager.GetTodoItemsAsync();
+            var items = await _manager.GetAsync();
             var overlappedItems = _validationService.CheckOverlapping(items, _shift);
             if (overlappedItems.Count() > 0)
                 ShowOverlappingError(_shift.TimeFrom);
 
-            await _manager.SaveTaskAsync(_shift);
+            await _manager.SaveAsync(_shift);
             await Application.Current.MainPage.Navigation.PopAsync();
             OnSaved?.Invoke();
         }

@@ -9,10 +9,10 @@ namespace MyJobDiary.ViewModel
 {
     public class ShiftListViewModel : ObservableObject
     {
-        private readonly ShiftItemManager _manager;
+        private readonly CachedTableManager<Shift> _manager;
         private IEnumerable<Shift> _allItems;
 
-        public ShiftListViewModel(ShiftItemManager manager)
+        public ShiftListViewModel(CachedTableManager<Shift> manager)
         {
             _manager = manager;
             _allItems = new List<Shift>();
@@ -31,9 +31,8 @@ namespace MyJobDiary.ViewModel
 
         public async void ReloadItems()
         {
-            ShiftItems = await _manager.GetTodoItemsAsync();
+            ShiftItems = await _manager.GetAsync();
         }
-
 
         #region private helpers
 

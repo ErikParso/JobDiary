@@ -25,16 +25,19 @@ namespace MyJobDiary.View
         {
             var menuItem = sender as MenuItem;
             var copy = (menuItem.CommandParameter as Shift).CopyCreate(true);
-            ShiftFormViewModel viewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, copy);
+            var manager = CachedTableManager<Shift>.Current.Value;
+            ShiftFormViewModel viewModel = new ShiftFormViewModel(manager, copy);
             viewModel.OnSaved = _viewModel.ReloadItems;
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
             await Navigation.PushAsync(shiftForm);
         }
+
         private async void OnCopy(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
             var copy = (menuItem.CommandParameter as Shift).CopyCreate(false);
-            ShiftFormViewModel viewModel = new ShiftFormViewModel(ShiftItemManager.Current.Value, copy);
+            var manager = CachedTableManager<Shift>.Current.Value;
+            ShiftFormViewModel viewModel = new ShiftFormViewModel(manager, copy);
             viewModel.OnSaved = _viewModel.ReloadItems;
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
             await Navigation.PushAsync(shiftForm);
@@ -44,7 +47,8 @@ namespace MyJobDiary.View
         {
             var menuItem = sender as MenuItem;
             var original = menuItem.CommandParameter as Shift;
-            await ShiftItemManager.Current.Value.DeleteAsync(original);
+            var manager = CachedTableManager<Shift>.Current.Value;
+            await manager.DeleteAsync(original);
             _viewModel.ReloadItems();
         }
 
