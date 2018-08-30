@@ -147,6 +147,16 @@ namespace MyJobDiary.ViewModel
             }
         }
 
+        public string Country
+        {
+            get => _shift.Country;
+            set
+            {
+                _shift.Country = value.ToUpper();
+            }
+        }
+
+
         public string Job
         {
             get => _shift.Job;

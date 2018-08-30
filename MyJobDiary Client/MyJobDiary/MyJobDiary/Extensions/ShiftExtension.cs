@@ -19,7 +19,8 @@ namespace MyJobDiary.Extensions
                 ArrivalTime = original.ArrivalTime,
                 DepartureLocation = original.DepartureLocation,
                 DepartureTime = original.DepartureTime,
-                WithDiets = original.WithDiets
+                WithDiets = original.WithDiets,
+                Country = original.Country
             };
         }
     }

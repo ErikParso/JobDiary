@@ -165,6 +165,10 @@
     <Compile Include="Migrations\201808301646245_dietPaymentItem.Designer.cs">
       <DependentUpon>201808301646245_dietPaymentItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808301903400_CountryField.cs" />
+    <Compile Include="Migrations\201808301903400_CountryField.Designer.cs">
+      <DependentUpon>201808301903400_CountryField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyJobDiaryContext.cs" />
     <Compile Include="Startup.cs" />
@@ -194,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808301646245_dietPaymentItem.resx">
       <DependentUpon>201808301646245_dietPaymentItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808301903400_CountryField.resx">
+      <DependentUpon>201808301903400_CountryField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

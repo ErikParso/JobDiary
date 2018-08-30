@@ -115,6 +115,14 @@
                     </Frame>
                 </Grid>
 
+                <!--country-->
+                <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" IsVisible="{Binding WithDiets}">
+                    <StackLayout>
+                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource flag_20}" Text="Krajina"/>
+                        <Entry Text="{Binding Country}" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+
                 <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}">
                     <StackLayout>
                         <!--description-->

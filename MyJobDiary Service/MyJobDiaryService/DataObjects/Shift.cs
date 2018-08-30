@@ -28,5 +28,7 @@ namespace MyJobDiaryService.DataObjects
         public string ArrivalLocation { get; set; }
 
         public string DepartureLocation { get; set; }
+
+        public string Country { get; set; }
     }
 }
