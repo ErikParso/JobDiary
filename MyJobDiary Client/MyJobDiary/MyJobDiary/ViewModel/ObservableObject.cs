@@ -13,7 +13,7 @@ namespace MyJobDiary.ViewModel
             RaisePropertyChanged(propertyName);
         }
 
-        protected void RaisePropertyChanged(string propertyName)
+        protected void RaisePropertyChanged([CallerMemberName]string propertyName = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

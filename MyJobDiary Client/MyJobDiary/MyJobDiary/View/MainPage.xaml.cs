@@ -57,5 +57,10 @@ namespace MyJobDiary.View
             AttendanceListViewModel viewModel = new AttendanceListViewModel(shifts);
             await Navigation.PushAsync(new AttendanceList(viewModel));
         }
+
+        private async void DietsSettings_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DietPaymentItemList());
+        }
     }
 }
