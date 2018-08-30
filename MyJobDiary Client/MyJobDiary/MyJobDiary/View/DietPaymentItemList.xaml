@@ -36,6 +36,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Icon="{StaticResource delete_32}"/>
+                        </ViewCell.ContextActions>
                         <Grid Margin="5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>

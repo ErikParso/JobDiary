@@ -29,6 +29,7 @@ namespace MyJobDiary.ViewModel
         }
 
 
+
         #region Bindable properties
 
         public string NewLocation
@@ -59,6 +60,11 @@ namespace MyJobDiary.ViewModel
 
         #endregion
 
+        public async void DeleteItem(DietPaymentItem item)
+        {
+            await _manager.DeleteAsync(item);
+            ReloadItems();
+        }
 
         private async void AddPaymentItem()
         {
