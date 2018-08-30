@@ -60,7 +60,9 @@ namespace MyJobDiary.View
 
         private async void DietsSettings_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DietPaymentItemList());
+            var manager = CachedTableManager<DietPaymentItem>.Current.Value;
+            var viewModel = new DietsPaymentViewModel(manager);
+            await Navigation.PushAsync(new DietPaymentItemList(viewModel));
         }
     }
 }

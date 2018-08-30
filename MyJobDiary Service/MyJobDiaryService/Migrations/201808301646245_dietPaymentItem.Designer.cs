@@ -7,13 +7,13 @@ namespace MyJobDiaryService.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class initDietRecordTable : IMigrationMetadata
+    public sealed partial class dietPaymentItem : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initDietRecordTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(dietPaymentItem));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808151433215_initDietRecordTable"; }
+            get { return "201808301646245_dietPaymentItem"; }
         }
         
         string IMigrationMetadata.Source

@@ -1,4 +1,5 @@
-﻿using MyJobDiary.Model;
+﻿using MyJobDiary.Managers;
+using MyJobDiary.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,22 @@ namespace MyJobDiary.ViewModel
 {
     public class DietsPaymentViewModel : ObservableObject
     {
-        private List<DietPaymentItem> _payments;
+        private IEnumerable<DietPaymentItem> _payments;
+        private readonly CachedTableManager<DietPaymentItem> _manager;
 
         private string _newLocation;
         private TimeSpan _newTime;
         private double _newPayment;
 
-        public DietsPaymentViewModel()
+        public DietsPaymentViewModel(CachedTableManager<DietPaymentItem> manager)
         {
-            Payments = new List<DietPaymentItem>();
+            _manager = manager;
+            _payments = new List<DietPaymentItem>();
             AddPaymentItemCommand = new Command(AddPaymentItem);
             NewLocation = "SK";
             NewPayment = 1;
             NewTime = TimeSpan.Zero;
+            ReloadItems();
         }
 
 
@@ -48,7 +52,7 @@ namespace MyJobDiary.ViewModel
         public IEnumerable<DietPaymentItem> Payments
         {
             get => _payments.OrderBy(p => p.Location).ThenBy(p => p.Time);
-            set => SetField(ref _payments, value.ToList());
+            set => SetField(ref _payments, value);
         }
 
         public ICommand AddPaymentItemCommand { get; private set; }
@@ -56,15 +60,20 @@ namespace MyJobDiary.ViewModel
         #endregion
 
 
-        private void AddPaymentItem()
+        private async void AddPaymentItem()
         {
-            _payments.Add(new DietPaymentItem()
+            await _manager.SaveAsync(new DietPaymentItem()
             {
                 Location = _newLocation,
                 Payment = _newPayment,
                 Time = _newTime,
             });
-            RaisePropertyChanged(nameof(Payments));
+            ReloadItems();
+        }
+
+        private async void ReloadItems()
+        {
+            Payments = await _manager.GetAsync();
         }
     }
 }

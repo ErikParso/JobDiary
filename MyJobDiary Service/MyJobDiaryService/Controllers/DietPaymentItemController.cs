@@ -12,39 +12,39 @@ using MyJobDiaryService.Models;
 namespace MyJobDiaryService.Controllers
 {
     [Authorize]
-    public class DietRecordController : TableController<DietRecord>
+    public class DietPaymentItemController : TableController<DietPaymentItem>
     {
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
             MyJobDiaryContext context = new MyJobDiaryContext();
-            DomainManager = new EntityDomainManager<DietRecord>(context, Request);
+            DomainManager = new EntityDomainManager<DietPaymentItem>(context, Request);
         }
 
         // GET tables/TodoItem
-        public IQueryable<DietRecord> GetAllTodoItems()
+        public IQueryable<DietPaymentItem> GetAllTodoItems()
         {
             string userId = GetUserId(User);
-            return Query().Where(d => d.UserId == userId);
+            return Query().Where(s => s.UserId == userId);
         }
 
         // GET tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public SingleResult<DietRecord> GetTodoItem(string id)
+        public SingleResult<DietPaymentItem> GetTodoItem(string id)
         {
             return Lookup(id);
         }
 
         // PATCH tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task<DietRecord> PatchTodoItem(string id, Delta<DietRecord> patch)
+        public Task<DietPaymentItem> PatchTodoItem(string id, Delta<DietPaymentItem> patch)
         {
             return UpdateAsync(id, patch);
         }
 
         // POST tables/TodoItem
-        public async Task<IHttpActionResult> PostTodoItem(DietRecord item)
+        public async Task<IHttpActionResult> PostTodoItem(DietPaymentItem item)
         {
             item.UserId = GetUserId(User);
-            DietRecord current = await InsertAsync(item);
+            DietPaymentItem current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 

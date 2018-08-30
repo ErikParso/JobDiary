@@ -149,21 +149,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
-    <Compile Include="Controllers\DietRecordController.cs" />
+    <Compile Include="Controllers\DietPaymentItemController.cs" />
     <Compile Include="Controllers\ShiftController.cs" />
-    <Compile Include="DataObjects\DietRecord.cs" />
+    <Compile Include="DataObjects\DietPaymentItem.cs" />
     <Compile Include="DataObjects\Shift.cs" />
     <Compile Include="Migrations\201808151410057_initialMigration.cs" />
     <Compile Include="Migrations\201808151410057_initialMigration.Designer.cs">
       <DependentUpon>201808151410057_initialMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808151433215_initDietRecordTable.cs" />
-    <Compile Include="Migrations\201808151433215_initDietRecordTable.Designer.cs">
-      <DependentUpon>201808151433215_initDietRecordTable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201808201617287_dietsInfo.cs" />
     <Compile Include="Migrations\201808201617287_dietsInfo.Designer.cs">
       <DependentUpon>201808201617287_dietsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808301646245_dietPaymentItem.cs" />
+    <Compile Include="Migrations\201808301646245_dietPaymentItem.Designer.cs">
+      <DependentUpon>201808301646245_dietPaymentItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyJobDiaryContext.cs" />
@@ -189,11 +189,11 @@
     <EmbeddedResource Include="Migrations\201808151410057_initialMigration.resx">
       <DependentUpon>201808151410057_initialMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808151433215_initDietRecordTable.resx">
-      <DependentUpon>201808151433215_initDietRecordTable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808201617287_dietsInfo.resx">
       <DependentUpon>201808201617287_dietsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808301646245_dietPaymentItem.resx">
+      <DependentUpon>201808301646245_dietPaymentItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

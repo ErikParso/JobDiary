@@ -15,7 +15,7 @@ namespace MyJobDiaryService.Models
         }
 
         public DbSet<Shift> Shifts { get; set; }
-        public DbSet<DietRecord> DietRecords { get; set; }
+        public DbSet<DietPaymentItem> DietPaymentItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

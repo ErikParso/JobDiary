@@ -7,10 +7,10 @@ namespace MyJobDiary.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DietPaymentItemList : ContentPage
     {
-        public DietPaymentItemList()
+        public DietPaymentItemList(DietsPaymentViewModel viewModel)
         {
             InitializeComponent();
-            BindingContext = new DietsPaymentViewModel();
+            BindingContext = viewModel;
         }
 
         protected override void OnAppearing()

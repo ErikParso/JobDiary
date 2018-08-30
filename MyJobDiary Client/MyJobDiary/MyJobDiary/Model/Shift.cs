@@ -3,7 +3,7 @@ using System;
 
 namespace MyJobDiary.Model
 {
-    public class Shift
+    public class Shift : ICachedTableItem
     {
         public string Id { get; set; }
 
