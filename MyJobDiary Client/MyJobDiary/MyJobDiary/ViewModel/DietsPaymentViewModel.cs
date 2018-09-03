@@ -22,9 +22,9 @@ namespace MyJobDiary.ViewModel
             _manager = manager;
             _payments = new List<DietPaymentItem>();
             AddPaymentItemCommand = new Command(AddPaymentItem);
-            Country = "SK";
-            Reward = 0;
-            Hours = 0;
+            _country = "SK";
+            _reward = 0;
+            _hours = 0;
             ReloadItems();
         }
 
@@ -37,16 +37,16 @@ namespace MyJobDiary.ViewModel
             set => SetField(ref _country, value.ToUpper());
         }
 
-        public double Hours
+        public string Hours
         {
-            get => _hours;
-            set => SetField(ref _hours, value);
+            get => _hours.ToString();
+            set => double.TryParse(value, out _hours);
         }
 
-        public double Reward
+        public string Reward
         {
-            get => _reward;
-            set => SetField(ref _reward, value);
+            get => _reward.ToString();
+            set => double.TryParse(value, out _reward);
         }
 
         public IEnumerable<DietPaymentItem> Payments
