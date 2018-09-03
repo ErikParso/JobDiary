@@ -3,6 +3,7 @@ using MyJobDiary.Managers;
 using MyJobDiary.Model;
 using MyJobDiary.ViewModel;
 using System;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace MyJobDiary.View
@@ -25,8 +26,10 @@ namespace MyJobDiary.View
         {
             var menuItem = sender as MenuItem;
             var copy = (menuItem.CommandParameter as Shift).CopyCreate(true);
-            var manager = CachedTableManager<Shift>.Current.Value;
-            ShiftFormViewModel viewModel = new ShiftFormViewModel(manager, copy);
+            var shiftsManager = CachedTableManager<Shift>.Current.Value;
+            var countries = (await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync())
+                .Select(c => c.Country).Distinct().ToList();
+            ShiftFormViewModel viewModel = new ShiftFormViewModel(shiftsManager, countries, copy);
             viewModel.OnSaved = _viewModel.ReloadItems;
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
             await Navigation.PushAsync(shiftForm);
@@ -36,8 +39,10 @@ namespace MyJobDiary.View
         {
             var menuItem = sender as MenuItem;
             var copy = (menuItem.CommandParameter as Shift).CopyCreate(false);
-            var manager = CachedTableManager<Shift>.Current.Value;
-            ShiftFormViewModel viewModel = new ShiftFormViewModel(manager, copy);
+            var shiftsManager = CachedTableManager<Shift>.Current.Value;
+            var countries = (await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync())
+                .Select(c => c.Country).Distinct().ToList();
+            ShiftFormViewModel viewModel = new ShiftFormViewModel(shiftsManager, countries, copy);
             viewModel.OnSaved = _viewModel.ReloadItems;
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
             await Navigation.PushAsync(shiftForm);

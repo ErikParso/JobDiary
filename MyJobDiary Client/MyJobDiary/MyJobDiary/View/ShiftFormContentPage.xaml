@@ -119,7 +119,7 @@
                 <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" IsVisible="{Binding WithDiets}">
                     <StackLayout>
                         <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource flag_20}" Text="Krajina"/>
-                        <Entry Text="{Binding Country}" TextColor="White"/>
+                        <Picker SelectedItem="{Binding Country}" ItemsSource="{Binding Countries}" TextColor="White" />
                     </StackLayout>
                 </Frame>
 

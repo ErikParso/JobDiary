@@ -4,6 +4,7 @@ using MyJobDiary.Services;
 using MyJobDiary.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -36,14 +37,17 @@ namespace MyJobDiary.View
 
         private async void ShiftForm_Clicked(object sender, EventArgs e)
         {
-            var manager = CachedTableManager<Shift>.Current.Value;
-            var shiftFormViewModel = new ShiftFormViewModel(manager, new Shift
+            var shiftsManager = CachedTableManager<Shift>.Current.Value;
+            var countries = (await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync())
+                .Select(c => c.Country).Distinct().ToList();
+            var shiftFormViewModel = new ShiftFormViewModel(shiftsManager, countries, new Shift
             {
                 DepartureTime = DateTime.Now,
                 TimeFrom = DateTime.Now,
                 TimeTo = DateTime.Now.AddHours(8),
                 ArrivalTime = DateTime.Now.AddHours(8),
-                IsNightShift = DateTime.Now.Hour < 24 && DateTime.Now.Hour > 18
+                IsNightShift = DateTime.Now.Hour < 24 && DateTime.Now.Hour > 18,
+                Country = countries.FirstOrDefault() ?? ""
             });
             await Navigation.PushAsync(new ShiftFormContentPage(shiftFormViewModel));
         }

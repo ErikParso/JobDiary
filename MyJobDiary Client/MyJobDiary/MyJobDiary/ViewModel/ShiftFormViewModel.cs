@@ -2,6 +2,7 @@
 using MyJobDiary.Model;
 using MyJobDiary.Services;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -11,13 +12,18 @@ namespace MyJobDiary.ViewModel
     public class ShiftFormViewModel : ObservableObject
     {
         private Shift _shift;
-        private CachedTableManager<Shift> _manager;
+        private CachedTableManager<Shift> _shiftsManeger;
         private ValidationService _validationService;
+        private List<string> _countries;
 
-        public ShiftFormViewModel(CachedTableManager<Shift> manager, Shift shift)
+        public ShiftFormViewModel(
+            CachedTableManager<Shift> shiftsManager,
+            List<string> countries,
+            Shift shift)
         {
+            _shiftsManeger = shiftsManager;
             SaveCommand = new Command(Save);
-            _manager = manager;
+            _countries = countries;
             _shift = shift;
             _validationService = new ValidationService();
         }
@@ -152,8 +158,18 @@ namespace MyJobDiary.ViewModel
             get => _shift.Country;
             set
             {
-                _shift.Country = value.ToUpper();
+                if (value != null)
+                {
+                    _shift.Country = value?.ToUpper();
+                    RaisePropertyChanged(nameof(Country));
+                }
             }
+        }
+
+        public List<string> Countries
+        {
+            get => _countries;
+            set => SetField(ref _countries, value);
         }
 
 
@@ -206,12 +222,12 @@ namespace MyJobDiary.ViewModel
 
         private async void Save(object obj)
         {
-            var items = await _manager.GetAsync();
+            var items = await _shiftsManeger.GetAsync();
             var overlappedItems = _validationService.CheckOverlapping(items, _shift);
             if (overlappedItems.Count() > 0)
                 ShowOverlappingError(_shift.TimeFrom);
 
-            await _manager.SaveAsync(_shift);
+            await _shiftsManeger.SaveAsync(_shift);
             await Application.Current.MainPage.Navigation.PopAsync();
             OnSaved?.Invoke();
         }
