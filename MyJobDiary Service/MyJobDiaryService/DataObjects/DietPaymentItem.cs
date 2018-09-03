@@ -1,5 +1,4 @@
 ﻿using Microsoft.Azure.Mobile.Server;
-using System;
 
 namespace MyJobDiaryService.DataObjects
 {
@@ -7,11 +6,11 @@ namespace MyJobDiaryService.DataObjects
     {
         public string UserId { get; set; }
 
-        public string Location { get; set; }
+        public string Country { get; set; }
 
-        public TimeSpan Time { get; set; }
+        public double Hours { get; set; }
 
-        public double Payment { get; set; }
+        public double Reward { get; set; }
 
     }
 }

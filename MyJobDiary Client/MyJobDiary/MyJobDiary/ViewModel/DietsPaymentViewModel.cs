@@ -13,46 +13,45 @@ namespace MyJobDiary.ViewModel
         private IEnumerable<DietPaymentItem> _payments;
         private readonly CachedTableManager<DietPaymentItem> _manager;
 
-        private string _newLocation;
-        private TimeSpan _newTime;
-        private double _newPayment;
+        private string _country;
+        private double _hours;
+        private double _reward;
 
         public DietsPaymentViewModel(CachedTableManager<DietPaymentItem> manager)
         {
             _manager = manager;
             _payments = new List<DietPaymentItem>();
             AddPaymentItemCommand = new Command(AddPaymentItem);
-            NewLocation = "SK";
-            NewPayment = 1;
-            NewTime = TimeSpan.Zero;
+            Country = "SK";
+            Reward = 0;
+            Hours = 0;
             ReloadItems();
         }
 
 
-
         #region Bindable properties
 
-        public string NewLocation
+        public string Country
         {
-            get => _newLocation;
-            set => SetField(ref _newLocation, value.ToUpper());
+            get => _country;
+            set => SetField(ref _country, value.ToUpper());
         }
 
-        public TimeSpan NewTime
+        public double Hours
         {
-            get => _newTime;
-            set => SetField(ref _newTime, value);
+            get => _hours;
+            set => SetField(ref _hours, value);
         }
 
-        public double NewPayment
+        public double Reward
         {
-            get => _newPayment;
-            set => SetField(ref _newPayment, value);
+            get => _reward;
+            set => SetField(ref _reward, value);
         }
 
         public IEnumerable<DietPaymentItem> Payments
         {
-            get => _payments.OrderBy(p => p.Location).ThenBy(p => p.Time);
+            get => _payments.OrderBy(p => p.Country).ThenBy(p => p.Hours);
             set => SetField(ref _payments, value);
         }
 
@@ -70,9 +69,9 @@ namespace MyJobDiary.ViewModel
         {
             await _manager.SaveAsync(new DietPaymentItem()
             {
-                Location = _newLocation,
-                Payment = _newPayment,
-                Time = _newTime,
+                Country = _country,
+                Reward = _reward,
+                Hours = _hours,
             });
             ReloadItems();
         }

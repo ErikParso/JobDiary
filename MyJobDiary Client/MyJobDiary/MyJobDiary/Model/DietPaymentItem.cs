@@ -7,13 +7,10 @@ namespace MyJobDiary.Model
     {
         public string Id { get; set; }
 
-        public string Location { get; set; }
+        public string Country { get; set; }
 
-        public TimeSpan Time { get; set; }
+        public double Hours { get; set; }
 
-        public double Payment { get; set; }
-
-        [JsonIgnore]
-        public string TimeString { get => Time.ToString(@"hh\:mm"); }
+        public double Reward { get; set; }
     }
 }
