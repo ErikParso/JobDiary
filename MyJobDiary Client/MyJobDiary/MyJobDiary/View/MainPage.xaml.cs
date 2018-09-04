@@ -47,7 +47,9 @@ namespace MyJobDiary.View
                 TimeTo = DateTime.Now.AddHours(8),
                 ArrivalTime = DateTime.Now.AddHours(8),
                 IsNightShift = DateTime.Now.Hour < 24 && DateTime.Now.Hour > 18,
-                Country = countries.FirstOrDefault() ?? ""
+                Country = countries.FirstOrDefault() ?? "",
+                IsClosed = true,
+                WithDiets = true,
             });
             await Navigation.PushAsync(new ShiftFormContentPage(shiftFormViewModel));
         }

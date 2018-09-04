@@ -26,6 +26,7 @@ namespace MyJobDiary.ViewModel
             _countries = countries;
             _shift = shift;
             _validationService = new ValidationService();
+            AdjustDates();
         }
 
         #region Bindable
@@ -93,34 +94,6 @@ namespace MyJobDiary.ViewModel
                 _shift.ArrivalTime = _shift.ArrivalTime.Date.Add(TruncTime(value));
                 AdjustDates();
             }
-        }
-
-        private void AdjustDates()
-        {
-            if (_shift.DepartureTime.TimeOfDay > _shift.TimeFrom.TimeOfDay)
-                _shift.DepartureTime = _shift.TimeFrom.Date.AddDays(-1).Add(_shift.DepartureTime.TimeOfDay);
-            else
-                _shift.DepartureTime = _shift.TimeFrom.Date.Add(_shift.DepartureTime.TimeOfDay);
-
-            if (_shift.TimeFrom.TimeOfDay > _shift.TimeTo.TimeOfDay)
-                _shift.TimeTo = _shift.TimeFrom.Date.AddDays(1).Add(_shift.TimeTo.TimeOfDay);
-            else
-                _shift.TimeTo = _shift.TimeFrom.Date.Add(_shift.TimeTo.TimeOfDay);
-
-            if (_shift.TimeTo.TimeOfDay > _shift.ArrivalTime.TimeOfDay)
-                _shift.ArrivalTime = _shift.TimeTo.Date.AddDays(1).Add(_shift.ArrivalTime.TimeOfDay);
-            else
-                _shift.ArrivalTime = _shift.TimeTo.Date.Add(_shift.ArrivalTime.TimeOfDay);
-
-            RaisePropertyChanged(nameof(DepartureDate));
-            RaisePropertyChanged(nameof(DateFrom));
-            RaisePropertyChanged(nameof(DateTo));
-            RaisePropertyChanged(nameof(ArrivalDate));
-
-            RaisePropertyChanged(nameof(DepartureTime));
-            RaisePropertyChanged(nameof(TimeFrom));
-            RaisePropertyChanged(nameof(TimeTo));
-            RaisePropertyChanged(nameof(ArrivalTime));
         }
 
         public string Location
@@ -242,6 +215,34 @@ namespace MyJobDiary.ViewModel
         {
             var detail = $"Časový interval sa prekrýva. Skontrolujte a opravte položky z dňa {day.ToString("dd.mm.yyyy")}. Prekrývajúce sa obdobia môžu spôsobiť problémy v dochádzke a výpočtoch.";
             App.DialogService.ShowDialog("Prekrývanie období", detail);
+        }
+
+        private void AdjustDates()
+        {
+            if (_shift.DepartureTime.TimeOfDay > _shift.TimeFrom.TimeOfDay)
+                _shift.DepartureTime = _shift.TimeFrom.Date.AddDays(-1).Add(_shift.DepartureTime.TimeOfDay);
+            else
+                _shift.DepartureTime = _shift.TimeFrom.Date.Add(_shift.DepartureTime.TimeOfDay);
+
+            if (_shift.TimeFrom.TimeOfDay > _shift.TimeTo.TimeOfDay)
+                _shift.TimeTo = _shift.TimeFrom.Date.AddDays(1).Add(_shift.TimeTo.TimeOfDay);
+            else
+                _shift.TimeTo = _shift.TimeFrom.Date.Add(_shift.TimeTo.TimeOfDay);
+
+            if (_shift.TimeTo.TimeOfDay > _shift.ArrivalTime.TimeOfDay)
+                _shift.ArrivalTime = _shift.TimeTo.Date.AddDays(1).Add(_shift.ArrivalTime.TimeOfDay);
+            else
+                _shift.ArrivalTime = _shift.TimeTo.Date.Add(_shift.ArrivalTime.TimeOfDay);
+
+            RaisePropertyChanged(nameof(DepartureDate));
+            RaisePropertyChanged(nameof(DateFrom));
+            RaisePropertyChanged(nameof(DateTo));
+            RaisePropertyChanged(nameof(ArrivalDate));
+
+            RaisePropertyChanged(nameof(DepartureTime));
+            RaisePropertyChanged(nameof(TimeFrom));
+            RaisePropertyChanged(nameof(TimeTo));
+            RaisePropertyChanged(nameof(ArrivalTime));
         }
 
         #endregion

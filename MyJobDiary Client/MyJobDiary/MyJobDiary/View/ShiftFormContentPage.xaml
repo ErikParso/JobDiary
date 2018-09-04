@@ -12,26 +12,6 @@
         <ScrollView>
             <StackLayout Spacing="0">
 
-                <!--link with vouchers / is finished-->
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="0">
-                        <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource food_20}" Text="stravné"/>
-                            <Switch IsToggled="{Binding WithDiets}" HorizontalOptions="Start"/>
-                        </StackLayout>
-                    </Frame>
-                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="1">
-                        <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource stop_20}" Text="Ukončená"/>
-                            <Switch IsToggled="{Binding IsClosed}" HorizontalOptions="Start"/>
-                        </StackLayout>
-                    </Frame>
-                </Grid>
-
                 <!--day-->
                 <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}">
                     <StackLayout>
@@ -44,96 +24,184 @@
                     </StackLayout>
                 </Frame>
 
-                <!--work start times-->
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="0" IsVisible="{Binding WithDiets}">
-                        <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Text="Odchod" Icon="{StaticResource car_20}"/>
-                            <Grid>
-                                <TimePicker Time="{Binding DepartureTime}" Format="HH:mm" TextColor="White"/>
-                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
-                                       Text="{Binding Path=DepartureDate, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
-                            </Grid>
-                            <Entry Text="{Binding DepartureLocation}" TextColor="White" FontSize="Micro"/>
-                        </StackLayout>
-                    </Frame>
-                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="1">
-                        <Frame.Triggers>
-                            <DataTrigger TargetType="Frame" Binding="{Binding WithDiets}" Value="False">
-                                <Setter Property="Grid.Column" Value="0"/>
-                                <Setter Property="Grid.ColumnSpan" Value="2"/>
-                            </DataTrigger>
-                        </Frame.Triggers>
-                        <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_start_20}" Text="Začiatok"/>
-                            <Grid>
-                                <TimePicker Time="{Binding TimeFrom}" Format="HH:mm" TextColor="White"/>
-                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
-                                Text="{Binding Path=DateFrom, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
-                            </Grid>
-                            <Entry Text="{Binding Location}" TextColor="White" FontSize="Micro"/>
-                        </StackLayout>
-                    </Frame>
-                </Grid>
+                <!--work-->
+                <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}">
+                    <Grid ColumnSpacing="10" RowSpacing="0">
 
-                <!--work end times-->
-                <Grid IsVisible="{Binding IsClosed}">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="0">
-                        <Frame.Triggers>
-                            <DataTrigger TargetType="Frame" Binding="{Binding WithDiets}" Value="False">
-                                <Setter Property="Grid.ColumnSpan" Value="2"/>
-                            </DataTrigger>
-                        </Frame.Triggers>
-                        <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource clock_end_20}" Text="Koniec"/>
-                            <Grid>
-                                <TimePicker Time="{Binding TimeTo}" Format="HH:mm" TextColor="White"/>
-                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
-                                       Text="{Binding Path=DateTo, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
-                            </Grid>
-                            <Entry Text="{Binding Location}" TextColor="White" FontSize="Micro"/>
-                        </StackLayout>
-                    </Frame>
-                    <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" Grid.Column="1" IsVisible="{Binding WithDiets}">
-                        <StackLayout>
-                            <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Text="Príchod" Icon="{StaticResource car_20}"/>
-                            <Grid>
-                                <TimePicker Time="{Binding ArrivalTime}" Format="HH:mm" TextColor="White"/>
-                                <Label HorizontalOptions="End" VerticalOptions="Center" TextColor="{StaticResource IconColor}"
-                                Text="{Binding Path=ArrivalDate, Converter={StaticResource dayOfWeekConverter}}" Margin="0,0,5,0"/>
-                            </Grid>
-                            <Entry Text="{Binding ArrivalLocation}" TextColor="White" FontSize="Micro"/>
-                        </StackLayout>
-                    </Frame>
-                </Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
 
-                <!--country-->
-                <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}" IsVisible="{Binding WithDiets}">
-                    <StackLayout>
-                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource flag_20}" Text="Krajina"/>
-                        <Picker SelectedItem="{Binding Country}" ItemsSource="{Binding Countries}" TextColor="White" />
-                    </StackLayout>
+                        <contentview:LinePictureLabel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
+                                                      Color="{StaticResource FrameLabelColor}" Icon="{StaticResource work_20}" Text="Pracovné údaje"/>
+
+                        <StackLayout Grid.Row="1" Grid.Column="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                       Source="{StaticResource clock_start_20}"/>
+                                <TimePicker Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
+                                    Time="{Binding TimeFrom}" Format="HH:mm" TextColor="{StaticResource PrimaryTextColor}"/>
+                                <Label Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,5,0"
+                                       Text="{Binding Path=DateFrom, Converter={StaticResource dayOfWeekConverter}}"
+                                       TextColor="{StaticResource IconColor}"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" Grid.Column="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                       Source="{StaticResource clock_end_20}"/>
+                                <TimePicker Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
+                                    Time="{Binding TimeTo}" Format="HH:mm" TextColor="{StaticResource PrimaryTextColor}"/>
+                                <Label Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,5,0"
+                                       Text="{Binding Path=DateTo, Converter={StaticResource dayOfWeekConverter}}"
+                                       TextColor="{StaticResource IconColor}"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                       Source="{StaticResource city_20}"/>
+                                <Entry Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
+                                       Text="{Binding Location}" TextColor="{StaticResource PrimaryTextColor}"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                       Source="{StaticResource note_20}"/>
+                                <Entry Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
+                                       Text="{Binding Job}" TextColor="{StaticResource PrimaryTextColor}"
+                                       FontSize="Micro"/>
+                            </Grid>
+                        </StackLayout>
+
+                    </Grid>
                 </Frame>
 
+                <!--diets-->
                 <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}">
-                    <StackLayout>
-                        <!--description-->
-                        <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource work_20}" Text="Popis práce"/>
-                        <Entry Text="{Binding Job}" TextColor="White"/>
-                    </StackLayout>
+                    <Grid ColumnSpacing="10" RowSpacing="0">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <contentview:LinePictureLabel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
+                                                      Color="{StaticResource FrameLabelColor}" Icon="{StaticResource food_20}" Text="Stravné údaje"/>
+
+                        <StackLayout Grid.Row="1" Grid.Column="0" IsVisible="{Binding WithDiets}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                       Source="{StaticResource clock_start_20}"/>
+                                <TimePicker Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
+                                    Time="{Binding DepartureTime}" Format="HH:mm" TextColor="{StaticResource PrimaryTextColor}"/>
+                                <Label Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,5,0"
+                                       Text="{Binding Path=DepartureDate, Converter={StaticResource dayOfWeekConverter}}"
+                                       TextColor="{StaticResource IconColor}"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" Grid.Column="1" IsVisible="{Binding WithDiets}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                       Source="{StaticResource clock_end_20}"/>
+                                <TimePicker Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
+                                    Time="{Binding ArrivalTime}" Format="HH:mm" TextColor="{StaticResource PrimaryTextColor}"/>
+                                <Label Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,5,0"
+                                       Text="{Binding Path=ArrivalDate, Converter={StaticResource dayOfWeekConverter}}"
+                                       TextColor="{StaticResource IconColor}"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="2" Grid.Column="0" IsVisible="{Binding WithDiets}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                       Source="{StaticResource car_20}"/>
+                                <Entry Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
+                                       Text="{Binding DepartureLocation}" TextColor="{StaticResource PrimaryTextColor}"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="2" Grid.Column="1" IsVisible="{Binding WithDiets}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                       Source="{StaticResource home_20}"/>
+                                <Entry Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
+                                       Text="{Binding ArrivalLocation}" TextColor="{StaticResource PrimaryTextColor}"/>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" IsVisible="{Binding WithDiets}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"
+                                       Source="{StaticResource flag_20}"/>
+                                <Picker Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
+                                        SelectedItem="{Binding Country}" ItemsSource="{Binding Countries}" TextColor="{StaticResource PrimaryTextColor}" />
+                            </Grid>
+                        </StackLayout>
+
+                        <Switch Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center"
+                                IsToggled="{Binding WithDiets}"/>
+                    </Grid>
                 </Frame>
 
+                <!--night-->
                 <Frame Margin="5" BackgroundColor="{StaticResource FrameColor}">
                     <StackLayout>
-                        <!--is night shift-->
                         <contentview:LinePictureLabel Color="{StaticResource FrameLabelColor}" Icon="{StaticResource moon_20}" Text="Nočná"/>
                         <Switch IsToggled="{Binding IsNightShift}" HorizontalOptions="Start"/>
                     </StackLayout>
