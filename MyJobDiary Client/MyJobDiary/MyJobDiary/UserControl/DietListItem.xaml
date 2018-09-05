@@ -18,6 +18,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="60"/>
         </Grid.ColumnDefinitions>
+
         <!--date-->
         <StackLayout HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" Margin="5,0,5,0">
             <Label TextColor="{StaticResource IconColor}" HorizontalOptions="Center"
@@ -33,6 +34,7 @@
             </Label>
             <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}"/>
         </StackLayout>
+
         <!--times-->
         <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="5,0,5,0">
             <StackLayout Orientation="Horizontal">
@@ -51,6 +53,7 @@
                        TextColor="{StaticResource SecondaryTextColor}"/>
             </StackLayout>
         </StackLayout>
+
         <!--location-->
         <StackLayout Grid.Column="2" Grid.Row="0" Margin="5,0,5,0" VerticalOptions="Start">
             <StackLayout Orientation="Horizontal">
@@ -70,9 +73,10 @@
                        TextColor="{StaticResource SecondaryTextColor}" LineBreakMode="NoWrap"/>
             </StackLayout>
         </StackLayout>
-        <!--night shift-->
+
+        <!--sum-->
         <StackLayout Grid.Column="3" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
-            <Label TextColor="{StaticResource IconColor}" Text="{Binding DietSum}"
+            <Label TextColor="{StaticResource IconColor}" Text="{Binding DietSumString}"
                    HorizontalOptions="Center"/>
             <Label TextColor="{StaticResource IconColor}" Text="{Binding DietTime, Converter={StaticResource timeWorkedConverter}}"
                    HorizontalOptions="Center" IsVisible="{Binding IsClosed}" FontSize="Micro"/>

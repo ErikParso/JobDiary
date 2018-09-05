@@ -39,5 +39,14 @@ namespace MyJobDiary.Model
 
         [JsonIgnore]
         public double DietSum { get; set; }
+
+        [JsonIgnore]
+        public string Currency { get; set; }
+
+        [JsonIgnore]
+        public string DietSumString
+        {
+            get => string.Format("{0:N2} {1}", DietSum, Currency);
+        }
     }
 }

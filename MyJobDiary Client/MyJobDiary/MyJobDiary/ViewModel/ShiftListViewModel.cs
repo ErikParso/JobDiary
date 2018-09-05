@@ -48,10 +48,12 @@ namespace MyJobDiary.ViewModel
         private IEnumerable<Shift> RecalculateSum(IEnumerable<Shift> items)
             => items.Select(i =>
             {
-                i.DietSum = _dietPaymentItems
+                var paymentItem = _dietPaymentItems
                     .Where(d => d.Country == i.Country && d.Hours <= i.DietTime.TotalHours)
                     .OrderByDescending(d => d.Hours)
-                    .FirstOrDefault()?.Reward ?? 0;
+                    .FirstOrDefault();
+                i.DietSum = paymentItem?.Reward ?? 0;
+                i.Currency = paymentItem?.Currency ?? "";
                 return i;
             });
 

@@ -16,6 +16,7 @@ namespace MyJobDiary.ViewModel
         private string _country;
         private double _hours;
         private double _reward;
+        private string _currency;
 
         public DietsPaymentViewModel(CachedTableManager<DietPaymentItem> manager)
         {
@@ -25,6 +26,7 @@ namespace MyJobDiary.ViewModel
             _country = "SK";
             _reward = 0;
             _hours = 0;
+            _currency = "€";
             ReloadItems();
         }
 
@@ -47,6 +49,12 @@ namespace MyJobDiary.ViewModel
         {
             get => _reward.ToString();
             set => double.TryParse(value, out _reward);
+        }
+
+        public string Currency
+        {
+            get => _currency.ToString();
+            set => SetField(ref _currency, value);
         }
 
         public IEnumerable<DietPaymentItem> Payments
@@ -72,6 +80,7 @@ namespace MyJobDiary.ViewModel
                 Country = _country,
                 Reward = _reward,
                 Hours = _hours,
+                Currency = _currency,
             });
             ReloadItems();
         }

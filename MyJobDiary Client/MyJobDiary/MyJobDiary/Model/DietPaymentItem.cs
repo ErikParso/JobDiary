@@ -1,7 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
-
-namespace MyJobDiary.Model
+﻿namespace MyJobDiary.Model
 {
     public class DietPaymentItem : ICachedTableItem
     {
@@ -12,5 +9,7 @@ namespace MyJobDiary.Model
         public double Hours { get; set; }
 
         public double Reward { get; set; }
+
+        public string Currency { get; set; }
     }
 }

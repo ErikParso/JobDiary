@@ -12,5 +12,7 @@ namespace MyJobDiaryService.DataObjects
 
         public double Reward { get; set; }
 
+        public string Currency { get; set; }
+
     }
 }

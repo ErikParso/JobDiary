@@ -173,6 +173,10 @@
     <Compile Include="Migrations\201809031419536_DietPaymentItemRemake.Designer.cs">
       <DependentUpon>201809031419536_DietPaymentItemRemake.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809051718471_DietCurrency.cs" />
+    <Compile Include="Migrations\201809051718471_DietCurrency.Designer.cs">
+      <DependentUpon>201809051718471_DietCurrency.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyJobDiaryContext.cs" />
     <Compile Include="Startup.cs" />
@@ -208,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809031419536_DietPaymentItemRemake.resx">
       <DependentUpon>201809031419536_DietPaymentItemRemake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809051718471_DietCurrency.resx">
+      <DependentUpon>201809051718471_DietCurrency.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
