@@ -29,6 +29,7 @@ namespace MyJobDiary.ViewModel
             AdjustDates();
         }
 
+
         #region Bindable
 
         public DateTime DateFrom
@@ -62,6 +63,7 @@ namespace MyJobDiary.ViewModel
             set
             {
                 _shift.TimeFrom = _shift.TimeFrom.Date.Add(TruncTime(value));
+                _shift.DepartureTime = _shift.TimeFrom;
                 AdjustDates();
             }
         }
@@ -72,6 +74,7 @@ namespace MyJobDiary.ViewModel
             set
             {
                 _shift.TimeTo = _shift.TimeTo.Date.Add(TruncTime(value));
+                _shift.ArrivalTime = _shift.TimeTo;
                 AdjustDates();
             }
         }
