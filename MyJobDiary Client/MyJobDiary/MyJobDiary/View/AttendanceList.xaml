@@ -31,15 +31,24 @@
                                        Text="{Binding Path=Day, Converter={StaticResource dayOfWeekConverter}}">
                                 <Label.Triggers>
                                     <DataTrigger TargetType="Label" Binding="{Binding Day.DayOfWeek}" Value="{x:Static system:DayOfWeek.Sunday}">
-                                        <Setter Property="FontAttributes" Value="Bold"/>
+                                        <Setter Property="TextColor" Value="{StaticResource TransferColor}"/>
                                     </DataTrigger>
                                     <DataTrigger TargetType="Label" Binding="{Binding Day.DayOfWeek}" Value="{x:Static system:DayOfWeek.Saturday}">
-                                        <Setter Property="FontAttributes" Value="Bold"/>
+                                        <Setter Property="TextColor" Value="{StaticResource TransferColor}"/>
                                     </DataTrigger>
                                 </Label.Triggers>
                             </Label>
                             <Label Text="{Binding Day, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}"
-                                       Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                       Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding Day.DayOfWeek}" Value="{x:Static system:DayOfWeek.Sunday}">
+                                        <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding Day.DayOfWeek}" Value="{x:Static system:DayOfWeek.Saturday}">
+                                        <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
                             <usercontrol:AttendanceItem HeightRequest="10" Grid.Column="2"
                                                         WorkColor="{StaticResource IconColor}"
                                                         TransferColor="{StaticResource TransferColor}"
