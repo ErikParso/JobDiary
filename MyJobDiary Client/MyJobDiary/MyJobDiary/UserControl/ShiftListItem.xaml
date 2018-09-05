@@ -18,21 +18,33 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="60"/>
         </Grid.ColumnDefinitions>
+        
         <!--date-->
         <StackLayout HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" Margin="5,0,5,0">
-            <Label TextColor="{StaticResource IconColor}" HorizontalOptions="Center"
+            <Label TextColor="{StaticResource IconColor}" HorizontalOptions="Center" FontAttributes="Bold"
                    Text="{Binding Path=TimeFrom, Converter={StaticResource dayOfWeekConverter}}">
                 <Label.Triggers>
                     <DataTrigger TargetType="Label" Binding="{Binding TimeFrom.DayOfWeek}" Value="{x:Static system:DayOfWeek.Sunday}">
-                        <Setter Property="FontAttributes" Value="Bold"/>
+                        <Setter Property="TextColor" Value="{StaticResource TransferColor}"/>
                     </DataTrigger>
                     <DataTrigger TargetType="Label" Binding="{Binding TimeFrom.DayOfWeek}" Value="{x:Static system:DayOfWeek.Saturday}">
-                        <Setter Property="FontAttributes" Value="Bold"/>
+                        <Setter Property="TextColor" Value="{StaticResource TransferColor}"/>
                     </DataTrigger>
                 </Label.Triggers>
             </Label>
-            <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}"/>
+            <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.}'}" FontAttributes="Bold"
+                   TextColor="{StaticResource PrimaryTextColor}">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label" Binding="{Binding TimeFrom.DayOfWeek}" Value="{x:Static system:DayOfWeek.Sunday}">
+                        <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Label" Binding="{Binding TimeFrom.DayOfWeek}" Value="{x:Static system:DayOfWeek.Saturday}">
+                        <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
         </StackLayout>
+        
         <!--times-->
         <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="5,0,5,0">
             <StackLayout Orientation="Horizontal">
@@ -43,17 +55,12 @@
                 <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource clock_end_20}"/>
                 <Label Text="{Binding TimeTo, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding IsClosed}"/>
             </StackLayout>
-            <!--<Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource alert_20}">
-                <Image.Triggers>
-                    <DataTrigger TargetType="Image" Binding="{Binding IsClosed}" Value="True">
-                        <Setter Property="IsVisible" Value="False"/>
-                    </DataTrigger>
-                </Image.Triggers>
-            </Image>-->
         </StackLayout>
+        
         <!--location-->
         <Label Text="{Binding Location}" TextColor="{StaticResource PrimaryTextColor}" Grid.Column="2" Grid.Row="0"
                HorizontalOptions="Center" VerticalOptions="Center" Margin="5,0,5,0"/>
+        
         <!--night shift-->
         <StackLayout Grid.Column="3" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
             <Image Source="{StaticResource sun_24}" HorizontalOptions="Center">

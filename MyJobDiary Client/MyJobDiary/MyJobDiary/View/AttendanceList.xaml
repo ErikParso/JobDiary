@@ -26,7 +26,7 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Label TextColor="{StaticResource IconColor}" Grid.Column="0"
+                            <Label TextColor="{StaticResource IconColor}" Grid.Column="0" FontAttributes="Bold"
                                        VerticalOptions="Center" HorizontalOptions="Center"
                                        Text="{Binding Path=Day, Converter={StaticResource dayOfWeekConverter}}">
                                 <Label.Triggers>
@@ -38,7 +38,7 @@
                                     </DataTrigger>
                                 </Label.Triggers>
                             </Label>
-                            <Label Text="{Binding Day, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}"
+                            <Label Text="{Binding Day, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}" FontAttributes="Bold"
                                        Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start">
                                 <Label.Triggers>
                                     <DataTrigger TargetType="Label" Binding="{Binding Day.DayOfWeek}" Value="{x:Static system:DayOfWeek.Sunday}">

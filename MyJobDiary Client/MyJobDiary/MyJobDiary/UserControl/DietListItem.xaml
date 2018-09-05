@@ -21,36 +21,41 @@
 
         <!--date-->
         <StackLayout HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" Margin="5,0,5,0">
-            <Label TextColor="{StaticResource IconColor}" HorizontalOptions="Center"
+            <Label TextColor="{StaticResource IconColor}" HorizontalOptions="Center" FontAttributes="Bold"
                    Text="{Binding Path=TimeFrom, Converter={StaticResource dayOfWeekConverter}}">
                 <Label.Triggers>
                     <DataTrigger TargetType="Label" Binding="{Binding TimeFrom.DayOfWeek}" Value="{x:Static system:DayOfWeek.Sunday}">
-                        <Setter Property="FontAttributes" Value="Bold"/>
+                        <Setter Property="TextColor" Value="{StaticResource TransferColor}"/>
                     </DataTrigger>
                     <DataTrigger TargetType="Label" Binding="{Binding TimeFrom.DayOfWeek}" Value="{x:Static system:DayOfWeek.Saturday}">
-                        <Setter Property="FontAttributes" Value="Bold"/>
+                        <Setter Property="TextColor" Value="{StaticResource TransferColor}"/>
                     </DataTrigger>
                 </Label.Triggers>
             </Label>
-            <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.}'}" TextColor="{StaticResource PrimaryTextColor}"/>
+            <Label Text="{Binding TimeFrom, StringFormat='\{0:dd.MM.}'}" FontAttributes="Bold"
+                   TextColor="{StaticResource PrimaryTextColor}">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label" Binding="{Binding TimeFrom.DayOfWeek}" Value="{x:Static system:DayOfWeek.Sunday}">
+                        <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Label" Binding="{Binding TimeFrom.DayOfWeek}" Value="{x:Static system:DayOfWeek.Saturday}">
+                        <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
         </StackLayout>
 
         <!--times-->
         <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="5,0,5,0">
             <StackLayout Orientation="Horizontal">
-                <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource clock_start_20}"/>
-                <Label Text="{Binding DepartureTime, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="{Binding DepartureTime, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}"/>
                 <Label Text="-" TextColor="{StaticResource SecondaryTextColor}"/>
-                <Label Text="{Binding TimeFrom, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}"/>
+                <Label Text="{Binding ArrivalTime, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Image HorizontalOptions="Start" VerticalOptions="Center" Source="{StaticResource clock_end_20}"/>
-                <Label IsVisible="{Binding IsClosed}" Text="{Binding TimeTo, StringFormat='\{0:HH:mm}'}"
-                       TextColor="{StaticResource PrimaryTextColor}"/>
-                <Label IsVisible="{Binding IsClosed}" Text="-"
-                       TextColor="{StaticResource SecondaryTextColor}"/>
-                <Label IsVisible="{Binding IsClosed}" Text="{Binding ArrivalTime, StringFormat='\{0:HH:mm}'}"
-                       TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="{Binding TimeFrom, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="-" TextColor="{StaticResource SecondaryTextColor}"/>
+                <Label Text="{Binding TimeTo, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource SecondaryTextColor}"/>
             </StackLayout>
         </StackLayout>
 
@@ -58,19 +63,17 @@
         <StackLayout Grid.Column="2" Grid.Row="0" Margin="5,0,5,0" VerticalOptions="Start">
             <StackLayout Orientation="Horizontal">
                 <Label Text="{Binding DepartureLocation}"
-                       TextColor="{StaticResource SecondaryTextColor}" LineBreakMode="NoWrap"/>
+                       TextColor="{StaticResource PrimaryTextColor}" LineBreakMode="NoWrap"/>
                 <Label Text="-"
-                       TextColor="{StaticResource SecondaryTextColor}"/>
-                <Label Text="{Binding Location}"
+                       TextColor="{StaticResource PrimaryTextColor}"/>
+                <Label Text="{Binding ArrivalLocation}"
                        TextColor="{StaticResource PrimaryTextColor}" LineBreakMode="NoWrap"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Grid.Row="1">
-                <Label IsVisible="{Binding IsClosed}" Text="{Binding Location}"
-                       TextColor="{StaticResource PrimaryTextColor}" LineBreakMode="NoWrap"/>
-                <Label IsVisible="{Binding IsClosed}" Text="-"
-                       TextColor="{StaticResource SecondaryTextColor}"/>
-                <Label IsVisible="{Binding IsClosed}" Text="{Binding ArrivalLocation}"
+                <Label Text="{Binding Location}"
                        TextColor="{StaticResource SecondaryTextColor}" LineBreakMode="NoWrap"/>
+                <Label Text="{Binding Country, StringFormat='({0})'}"
+                       TextColor="{StaticResource PrimaryTextColor}" LineBreakMode="NoWrap"/>
             </StackLayout>
         </StackLayout>
 
@@ -79,7 +82,7 @@
             <Label TextColor="{StaticResource IconColor}" Text="{Binding DietSumString}"
                    HorizontalOptions="Center"/>
             <Label TextColor="{StaticResource IconColor}" Text="{Binding DietTime, Converter={StaticResource timeWorkedConverter}}"
-                   HorizontalOptions="Center" IsVisible="{Binding IsClosed}" FontSize="Micro"/>
+                   HorizontalOptions="Center" FontSize="Micro"/>
         </StackLayout>
 
         <!--job description-->
