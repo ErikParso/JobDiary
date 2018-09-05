@@ -26,7 +26,7 @@
                        TextColor="{StaticResource PrimaryTextColor}"/>
                 <Label Text="Počet hodín" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"
                        TextColor="{StaticResource PrimaryTextColor}"/>
-                <Label Text="Odmena" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"
+                <Label Text="Suma" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"
                        TextColor="{StaticResource PrimaryTextColor}"/>
             </Grid>
             <BoxView HeightRequest="1" BackgroundColor="{StaticResource IconColor}" Margin="0"/>
