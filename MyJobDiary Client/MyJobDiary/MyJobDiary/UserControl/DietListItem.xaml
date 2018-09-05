@@ -72,13 +72,8 @@
         </StackLayout>
         <!--night shift-->
         <StackLayout Grid.Column="3" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
-            <Image Source="{StaticResource sun_24}" HorizontalOptions="Center">
-                <Image.Triggers>
-                    <DataTrigger TargetType="Image" Binding="{Binding IsNightShift}" Value="True">
-                        <Setter Property="Source" Value="{StaticResource moon_24}"/>
-                    </DataTrigger>
-                </Image.Triggers>
-            </Image>
+            <Label TextColor="{StaticResource IconColor}" Text="{Binding DietSum}"
+                   HorizontalOptions="Center"/>
             <Label TextColor="{StaticResource IconColor}" Text="{Binding DietTime, Converter={StaticResource timeWorkedConverter}}"
                    HorizontalOptions="Center" IsVisible="{Binding IsClosed}" FontSize="Micro"/>
         </StackLayout>

@@ -36,5 +36,8 @@ namespace MyJobDiary.Model
 
         [JsonIgnore]
         public TimeSpan DietTime { get => ArrivalTime - DepartureTime; }
+
+        [JsonIgnore]
+        public double DietSum { get; set; }
     }
 }

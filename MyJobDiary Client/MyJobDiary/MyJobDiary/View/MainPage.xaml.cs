@@ -22,7 +22,8 @@ namespace MyJobDiary.View
         private async void ShiftList_Clicked(object sender, EventArgs e)
         {
             var manager = CachedTableManager<Shift>.Current.Value;
-            ShiftListViewModel viewModel = new ShiftListViewModel(manager);
+            var dietItems = await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync();
+            ShiftListViewModel viewModel = new ShiftListViewModel(manager, dietItems);
             ShiftListContentPage shiftList = new ShiftListContentPage(viewModel, false);
             await Navigation.PushAsync(shiftList);
         }
@@ -30,7 +31,8 @@ namespace MyJobDiary.View
         private async void Diets_Clicked(object sender, EventArgs e)
         {
             var manager = CachedTableManager<Shift>.Current.Value;
-            ShiftListViewModel viewModel = new ShiftListViewModel(manager);
+            var dietItems = await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync();
+            ShiftListViewModel viewModel = new ShiftListViewModel(manager, dietItems);
             ShiftListContentPage shiftList = new ShiftListContentPage(viewModel, true);
             await Navigation.PushAsync(shiftList);
         }
