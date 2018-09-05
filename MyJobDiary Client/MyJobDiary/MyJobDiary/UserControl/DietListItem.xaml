@@ -79,7 +79,7 @@
                     </DataTrigger>
                 </Image.Triggers>
             </Image>
-            <Label TextColor="{StaticResource IconColor}" Text="{Binding TimeWorked, Converter={StaticResource timeWorkedConverter}}"
+            <Label TextColor="{StaticResource IconColor}" Text="{Binding DietTime, Converter={StaticResource timeWorkedConverter}}"
                    HorizontalOptions="Center" IsVisible="{Binding IsClosed}" FontSize="Micro"/>
         </StackLayout>
 

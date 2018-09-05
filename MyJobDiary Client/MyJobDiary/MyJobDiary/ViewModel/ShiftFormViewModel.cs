@@ -62,8 +62,11 @@ namespace MyJobDiary.ViewModel
             get => _shift.TimeFrom.TimeOfDay;
             set
             {
-                _shift.TimeFrom = _shift.TimeFrom.Date.Add(TruncTime(value));
-                _shift.DepartureTime = _shift.TimeFrom;
+                TimeSpan truncVal = TruncTime(value);
+                DateTime newTime = _shift.TimeFrom.Date.Add(truncVal);
+                if (TimeFrom != truncVal)
+                    _shift.DepartureTime = newTime;
+                _shift.TimeFrom = newTime;
                 AdjustDates();
             }
         }
@@ -73,8 +76,11 @@ namespace MyJobDiary.ViewModel
             get => _shift.TimeTo.TimeOfDay;
             set
             {
-                _shift.TimeTo = _shift.TimeTo.Date.Add(TruncTime(value));
-                _shift.ArrivalTime = _shift.TimeTo;
+                TimeSpan truncVal = TruncTime(value);
+                DateTime newTime = _shift.TimeTo.Date.Add(truncVal);
+                if (TimeTo != truncVal)
+                    _shift.ArrivalTime = newTime;
+                _shift.TimeTo = newTime;
                 AdjustDates();
             }
         }

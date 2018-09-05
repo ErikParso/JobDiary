@@ -19,9 +19,6 @@ namespace MyJobDiary.Model
 
         public bool IsClosed { get; set; }
 
-        [JsonIgnore]
-        public TimeSpan TimeWorked { get => TimeTo - TimeFrom; }
-
         public bool WithDiets { get; set; }
 
         public DateTime DepartureTime { get; set; }
@@ -33,5 +30,11 @@ namespace MyJobDiary.Model
         public string DepartureLocation { get; set; }
 
         public string Country { get; set; }
+
+        [JsonIgnore]
+        public TimeSpan TimeWorked { get => TimeTo - TimeFrom; }
+
+        [JsonIgnore]
+        public TimeSpan DietTime { get => ArrivalTime - DepartureTime; }
     }
 }
