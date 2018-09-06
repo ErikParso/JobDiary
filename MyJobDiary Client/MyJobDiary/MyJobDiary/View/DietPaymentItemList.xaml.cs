@@ -17,17 +17,17 @@ namespace MyJobDiary.View
             BindingContext = viewModel;
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            NavigationPage.SetHasNavigationBar(this, false);
-        }
-
         private void OnDelete(object sender, System.EventArgs e)
         {
             var menuItem = sender as MenuItem;
             var item = (menuItem.CommandParameter as DietPaymentItem);
             _viewModel.DeleteItem(item);
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

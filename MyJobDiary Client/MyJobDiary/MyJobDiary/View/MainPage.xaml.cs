@@ -78,5 +78,10 @@ namespace MyJobDiary.View
             var viewModel = new DietsPaymentViewModel(manager);
             await Navigation.PushAsync(new DietPaymentItemList(viewModel));
         }
+
+        private async void Statistic_Click(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StatistiscContentPage());
+        }
     }
 }
