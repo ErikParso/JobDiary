@@ -80,7 +80,13 @@
         <!--sum-->
         <StackLayout Grid.Column="3" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
             <Label TextColor="{StaticResource IconColor}" Text="{Binding DietSumString}"
-                   HorizontalOptions="Center"/>
+                   HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="OnDietSumTapped"
+                        NumberOfTapsRequired="1" />
+                </Label.GestureRecognizers>
+            </Label>
             <Label TextColor="{StaticResource IconColor}" Text="{Binding DietTime, Converter={StaticResource timeWorkedConverter}}"
                    HorizontalOptions="Center" FontSize="Micro"/>
         </StackLayout>

@@ -1,5 +1,6 @@
 ﻿using MyJobDiary.Managers;
 using MyJobDiary.Model;
+using MyJobDiary.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +12,14 @@ namespace MyJobDiary.ViewModel
     {
         private readonly CachedTableManager<Shift> _shiftManager;
         private IEnumerable<Shift> _allShiftItems;
-        private IEnumerable<DietPaymentItem> _dietPaymentItems;
+        private DietCalculationService _dietCalculationService;
 
         public ShiftListViewModel(
             CachedTableManager<Shift> shiftManager,
-            IEnumerable<DietPaymentItem> dietPaymentItems)
+            DietCalculationService dietCalculationService)
         {
             _shiftManager = shiftManager;
-            _dietPaymentItems = dietPaymentItems;
+            _dietCalculationService = dietCalculationService;
             _allShiftItems = new List<Shift>();
             MonthNavigationViewModel = new MonthNavigationViewModel();
             MonthNavigationViewModel.MonthChanged += ReloadItems;
@@ -27,7 +28,7 @@ namespace MyJobDiary.ViewModel
 
         public IEnumerable<Shift> ShiftItems
         {
-            get => RecalculateSum(Filter(_allShiftItems));
+            get => RecalculateDiets(Filter(_allShiftItems));
             set => SetField(ref _allShiftItems, value);
         }
 
@@ -45,15 +46,10 @@ namespace MyJobDiary.ViewModel
                                    i.TimeFrom.Month == MonthNavigationViewModel.MonthPicker.Value)
                        .OrderBy(i => i.TimeFrom);
 
-        private IEnumerable<Shift> RecalculateSum(IEnumerable<Shift> items)
+        private IEnumerable<Shift> RecalculateDiets(IEnumerable<Shift> items)
             => items.Select(i =>
             {
-                var paymentItem = _dietPaymentItems
-                    .Where(d => d.Country == i.Country && d.Hours <= i.DietTime.TotalHours)
-                    .OrderByDescending(d => d.Hours)
-                    .FirstOrDefault();
-                i.DietSum = paymentItem?.Reward ?? 0;
-                i.Currency = paymentItem?.Currency ?? "";
+                i.DietCalculationItems = _dietCalculationService.GetDietCalculation(i);
                 return i;
             });
 

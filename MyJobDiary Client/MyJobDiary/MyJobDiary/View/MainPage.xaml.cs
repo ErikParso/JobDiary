@@ -23,7 +23,8 @@ namespace MyJobDiary.View
         {
             var manager = CachedTableManager<Shift>.Current.Value;
             var dietItems = await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync();
-            ShiftListViewModel viewModel = new ShiftListViewModel(manager, dietItems);
+            var calc = new DietCalculationService(dietItems);
+            ShiftListViewModel viewModel = new ShiftListViewModel(manager, calc);
             ShiftListContentPage shiftList = new ShiftListContentPage(viewModel, false);
             await Navigation.PushAsync(shiftList);
         }
@@ -32,7 +33,8 @@ namespace MyJobDiary.View
         {
             var manager = CachedTableManager<Shift>.Current.Value;
             var dietItems = await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync();
-            ShiftListViewModel viewModel = new ShiftListViewModel(manager, dietItems);
+            var calc = new DietCalculationService(dietItems);
+            ShiftListViewModel viewModel = new ShiftListViewModel(manager, calc);
             ShiftListContentPage shiftList = new ShiftListContentPage(viewModel, true);
             await Navigation.PushAsync(shiftList);
         }

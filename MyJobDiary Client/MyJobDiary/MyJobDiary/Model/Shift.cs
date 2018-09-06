@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MyJobDiary.Model
 {
@@ -38,15 +40,14 @@ namespace MyJobDiary.Model
         public TimeSpan DietTime { get => ArrivalTime - DepartureTime; }
 
         [JsonIgnore]
-        public double DietSum { get; set; }
-
-        [JsonIgnore]
-        public string Currency { get; set; }
-
-        [JsonIgnore]
         public string DietSumString
         {
-            get => string.Format("{0:N2} {1}", DietSum, Currency);
+            get => string.Format("{0:N2} {1}",
+                DietCalculationItems.Sum(d => d.Reward),
+                DietCalculationItems.Select(d => d.Currency).FirstOrDefault());
         }
+
+        [JsonIgnore]
+        public IEnumerable<DietCalculationItem> DietCalculationItems { get; set; }
     }
 }

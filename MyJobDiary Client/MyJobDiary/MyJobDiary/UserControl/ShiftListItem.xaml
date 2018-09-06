@@ -18,7 +18,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="60"/>
         </Grid.ColumnDefinitions>
-        
+
         <!--date-->
         <StackLayout HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" Margin="5,0,5,0">
             <Label TextColor="{StaticResource IconColor}" HorizontalOptions="Center" FontAttributes="Bold"
@@ -44,7 +44,7 @@
                 </Label.Triggers>
             </Label>
         </StackLayout>
-        
+
         <!--times-->
         <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="5,0,5,0">
             <StackLayout Orientation="Horizontal">
@@ -56,11 +56,11 @@
                 <Label Text="{Binding TimeTo, StringFormat='\{0:HH:mm}'}" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding IsClosed}"/>
             </StackLayout>
         </StackLayout>
-        
+
         <!--location-->
         <Label Text="{Binding Location}" TextColor="{StaticResource PrimaryTextColor}" Grid.Column="2" Grid.Row="0"
                HorizontalOptions="Center" VerticalOptions="Center" Margin="5,0,5,0"/>
-        
+
         <!--night shift-->
         <StackLayout Grid.Column="3" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
             <Image Source="{StaticResource sun_24}" HorizontalOptions="Center">

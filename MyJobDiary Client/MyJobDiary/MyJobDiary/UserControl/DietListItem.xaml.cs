@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyJobDiary.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,5 +17,16 @@ namespace MyJobDiary.UserControl
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void OnDietSumTapped(object sender, EventArgs e)
+        {
+            var item = BindingContext as Shift;
+            App.DialogService.ShowDialog(item.DietSumString, BuildcalculationInfo(item));
+        }
+
+        private string BuildcalculationInfo(Shift item)
+            => string.Join(Environment.NewLine,
+               item.DietCalculationItems.Select(c => string.Format("{0:hh\\:mm} - {1:hh\\:mm}   {2:N2}{3}",
+               c.TimeFrom, c.TimeTo, c.Reward, c.Currency)));
+    }
 }
