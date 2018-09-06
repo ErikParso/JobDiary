@@ -18,19 +18,25 @@ namespace MyJobDiary.View
                 {
                     Label = "January",
                     ValueLabel = "200",
-                    Color = SKColor.Parse("#266489"),
+                    Color = SKColor.Parse("#0097E7"),
                 },
                 new Microcharts.Entry(400)
                 {
                     Label = "February",
                     ValueLabel = "400",
-                    Color = SKColor.Parse("#68B9C0")
+                    Color = SKColor.Parse("#0097F7")
                 },
                 new Microcharts.Entry(-100)
                 {
                     Label = "March",
                     ValueLabel = "-100",
-                    Color = SKColor.Parse("#90D585")
+                    Color = SKColor.Parse("#0097E7")
+                },
+                new Microcharts.Entry(100)
+                {
+                    Label = "April",
+                    ValueLabel = "100",
+                    Color = SKColor.Parse("#5597F7")
                 }
             };
             var chart = new BarChart() { Entries = entries };
