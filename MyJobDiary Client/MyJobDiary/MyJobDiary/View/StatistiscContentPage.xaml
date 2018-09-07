@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              x:Class="MyJobDiary.View.StatistiscContentPage" BackgroundColor="Black">
-    <microcharts:ChartView x:Name="chartView"
-                           Margin="50" BackgroundColor="Black"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <microcharts:ChartView x:Name="chartView" Grid.Row="0"
+                           Margin="10" BackgroundColor="Black"/>
+    </Grid>
+
 </ContentPage>
