@@ -84,6 +84,12 @@
                                        Source="{StaticResource city_20}"/>
                                 <Entry Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
                                        Text="{Binding Location}" TextColor="{StaticResource PrimaryTextColor}"/>
+                                <Image Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="5"
+                                       Source="{StaticResource location_20}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SetLocationCommand}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </Grid>
                         </StackLayout>
 
@@ -165,6 +171,12 @@
                                        Source="{StaticResource car_20}"/>
                                 <Entry Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
                                        Text="{Binding DepartureLocation}" TextColor="{StaticResource PrimaryTextColor}"/>
+                                <Image Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="5"
+                                       Source="{StaticResource location_20}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SetDepartureLocationCommand}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </Grid>
                         </StackLayout>
 
@@ -178,6 +190,12 @@
                                        Source="{StaticResource home_20}"/>
                                 <Entry Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
                                        Text="{Binding ArrivalLocation}" TextColor="{StaticResource PrimaryTextColor}"/>
+                                <Image Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="5"
+                                       Source="{StaticResource location_20}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SetArrivalLocationCommand}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </Grid>
                         </StackLayout>
 
@@ -191,6 +209,12 @@
                                        Source="{StaticResource flag_20}"/>
                                 <Picker Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center"
                                         SelectedItem="{Binding Country}" ItemsSource="{Binding Countries}" TextColor="{StaticResource PrimaryTextColor}" />
+                                <Image Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" Margin="5"
+                                       Source="{StaticResource location_20}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SetCountryCommand}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </Grid>
                         </StackLayout>
 

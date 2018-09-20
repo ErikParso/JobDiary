@@ -86,7 +86,7 @@ namespace MyJobDiary.ViewModel
         {
             var res = await MyClient.Current.Value.InvokeApiAsync<List<AppServiceIdentity>>("/.auth/me");
             UserName = res[0].UserClaims[3].Value;
-            Photo = ImageSource.FromUri(new Uri(res[0].UserClaims[10].Value));
+            Photo = ImageSource.FromUri(new Uri(res[0].UserClaims[8].Value));
         }
 
         #endregion

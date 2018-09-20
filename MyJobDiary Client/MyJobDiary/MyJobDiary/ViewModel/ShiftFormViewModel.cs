@@ -4,7 +4,9 @@ using MyJobDiary.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace MyJobDiary.ViewModel
@@ -27,6 +29,11 @@ namespace MyJobDiary.ViewModel
             _shift = shift;
             _validationService = new ValidationService();
             AdjustDates();
+
+            SetCountryCommand = new Command(SetCountry);
+            SetLocationCommand = new Command(SetLocation);
+            SetDepartureLocationCommand = new Command(SetDepartureLocation);
+            SetArrivalLocationCommand = new Command(SetArrivalLocation);
         }
 
 
@@ -195,10 +202,12 @@ namespace MyJobDiary.ViewModel
             }
         }
 
-        public ICommand SaveCommand { get; private set; }
-
         #endregion
 
+
+        #region Save
+
+        public ICommand SaveCommand { get; private set; }
 
         public Action OnSaved { get; set; }
 
@@ -213,6 +222,70 @@ namespace MyJobDiary.ViewModel
             await Application.Current.MainPage.Navigation.PopAsync();
             OnSaved?.Invoke();
         }
+
+        #endregion
+
+
+        #region Navigation and Location
+
+        public ICommand SetCountryCommand { get; private set; }
+
+        public ICommand SetLocationCommand { get; private set; }
+
+        public ICommand SetArrivalLocationCommand { get; private set; }
+
+        public ICommand SetDepartureLocationCommand { get; private set; }
+
+        private async void SetCountry(object obj)
+        {
+            var placemark = await CurrentLocationProvider.GetLocation();
+            if (placemark != null)
+            {
+                if (!Countries.Contains(placemark.CountryCode))
+                {
+                    Countries.Add(placemark.CountryCode);
+                    Countries = Countries.ToList();
+                }
+                Country = placemark.CountryCode;
+            }
+        }
+
+        private async void SetLocation(object obj)
+        {
+            var placemark = await CurrentLocationProvider.GetLocation();
+            if (placemark != null)
+            {
+                string newLoc = await PickFromPlacemark(placemark);
+                if (!string.IsNullOrWhiteSpace(newLoc))
+                    Location = newLoc;
+            }
+        }
+
+        private async void SetDepartureLocation(object obj)
+        {
+            var placemark = await CurrentLocationProvider.GetLocation();
+            if (placemark != null)
+            {
+                string newLoc = await PickFromPlacemark(placemark);
+                if (!string.IsNullOrWhiteSpace(newLoc))
+                    DepartureLocation = newLoc;
+            }
+        }
+
+        private async void SetArrivalLocation(object obj)
+        {
+            var placemark = await CurrentLocationProvider.GetLocation();
+            if (placemark != null)
+            {
+                string newLoc = await PickFromPlacemark(placemark);
+                if (!string.IsNullOrWhiteSpace(newLoc))
+                    ArrivalLocation = newLoc;
+            }
+        }
+
+        public Func<Placemark, Task<string>> PickFromPlacemark;
+
+        #endregion
 
 
         #region private helpers
