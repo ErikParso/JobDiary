@@ -30,7 +30,8 @@ namespace MyJobDiary.View
             var countries = (await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync())
                 .Select(c => c.Country).Distinct().ToList();
             ShiftFormViewModel viewModel = new ShiftFormViewModel(shiftsManager, countries, copy);
-            viewModel.OnSaved = _viewModel.ReloadItems;
+            viewModel.OnSaved += _viewModel.ReloadItems;
+            viewModel.OnSaved += async () => await Navigation.PopAsync();
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
             await Navigation.PushAsync(shiftForm);
         }
@@ -44,6 +45,7 @@ namespace MyJobDiary.View
                 .Select(c => c.Country).Distinct().ToList();
             ShiftFormViewModel viewModel = new ShiftFormViewModel(shiftsManager, countries, copy);
             viewModel.OnSaved = _viewModel.ReloadItems;
+            viewModel.OnSaved += async () => await Navigation.PopAsync();
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
             await Navigation.PushAsync(shiftForm);
         }
@@ -55,12 +57,6 @@ namespace MyJobDiary.View
             var manager = CachedTableManager<Shift>.Current.Value;
             await manager.DeleteAsync(original);
             _viewModel.ReloadItems();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            NavigationPage.SetHasNavigationBar(this, false);
         }
 
     }

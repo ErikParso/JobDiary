@@ -1,7 +1,9 @@
-﻿using MyJobDiary.Managers;
+﻿using Microcharts;
+using MyJobDiary.Managers;
 using MyJobDiary.Model;
 using MyJobDiary.Services;
 using MyJobDiary.ViewModel;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,30 +16,13 @@ namespace MyJobDiary.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
+        private readonly MainPageViewModel _viewModel = new MainPageViewModel();
+
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new MainPageViewModel();
-        }
-
-        private async void ShiftList_Clicked(object sender, EventArgs e)
-        {
-            var manager = CachedTableManager<Shift>.Current.Value;
-            var dietItems = await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync();
-            var calc = new DietCalculationService(dietItems);
-            ShiftListViewModel viewModel = new ShiftListViewModel(manager, calc);
-            ShiftListContentPage shiftList = new ShiftListContentPage(viewModel, false);
-            await Navigation.PushAsync(shiftList);
-        }
-
-        private async void Diets_Clicked(object sender, EventArgs e)
-        {
-            var manager = CachedTableManager<Shift>.Current.Value;
-            var dietItems = await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync();
-            var calc = new DietCalculationService(dietItems);
-            ShiftListViewModel viewModel = new ShiftListViewModel(manager, calc);
-            ShiftListContentPage shiftList = new ShiftListContentPage(viewModel, true);
-            await Navigation.PushAsync(shiftList);
+            _viewModel = new MainPageViewModel();
+            BindingContext = _viewModel;
         }
 
         private async void ShiftForm_Clicked(object sender, EventArgs e)
@@ -56,33 +41,36 @@ namespace MyJobDiary.View
                 IsClosed = true,
                 WithDiets = true,
             });
+            shiftFormViewModel.OnSaved += async () => await Navigation.PopAsync();
             await Navigation.PushAsync(new ShiftFormContentPage(shiftFormViewModel));
         }
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
-            NavigationPage.SetHasNavigationBar(this, false);
+
+            var shifts = await CachedTableManager<Shift>.Current.Value.GetAsync();
+            var chart = new LineChart()
+            {
+                Entries = Enumerable.Range(-12, 13)
+                    .Select(i => DateTime.Now.AddMonths(i).Date)
+                    .Select(d => (
+                        Date: d,
+                        TimeWorked: shifts.Where(s => s.TimeFrom.Year == d.Year && s.TimeFrom.Month == d.Month)
+                            .Sum(s => (s.TimeTo - s.TimeFrom).TotalHours)
+                    ))
+                    .Select(d => new Microcharts.Entry((float)d.TimeWorked)
+                    {
+                        Color = SKColor.Parse("#0097E7"),
+                        Label = d.Date.ToString("MMM"),
+                        ValueLabel = string.Format("{0:N2} H", d.TimeWorked),
+                    })
+            };
+            chart.BackgroundColor = SKColors.Transparent;
+            chartView.BackgroundColor = Color.Transparent;
+            chart.PointMode = PointMode.Circle;
+            this.chartView.Chart = chart;
         }
 
-        private async void Attendance_Click(object sender, EventArgs e)
-        {
-            var manager = CachedTableManager<Shift>.Current.Value;
-            var items = await manager.GetAsync();
-            AttendanceListViewModel viewModel = new AttendanceListViewModel(items);
-            await Navigation.PushAsync(new AttendanceList(viewModel));
-        }
-
-        private async void DietsSettings_Clicked(object sender, EventArgs e)
-        {
-            var manager = CachedTableManager<DietPaymentItem>.Current.Value;
-            var viewModel = new DietsPaymentViewModel(manager);
-            await Navigation.PushAsync(new DietPaymentItemList(viewModel));
-        }
-
-        private async void Statistic_Click(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new StatistiscContentPage());
-        }
     }
 }

@@ -23,11 +23,5 @@ namespace MyJobDiary.View
             var item = (menuItem.CommandParameter as DietPaymentItem);
             _viewModel.DeleteItem(item);
         }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            NavigationPage.SetHasNavigationBar(this, false);
-        }
     }
 }

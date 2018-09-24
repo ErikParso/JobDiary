@@ -15,8 +15,7 @@ namespace MyJobDiary
 
         public App()
         {
-            // The root page of your application
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new LoginPage();
         }
 
         public static void SetLoginService(ILoginService loginService)

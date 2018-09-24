@@ -12,11 +12,5 @@ namespace MyJobDiary.View
 			InitializeComponent();
             BindingContext = viewModel;
 		}
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            NavigationPage.SetHasNavigationBar(this, false);
-        }
     }
 }

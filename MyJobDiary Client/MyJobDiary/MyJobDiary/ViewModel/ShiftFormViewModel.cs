@@ -217,9 +217,7 @@ namespace MyJobDiary.ViewModel
             var overlappedItems = _validationService.CheckOverlapping(items, _shift);
             if (overlappedItems.Count() > 0)
                 ShowOverlappingError(_shift.TimeFrom);
-
             await _shiftsManeger.SaveAsync(_shift);
-            await Application.Current.MainPage.Navigation.PopAsync();
             OnSaved?.Invoke();
         }
 

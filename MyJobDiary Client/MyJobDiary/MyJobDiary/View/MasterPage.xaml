@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyJobDiary.View"
+             xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
+             x:Class="MyJobDiary.View.MasterPage"
+             Title="Master">
+
+    <ContentPage.Resources>
+        <theme:BlackAndBlue/>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <StackLayout Spacing="0" Orientation="Horizontal" Margin="5">
+            <Image Source="{Binding Photo}" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="{Binding UserName}" TextColor="{StaticResource PrimaryTextColor}" VerticalOptions="Center" Margin="10"/>
+        </StackLayout>
+        <BoxView HeightRequest="1" HorizontalOptions="Fill" BackgroundColor="{StaticResource IconColor}"/>
+        <ListView x:Name="listView" x:FieldModifier="public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:MasterPageItem}">
+                    <local:MasterPageItem Title="Prehľad" IconSource="blue_bars_32" Page="{x:Static local:Pages.MainPage}"/>
+                    <local:MasterPageItem Title="Práca" IconSource="blue_calendar_32" Page="{x:Static local:Pages.Shifts}"/>
+                    <local:MasterPageItem Title="Diéty" IconSource="blue_voucher_32" Page="{x:Static local:Pages.Diets}"/>
+                    <local:MasterPageItem Title="Dochádzka" IconSource="blue_table_32" Page="{x:Static local:Pages.Attendance}"/>
+                    <local:MasterPageItem Title="Nastavenia" IconSource="blue_time_settings_32" Page="{x:Static local:Pages.Settings}"/>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
