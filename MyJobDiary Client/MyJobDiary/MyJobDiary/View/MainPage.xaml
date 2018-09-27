@@ -15,12 +15,16 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Image Grid.Row="0" Source="road.jpg" Opacity="0.3" Aspect="AspectFill"/>
         <microcharts:ChartView x:Name="chartView" Grid.Row="0" />
         <BoxView Grid.Row="1" HeightRequest="1" HorizontalOptions="Fill" BackgroundColor="{StaticResource IconColor}"/>
         <Button Grid.Row="2" Image="plus.png" HorizontalOptions="Center" VerticalOptions="Center" Margin="5"
                     BackgroundColor="Black" BorderWidth="1" Clicked="ShiftForm_Clicked"/>
+        <BoxView Grid.Row="3" HeightRequest="1" HorizontalOptions="Fill" BackgroundColor="{StaticResource IconColor}"/>
+        <Label Grid.Row="4" HorizontalOptions="Center" VerticalOptions="End" Text="{Binding ThisMonthReward}"/>
     </Grid>
 
 </ContentPage>

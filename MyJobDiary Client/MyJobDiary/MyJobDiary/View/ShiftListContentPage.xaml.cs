@@ -1,9 +1,11 @@
-﻿using MyJobDiary.Extensions;
+﻿using Autofac;
+using MyJobDiary.Extensions;
 using MyJobDiary.Managers;
 using MyJobDiary.Model;
 using MyJobDiary.ViewModel;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace MyJobDiary.View
@@ -17,48 +19,47 @@ namespace MyJobDiary.View
         public ShiftListContentPage(ShiftListViewModel model, bool showsDiets)
         {
             InitializeComponent();
-            ShowsDiets = showsDiets;
-            BindingContext = model;
             _viewModel = model;
+            BindingContext = model;
+            ShowsDiets = showsDiets;
         }
 
-        private async void OnEdit(object sender, EventArgs e)
+        private void OnEdit(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
             var copy = (menuItem.CommandParameter as Shift).CopyCreate(true);
-            var shiftsManager = CachedTableManager<Shift>.Current.Value;
-            var countries = (await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync())
-                .Select(c => c.Country).Distinct().ToList();
-            ShiftFormViewModel viewModel = new ShiftFormViewModel(shiftsManager, countries, copy);
-            viewModel.OnSaved += _viewModel.ReloadItems;
-            viewModel.OnSaved += async () => await Navigation.PopAsync();
-            ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
-            await Navigation.PushAsync(shiftForm);
+            ShowShiftForm(copy, "Oprava položky");
         }
 
-        private async void OnCopy(object sender, EventArgs e)
+        private void OnCopy(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
             var copy = (menuItem.CommandParameter as Shift).CopyCreate(false);
-            var shiftsManager = CachedTableManager<Shift>.Current.Value;
-            var countries = (await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync())
-                .Select(c => c.Country).Distinct().ToList();
-            ShiftFormViewModel viewModel = new ShiftFormViewModel(shiftsManager, countries, copy);
-            viewModel.OnSaved = _viewModel.ReloadItems;
-            viewModel.OnSaved += async () => await Navigation.PopAsync();
-            ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel);
+            ShowShiftForm(copy, "Kópia položky");
+        }
+
+        private async void ShowShiftForm(Shift copy, string title)
+        {
+            ShiftFormViewModel viewModel = App.Container.Resolve<ShiftFormViewModel>(new TypedParameter(typeof(Shift), copy));
+            ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel)
+            {
+                Title = title
+            };
             await Navigation.PushAsync(shiftForm);
         }
 
-        private async void OnDelete(object sender, EventArgs e)
+        private void OnDelete(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
             var original = menuItem.CommandParameter as Shift;
-            var manager = CachedTableManager<Shift>.Current.Value;
-            await manager.DeleteAsync(original);
-            _viewModel.ReloadItems();
+            _viewModel.Delete(original);
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _viewModel.Reload();
+        }
     }
 }
 

@@ -9,11 +9,11 @@ namespace MyJobDiary.View
 	{
         private readonly LoginViewModel _viewModel;
 
-        public LoginPage()
+        public LoginPage(LoginViewModel loginViewModel)
 		{
 			InitializeComponent();
-            _viewModel = new LoginViewModel();
-            BindingContext = _viewModel;
+            _viewModel = loginViewModel;
+            BindingContext = loginViewModel;
             AddHandlers();
 		}
 

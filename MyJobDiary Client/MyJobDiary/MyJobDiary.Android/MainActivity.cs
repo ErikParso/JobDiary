@@ -15,7 +15,7 @@ namespace MyJobDiary.Droid
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Forms.Init(this, savedInstanceState);
-            SetServices();
+            App.InitConatiner(new LoginService(this), new LoadingService(this), new DialogService(this));
             LoadApplication(new App());
         }
 
@@ -24,13 +24,6 @@ namespace MyJobDiary.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-        private void SetServices()
-        {
-            App.SetLoginService(new LoginService(this));
-            App.SetLoadingService(new LoadingService(this));
-            App.SetDialogService(new DialogService(this));
         }
     }
 }

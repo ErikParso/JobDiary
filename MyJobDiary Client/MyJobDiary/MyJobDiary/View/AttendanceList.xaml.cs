@@ -7,10 +7,19 @@ namespace MyJobDiary.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AttendanceList : ContentPage
 	{
-		public AttendanceList (AttendanceListViewModel viewModel)
+        private readonly AttendanceListViewModel _viewModel;
+
+        public AttendanceList (AttendanceListViewModel viewModel)
 		{
 			InitializeComponent();
+            _viewModel = viewModel;
             BindingContext = viewModel;
 		}
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _viewModel.Reload();
+        }
     }
 }

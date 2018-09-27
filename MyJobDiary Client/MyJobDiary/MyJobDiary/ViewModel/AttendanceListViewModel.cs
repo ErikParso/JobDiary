@@ -1,34 +1,37 @@
-﻿using MyJobDiary.Model;
+﻿using MyJobDiary.Managers;
+using MyJobDiary.Model;
 using MyJobDiary.Services;
-using System;
 using System.Collections.Generic;
 
 namespace MyJobDiary.ViewModel
 {
     public class AttendanceListViewModel : ObservableObject
     {
-        private readonly IEnumerable<Shift> _shifts;
+        private readonly CachedTableManager<Shift> _shiftManager;
 
-        public AttendanceListViewModel(IEnumerable<Shift> shifts)
+        public AttendanceListViewModel(CachedTableManager<Shift> shiftManager)
         {
-            _shifts = shifts;
+            _shiftManager = shiftManager;
             MonthNavigationViewModel = new MonthNavigationViewModel();
+            AddHandlers();
+        }
+
+        private void AddHandlers()
+        {
             MonthNavigationViewModel.MonthChanged += Reload;
-            Reload();
         }
 
         public MonthNavigationViewModel MonthNavigationViewModel { get; private set; }
 
         public IEnumerable<AttendanceItem> Days { get; private set; }
 
-        private void Reload()
+        public async void Reload()
         {
             Days = AttendanceBuilder.BuildAttendance(
                 MonthNavigationViewModel.YearPicker.Value,
                 MonthNavigationViewModel.MonthPicker.Value,
-                _shifts);
+                await _shiftManager.GetAsync());
             RaisePropertyChanged(nameof(Days));
         }
-
     }
 }

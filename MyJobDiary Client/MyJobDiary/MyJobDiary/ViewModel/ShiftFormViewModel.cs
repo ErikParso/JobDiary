@@ -4,37 +4,73 @@ using MyJobDiary.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace MyJobDiary.ViewModel
 {
     public class ShiftFormViewModel : ObservableObject
     {
-        private Shift _shift;
-        private CachedTableManager<Shift> _shiftsManeger;
-        private ValidationService _validationService;
+        #region Private fields
+
+        private readonly CachedTableManager<Shift> _shiftManager;
+        private readonly CachedTableManager<DietPaymentItem> _dietManager;
+        private readonly IValidationService _validationService;
+        private readonly IDialogService _dialogService;
+        private readonly ILocationService _locationService;
+
+        private readonly Shift _shift;
         private List<string> _countries;
 
+        #endregion
+
+
+        #region Constructors and Initialization
+
         public ShiftFormViewModel(
-            CachedTableManager<Shift> shiftsManager,
-            List<string> countries,
+            CachedTableManager<Shift> shiftManager,
+            CachedTableManager<DietPaymentItem> dietManager,
+            IValidationService validationService,
+            IDialogService dialogService,
+            ILocationService locationService,
             Shift shift)
         {
-            _shiftsManeger = shiftsManager;
-            SaveCommand = new Command(Save);
-            _countries = countries;
+            _shiftManager = shiftManager;
+            _dietManager = dietManager;
+            _validationService = validationService;
+            _dialogService = dialogService;
+            _locationService = locationService;
             _shift = shift;
-            _validationService = new ValidationService();
-            AdjustDates();
 
+            InitCountries();
+            InitCommands();
+            AdjustDates();
+        }
+
+        private void InitCountries()
+        {
+            _countries = new List<string>();
+            if (!string.IsNullOrWhiteSpace(_shift.Country))
+                _countries.Add(_shift.Country);
+        }
+
+        private void InitCommands()
+        {
+            SaveCommand = new Command(Save);
             SetCountryCommand = new Command(SetCountry);
             SetLocationCommand = new Command(SetLocation);
             SetDepartureLocationCommand = new Command(SetDepartureLocation);
             SetArrivalLocationCommand = new Command(SetArrivalLocation);
         }
+
+        public async void Reload()
+        {
+            var countries = (await _dietManager.GetAsync()).Select(d => d.Country);
+            Countries = Countries.Union(countries).Distinct().ToList();
+            RaisePropertyChanged(nameof(Country));
+        }
+
+        #endregion
 
 
         #region Bindable
@@ -213,11 +249,10 @@ namespace MyJobDiary.ViewModel
 
         private async void Save(object obj)
         {
-            var items = await _shiftsManeger.GetAsync();
-            var overlappedItems = _validationService.CheckOverlapping(items, _shift);
-            if (overlappedItems.Count() > 0)
+            var items = await _shiftManager.GetAsync();
+            if (await _validationService.IsShiftOverlapped(_shift))
                 ShowOverlappingError(_shift.TimeFrom);
-            await _shiftsManeger.SaveAsync(_shift);
+            await _shiftManager.SaveAsync(_shift);
             OnSaved?.Invoke();
         }
 
@@ -236,7 +271,7 @@ namespace MyJobDiary.ViewModel
 
         private async void SetCountry(object obj)
         {
-            var placemark = await CurrentLocationProvider.GetLocation();
+            var placemark = await _locationService.GetLocation();
             if (placemark != null)
             {
                 if (!Countries.Contains(placemark.CountryCode))
@@ -250,10 +285,10 @@ namespace MyJobDiary.ViewModel
 
         private async void SetLocation(object obj)
         {
-            var placemark = await CurrentLocationProvider.GetLocation();
+            var placemark = await _locationService.GetLocation();
             if (placemark != null)
             {
-                string newLoc = await PickFromPlacemark(placemark);
+                string newLoc = placemark.SubLocality;
                 if (!string.IsNullOrWhiteSpace(newLoc))
                     Location = newLoc;
             }
@@ -261,10 +296,10 @@ namespace MyJobDiary.ViewModel
 
         private async void SetDepartureLocation(object obj)
         {
-            var placemark = await CurrentLocationProvider.GetLocation();
+            var placemark = await _locationService.GetLocation();
             if (placemark != null)
             {
-                string newLoc = await PickFromPlacemark(placemark);
+                string newLoc = placemark.SubLocality;
                 if (!string.IsNullOrWhiteSpace(newLoc))
                     DepartureLocation = newLoc;
             }
@@ -272,16 +307,14 @@ namespace MyJobDiary.ViewModel
 
         private async void SetArrivalLocation(object obj)
         {
-            var placemark = await CurrentLocationProvider.GetLocation();
+            var placemark = await _locationService.GetLocation();
             if (placemark != null)
             {
-                string newLoc = await PickFromPlacemark(placemark);
+                string newLoc = placemark.SubLocality;
                 if (!string.IsNullOrWhiteSpace(newLoc))
                     ArrivalLocation = newLoc;
             }
         }
-
-        public Func<Placemark, Task<string>> PickFromPlacemark;
 
         #endregion
 
@@ -294,7 +327,7 @@ namespace MyJobDiary.ViewModel
         private void ShowOverlappingError(DateTime day)
         {
             var detail = $"Časový interval sa prekrýva. Skontrolujte a opravte položky z dňa {day.ToString("dd.mm.yyyy")}. Prekrývajúce sa obdobia môžu spôsobiť problémy v dochádzke a výpočtoch.";
-            App.DialogService.ShowDialog("Prekrývanie období", detail);
+            _dialogService.ShowDialog("Prekrývanie období", detail);
         }
 
         private void AdjustDates()

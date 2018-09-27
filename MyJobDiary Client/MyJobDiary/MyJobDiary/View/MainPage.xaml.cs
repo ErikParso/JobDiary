@@ -1,13 +1,11 @@
-﻿using Microcharts;
+﻿using Autofac;
+using Microcharts;
 using MyJobDiary.Managers;
 using MyJobDiary.Model;
-using MyJobDiary.Services;
 using MyJobDiary.ViewModel;
 using SkiaSharp;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,40 +14,42 @@ namespace MyJobDiary.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
-        private readonly MainPageViewModel _viewModel = new MainPageViewModel();
+        private readonly MainPageViewModel _viewModel;
 
         public MainPage()
         {
             InitializeComponent();
-            _viewModel = new MainPageViewModel();
+            _viewModel = App.Container.Resolve<MainPageViewModel>();
             BindingContext = _viewModel;
         }
 
         private async void ShiftForm_Clicked(object sender, EventArgs e)
         {
-            var shiftsManager = CachedTableManager<Shift>.Current.Value;
-            var countries = (await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync())
-                .Select(c => c.Country).Distinct().ToList();
-            var shiftFormViewModel = new ShiftFormViewModel(shiftsManager, countries, new Shift
+            Shift initial = new Shift
             {
                 DepartureTime = DateTime.Now,
                 TimeFrom = DateTime.Now,
                 TimeTo = DateTime.Now.AddHours(8),
                 ArrivalTime = DateTime.Now.AddHours(8),
                 IsNightShift = DateTime.Now.Hour < 24 && DateTime.Now.Hour > 18,
-                Country = countries.FirstOrDefault() ?? "",
+                Country = "",
                 IsClosed = true,
                 WithDiets = true,
-            });
-            shiftFormViewModel.OnSaved += async () => await Navigation.PopAsync();
-            await Navigation.PushAsync(new ShiftFormContentPage(shiftFormViewModel));
+            };
+            var shiftFormViewModel = App.Container.Resolve<ShiftFormViewModel>(new TypedParameter(typeof(Shift), initial));
+            var shiftFormPage = new ShiftFormContentPage(shiftFormViewModel)
+            {
+                Title = "Nová položka"
+            };
+            await Navigation.PushAsync(shiftFormPage);
         }
 
         protected async override void OnAppearing()
         {
             base.OnAppearing();
+            await _viewModel.Reload();
 
-            var shifts = await CachedTableManager<Shift>.Current.Value.GetAsync();
+            var shifts = await App.Container.Resolve<CachedTableManager<Shift>>().GetAsync();
             var chart = new LineChart()
             {
                 Entries = Enumerable.Range(-12, 13)
@@ -71,6 +71,5 @@ namespace MyJobDiary.View
             chart.PointMode = PointMode.Circle;
             this.chartView.Chart = chart;
         }
-
     }
 }

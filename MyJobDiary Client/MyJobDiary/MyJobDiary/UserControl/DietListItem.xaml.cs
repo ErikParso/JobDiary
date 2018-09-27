@@ -1,4 +1,6 @@
-﻿using MyJobDiary.Model;
+﻿using Autofac;
+using MyJobDiary.Model;
+using MyJobDiary.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +23,8 @@ namespace MyJobDiary.UserControl
         private void OnDietSumTapped(object sender, EventArgs e)
         {
             var item = BindingContext as Shift;
-            App.DialogService.ShowDialog(item.DietSumString, BuildcalculationInfo(item));
+            IDialogService dialogService = App.Container.Resolve<IDialogService>();
+            dialogService.ShowDialog(item.DietSumString, BuildcalculationInfo(item));
         }
 
         private string BuildcalculationInfo(Shift item)

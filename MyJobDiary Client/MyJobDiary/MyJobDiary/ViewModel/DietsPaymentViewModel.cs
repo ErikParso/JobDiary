@@ -1,6 +1,5 @@
 ﻿using MyJobDiary.Managers;
 using MyJobDiary.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
@@ -22,12 +21,16 @@ namespace MyJobDiary.ViewModel
         {
             _manager = manager;
             _payments = new List<DietPaymentItem>();
-            AddPaymentItemCommand = new Command(AddPaymentItem);
             _country = "SK";
             _reward = 0;
             _hours = 0;
             _currency = "€";
-            ReloadItems();
+            AddPaymentItemCommand = new Command(AddPaymentItem);
+        }
+
+        public async void ReloadItems()
+        {
+            Payments = await _manager.GetAsync();
         }
 
 
@@ -67,6 +70,8 @@ namespace MyJobDiary.ViewModel
 
         #endregion
 
+
+
         public async void DeleteItem(DietPaymentItem item)
         {
             await _manager.DeleteAsync(item);
@@ -83,11 +88,6 @@ namespace MyJobDiary.ViewModel
                 Currency = _currency,
             });
             ReloadItems();
-        }
-
-        private async void ReloadItems()
-        {
-            Payments = await _manager.GetAsync();
         }
     }
 }

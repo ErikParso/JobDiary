@@ -1,7 +1,8 @@
-﻿using MyJobDiary.Model;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using MyJobDiary.Model;
+using MyJobDiary.Services;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -10,8 +11,21 @@ namespace MyJobDiary.ViewModel
 {
     public class LoginViewModel : ObservableObject
     {
-        public LoginViewModel()
+        private readonly ILoadingService _loadingService;
+        private readonly IDialogService _dialogService;
+        private readonly ILoginService _loginService;
+        private readonly IMobileServiceClient _mobileServiceClient;
+
+        public LoginViewModel(
+            ILoadingService loadingService,
+            IDialogService dialogservice,
+            ILoginService loginService,
+            IMobileServiceClient mobileServiceClient)
         {
+            _loadingService = loadingService;
+            _dialogService = dialogservice;
+            _loginService = loginService;
+            _mobileServiceClient = mobileServiceClient;
             LoginCommand = new Command(Login);
         }
 
@@ -31,25 +45,25 @@ namespace MyJobDiary.ViewModel
         public async void Login()
         {
             WorkInProgress = true;
-            App.LoadingService.StartLoading("prebieha prihlasovanie");
+            _loadingService.StartLoading("prebieha prihlasovanie");
             try
             {
-                if (await App.LoginService.Login())
+                if (await _loginService.Login())
                 {
                     LoggedIn?.Invoke(await GetUserInformation());
                 }
             }
             catch (Exception e)
             {
-                App.DialogService.ShowDialog("Nepodarilo sa prihlásiť", e.Message);
+                _dialogService.ShowDialog("Nepodarilo sa prihlásiť", e.Message);
             }
-            App.LoadingService.StopLoading();
+            _loadingService.StopLoading();
             WorkInProgress = false;
         }
 
         public async Task<(string, string)> GetUserInformation()
         {
-            var res = await MyClient.Current.Value.InvokeApiAsync<List<AppServiceIdentity>>("/.auth/me");
+            var res = await _mobileServiceClient.InvokeApiAsync<List<AppServiceIdentity>>("/.auth/me");
             return (res[0].UserClaims[4].Value, res[0].UserClaims[8].Value);
         }
 
