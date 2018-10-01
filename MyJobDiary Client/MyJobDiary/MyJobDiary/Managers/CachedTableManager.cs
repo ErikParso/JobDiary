@@ -18,7 +18,7 @@ namespace MyJobDiary.Managers
         private List<T> _cachedItems;
 
         public CachedTableManager(
-            IMobileServiceClient mobileServiceClient,
+            MobileServiceClient mobileServiceClient,
             ILoadingService loadingService,
             IDialogService dialogservice)
         {

@@ -5,10 +5,6 @@ namespace MyJobDiary.Services
 {
     public interface ILoginService
     {
-        MobileServiceUser User { get; }
-
-        Task<bool> Login();
-
-        Task Logout();
+        Task<bool> Login(MobileServiceClient client);
     }
 }

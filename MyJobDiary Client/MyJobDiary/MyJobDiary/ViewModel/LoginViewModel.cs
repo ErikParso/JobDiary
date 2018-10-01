@@ -14,13 +14,13 @@ namespace MyJobDiary.ViewModel
         private readonly ILoadingService _loadingService;
         private readonly IDialogService _dialogService;
         private readonly ILoginService _loginService;
-        private readonly IMobileServiceClient _mobileServiceClient;
+        private readonly MobileServiceClient _mobileServiceClient;
 
         public LoginViewModel(
             ILoadingService loadingService,
             IDialogService dialogservice,
             ILoginService loginService,
-            IMobileServiceClient mobileServiceClient)
+            MobileServiceClient mobileServiceClient)
         {
             _loadingService = loadingService;
             _dialogService = dialogservice;
@@ -48,7 +48,7 @@ namespace MyJobDiary.ViewModel
             _loadingService.StartLoading("prebieha prihlasovanie");
             try
             {
-                if (await _loginService.Login())
+                if (await _loginService.Login(_mobileServiceClient))
                 {
                     LoggedIn?.Invoke(await GetUserInformation());
                 }

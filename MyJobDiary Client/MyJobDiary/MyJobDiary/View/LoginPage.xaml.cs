@@ -27,5 +27,11 @@ namespace MyJobDiary.View
             var masterViewModel = new MasterViewModel(userName, photoUrl);
             App.Current.MainPage = new MasterDetailPage(masterViewModel);
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _viewModel.Login();
+        }
     }
 }

@@ -15,9 +15,6 @@ namespace MyJobDiary
     {
         public static IContainer Container { get; set; }
 
-        public static MobileServiceClient Client { get; private set; } =
-            new MobileServiceClient(Constants.ApplicationURL);
-
         public App()
         {
             MainPage = Container.Resolve<LoginPage>();
@@ -30,7 +27,7 @@ namespace MyJobDiary
         {
             ContainerBuilder builder = new ContainerBuilder();
             //MobileServiceClient
-            builder.RegisterInstance(Client).As<IMobileServiceClient>();
+            builder.RegisterInstance(new MobileServiceClient(Constants.ApplicationURL));
             //Services
             builder.RegisterInstance(loginService);
             builder.RegisterInstance(loadingService);
