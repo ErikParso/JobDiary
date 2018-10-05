@@ -12,13 +12,13 @@
 
     <Grid RowSpacing="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Grid.Row="0" Source="road.jpg" Opacity="0.3" Aspect="AspectFill"/>
+        <Image Grid.Row="0" Source="road.jpg" Opacity="0.4" Aspect="AspectFill"/>
         <microcharts:ChartView x:Name="chartView" Grid.Row="0" />
         <BoxView Grid.Row="1" HeightRequest="1" HorizontalOptions="Fill" BackgroundColor="{StaticResource IconColor}"/>
         <Button Grid.Row="2" Image="plus.png" HorizontalOptions="Center" VerticalOptions="Center" Margin="5"

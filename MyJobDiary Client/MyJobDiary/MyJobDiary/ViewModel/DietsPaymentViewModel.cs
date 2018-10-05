@@ -9,6 +9,8 @@ namespace MyJobDiary.ViewModel
 {
     public class DietsPaymentViewModel : ObservableObject
     {
+        #region Private fields
+
         private IEnumerable<DietPaymentItem> _payments;
         private readonly CachedTableManager<DietPaymentItem> _manager;
 
@@ -16,6 +18,11 @@ namespace MyJobDiary.ViewModel
         private double _hours;
         private double _reward;
         private string _currency;
+
+        #endregion
+
+
+        #region Constructors
 
         public DietsPaymentViewModel(CachedTableManager<DietPaymentItem> manager)
         {
@@ -28,10 +35,7 @@ namespace MyJobDiary.ViewModel
             AddPaymentItemCommand = new Command(AddPaymentItem);
         }
 
-        public async void ReloadItems()
-        {
-            Payments = await _manager.GetAsync();
-        }
+        #endregion
 
 
         #region Bindable properties
@@ -71,6 +75,12 @@ namespace MyJobDiary.ViewModel
         #endregion
 
 
+        #region Public methods
+
+        public async void ReloadItems()
+        {
+            Payments = await _manager.GetAsync();
+        }
 
         public async void DeleteItem(DietPaymentItem item)
         {
@@ -89,5 +99,8 @@ namespace MyJobDiary.ViewModel
             });
             ReloadItems();
         }
+
+        #endregion
+
     }
 }
