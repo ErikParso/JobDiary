@@ -93,12 +93,6 @@ namespace MyJobDiary.Droid.Services
             await client.LogoutAsync();
         }
 
-        public async Task<AppServiceIdentity> GetUserInformation(MobileServiceClient client)
-        {
-            var res = await client.InvokeApiAsync<List<AppServiceIdentity>>("/.auth/me");
-            return res.First();
-        }
-
         private int GetStoredAccountsCount()
             => _accountStore.FindAccountsForService("myjobdiary").Count();
 

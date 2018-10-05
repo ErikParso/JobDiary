@@ -15,6 +15,7 @@ namespace MyJobDiary.ViewModel
         private readonly ILoginService _loginService;
         private readonly ILoadingService _loadingService;
         private readonly IDialogService _dialogService;
+        private readonly IAccountInformationService _accoutInformationService;
         private readonly CachedTableManager<Shift> _shiftManager;
         private readonly CachedTableManager<DietPaymentItem> _dietManager;
         private readonly MobileServiceClient _mobileServiceClient;
@@ -26,6 +27,7 @@ namespace MyJobDiary.ViewModel
             ILoginService loginService,
             ILoadingService loadingService,
             IDialogService dialogService,
+            IAccountInformationService accountInformationService,
             MobileServiceClient mobileServiceClient,
             CachedTableManager<Shift> shiftManager,
             CachedTableManager<DietPaymentItem> dietManager)
@@ -33,6 +35,7 @@ namespace MyJobDiary.ViewModel
             _loginService = loginService;
             _loadingService = loadingService;
             _dialogService = dialogService;
+            _accoutInformationService = accountInformationService;
             _shiftManager = shiftManager;
             _dietManager = dietManager;
             _mobileServiceClient = mobileServiceClient;
@@ -53,9 +56,9 @@ namespace MyJobDiary.ViewModel
 
         public async void ReloadUserInformation()
         {
-            var info = await _loginService.GetUserInformation(_mobileServiceClient);
-            UserName = info.UserClaims[4].Value;
-            Photo = info.UserClaims[8].Value;
+            await _accoutInformationService.LoadInformation();
+            Photo = _accoutInformationService.PhotoUrl;
+            UserName = _accoutInformationService.Email;
         }
 
         public Action LogoutSuccessfull;

@@ -32,6 +32,7 @@ namespace MyJobDiary
             builder.RegisterInstance(loginService);
             builder.RegisterInstance(loadingService);
             builder.RegisterInstance(dialogService);
+            builder.RegisterType<AccountInformationService>().SingleInstance().As<IAccountInformationService>();
             builder.RegisterType<DietCalculationService>().SingleInstance().As<IDietCalculationService>();
             builder.RegisterType<LocationService>().SingleInstance().As<ILocationService>();
             builder.RegisterType<ValidationService>().SingleInstance().As<IValidationService>();
