@@ -40,6 +40,7 @@ namespace MyJobDiary
             builder.RegisterType<CachedTableManager<DietPaymentItem>>().SingleInstance();
             //ViewModels
             builder.RegisterType<LoginViewModel>().SingleInstance();
+            builder.RegisterType<MasterViewModel>().SingleInstance();
             builder.RegisterType<ShiftListViewModel>().SingleInstance();
             builder.RegisterType<ShiftFormViewModel>();
             builder.RegisterType<AttendanceListViewModel>().SingleInstance();

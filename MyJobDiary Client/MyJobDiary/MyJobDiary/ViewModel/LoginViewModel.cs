@@ -40,31 +40,24 @@ namespace MyJobDiary.ViewModel
 
         public ICommand LoginCommand { get; private set; }
 
-        public Action<(string, string)> LoggedIn { get; set; }
+        public Action LoginSuccessfull { get; set; }
 
         public async void Login()
         {
             WorkInProgress = true;
-            _loadingService.StartLoading("prebieha prihlasovanie");
+            _loadingService.StartLoading("Prihlasujem");
             try
             {
-                if (await _loginService.Login(_mobileServiceClient))
-                {
-                    LoggedIn?.Invoke(await GetUserInformation());
-                }
+                await _loginService.Login(_mobileServiceClient);
+                _dialogService.ShowDialog("Login information", _loginService.Log);
+                LoginSuccessfull?.Invoke();
             }
             catch (Exception e)
             {
-                _dialogService.ShowDialog("Nepodarilo sa prihlásiť", e.Message);
+                _dialogService.ShowDialog("Prihlásenie zlyhalo", e.Message);
             }
             _loadingService.StopLoading();
             WorkInProgress = false;
-        }
-
-        public async Task<(string, string)> GetUserInformation()
-        {
-            var res = await _mobileServiceClient.InvokeApiAsync<List<AppServiceIdentity>>("/.auth/me");
-            return (res[0].UserClaims[4].Value, res[0].UserClaims[8].Value);
         }
 
         #endregion

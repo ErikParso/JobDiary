@@ -27,6 +27,11 @@ namespace MyJobDiary.Managers
             _dialogService = dialogservice;
         }
 
+        public void ClearCache()
+        {
+            _cachedItems = null;
+        }
+
         public async Task<IEnumerable<T>> GetAsync()
         {
             await LoadIfNotCached();

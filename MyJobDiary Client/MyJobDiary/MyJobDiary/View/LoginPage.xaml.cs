@@ -1,4 +1,6 @@
-﻿using MyJobDiary.ViewModel;
+﻿using Autofac;
+using MyJobDiary.ViewModel;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,12 +21,12 @@ namespace MyJobDiary.View
 
         private void AddHandlers()
         {
-            _viewModel.LoggedIn = (info) => LoggedIn(info.Item1, info.Item2);
+            _viewModel.LoginSuccessfull = LoggedIn;
         }
 
-        private void LoggedIn(string userName, string photoUrl)
+        private void LoggedIn()
         {
-            var masterViewModel = new MasterViewModel(userName, photoUrl);
+            var masterViewModel = App.Container.Resolve<MasterViewModel>();
             App.Current.MainPage = new MasterDetailPage(masterViewModel);
         }
 
