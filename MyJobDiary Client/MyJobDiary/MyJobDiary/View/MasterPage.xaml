@@ -11,13 +11,24 @@
     </ContentPage.Resources>
 
     <StackLayout>
-        <StackLayout Spacing="0" Orientation="Horizontal" Margin="5">
-            <Image Source="{Binding Photo}" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Label Text="{Binding UserName}" TextColor="{StaticResource PrimaryTextColor}" VerticalOptions="Center" Margin="10"/>
-            <Button BackgroundColor="Transparent" TextColor="{StaticResource IconColor}" Text="Zmeniť účet"
-                    BorderColor="{StaticResource IconColor}" Command="{Binding LogoutCommand}"/>
-        </StackLayout>
+
+        <!--Account information-->
+        <Grid Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="{Binding Photo}" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Grid.Column="1" Text="{Binding UserName}" TextColor="{StaticResource PrimaryTextColor}" VerticalOptions="Center" Margin="10"/>
+            <Button Grid.Column="2" BackgroundColor="Transparent" TextColor="{StaticResource IconColor}"
+                    Text="Zmeniť účet" Command="{Binding LogoutCommand}"/>
+        </Grid>
+
+        <!--splitter-->
         <BoxView HeightRequest="1" HorizontalOptions="Fill" BackgroundColor="{StaticResource IconColor}"/>
+
+        <!--menu items-->
         <ListView x:Name="listView" x:FieldModifier="public">
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type local:MasterPageItem}">
@@ -43,6 +54,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
     </StackLayout>
 
 </ContentPage>
