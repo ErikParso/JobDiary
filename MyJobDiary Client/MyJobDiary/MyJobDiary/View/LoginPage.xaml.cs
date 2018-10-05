@@ -1,4 +1,6 @@
-﻿using MyJobDiary.ViewModel;
+﻿using Autofac;
+using MyJobDiary.ViewModel;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,23 +11,29 @@ namespace MyJobDiary.View
 	{
         private readonly LoginViewModel _viewModel;
 
-        public LoginPage()
+        public LoginPage(LoginViewModel loginViewModel)
 		{
 			InitializeComponent();
-            _viewModel = new LoginViewModel();
-            BindingContext = _viewModel;
+            _viewModel = loginViewModel;
+            BindingContext = loginViewModel;
             AddHandlers();
 		}
 
         private void AddHandlers()
         {
-            _viewModel.LoggedIn = (info) => LoggedIn(info.Item1, info.Item2);
+            _viewModel.LoginSuccessfull = LoggedIn;
         }
 
-        private void LoggedIn(string userName, string photoUrl)
+        private void LoggedIn()
         {
-            var masterViewModel = new MasterViewModel(userName, photoUrl);
+            var masterViewModel = App.Container.Resolve<MasterViewModel>();
             App.Current.MainPage = new MasterDetailPage(masterViewModel);
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _viewModel.Login();
         }
     }
 }

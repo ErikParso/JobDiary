@@ -1,6 +1,10 @@
-﻿using MyJobDiary.Services;
+﻿using Autofac;
+using Microsoft.WindowsAzure.MobileServices;
+using MyJobDiary.Managers;
+using MyJobDiary.Model;
+using MyJobDiary.Services;
 using MyJobDiary.View;
-using System;
+using MyJobDiary.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,28 +13,43 @@ namespace MyJobDiary
 {
     public partial class App : Application
     {
-        public static ILoginService LoginService { get; private set; }
-        public static ILoadingService LoadingService { get; private set; }
-        public static IDialogService DialogService { get; private set; }
+        public static IContainer Container { get; set; }
 
         public App()
         {
-            MainPage = new LoginPage();
+            MainPage = Container.Resolve<LoginPage>();
         }
 
-        public static void SetLoginService(ILoginService loginService)
+        public static void InitConatiner(
+            ILoginService loginService,
+            ILoadingService loadingService,
+            IDialogService dialogService)
         {
-            LoginService = loginService;
-        }
+            ContainerBuilder builder = new ContainerBuilder();
+            //MobileServiceClient
+            builder.RegisterInstance(new MobileServiceClient(Constants.ApplicationURL));
+            //Services
+            builder.RegisterInstance(loginService);
+            builder.RegisterInstance(loadingService);
+            builder.RegisterInstance(dialogService);
+            builder.RegisterType<DietCalculationService>().SingleInstance().As<IDietCalculationService>();
+            builder.RegisterType<LocationService>().SingleInstance().As<ILocationService>();
+            builder.RegisterType<ValidationService>().SingleInstance().As<IValidationService>();
+            //Managers
+            builder.RegisterType<CachedTableManager<Shift>>().SingleInstance();
+            builder.RegisterType<CachedTableManager<DietPaymentItem>>().SingleInstance();
+            //ViewModels
+            builder.RegisterType<LoginViewModel>().SingleInstance();
+            builder.RegisterType<MasterViewModel>().SingleInstance();
+            builder.RegisterType<ShiftListViewModel>().SingleInstance();
+            builder.RegisterType<ShiftFormViewModel>();
+            builder.RegisterType<AttendanceListViewModel>().SingleInstance();
+            builder.RegisterType<DietsPaymentViewModel>().SingleInstance();
+            builder.RegisterType<MainPageViewModel>().SingleInstance();
+            //Views
+            builder.RegisterType<LoginPage>().SingleInstance();
 
-        public static void SetLoadingService(ILoadingService loadingService)
-        {
-            LoadingService = loadingService;
-        }
-
-        public static void SetDialogService(IDialogService dialogService)
-        {
-            DialogService = dialogService;
+            Container = builder.Build();
         }
 
         protected override void OnStart()

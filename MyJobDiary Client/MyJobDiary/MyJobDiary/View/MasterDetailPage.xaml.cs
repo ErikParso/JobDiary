@@ -1,4 +1,5 @@
-﻿using MyJobDiary.Managers;
+﻿using Autofac;
+using MyJobDiary.Managers;
 using MyJobDiary.Model;
 using MyJobDiary.Services;
 using MyJobDiary.ViewModel;
@@ -24,13 +25,13 @@ namespace MyJobDiary.View
             MasterPage.BindingContext = masterViewModel;
         }
 
-        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as MasterPageItem;
             if (item == null)
                 return;
 
-            var page = await CreateDetailPage(item.Page);
+            var page = CreateDetailPage(item.Page);
             page.Title = item.Title;
 
             Detail = new NavigationPage(page);
@@ -39,31 +40,22 @@ namespace MyJobDiary.View
             MasterPage.ListView.SelectedItem = null;
         }
 
-        private async Task<Page> CreateDetailPage(Pages page)
+        private Page CreateDetailPage(Pages page)
         {
             switch (page)
             {
-                case Pages.MainPage: return new MainPage();
+                case Pages.MainPage:
+                    return new MainPage();
                 case Pages.Shifts:
-                    var manager = CachedTableManager<Shift>.Current.Value;
-                    var dietItems = await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync();
-                    var calc = new DietCalculationService(dietItems);
-                    ShiftListViewModel viewModel = new ShiftListViewModel(manager, calc);
-                    return new ShiftListContentPage(viewModel, false);
+                    return new ShiftListContentPage(App.Container.Resolve<ShiftListViewModel>(), false);
                 case Pages.Diets:
-                    manager = CachedTableManager<Shift>.Current.Value;
-                    dietItems = await CachedTableManager<DietPaymentItem>.Current.Value.GetAsync();
-                    calc = new DietCalculationService(dietItems);
-                    viewModel = new ShiftListViewModel(manager, calc);
-                    return new ShiftListContentPage(viewModel, true);
+                    return new ShiftListContentPage(App.Container.Resolve<ShiftListViewModel>(), true);
                 case Pages.Attendance:
-                    manager = CachedTableManager<Shift>.Current.Value;
-                    var items = await manager.GetAsync();
-                    return new AttendanceList(new AttendanceListViewModel(items));
+                    return new AttendanceList(App.Container.Resolve<AttendanceListViewModel>());
                 case Pages.Settings:
-                    var dietManager = CachedTableManager<DietPaymentItem>.Current.Value;
-                    return new DietPaymentItemList(new DietsPaymentViewModel(dietManager));
-                default: throw new NotImplementedException($"Page {page} is not implemented.");
+                    return new DietPaymentItemList(App.Container.Resolve<DietsPaymentViewModel>());
+                default:
+                    throw new NotImplementedException($"Page {page} is not implemented.");
             }
         }
     }

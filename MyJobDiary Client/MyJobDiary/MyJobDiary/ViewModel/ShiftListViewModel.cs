@@ -1,57 +1,79 @@
 ﻿using MyJobDiary.Managers;
 using MyJobDiary.Model;
 using MyJobDiary.Services;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xamarin.Forms;
 
 namespace MyJobDiary.ViewModel
 {
     public class ShiftListViewModel : ObservableObject
     {
+        #region Private fields
+
         private readonly CachedTableManager<Shift> _shiftManager;
+        private readonly CachedTableManager<DietPaymentItem> _dietManager;
+        private readonly IDietCalculationService _dietCalculationService;
+
         private IEnumerable<Shift> _allShiftItems;
-        private DietCalculationService _dietCalculationService;
+
+        #endregion
+
+
+        #region Constructors
 
         public ShiftListViewModel(
             CachedTableManager<Shift> shiftManager,
-            DietCalculationService dietCalculationService)
+            CachedTableManager<DietPaymentItem> dietManager,
+            IDietCalculationService dietCalculationService)
         {
             _shiftManager = shiftManager;
+            _dietManager = dietManager;
             _dietCalculationService = dietCalculationService;
             _allShiftItems = new List<Shift>();
             MonthNavigationViewModel = new MonthNavigationViewModel();
-            MonthNavigationViewModel.MonthChanged += ReloadItems;
-            ReloadItems();
+            MonthNavigationViewModel.MonthChanged += Reload;
         }
+
+        #endregion
+
+
+        #region Properties
 
         public IEnumerable<Shift> ShiftItems
         {
-            get => RecalculateDiets(Filter(_allShiftItems));
+            get => _allShiftItems;
             set => SetField(ref _allShiftItems, value);
         }
 
         public MonthNavigationViewModel MonthNavigationViewModel { get; private set; }
 
-        public async void ReloadItems()
+        #endregion
+
+
+        #region Public methods
+
+        public async void Reload()
         {
-            ShiftItems = await _shiftManager.GetAsync();
+            var newShifts = Filter(await _shiftManager.GetAsync())
+                .OrderBy(s => s.TimeFrom);
+            await _dietCalculationService.RecalculateDiets(newShifts);
+            ShiftItems = newShifts;
         }
+
+        public async void Delete(Shift shift)
+        {
+            await _shiftManager.DeleteAsync(shift);
+            Reload();
+        }
+
+        #endregion
+
 
         #region private helpers
 
         private IEnumerable<Shift> Filter(IEnumerable<Shift> allItems)
             => allItems.Where(i => i.TimeFrom.Year == MonthNavigationViewModel.YearPicker.Value &&
-                                   i.TimeFrom.Month == MonthNavigationViewModel.MonthPicker.Value)
-                       .OrderBy(i => i.TimeFrom);
-
-        private IEnumerable<Shift> RecalculateDiets(IEnumerable<Shift> items)
-            => items.Select(i =>
-            {
-                i.DietCalculationItems = _dietCalculationService.GetDietCalculation(i);
-                return i;
-            });
+                                   i.TimeFrom.Month == MonthNavigationViewModel.MonthPicker.Value);
 
         #endregion
 

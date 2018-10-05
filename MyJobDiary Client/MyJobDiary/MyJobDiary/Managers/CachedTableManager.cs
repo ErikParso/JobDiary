@@ -4,22 +4,32 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
 using MyJobDiary.Model;
+using MyJobDiary.Services;
 
 namespace MyJobDiary.Managers
 {
     public partial class CachedTableManager<T>
         where T : ICachedTableItem
     {
-        public static Lazy<CachedTableManager<T>> Current =
-            new Lazy<CachedTableManager<T>>(() => new CachedTableManager<T>());
-
-        private IMobileServiceTable<T> _table;
+        private readonly IMobileServiceTable<T> _table;
+        private readonly ILoadingService _loadingService;
+        private readonly IDialogService _dialogService;
 
         private List<T> _cachedItems;
 
-        private CachedTableManager()
+        public CachedTableManager(
+            MobileServiceClient mobileServiceClient,
+            ILoadingService loadingService,
+            IDialogService dialogservice)
         {
-            _table = MyClient.Current.Value.GetTable<T>();
+            _table = mobileServiceClient.GetTable<T>();
+            _loadingService = loadingService;
+            _dialogService = dialogservice;
+        }
+
+        public void ClearCache()
+        {
+            _cachedItems = null;
         }
 
         public async Task<IEnumerable<T>> GetAsync()
@@ -31,7 +41,7 @@ namespace MyJobDiary.Managers
         public async Task SaveAsync(T item)
         {
             await LoadIfNotCached();
-            App.LoadingService.StartLoading("Odosielam položku");
+            _loadingService.StartLoading("Odosielam položku");
             try
             {
                 if (item.Id == null)
@@ -48,15 +58,15 @@ namespace MyJobDiary.Managers
             }
             catch (Exception e)
             {
-                App.DialogService.ShowDialog("Chyba spojenia", e.Message);
+                _dialogService.ShowDialog("Chyba spojenia", e.Message);
             }
-            App.LoadingService.StopLoading();
+            _loadingService.StopLoading();
         }
 
         public async Task DeleteAsync(T item)
         {
             await LoadIfNotCached();
-            App.LoadingService.StartLoading("Mažem položky");
+            _loadingService.StartLoading("Mažem položky");
             try
             {
                 await _table.DeleteAsync(item);
@@ -64,25 +74,25 @@ namespace MyJobDiary.Managers
             }
             catch (Exception e)
             {
-                App.DialogService.ShowDialog("Chyba spojenia", e.Message);
+                _dialogService.ShowDialog("Chyba spojenia", e.Message);
             }
-            App.LoadingService.StopLoading();
+            _loadingService.StopLoading();
         }
 
         private async Task LoadIfNotCached()
         {
             if (_cachedItems == null)
             {
-                App.LoadingService.StartLoading("Naèítavam zoznam");
+                _loadingService.StartLoading("Naèítavam zoznam");
                 try
                 {
                     _cachedItems = (await _table.ToEnumerableAsync()).ToList();
                 }
                 catch (Exception e)
                 {
-                    App.DialogService.ShowDialog("Chyba spojenia", e.Message);
+                    _dialogService.ShowDialog("Chyba spojenia", e.Message);
                 }
-                App.LoadingService.StopLoading();
+                _loadingService.StopLoading();
             }
         }
     }

@@ -1,14 +1,17 @@
 ﻿using Microsoft.WindowsAzure.MobileServices;
+using MyJobDiary.Model;
 using System.Threading.Tasks;
 
 namespace MyJobDiary.Services
 {
     public interface ILoginService
     {
-        MobileServiceUser User { get; }
+        Task<bool> Login(MobileServiceClient client);
 
-        Task<bool> Login();
+        Task Logout(MobileServiceClient client);
 
-        Task Logout();
+        Task<AppServiceIdentity> GetUserInformation(MobileServiceClient client);
+
+        string Log { get; }
     }
 }

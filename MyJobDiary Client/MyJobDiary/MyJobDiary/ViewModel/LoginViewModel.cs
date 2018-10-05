@@ -1,7 +1,8 @@
-﻿using MyJobDiary.Model;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using MyJobDiary.Model;
+using MyJobDiary.Services;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -10,8 +11,21 @@ namespace MyJobDiary.ViewModel
 {
     public class LoginViewModel : ObservableObject
     {
-        public LoginViewModel()
+        private readonly ILoadingService _loadingService;
+        private readonly IDialogService _dialogService;
+        private readonly ILoginService _loginService;
+        private readonly MobileServiceClient _mobileServiceClient;
+
+        public LoginViewModel(
+            ILoadingService loadingService,
+            IDialogService dialogservice,
+            ILoginService loginService,
+            MobileServiceClient mobileServiceClient)
         {
+            _loadingService = loadingService;
+            _dialogService = dialogservice;
+            _loginService = loginService;
+            _mobileServiceClient = mobileServiceClient;
             LoginCommand = new Command(Login);
         }
 
@@ -26,31 +40,24 @@ namespace MyJobDiary.ViewModel
 
         public ICommand LoginCommand { get; private set; }
 
-        public Action<(string, string)> LoggedIn { get; set; }
+        public Action LoginSuccessfull { get; set; }
 
         public async void Login()
         {
             WorkInProgress = true;
-            App.LoadingService.StartLoading("prebieha prihlasovanie");
+            _loadingService.StartLoading("Prihlasujem");
             try
             {
-                if (await App.LoginService.Login())
-                {
-                    LoggedIn?.Invoke(await GetUserInformation());
-                }
+                await _loginService.Login(_mobileServiceClient);
+                _dialogService.ShowDialog("Login information", _loginService.Log);
+                LoginSuccessfull?.Invoke();
             }
             catch (Exception e)
             {
-                App.DialogService.ShowDialog("Nepodarilo sa prihlásiť", e.Message);
+                _dialogService.ShowDialog("Prihlásenie zlyhalo", e.Message);
             }
-            App.LoadingService.StopLoading();
+            _loadingService.StopLoading();
             WorkInProgress = false;
-        }
-
-        public async Task<(string, string)> GetUserInformation()
-        {
-            var res = await MyClient.Current.Value.InvokeApiAsync<List<AppServiceIdentity>>("/.auth/me");
-            return (res[0].UserClaims[4].Value, res[0].UserClaims[8].Value);
         }
 
         #endregion

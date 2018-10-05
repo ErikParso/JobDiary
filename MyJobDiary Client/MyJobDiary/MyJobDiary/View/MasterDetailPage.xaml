@@ -9,7 +9,7 @@
   <MasterDetailPage.Detail>
     <NavigationPage>
       <x:Arguments>
-        <local:MainPage/>
+        <local:MainPage Title="Prehľad"/>
       </x:Arguments>
     </NavigationPage>
   </MasterDetailPage.Detail>

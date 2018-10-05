@@ -12,38 +12,25 @@ namespace MyJobDiary.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ShiftFormContentPage : ContentPage
 	{
-		public ShiftFormContentPage(ShiftFormViewModel viewModel)
+        private readonly ShiftFormViewModel _viewModel;
+
+        public ShiftFormContentPage(ShiftFormViewModel viewModel)
 		{
 			InitializeComponent();
-            viewModel.PickFromPlacemark = PickFromPlacemark;
+            _viewModel = viewModel;
             BindingContext = viewModel;
+            AddHandlers();
 		}
 
-        private async Task<string> PickFromPlacemark(Placemark placemark)
-            => await DisplayActionSheet("Vyber aktuálnu polohu:", null, null, PrepareOptions(placemark).ToArray());
-
-        private IEnumerable<string> PrepareOptions(Placemark placemark)
+        private void AddHandlers()
         {
-            var ret = new List<string>();
-            if (!string.IsNullOrWhiteSpace(placemark.Locality) && !ret.Contains(placemark.Locality))
-                ret.Add(placemark.Locality);
-            if (!string.IsNullOrWhiteSpace(placemark.SubLocality) && !ret.Contains(placemark.SubLocality))
-                ret.Add(placemark.SubLocality);
-            if (!string.IsNullOrWhiteSpace(placemark.AdminArea) && !ret.Contains(placemark.AdminArea))
-                ret.Add(placemark.AdminArea);
-            if (!string.IsNullOrWhiteSpace(placemark.SubAdminArea) && !ret.Contains(placemark.SubAdminArea))
-                ret.Add(placemark.SubAdminArea);
-            if (!string.IsNullOrWhiteSpace(placemark.Thoroughfare) && !ret.Contains(placemark.Thoroughfare))
-                ret.Add(placemark.Thoroughfare);
-            if (!string.IsNullOrWhiteSpace(placemark.CountryName) && !ret.Contains(placemark.CountryName))
-                ret.Add(placemark.CountryName);
-            return ret;
+            _viewModel.OnSaved += async () => await Navigation.PopAsync();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            NavigationPage.SetHasNavigationBar(this, false);
+            _viewModel.Reload();
         }
 
     }

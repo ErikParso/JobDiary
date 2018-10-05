@@ -1,14 +1,25 @@
-﻿using MyJobDiary.Model;
+﻿using MyJobDiary.Managers;
+using MyJobDiary.Model;
 using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MyJobDiary.Services
 {
-    public class ValidationService
+    public class ValidationService: IValidationService
     {
-        public IEnumerable<Shift> CheckOverlapping(IEnumerable<Shift> shifts, Shift newShift)
-            => shifts.Where(s => s.Id != newShift.Id && CheckOverlapping(s, newShift));
+        private readonly CachedTableManager<Shift> _shiftManager;
+
+        public ValidationService(CachedTableManager<Shift> shiftManager)
+        {
+            _shiftManager = shiftManager;
+        }
+
+        public async Task<bool> IsShiftOverlapped(Shift shift)
+        {
+            var allShifts = await _shiftManager.GetAsync();
+            return allShifts.Any(s => s.Id != shift.Id && CheckOverlapping(s, shift));
+        }
 
         private bool CheckOverlapping(Shift shift1, Shift shift2)
         {

@@ -8,6 +8,9 @@ namespace MyJobDiary.Model
         [JsonProperty(PropertyName = "id_token")]
         public string IdToken { get; set; }
 
+        [JsonProperty(PropertyName = "refresh_token")]
+        public string RefreshToken { get; set; }
+
         [JsonProperty(PropertyName = "provider_name")]
         public string ProviderName { get; set; }
 

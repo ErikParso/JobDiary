@@ -5,12 +5,24 @@ using Xamarin.Essentials;
 
 namespace MyJobDiary.Services
 {
-    public class CurrentLocationProvider
+    public class LocationService : ILocationService
     {
-        public static async Task<Placemark> GetLocation()
+        private readonly ILoadingService _loadingService;
+        private readonly IDialogService _dialogService;
+
+        public LocationService(
+            ILoadingService loadingService,
+            IDialogService dialogService)
+        {
+            _loadingService = loadingService;
+            _dialogService = dialogService;
+        }
+
+
+        public async Task<Placemark> GetLocation()
         {
             Placemark ret = null;
-            App.LoadingService.StartLoading("Načítavam pozíciu");
+            _loadingService.StartLoading("Načítavam pozíciu");
 
             try
             {
@@ -26,10 +38,10 @@ namespace MyJobDiary.Services
             }
             catch (Exception e)
             {
-                App.DialogService.ShowDialog("Lokalizácia neúspešná", e.Message);
+                _dialogService.ShowDialog("Lokalizácia neúspešná", e.Message);
             }
 
-            App.LoadingService.StopLoading();
+            _loadingService.StopLoading();
             return ret;
         }
     }

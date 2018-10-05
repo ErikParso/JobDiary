@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Autofac;
+using MyJobDiary.ViewModel;
+using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,10 +12,26 @@ namespace MyJobDiary.View
     {
         public readonly ListView ListView;
 
+        private readonly MasterViewModel _viewModel;
+
         public MasterPage()
         {
             InitializeComponent();
+            _viewModel = App.Container.Resolve<MasterViewModel>();
+            _viewModel.LogoutSuccessfull = LogoutSuccessfull;
+            BindingContext = _viewModel;
             ListView = listView;
+        }
+
+        private void LogoutSuccessfull()
+        {
+            App.Current.MainPage = App.Container.Resolve<LoginPage>();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _viewModel.ReloadUserInformation();
         }
     }
 }
