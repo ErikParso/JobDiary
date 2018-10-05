@@ -15,59 +15,60 @@ namespace MyJobDiary.Droid.Services
 {
     public class LoginService : ILoginService
     {
+        #region Private fields
+
         private readonly FormsAppCompatActivity _mainActivity;
         private readonly AccountStore _accountStore;
-        private StringBuilder _logBuilder;
 
-        public string Log => _logBuilder.ToString();
+        #endregion
+
+
+        #region Constructor
 
         public LoginService(MainActivity mainActivity)
         {
             _mainActivity = mainActivity;
             _accountStore = AccountStore.Create(mainActivity, "bobik");
-            _logBuilder = new StringBuilder();
         }
+
+        #endregion
+
+
+        #region Login, Logout
 
         public async Task<bool> Login(MobileServiceClient client)
         {
-            _logBuilder.AppendLine($"{GetStoredAccountsCount()} tokens in account store.");
             client.CurrentUser = RetrieveTokenFromSecureStore();
             if (client.CurrentUser != null)
             {
                 try
                 {
-                    _logBuilder.AppendLine($"Refreshing token ...");
                     var refreshed = await client.RefreshUserAsync();
-                    _logBuilder.AppendLine($"Refresh successfull.");
                     if (refreshed != null)
                     {
                         client.CurrentUser = refreshed;
                         StoreTokenInSecureStore(refreshed);
-                        _logBuilder.AppendLine($"Token saved in account store.");
                         return true;
                     }
                 }
-                catch (Exception refreshException)
+                catch (Exception)
                 {
-                    _logBuilder.AppendLine($"Refresh Failed '{refreshException.Message}'");
+
                 }
             }
 
             if (client.CurrentUser != null && !IsTokenExpired(client.CurrentUser.MobileServiceAuthenticationToken))
             {
                 // User has previously been authenticated, no refresh is required
-                _logBuilder.AppendLine($"Old token not expired, login unnecessary.");
                 return true;
             }
 
             // We need to ask for credentials at this point
             await LoginAsync(client);
-            _logBuilder.AppendLine($"Login successfull.");
             if (client.CurrentUser != null)
             {
                 // We were able to successfully log in
                 StoreTokenInSecureStore(client.CurrentUser);
-                _logBuilder.AppendLine($"Token saved in account store.");
             }
 
             return client.CurrentUser != null;
@@ -93,8 +94,10 @@ namespace MyJobDiary.Droid.Services
             await client.LogoutAsync();
         }
 
-        private int GetStoredAccountsCount()
-            => _accountStore.FindAccountsForService("myjobdiary").Count();
+        #endregion
+
+
+        #region Private helpers
 
         private MobileServiceUser RetrieveTokenFromSecureStore()
         {
@@ -122,7 +125,7 @@ namespace MyJobDiary.Droid.Services
             _accountStore.Save(account, "myjobdiary");
         }
 
-        public void RemoveTokenFromSecureStore()
+        private void RemoveTokenFromSecureStore()
         {
             var accounts = _accountStore.FindAccountsForService("myjobdiary");
             if (accounts != null)
@@ -175,13 +178,6 @@ namespace MyJobDiary.Droid.Services
             return (expire < DateTime.UtcNow);
         }
 
-        private void Clear()
-        {
-            var accs = _accountStore.FindAccountsForService("myjobdiary").ToList();
-            foreach (var acc in accs)
-            {
-                _accountStore.Delete(acc, "myjobdiary");
-            }
-        }
+        #endregion
     }
 }

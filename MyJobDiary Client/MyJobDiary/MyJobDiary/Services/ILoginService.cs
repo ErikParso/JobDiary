@@ -8,7 +8,5 @@ namespace MyJobDiary.Services
         Task<bool> Login(MobileServiceClient client);
 
         Task Logout(MobileServiceClient client);
-
-        string Log { get; }
     }
 }
