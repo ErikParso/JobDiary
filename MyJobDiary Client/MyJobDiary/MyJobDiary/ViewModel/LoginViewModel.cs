@@ -1,9 +1,6 @@
 ﻿using Microsoft.WindowsAzure.MobileServices;
-using MyJobDiary.Model;
 using MyJobDiary.Services;
 using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -48,13 +45,14 @@ namespace MyJobDiary.ViewModel
             _loadingService.StartLoading("Prihlasujem");
             try
             {
-                await _loginService.Login(_mobileServiceClient);
-                _dialogService.ShowDialog("Login information", _loginService.Log);
-                LoginSuccessfull?.Invoke();
+                if (await _loginService.Login(_mobileServiceClient))
+                {
+                    LoginSuccessfull?.Invoke();
+                }
             }
             catch (Exception e)
             {
-                _dialogService.ShowDialog("Prihlásenie zlyhalo", e.Message);
+                _dialogService.ShowDialog("Prihlásenie bolo neúspešné", e.Message);
             }
             _loadingService.StopLoading();
             WorkInProgress = false;
