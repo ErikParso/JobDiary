@@ -57,8 +57,10 @@ namespace MyJobDiary.ViewModel
         private async void FastInsert()
         {
             var insertInfo = await _fastInsertService.InsertFast();
-            _dialogService.ShowDialog($"Zaznamenaný {GetFastInsertCaption(insertInfo.Item1)}",
-                GetFastInsertDetail(insertInfo.Item1, insertInfo.Item2));
+            _dialogService.ShowDialog(
+                $"Zaznamenaný {GetFastInsertCaption(insertInfo.Item1)}",
+                GetFastInsertDetail(insertInfo.Item1, insertInfo.Item2),
+                GetFastInsertIcon(insertInfo.Item1));
         }
 
         private string GetFastInsertDetail(Insertion insertion, Shift shift)
@@ -97,6 +99,18 @@ namespace MyJobDiary.ViewModel
                 case Insertion.WorkStart: return "začiatok práce";
                 case Insertion.WorkEnd: return "koniec práce";
                 case Insertion.Arrival: return "Príchod domov";
+                default: throw new NotImplementedException();
+            }
+        }
+
+        private string GetFastInsertIcon(Insertion insertion)
+        {
+            switch (insertion)
+            {
+                case Insertion.Departure: return "white_car_20.png";
+                case Insertion.WorkStart: return "white_clock_start_20.png";
+                case Insertion.WorkEnd: return "white_clock_end_20.png";
+                case Insertion.Arrival: return "white_home_20.png";
                 default: throw new NotImplementedException();
             }
         }

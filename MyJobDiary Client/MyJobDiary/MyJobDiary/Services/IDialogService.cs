@@ -2,8 +2,6 @@
 {
     public interface IDialogService
     {
-        void ShowDialog(string title, string message);
-
-        bool ShowYesNoDialog(string title, string message);
+        void ShowDialog(string title, string message, string icon = null);
     }
 }
