@@ -35,5 +35,11 @@ namespace MyJobDiary.View
             base.OnAppearing();
             _viewModel.Login();
         }
+
+        private async void Button_Clicked(object sender, System.EventArgs e)
+        {
+            await btnLogin.TranslateTo(10, 0, 250, Easing.BounceIn);
+            await btnLogin.TranslateTo(0, 0, 100);
+        }
     }
 }

@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using MyJobDiary.Model;
+using System.Threading.Tasks;
 
 namespace MyJobDiary.Services
 {
     public interface IFastInsertService
     {
-        Task InsertFast();
+        Task<(Insertion, Shift)> InsertFast();
     }
 }

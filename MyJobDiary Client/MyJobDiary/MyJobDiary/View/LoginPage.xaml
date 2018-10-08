@@ -14,10 +14,10 @@
             <Image Source="orange.png" HorizontalOptions="Center" VerticalOptions="Center"
                    IsVisible="{Binding IsAuthenticated, Converter={StaticResource inverseBooleanConverter}}"/>
 
-            <Button Image="google.png" HorizontalOptions="Center"
+            <Button x:Name="btnLogin" Image="google.png" HorizontalOptions="Center"
                     VerticalOptions="End" Margin="5" BackgroundColor="Transparent" Text="Login"
                     TextColor="{StaticResource PrimaryTextColor}"
-                    Command="{Binding LoginCommand}"
+                    Command="{Binding LoginCommand}" Clicked="Button_Clicked"
                     IsEnabled="{Binding WorkInProgress, Converter={StaticResource inverseBooleanConverter}}"
                     IsVisible="{Binding IsAuthenticated, Converter={StaticResource inverseBooleanConverter}}">
             </Button>

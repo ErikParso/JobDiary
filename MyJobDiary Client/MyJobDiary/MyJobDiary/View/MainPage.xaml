@@ -23,7 +23,7 @@
         <BoxView Grid.Row="1" HeightRequest="1" HorizontalOptions="Fill" BackgroundColor="{StaticResource IconColor}"/>
         <StackLayout Orientation="Horizontal" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" >
             <Button Image="plus.png" Margin="5" BackgroundColor="Black" BorderWidth="1" Clicked="ShiftForm_Clicked"/>
-            <Button Image="add_time.png" Margin="5" BackgroundColor="Black" BorderWidth="1" Clicked="AddTime_Clicked"/>
+            <Button Image="add_time.png" Margin="5" BackgroundColor="Black" BorderWidth="1" Command="{Binding FastInsertCommand}"/>
         </StackLayout>
         <BoxView Grid.Row="3" HeightRequest="1" HorizontalOptions="Fill" BackgroundColor="{StaticResource IconColor}"/>
         <Label Grid.Row="4" HorizontalOptions="Center" VerticalOptions="End" Text="{Binding ThisMonthReward}"/>

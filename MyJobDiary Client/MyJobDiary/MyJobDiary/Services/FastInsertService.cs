@@ -20,17 +20,19 @@ namespace MyJobDiary.Services
             _locationService = locationService;
         }
 
-        public async Task InsertFast()
+        public async Task<(Insertion, Shift)> InsertFast()
         {
+            var insertion = Insertion.Departure;
             var currentTime = GetCurrentTime();
             var currentLocation = await _locationService.GetLocation();
             var shifts = await _shiftManager.GetAsync();
-            var currentShift = shifts.Where(s => s.DepartureTime < currentTime)
+            var currentShift = shifts.Where(s => s.DepartureTime <= currentTime)
                 .OrderByDescending(s => s.DepartureTime)
                 .FirstOrDefault();
             if (currentShift == null)
             {
                 currentShift = CreateInitShift(currentLocation, currentTime);
+                insertion = Insertion.Departure;
             }
             else if (DateTime.Equals(currentShift.DepartureTime, currentShift.TimeFrom) &&
                      DateTime.Equals(currentShift.DepartureTime, currentShift.TimeTo) &&
@@ -40,31 +42,35 @@ namespace MyJobDiary.Services
                 currentShift.TimeTo = currentTime;
                 currentShift.ArrivalTime = currentTime;
                 currentShift.Location = currentLocation.Locality;
+                currentShift.Country = currentLocation.CountryCode;
+                insertion = Insertion.WorkStart;
             }
             else if (DateTime.Equals(currentShift.TimeFrom, currentShift.TimeTo) &&
                      DateTime.Equals(currentShift.TimeFrom, currentShift.ArrivalTime))
             {
                 currentShift.TimeTo = currentTime;
                 currentShift.ArrivalTime = currentTime;
+                insertion = Insertion.WorkEnd;
             }
             else if (DateTime.Equals(currentShift.TimeTo, currentShift.ArrivalTime))
             {
                 currentShift.ArrivalTime = currentTime;
                 currentShift.ArrivalLocation = currentLocation.Locality;
-                currentShift.IsClosed = true;
+                insertion = Insertion.Arrival;
             }
             else
             {
                 currentShift = CreateInitShift(currentLocation, currentTime);
+                insertion = Insertion.Departure;
             }
             await _shiftManager.SaveAsync(currentShift);
+            return (insertion, currentShift);
         }
 
         private Shift CreateInitShift(Placemark currentLocation, DateTime currentTime)
         {
             return new Shift()
             {
-                Country = currentLocation.CountryCode,
                 DepartureLocation = currentLocation.Locality,
                 DepartureTime = currentTime,
                 TimeFrom = currentTime,
