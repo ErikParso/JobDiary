@@ -36,6 +36,7 @@ namespace MyJobDiary
             builder.RegisterType<DietCalculationService>().SingleInstance().As<IDietCalculationService>();
             builder.RegisterType<LocationService>().SingleInstance().As<ILocationService>();
             builder.RegisterType<ValidationService>().SingleInstance().As<IValidationService>();
+            builder.RegisterType<FastInsertService>().SingleInstance().As<IFastInsertService>();
             //Managers
             builder.RegisterType<CachedTableManager<Shift>>().SingleInstance();
             builder.RegisterType<CachedTableManager<DietPaymentItem>>().SingleInstance();

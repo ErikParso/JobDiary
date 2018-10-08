@@ -9,12 +9,16 @@ namespace MyJobDiary.ViewModel
     public class MainPageViewModel : ObservableObject
     {
         private readonly IDietCalculationService _dietCalculationService;
+        private readonly IFastInsertService _fastInsertService;
 
         private string _thisMonthReward;
 
-        public MainPageViewModel(IDietCalculationService dietCalculationService)
+        public MainPageViewModel(
+            IDietCalculationService dietCalculationService,
+            IFastInsertService fastInsertService)
         {
             _dietCalculationService = dietCalculationService;
+            _fastInsertService = fastInsertService;
         }
 
         public async Task Reload()
@@ -31,5 +35,10 @@ namespace MyJobDiary.ViewModel
 
         private string BuildRewardString(Dictionary<string, double> diets)
             => "Diéty za tento mesiac: " + string.Join(", ", diets.Select(d => $"{d.Value} {d.Key}"));
+
+        internal void FastInsert()
+        {
+            _fastInsertService.InsertFast();
+        }
     }
 }

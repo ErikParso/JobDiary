@@ -71,5 +71,10 @@ namespace MyJobDiary.View
             chart.PointMode = PointMode.Circle;
             this.chartView.Chart = chart;
         }
+
+        private void AddTime_Clicked(object sender, EventArgs e)
+        {
+            _viewModel.FastInsert();
+        }
     }
 }
