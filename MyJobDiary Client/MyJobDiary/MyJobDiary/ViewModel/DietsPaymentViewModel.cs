@@ -92,10 +92,10 @@ namespace MyJobDiary.ViewModel
         {
             await _manager.SaveAsync(new DietPaymentItem()
             {
-                Country = _country,
+                Country = _country.Trim(),
                 Reward = _reward,
                 Hours = _hours,
-                Currency = _currency,
+                Currency = _currency.Trim(),
             });
             ReloadItems();
         }
