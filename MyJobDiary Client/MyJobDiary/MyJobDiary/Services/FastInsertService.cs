@@ -20,15 +20,15 @@ namespace MyJobDiary.Services
             _locationService = locationService;
         }
 
+        public async Task<Shift> GetCurrentshift()
+         => await GetCurrentshift(GetCurrentTime());
+
         public async Task<(Insertion, Shift)> InsertFast()
         {
             var insertion = Insertion.Departure;
             var currentTime = GetCurrentTime();
             var currentLocation = await _locationService.GetLocation();
-            var shifts = await _shiftManager.GetAsync();
-            var currentShift = shifts.Where(s => s.DepartureTime <= currentTime)
-                .OrderByDescending(s => s.DepartureTime)
-                .FirstOrDefault();
+            var currentShift = await GetCurrentshift(currentTime);
             if (currentShift == null)
             {
                 currentShift = CreateInitShift(currentLocation, currentTime);
@@ -65,6 +65,14 @@ namespace MyJobDiary.Services
             }
             await _shiftManager.SaveAsync(currentShift);
             return (insertion, currentShift);
+        }
+
+        private async Task<Shift> GetCurrentshift(DateTime currentTime)
+        {
+            var shifts = await _shiftManager.GetAsync();
+            return shifts.Where(s => s.DepartureTime <= currentTime)
+                .OrderByDescending(s => s.DepartureTime)
+                .FirstOrDefault();
         }
 
         private Shift CreateInitShift(Placemark currentLocation, DateTime currentTime)

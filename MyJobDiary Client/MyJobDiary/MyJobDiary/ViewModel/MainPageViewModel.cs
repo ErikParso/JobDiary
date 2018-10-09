@@ -1,4 +1,5 @@
-﻿using MyJobDiary.Model;
+﻿using MyJobDiary.Extensions;
+using MyJobDiary.Model;
 using MyJobDiary.Services;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace MyJobDiary.ViewModel
         private readonly IDietCalculationService _dietCalculationService;
         private readonly IFastInsertService _fastInsertService;
         private readonly IDialogService _dialogService;
+
+        private Shift _currentShift;
 
         private string _thisMonthReward;
 
@@ -34,6 +37,9 @@ namespace MyJobDiary.ViewModel
         {
             ThisMonthReward =
                 BuildRewardString(await _dietCalculationService.GetMonthDiets(DateTime.Now.Year, DateTime.Now.Month));
+            var currentShift = (await _fastInsertService.GetCurrentshift()).CopyCreate(true);
+            await _dietCalculationService.RecalculateDiets(new List<Shift> { currentShift });
+            CurrentShift = currentShift;
         }
 
 
@@ -61,6 +67,7 @@ namespace MyJobDiary.ViewModel
                 $"Zaznamenaný {GetFastInsertCaption(insertInfo.Item1)}",
                 GetFastInsertDetail(insertInfo.Item1, insertInfo.Item2),
                 GetFastInsertIcon(insertInfo.Item1));
+            await Reload();
         }
 
         private string GetFastInsertDetail(Insertion insertion, Shift shift)
@@ -113,6 +120,17 @@ namespace MyJobDiary.ViewModel
                 case Insertion.Arrival: return "white_home_20.png";
                 default: throw new NotImplementedException();
             }
+        }
+
+        #endregion
+
+
+        #region Current item
+
+        public Shift CurrentShift
+        {
+            get => _currentShift;
+            set => SetField(ref _currentShift, value);
         }
 
         #endregion

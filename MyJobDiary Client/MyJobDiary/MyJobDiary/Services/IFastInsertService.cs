@@ -6,5 +6,7 @@ namespace MyJobDiary.Services
     public interface IFastInsertService
     {
         Task<(Insertion, Shift)> InsertFast();
+
+        Task<Shift> GetCurrentshift();
     }
 }

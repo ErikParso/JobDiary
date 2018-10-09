@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:usercontrol="clr-namespace:MyJobDiary.UserControl"
              x:Class="MyJobDiary.View.MainPage"
              BackgroundColor="Black">
 
@@ -16,17 +17,31 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+
         <Image Grid.Row="0" Source="road.jpg" Opacity="0.4" Aspect="AspectFill"/>
         <microcharts:ChartView x:Name="chartView" Grid.Row="0" />
+
         <BoxView Grid.Row="1" HeightRequest="1" HorizontalOptions="Fill" BackgroundColor="{StaticResource IconColor}"/>
-        <StackLayout Orientation="Horizontal" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" >
+
+        <StackLayout Orientation="Horizontal" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center">
             <Button Image="plus.png" Margin="5" BackgroundColor="Black" BorderWidth="1" Clicked="ShiftForm_Clicked"/>
             <Button Image="add_time.png" Margin="5" BackgroundColor="Black" BorderWidth="1" Command="{Binding FastInsertCommand}"/>
         </StackLayout>
+
         <BoxView Grid.Row="3" HeightRequest="1" HorizontalOptions="Fill" BackgroundColor="{StaticResource IconColor}"/>
-        <Label Grid.Row="4" HorizontalOptions="Center" VerticalOptions="End" Text="{Binding ThisMonthReward}"/>
+
+        <StackLayout Grid.Row="4" Margin="5">
+            <Label Text="Aktuálna položka:"/>
+            <Frame BackgroundColor="{StaticResource FrameColor}">
+                <usercontrol:DietListItem BindingContext="{Binding CurrentShift}"/>
+            </Frame>
+        </StackLayout>
+
+        <Label Grid.Row="5" Text="{Binding ThisMonthReward}" Margin="5"/>
+
     </Grid>
 
 </ContentPage>
