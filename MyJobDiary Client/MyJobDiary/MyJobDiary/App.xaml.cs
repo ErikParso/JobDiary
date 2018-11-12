@@ -6,6 +6,7 @@ using MyJobDiary.Services;
 using MyJobDiary.View;
 using MyJobDiary.ViewModel;
 using Xamarin.Forms;
+using Xamarin.Forms.Utils.Services;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -14,6 +15,7 @@ namespace MyJobDiary
     public partial class App : Application
     {
         public static IContainer Container { get; set; }
+        public static MobileServiceClient MobileServiceClient = new MobileServiceClient(Constants.ApplicationURL);
 
         public App()
         {
@@ -21,15 +23,15 @@ namespace MyJobDiary
         }
 
         public static void InitConatiner(
-            ILoginService loginService,
+            IAuthenticationService authenticationService,
             ILoadingService loadingService,
             IDialogService dialogService)
         {
             ContainerBuilder builder = new ContainerBuilder();
             //MobileServiceClient
-            builder.RegisterInstance(new MobileServiceClient(Constants.ApplicationURL));
+            builder.RegisterInstance(MobileServiceClient);
             //Services
-            builder.RegisterInstance(loginService);
+            builder.RegisterInstance(authenticationService);
             builder.RegisterInstance(loadingService);
             builder.RegisterInstance(dialogService);
             builder.RegisterType<AccountInformationService>().SingleInstance().As<IAccountInformationService>();

@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Xamarin-Utils\Xamarin.Utils\Xamarin.Forms.Utils\Xamarin.Forms.Utils.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="UserControl\AttendanceItem.xaml.cs">
       <DependentUpon>AttendanceItem.xaml</DependentUpon>
     </Compile>

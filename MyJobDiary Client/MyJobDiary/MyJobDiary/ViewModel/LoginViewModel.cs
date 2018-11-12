@@ -3,6 +3,7 @@ using MyJobDiary.Services;
 using System;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Xamarin.Forms.Utils.Services;
 
 namespace MyJobDiary.ViewModel
 {
@@ -10,18 +11,18 @@ namespace MyJobDiary.ViewModel
     {
         private readonly ILoadingService _loadingService;
         private readonly IDialogService _dialogService;
-        private readonly ILoginService _loginService;
+        private readonly IAuthenticationService _authenticationService;
         private readonly MobileServiceClient _mobileServiceClient;
 
         public LoginViewModel(
             ILoadingService loadingService,
             IDialogService dialogservice,
-            ILoginService loginService,
+            IAuthenticationService authenticationService,
             MobileServiceClient mobileServiceClient)
         {
             _loadingService = loadingService;
             _dialogService = dialogservice;
-            _loginService = loginService;
+            _authenticationService = authenticationService;
             _mobileServiceClient = mobileServiceClient;
             LoginCommand = new Command(Login);
         }
@@ -45,7 +46,7 @@ namespace MyJobDiary.ViewModel
             _loadingService.StartLoading("Prihlasujem");
             try
             {
-                if (await _loginService.Login(_mobileServiceClient))
+                if (await _authenticationService.Login())
                 {
                     LoginSuccessfull?.Invoke();
                 }

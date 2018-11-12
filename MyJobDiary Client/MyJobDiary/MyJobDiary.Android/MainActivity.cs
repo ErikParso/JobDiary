@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using MyJobDiary.Droid.Services;
+using Xamarin.Droid.Utils.Services;
 using Xamarin.Forms;
 
 namespace MyJobDiary.Droid
@@ -15,7 +16,10 @@ namespace MyJobDiary.Droid
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Forms.Init(this, savedInstanceState);
-            App.InitConatiner(new LoginService(this), new LoadingService(this), new DialogService(this));
+            App.InitConatiner(
+                new AuthenticationService(this, App.MobileServiceClient, "myjobdiary", "bobik"),
+                new LoadingService(this),
+                new DialogService(this));
             LoadApplication(new App());
         }
 

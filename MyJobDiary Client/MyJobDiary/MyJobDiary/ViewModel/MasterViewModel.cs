@@ -5,6 +5,7 @@ using MyJobDiary.Services;
 using System;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Xamarin.Forms.Utils.Services;
 
 namespace MyJobDiary.ViewModel
 {
@@ -12,7 +13,7 @@ namespace MyJobDiary.ViewModel
     {
         #region User
 
-        private readonly ILoginService _loginService;
+        private readonly IAuthenticationService _authenticationService;
         private readonly ILoadingService _loadingService;
         private readonly IDialogService _dialogService;
         private readonly IAccountInformationService _accoutInformationService;
@@ -24,7 +25,7 @@ namespace MyJobDiary.ViewModel
         private string _photo;
 
         public MasterViewModel(
-            ILoginService loginService,
+            IAuthenticationService authenticationService,
             ILoadingService loadingService,
             IDialogService dialogService,
             IAccountInformationService accountInformationService,
@@ -32,7 +33,7 @@ namespace MyJobDiary.ViewModel
             CachedTableManager<Shift> shiftManager,
             CachedTableManager<DietPaymentItem> dietManager)
         {
-            _loginService = loginService;
+            _authenticationService = authenticationService;
             _loadingService = loadingService;
             _dialogService = dialogService;
             _accoutInformationService = accountInformationService;
@@ -70,7 +71,7 @@ namespace MyJobDiary.ViewModel
             _loadingService.StartLoading("Odhlasujem");
             try
             {
-                await _loginService.Logout(_mobileServiceClient);
+                await _authenticationService.Logout();
                 _shiftManager.ClearCache();
                 _dietManager.ClearCache();
                 LogoutSuccessfull?.Invoke();
