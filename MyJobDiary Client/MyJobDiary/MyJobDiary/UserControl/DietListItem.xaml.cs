@@ -23,7 +23,7 @@ namespace MyJobDiary.UserControl
         private void OnDietSumTapped(object sender, EventArgs e)
         {
             var item = BindingContext as Shift;
-            IDialogService dialogService = App.Container.Resolve<IDialogService>();
+            IDialogService dialogService = App.CurrentAppContainer.Resolve<IDialogService>();
             dialogService.ShowDialog(item.DietSumString, BuildcalculationInfo(item));
         }
 

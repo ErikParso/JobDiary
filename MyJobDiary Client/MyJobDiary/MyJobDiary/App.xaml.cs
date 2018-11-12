@@ -5,6 +5,7 @@ using MyJobDiary.Model;
 using MyJobDiary.Services;
 using MyJobDiary.View;
 using MyJobDiary.ViewModel;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Utils.Services;
 using Xamarin.Forms.Xaml;
@@ -14,26 +15,23 @@ namespace MyJobDiary
 {
     public partial class App : Application
     {
-        public static IContainer Container { get; set; }
-        public static MobileServiceClient MobileServiceClient = new MobileServiceClient(Constants.ApplicationURL);
+        private readonly IContainer _container;
 
-        public App()
-        {
-            MainPage = Container.Resolve<LoginPage>();
-        }
-
-        public static void InitConatiner(
-            IAuthenticationService authenticationService,
-            ILoadingService loadingService,
-            IDialogService dialogService)
+        public App(Action<ContainerBuilder> registerPlatformSpecific)
         {
             ContainerBuilder builder = new ContainerBuilder();
+            RegisterShared(builder);
+            registerPlatformSpecific?.Invoke(builder);
+            _container = builder.Build();
+
+            MainPage = _container.Resolve<LoginPage>();
+        }
+
+        public void RegisterShared(ContainerBuilder builder)
+        {
             //MobileServiceClient
-            builder.RegisterInstance(MobileServiceClient);
+            builder.RegisterInstance(new MobileServiceClient(Constants.ApplicationURL));
             //Services
-            builder.RegisterInstance(authenticationService);
-            builder.RegisterInstance(loadingService);
-            builder.RegisterInstance(dialogService);
             builder.RegisterType<AccountInformationService>().SingleInstance().As<IAccountInformationService>();
             builder.RegisterType<DietCalculationService>().SingleInstance().As<IDietCalculationService>();
             builder.RegisterType<LocationService>().SingleInstance().As<ILocationService>();
@@ -52,23 +50,9 @@ namespace MyJobDiary
             builder.RegisterType<MainPageViewModel>().SingleInstance();
             //Views
             builder.RegisterType<LoginPage>().SingleInstance();
-
-            Container = builder.Build();
         }
 
-        protected override void OnStart()
-        {
+        public static IContainer CurrentAppContainer => ((App)Current)._container;
 
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
-        }
     }
 }

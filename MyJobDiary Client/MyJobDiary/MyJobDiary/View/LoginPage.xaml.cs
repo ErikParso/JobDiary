@@ -26,7 +26,7 @@ namespace MyJobDiary.View
 
         private void LoggedIn()
         {
-            var masterViewModel = App.Container.Resolve<MasterViewModel>();
+            var masterViewModel = App.CurrentAppContainer.Resolve<MasterViewModel>();
             App.Current.MainPage = new MasterDetailPage(masterViewModel);
         }
 

@@ -17,7 +17,7 @@ namespace MyJobDiary.View
         public MasterPage()
         {
             InitializeComponent();
-            _viewModel = App.Container.Resolve<MasterViewModel>();
+            _viewModel = App.CurrentAppContainer.Resolve<MasterViewModel>();
             _viewModel.LogoutSuccessfull = LogoutSuccessfull;
             BindingContext = _viewModel;
             ListView = listView;
@@ -25,7 +25,7 @@ namespace MyJobDiary.View
 
         private void LogoutSuccessfull()
         {
-            App.Current.MainPage = App.Container.Resolve<LoginPage>();
+            App.Current.MainPage = App.CurrentAppContainer.Resolve<LoginPage>();
         }
 
         protected override void OnAppearing()

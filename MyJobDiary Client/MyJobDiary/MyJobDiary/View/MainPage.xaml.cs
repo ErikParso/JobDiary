@@ -19,7 +19,7 @@ namespace MyJobDiary.View
         public MainPage()
         {
             InitializeComponent();
-            _viewModel = App.Container.Resolve<MainPageViewModel>();
+            _viewModel = App.CurrentAppContainer.Resolve<MainPageViewModel>();
             BindingContext = _viewModel;
         }
 
@@ -36,7 +36,8 @@ namespace MyJobDiary.View
                 IsClosed = true,
                 WithDiets = true,
             };
-            var shiftFormViewModel = App.Container.Resolve<ShiftFormViewModel>(new TypedParameter(typeof(Shift), initial));
+            var shiftFormViewModel = App.CurrentAppContainer
+                .Resolve<ShiftFormViewModel>(new TypedParameter(typeof(Shift), initial));
             var shiftFormPage = new ShiftFormContentPage(shiftFormViewModel)
             {
                 Title = "Nová položka"
@@ -49,7 +50,7 @@ namespace MyJobDiary.View
             base.OnAppearing();
             await _viewModel.Reload();
 
-            var shifts = await App.Container.Resolve<CachedTableManager<Shift>>().GetAsync();
+            var shifts = await App.CurrentAppContainer.Resolve<CachedTableManager<Shift>>().GetAsync();
             var chart = new LineChart()
             {
                 Entries = Enumerable.Range(-12, 13)

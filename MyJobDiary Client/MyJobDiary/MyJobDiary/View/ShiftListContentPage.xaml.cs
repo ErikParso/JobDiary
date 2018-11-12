@@ -40,7 +40,8 @@ namespace MyJobDiary.View
 
         private async void ShowShiftForm(Shift copy, string title)
         {
-            ShiftFormViewModel viewModel = App.Container.Resolve<ShiftFormViewModel>(new TypedParameter(typeof(Shift), copy));
+            ShiftFormViewModel viewModel = App.CurrentAppContainer
+                .Resolve<ShiftFormViewModel>(new TypedParameter(typeof(Shift), copy));
             ShiftFormContentPage shiftForm = new ShiftFormContentPage(viewModel)
             {
                 Title = title

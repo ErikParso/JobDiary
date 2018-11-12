@@ -47,13 +47,13 @@ namespace MyJobDiary.View
                 case Pages.MainPage:
                     return new MainPage();
                 case Pages.Shifts:
-                    return new ShiftListContentPage(App.Container.Resolve<ShiftListViewModel>(), false);
+                    return new ShiftListContentPage(App.CurrentAppContainer.Resolve<ShiftListViewModel>(), false);
                 case Pages.Diets:
-                    return new ShiftListContentPage(App.Container.Resolve<ShiftListViewModel>(), true);
+                    return new ShiftListContentPage(App.CurrentAppContainer.Resolve<ShiftListViewModel>(), true);
                 case Pages.Attendance:
-                    return new AttendanceList(App.Container.Resolve<AttendanceListViewModel>());
+                    return new AttendanceList(App.CurrentAppContainer.Resolve<AttendanceListViewModel>());
                 case Pages.Settings:
-                    return new DietPaymentItemList(App.Container.Resolve<DietsPaymentViewModel>());
+                    return new DietPaymentItemList(App.CurrentAppContainer.Resolve<DietsPaymentViewModel>());
                 default:
                     throw new NotImplementedException($"Page {page} is not implemented.");
             }
