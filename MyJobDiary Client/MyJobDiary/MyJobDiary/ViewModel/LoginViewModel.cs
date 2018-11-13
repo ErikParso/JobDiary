@@ -46,7 +46,7 @@ namespace MyJobDiary.ViewModel
             _loadingService.StartLoading("Prihlasujem");
             try
             {
-                if (await _authenticationService.Login())
+                if (await _authenticationService.Login(MobileServiceAuthenticationProvider.Google))
                 {
                     LoginSuccessfull?.Invoke();
                 }
