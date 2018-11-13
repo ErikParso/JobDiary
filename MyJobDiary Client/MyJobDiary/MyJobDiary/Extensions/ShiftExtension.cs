@@ -6,6 +6,8 @@ namespace MyJobDiary.Extensions
     {
         public static Shift CopyCreate(this Shift original, bool copyId)
         {
+            if (original == null)
+                return null;
             return new Shift()
             {
                 Id = copyId ? original.Id : null,

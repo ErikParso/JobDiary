@@ -38,7 +38,8 @@ namespace MyJobDiary.ViewModel
             ThisMonthReward =
                 BuildRewardString(await _dietCalculationService.GetMonthDiets(DateTime.Now.Year, DateTime.Now.Month));
             var currentShift = (await _fastInsertService.GetCurrentshift()).CopyCreate(true);
-            await _dietCalculationService.RecalculateDiets(new List<Shift> { currentShift });
+            if (currentShift != null)
+                await _dietCalculationService.RecalculateDiets(new List<Shift> { currentShift });
             CurrentShift = currentShift;
         }
 

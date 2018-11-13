@@ -24,7 +24,7 @@ namespace MyJobDiary.ViewModel
             _dialogService = dialogservice;
             _authenticationService = authenticationService;
             _mobileServiceClient = mobileServiceClient;
-            LoginCommand = new Command(Login);
+            LoginCommand = new Command<MobileServiceAuthenticationProvider>(Login);
         }
 
         private bool _workInProgress;
@@ -52,13 +52,13 @@ namespace MyJobDiary.ViewModel
             WorkInProgress = false;
         }
 
-        public async void Login()
+        public async void Login(MobileServiceAuthenticationProvider provider)
         {
             WorkInProgress = true;
             _loadingService.StartLoading("Prihlasujem");
             try
             {
-                if (await _authenticationService.Login(MobileServiceAuthenticationProvider.Google))
+                if (await _authenticationService.Login(provider))
                 {
                     LoginSuccessfull?.Invoke();
                 }

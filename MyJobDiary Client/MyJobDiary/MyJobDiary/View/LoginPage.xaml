@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:theme="clr-namespace:MyJobDiary.ThemeDictionaries"
+             xmlns:login="clr-namespace:Microsoft.WindowsAzure.MobileServices;assembly=Microsoft.Azure.Mobile.Client"
              x:Class="MyJobDiary.View.LoginPage"
              BackgroundColor="Black">
 
@@ -13,12 +14,17 @@
         <Grid>
             <Image Source="orange.png" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-            <Button x:Name="btnLogin" Image="google.png" HorizontalOptions="Center"
-                    VerticalOptions="End" Margin="5" BackgroundColor="Transparent" Text="Login"
-                    TextColor="{StaticResource PrimaryTextColor}"
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End"
+                         IsVisible="{Binding WorkInProgress, Converter={StaticResource inverseBooleanConverter}}">
+                <Button Image="google.png" Margin="5" BackgroundColor="Transparent"
                     Command="{Binding LoginCommand}"
-                    IsVisible="{Binding WorkInProgress, Converter={StaticResource inverseBooleanConverter}}">
-            </Button>
+                    CommandParameter="{x:Static login:MobileServiceAuthenticationProvider.Google}">
+                </Button>
+                <Button Image="facebook.png" Margin="5" BackgroundColor="Transparent"
+                    Command="{Binding LoginCommand}"
+                    CommandParameter="{x:Static login:MobileServiceAuthenticationProvider.Facebook}">
+                </Button>
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

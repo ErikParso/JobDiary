@@ -22,8 +22,16 @@ namespace MyJobDiary.Services
         public async Task LoadInformation()
         {
             var info = (await _mobileServiceClient.InvokeApiAsync<List<AppServiceIdentity>>("/.auth/me")).First();
-            Email = info.UserClaims[4].Value;
-            PhotoUrl = info.UserClaims[8].Value;
+            if (info.ProviderName == "google")
+            {
+                Email = info.UserClaims[4].Value;
+                PhotoUrl = info.UserClaims[8].Value;
+            }
+            else if (info.ProviderName == "facebook")
+            {
+                Email = info.UserClaims[1].Value;
+                PhotoUrl = "facebook.png";
+            }
         }
     }
 }

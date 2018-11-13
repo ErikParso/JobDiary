@@ -50,6 +50,8 @@ namespace MyJobDiary.Services
 
         public async Task<IEnumerable<DietCalculationItem>> GetDietCalculation(Shift shift)
         {
+            if (shift == null)
+                return Enumerable.Empty<DietCalculationItem>();
             var ret = new List<DietCalculationItem>();
             var dietPaymentItems = await _dietManager.GetAsync();
             var daysSplit = SplitShift(shift).ToList();
