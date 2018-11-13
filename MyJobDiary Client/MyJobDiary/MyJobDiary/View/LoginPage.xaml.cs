@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using MyJobDiary.ViewModel;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,10 +20,11 @@ namespace MyJobDiary.View
 
         private void AddHandlers()
         {
-            _viewModel.LoginSuccessfull = LoggedIn;
+            _viewModel.LoginSuccessfull = Authenticated;
+            _viewModel.AuthenticateSuccessfull = Authenticated;
         }
 
-        private void LoggedIn()
+        private void Authenticated()
         {
             var masterViewModel = App.CurrentAppContainer.Resolve<MasterViewModel>();
             App.Current.MainPage = new MasterDetailPage(masterViewModel);
@@ -33,13 +33,7 @@ namespace MyJobDiary.View
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            _viewModel.Login();
-        }
-
-        private async void Button_Clicked(object sender, System.EventArgs e)
-        {
-            await btnLogin.TranslateTo(10, 0, 250, Easing.BounceIn);
-            await btnLogin.TranslateTo(0, 0, 100);
+            _viewModel.Authenticate();
         }
     }
 }

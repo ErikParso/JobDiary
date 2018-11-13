@@ -40,6 +40,18 @@ namespace MyJobDiary.ViewModel
 
         public Action LoginSuccessfull { get; set; }
 
+        public Action AuthenticateSuccessfull { get; set; }
+
+        public async void Authenticate()
+        {
+            WorkInProgress = true;
+            if (await _authenticationService.Authenticate())
+            {
+                AuthenticateSuccessfull?.Invoke();
+            }
+            WorkInProgress = false;
+        }
+
         public async void Login()
         {
             WorkInProgress = true;
@@ -53,7 +65,7 @@ namespace MyJobDiary.ViewModel
             }
             catch (Exception e)
             {
-                _dialogService.ShowDialog("Prihlásenie bolo neúspešné", e.Message);
+                _dialogService.ShowDialog("Prihlásenie zlyhalo", e.Message);
             }
             _loadingService.StopLoading();
             WorkInProgress = false;

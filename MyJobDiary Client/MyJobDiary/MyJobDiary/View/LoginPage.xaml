@@ -11,15 +11,13 @@
 
     <ContentPage.Content>
         <Grid>
-            <Image Source="orange.png" HorizontalOptions="Center" VerticalOptions="Center"
-                   IsVisible="{Binding IsAuthenticated, Converter={StaticResource inverseBooleanConverter}}"/>
+            <Image Source="orange.png" HorizontalOptions="Center" VerticalOptions="Center"/>
 
             <Button x:Name="btnLogin" Image="google.png" HorizontalOptions="Center"
                     VerticalOptions="End" Margin="5" BackgroundColor="Transparent" Text="Login"
                     TextColor="{StaticResource PrimaryTextColor}"
-                    Command="{Binding LoginCommand}" Clicked="Button_Clicked"
-                    IsEnabled="{Binding WorkInProgress, Converter={StaticResource inverseBooleanConverter}}"
-                    IsVisible="{Binding IsAuthenticated, Converter={StaticResource inverseBooleanConverter}}">
+                    Command="{Binding LoginCommand}"
+                    IsVisible="{Binding WorkInProgress, Converter={StaticResource inverseBooleanConverter}}">
             </Button>
         </Grid>
     </ContentPage.Content>

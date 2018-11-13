@@ -20,8 +20,6 @@ namespace MyJobDiary.Droid
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Forms.Init(this, savedInstanceState);
-            //new LoadingService(this),
-            //new DialogService(this)
             App app = new App(RegisterPlatformSpecificTypes);
             LoadApplication(app);
         }
