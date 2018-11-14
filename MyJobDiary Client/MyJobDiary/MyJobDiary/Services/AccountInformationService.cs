@@ -30,7 +30,7 @@ namespace MyJobDiary.Services
             else if (info.ProviderName == "facebook")
             {
                 Email = info.UserClaims[1].Value;
-                PhotoUrl = "facebook.png";
+                PhotoUrl = $@"https://graph.facebook.com/{info.UserClaims[0].Value}/picture?type=normal";
             }
         }
     }
