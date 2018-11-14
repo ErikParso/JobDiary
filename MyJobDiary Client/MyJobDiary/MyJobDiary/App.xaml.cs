@@ -7,7 +7,6 @@ using MyJobDiary.View;
 using MyJobDiary.ViewModel;
 using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Utils.Services;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
