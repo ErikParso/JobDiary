@@ -164,6 +164,2282 @@ namespace MyJobDiary.Droid
 			global::Xamarin.Auth.Resource.Styleable.FontFamilyFont_font = global::MyJobDiary.Droid.Resource.Styleable.FontFamilyFont_font;
 			global::Xamarin.Auth.Resource.Styleable.FontFamilyFont_fontStyle = global::MyJobDiary.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
 			global::Xamarin.Auth.Resource.Styleable.FontFamilyFont_fontWeight = global::MyJobDiary.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Xamarin.Droid.Utils.Resource.Animation.abc_fade_in = global::MyJobDiary.Droid.Resource.Animation.abc_fade_in;
+			global::Xamarin.Droid.Utils.Resource.Animation.abc_fade_out = global::MyJobDiary.Droid.Resource.Animation.abc_fade_out;
+			global::Xamarin.Droid.Utils.Resource.Animation.abc_grow_fade_in_from_bottom = global::MyJobDiary.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Xamarin.Droid.Utils.Resource.Animation.abc_popup_enter = global::MyJobDiary.Droid.Resource.Animation.abc_popup_enter;
+			global::Xamarin.Droid.Utils.Resource.Animation.abc_popup_exit = global::MyJobDiary.Droid.Resource.Animation.abc_popup_exit;
+			global::Xamarin.Droid.Utils.Resource.Animation.abc_shrink_fade_out_from_bottom = global::MyJobDiary.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Xamarin.Droid.Utils.Resource.Animation.abc_slide_in_bottom = global::MyJobDiary.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Xamarin.Droid.Utils.Resource.Animation.abc_slide_in_top = global::MyJobDiary.Droid.Resource.Animation.abc_slide_in_top;
+			global::Xamarin.Droid.Utils.Resource.Animation.abc_slide_out_bottom = global::MyJobDiary.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Xamarin.Droid.Utils.Resource.Animation.abc_slide_out_top = global::MyJobDiary.Droid.Resource.Animation.abc_slide_out_top;
+			global::Xamarin.Droid.Utils.Resource.Animation.design_bottom_sheet_slide_in = global::MyJobDiary.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Xamarin.Droid.Utils.Resource.Animation.design_bottom_sheet_slide_out = global::MyJobDiary.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Xamarin.Droid.Utils.Resource.Animation.design_snackbar_in = global::MyJobDiary.Droid.Resource.Animation.design_snackbar_in;
+			global::Xamarin.Droid.Utils.Resource.Animation.design_snackbar_out = global::MyJobDiary.Droid.Resource.Animation.design_snackbar_out;
+			global::Xamarin.Droid.Utils.Resource.Animation.slide_in_right = global::MyJobDiary.Droid.Resource.Animation.slide_in_right;
+			global::Xamarin.Droid.Utils.Resource.Animation.slide_out_left = global::MyJobDiary.Droid.Resource.Animation.slide_out_left;
+			global::Xamarin.Droid.Utils.Resource.Animation.tooltip_enter = global::MyJobDiary.Droid.Resource.Animation.tooltip_enter;
+			global::Xamarin.Droid.Utils.Resource.Animation.tooltip_exit = global::MyJobDiary.Droid.Resource.Animation.tooltip_exit;
+			global::Xamarin.Droid.Utils.Resource.Animator.design_appbar_state_list_animator = global::MyJobDiary.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarDivider = global::MyJobDiary.Droid.Resource.Attribute.actionBarDivider;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarItemBackground = global::MyJobDiary.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarPopupTheme = global::MyJobDiary.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarSize = global::MyJobDiary.Droid.Resource.Attribute.actionBarSize;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarSplitStyle = global::MyJobDiary.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarStyle = global::MyJobDiary.Droid.Resource.Attribute.actionBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarTabBarStyle = global::MyJobDiary.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarTabStyle = global::MyJobDiary.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarTabTextStyle = global::MyJobDiary.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarTheme = global::MyJobDiary.Droid.Resource.Attribute.actionBarTheme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionBarWidgetTheme = global::MyJobDiary.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.actionButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionDropDownStyle = global::MyJobDiary.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionLayout = global::MyJobDiary.Droid.Resource.Attribute.actionLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionMenuTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionMenuTextColor = global::MyJobDiary.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeBackground = global::MyJobDiary.Droid.Resource.Attribute.actionModeBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeCloseButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeCloseDrawable = global::MyJobDiary.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeCopyDrawable = global::MyJobDiary.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeCutDrawable = global::MyJobDiary.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeFindDrawable = global::MyJobDiary.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModePasteDrawable = global::MyJobDiary.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModePopupWindowStyle = global::MyJobDiary.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeSelectAllDrawable = global::MyJobDiary.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeShareDrawable = global::MyJobDiary.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeSplitBackground = global::MyJobDiary.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeStyle = global::MyJobDiary.Droid.Resource.Attribute.actionModeStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionModeWebSearchDrawable = global::MyJobDiary.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionOverflowButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionOverflowMenuStyle = global::MyJobDiary.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionProviderClass = global::MyJobDiary.Droid.Resource.Attribute.actionProviderClass;
+			global::Xamarin.Droid.Utils.Resource.Attribute.actionViewClass = global::MyJobDiary.Droid.Resource.Attribute.actionViewClass;
+			global::Xamarin.Droid.Utils.Resource.Attribute.activityChooserViewStyle = global::MyJobDiary.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.alertDialogButtonGroupStyle = global::MyJobDiary.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.alertDialogCenterButtons = global::MyJobDiary.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Xamarin.Droid.Utils.Resource.Attribute.alertDialogStyle = global::MyJobDiary.Droid.Resource.Attribute.alertDialogStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.alertDialogTheme = global::MyJobDiary.Droid.Resource.Attribute.alertDialogTheme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.allowStacking = global::MyJobDiary.Droid.Resource.Attribute.allowStacking;
+			global::Xamarin.Droid.Utils.Resource.Attribute.alpha = global::MyJobDiary.Droid.Resource.Attribute.alpha;
+			global::Xamarin.Droid.Utils.Resource.Attribute.alphabeticModifiers = global::MyJobDiary.Droid.Resource.Attribute.alphabeticModifiers;
+			global::Xamarin.Droid.Utils.Resource.Attribute.arrowHeadLength = global::MyJobDiary.Droid.Resource.Attribute.arrowHeadLength;
+			global::Xamarin.Droid.Utils.Resource.Attribute.arrowShaftLength = global::MyJobDiary.Droid.Resource.Attribute.arrowShaftLength;
+			global::Xamarin.Droid.Utils.Resource.Attribute.autoCompleteTextViewStyle = global::MyJobDiary.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.autoSizeMaxTextSize = global::MyJobDiary.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::Xamarin.Droid.Utils.Resource.Attribute.autoSizeMinTextSize = global::MyJobDiary.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::Xamarin.Droid.Utils.Resource.Attribute.autoSizePresetSizes = global::MyJobDiary.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::Xamarin.Droid.Utils.Resource.Attribute.autoSizeStepGranularity = global::MyJobDiary.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::Xamarin.Droid.Utils.Resource.Attribute.autoSizeTextType = global::MyJobDiary.Droid.Resource.Attribute.autoSizeTextType;
+			global::Xamarin.Droid.Utils.Resource.Attribute.background = global::MyJobDiary.Droid.Resource.Attribute.background;
+			global::Xamarin.Droid.Utils.Resource.Attribute.backgroundSplit = global::MyJobDiary.Droid.Resource.Attribute.backgroundSplit;
+			global::Xamarin.Droid.Utils.Resource.Attribute.backgroundStacked = global::MyJobDiary.Droid.Resource.Attribute.backgroundStacked;
+			global::Xamarin.Droid.Utils.Resource.Attribute.backgroundTint = global::MyJobDiary.Droid.Resource.Attribute.backgroundTint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.backgroundTintMode = global::MyJobDiary.Droid.Resource.Attribute.backgroundTintMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.barLength = global::MyJobDiary.Droid.Resource.Attribute.barLength;
+			global::Xamarin.Droid.Utils.Resource.Attribute.behavior_autoHide = global::MyJobDiary.Droid.Resource.Attribute.behavior_autoHide;
+			global::Xamarin.Droid.Utils.Resource.Attribute.behavior_hideable = global::MyJobDiary.Droid.Resource.Attribute.behavior_hideable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.behavior_overlapTop = global::MyJobDiary.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Xamarin.Droid.Utils.Resource.Attribute.behavior_peekHeight = global::MyJobDiary.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Xamarin.Droid.Utils.Resource.Attribute.behavior_skipCollapsed = global::MyJobDiary.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Xamarin.Droid.Utils.Resource.Attribute.borderWidth = global::MyJobDiary.Droid.Resource.Attribute.borderWidth;
+			global::Xamarin.Droid.Utils.Resource.Attribute.borderlessButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.bottomSheetDialogTheme = global::MyJobDiary.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.bottomSheetStyle = global::MyJobDiary.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonBarButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonBarNegativeButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonBarNeutralButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonBarPositiveButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonBarStyle = global::MyJobDiary.Droid.Resource.Attribute.buttonBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonGravity = global::MyJobDiary.Droid.Resource.Attribute.buttonGravity;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonPanelSideLayout = global::MyJobDiary.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonStyle = global::MyJobDiary.Droid.Resource.Attribute.buttonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonStyleSmall = global::MyJobDiary.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonTint = global::MyJobDiary.Droid.Resource.Attribute.buttonTint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.buttonTintMode = global::MyJobDiary.Droid.Resource.Attribute.buttonTintMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.cardBackgroundColor = global::MyJobDiary.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.cardCornerRadius = global::MyJobDiary.Droid.Resource.Attribute.cardCornerRadius;
+			global::Xamarin.Droid.Utils.Resource.Attribute.cardElevation = global::MyJobDiary.Droid.Resource.Attribute.cardElevation;
+			global::Xamarin.Droid.Utils.Resource.Attribute.cardMaxElevation = global::MyJobDiary.Droid.Resource.Attribute.cardMaxElevation;
+			global::Xamarin.Droid.Utils.Resource.Attribute.cardPreventCornerOverlap = global::MyJobDiary.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Xamarin.Droid.Utils.Resource.Attribute.cardUseCompatPadding = global::MyJobDiary.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.checkboxStyle = global::MyJobDiary.Droid.Resource.Attribute.checkboxStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.checkedTextViewStyle = global::MyJobDiary.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.closeIcon = global::MyJobDiary.Droid.Resource.Attribute.closeIcon;
+			global::Xamarin.Droid.Utils.Resource.Attribute.closeItemLayout = global::MyJobDiary.Droid.Resource.Attribute.closeItemLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.collapseContentDescription = global::MyJobDiary.Droid.Resource.Attribute.collapseContentDescription;
+			global::Xamarin.Droid.Utils.Resource.Attribute.collapseIcon = global::MyJobDiary.Droid.Resource.Attribute.collapseIcon;
+			global::Xamarin.Droid.Utils.Resource.Attribute.collapsedTitleGravity = global::MyJobDiary.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Xamarin.Droid.Utils.Resource.Attribute.collapsedTitleTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.color = global::MyJobDiary.Droid.Resource.Attribute.color;
+			global::Xamarin.Droid.Utils.Resource.Attribute.colorAccent = global::MyJobDiary.Droid.Resource.Attribute.colorAccent;
+			global::Xamarin.Droid.Utils.Resource.Attribute.colorBackgroundFloating = global::MyJobDiary.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Xamarin.Droid.Utils.Resource.Attribute.colorButtonNormal = global::MyJobDiary.Droid.Resource.Attribute.colorButtonNormal;
+			global::Xamarin.Droid.Utils.Resource.Attribute.colorControlActivated = global::MyJobDiary.Droid.Resource.Attribute.colorControlActivated;
+			global::Xamarin.Droid.Utils.Resource.Attribute.colorControlHighlight = global::MyJobDiary.Droid.Resource.Attribute.colorControlHighlight;
+			global::Xamarin.Droid.Utils.Resource.Attribute.colorControlNormal = global::MyJobDiary.Droid.Resource.Attribute.colorControlNormal;
+			global::Xamarin.Droid.Utils.Resource.Attribute.colorError = global::MyJobDiary.Droid.Resource.Attribute.colorError;
+			global::Xamarin.Droid.Utils.Resource.Attribute.colorPrimary = global::MyJobDiary.Droid.Resource.Attribute.colorPrimary;
+			global::Xamarin.Droid.Utils.Resource.Attribute.colorPrimaryDark = global::MyJobDiary.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Xamarin.Droid.Utils.Resource.Attribute.colorSwitchThumbNormal = global::MyJobDiary.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Xamarin.Droid.Utils.Resource.Attribute.commitIcon = global::MyJobDiary.Droid.Resource.Attribute.commitIcon;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentDescription = global::MyJobDiary.Droid.Resource.Attribute.contentDescription;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentInsetEnd = global::MyJobDiary.Droid.Resource.Attribute.contentInsetEnd;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentInsetEndWithActions = global::MyJobDiary.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentInsetLeft = global::MyJobDiary.Droid.Resource.Attribute.contentInsetLeft;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentInsetRight = global::MyJobDiary.Droid.Resource.Attribute.contentInsetRight;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentInsetStart = global::MyJobDiary.Droid.Resource.Attribute.contentInsetStart;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentInsetStartWithNavigation = global::MyJobDiary.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentPadding = global::MyJobDiary.Droid.Resource.Attribute.contentPadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentPaddingBottom = global::MyJobDiary.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentPaddingLeft = global::MyJobDiary.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentPaddingRight = global::MyJobDiary.Droid.Resource.Attribute.contentPaddingRight;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentPaddingTop = global::MyJobDiary.Droid.Resource.Attribute.contentPaddingTop;
+			global::Xamarin.Droid.Utils.Resource.Attribute.contentScrim = global::MyJobDiary.Droid.Resource.Attribute.contentScrim;
+			global::Xamarin.Droid.Utils.Resource.Attribute.controlBackground = global::MyJobDiary.Droid.Resource.Attribute.controlBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.counterEnabled = global::MyJobDiary.Droid.Resource.Attribute.counterEnabled;
+			global::Xamarin.Droid.Utils.Resource.Attribute.counterMaxLength = global::MyJobDiary.Droid.Resource.Attribute.counterMaxLength;
+			global::Xamarin.Droid.Utils.Resource.Attribute.counterOverflowTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.counterTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.counterTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.customNavigationLayout = global::MyJobDiary.Droid.Resource.Attribute.customNavigationLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.defaultQueryHint = global::MyJobDiary.Droid.Resource.Attribute.defaultQueryHint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.dialogPreferredPadding = global::MyJobDiary.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.dialogTheme = global::MyJobDiary.Droid.Resource.Attribute.dialogTheme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.displayOptions = global::MyJobDiary.Droid.Resource.Attribute.displayOptions;
+			global::Xamarin.Droid.Utils.Resource.Attribute.divider = global::MyJobDiary.Droid.Resource.Attribute.divider;
+			global::Xamarin.Droid.Utils.Resource.Attribute.dividerHorizontal = global::MyJobDiary.Droid.Resource.Attribute.dividerHorizontal;
+			global::Xamarin.Droid.Utils.Resource.Attribute.dividerPadding = global::MyJobDiary.Droid.Resource.Attribute.dividerPadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.dividerVertical = global::MyJobDiary.Droid.Resource.Attribute.dividerVertical;
+			global::Xamarin.Droid.Utils.Resource.Attribute.drawableSize = global::MyJobDiary.Droid.Resource.Attribute.drawableSize;
+			global::Xamarin.Droid.Utils.Resource.Attribute.drawerArrowStyle = global::MyJobDiary.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.dropDownListViewStyle = global::MyJobDiary.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.dropdownListPreferredItemHeight = global::MyJobDiary.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Xamarin.Droid.Utils.Resource.Attribute.editTextBackground = global::MyJobDiary.Droid.Resource.Attribute.editTextBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.editTextColor = global::MyJobDiary.Droid.Resource.Attribute.editTextColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.editTextStyle = global::MyJobDiary.Droid.Resource.Attribute.editTextStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.elevation = global::MyJobDiary.Droid.Resource.Attribute.elevation;
+			global::Xamarin.Droid.Utils.Resource.Attribute.errorEnabled = global::MyJobDiary.Droid.Resource.Attribute.errorEnabled;
+			global::Xamarin.Droid.Utils.Resource.Attribute.errorTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.errorTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.expandActivityOverflowButtonDrawable = global::MyJobDiary.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.expanded = global::MyJobDiary.Droid.Resource.Attribute.expanded;
+			global::Xamarin.Droid.Utils.Resource.Attribute.expandedTitleGravity = global::MyJobDiary.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Xamarin.Droid.Utils.Resource.Attribute.expandedTitleMargin = global::MyJobDiary.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Xamarin.Droid.Utils.Resource.Attribute.expandedTitleMarginBottom = global::MyJobDiary.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Xamarin.Droid.Utils.Resource.Attribute.expandedTitleMarginEnd = global::MyJobDiary.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Xamarin.Droid.Utils.Resource.Attribute.expandedTitleMarginStart = global::MyJobDiary.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Xamarin.Droid.Utils.Resource.Attribute.expandedTitleMarginTop = global::MyJobDiary.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Xamarin.Droid.Utils.Resource.Attribute.expandedTitleTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.externalRouteEnabledDrawable = global::MyJobDiary.Droid.Resource.Attribute.externalRouteEnabledDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fabSize = global::MyJobDiary.Droid.Resource.Attribute.fabSize;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fastScrollEnabled = global::MyJobDiary.Droid.Resource.Attribute.fastScrollEnabled;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::MyJobDiary.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::MyJobDiary.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fastScrollVerticalThumbDrawable = global::MyJobDiary.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fastScrollVerticalTrackDrawable = global::MyJobDiary.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.font = global::MyJobDiary.Droid.Resource.Attribute.font;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fontFamily = global::MyJobDiary.Droid.Resource.Attribute.fontFamily;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fontProviderAuthority = global::MyJobDiary.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fontProviderCerts = global::MyJobDiary.Droid.Resource.Attribute.fontProviderCerts;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fontProviderFetchStrategy = global::MyJobDiary.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fontProviderFetchTimeout = global::MyJobDiary.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fontProviderPackage = global::MyJobDiary.Droid.Resource.Attribute.fontProviderPackage;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fontProviderQuery = global::MyJobDiary.Droid.Resource.Attribute.fontProviderQuery;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fontStyle = global::MyJobDiary.Droid.Resource.Attribute.fontStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.fontWeight = global::MyJobDiary.Droid.Resource.Attribute.fontWeight;
+			global::Xamarin.Droid.Utils.Resource.Attribute.foregroundInsidePadding = global::MyJobDiary.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.gapBetweenBars = global::MyJobDiary.Droid.Resource.Attribute.gapBetweenBars;
+			global::Xamarin.Droid.Utils.Resource.Attribute.goIcon = global::MyJobDiary.Droid.Resource.Attribute.goIcon;
+			global::Xamarin.Droid.Utils.Resource.Attribute.headerLayout = global::MyJobDiary.Droid.Resource.Attribute.headerLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.height = global::MyJobDiary.Droid.Resource.Attribute.height;
+			global::Xamarin.Droid.Utils.Resource.Attribute.hideOnContentScroll = global::MyJobDiary.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Xamarin.Droid.Utils.Resource.Attribute.hintAnimationEnabled = global::MyJobDiary.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Xamarin.Droid.Utils.Resource.Attribute.hintEnabled = global::MyJobDiary.Droid.Resource.Attribute.hintEnabled;
+			global::Xamarin.Droid.Utils.Resource.Attribute.hintTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.hintTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.homeAsUpIndicator = global::MyJobDiary.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Xamarin.Droid.Utils.Resource.Attribute.homeLayout = global::MyJobDiary.Droid.Resource.Attribute.homeLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.icon = global::MyJobDiary.Droid.Resource.Attribute.icon;
+			global::Xamarin.Droid.Utils.Resource.Attribute.iconTint = global::MyJobDiary.Droid.Resource.Attribute.iconTint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.iconTintMode = global::MyJobDiary.Droid.Resource.Attribute.iconTintMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.iconifiedByDefault = global::MyJobDiary.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Xamarin.Droid.Utils.Resource.Attribute.imageButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.imageButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.indeterminateProgressStyle = global::MyJobDiary.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.initialActivityCount = global::MyJobDiary.Droid.Resource.Attribute.initialActivityCount;
+			global::Xamarin.Droid.Utils.Resource.Attribute.insetForeground = global::MyJobDiary.Droid.Resource.Attribute.insetForeground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.isLightTheme = global::MyJobDiary.Droid.Resource.Attribute.isLightTheme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.itemBackground = global::MyJobDiary.Droid.Resource.Attribute.itemBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.itemIconTint = global::MyJobDiary.Droid.Resource.Attribute.itemIconTint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.itemPadding = global::MyJobDiary.Droid.Resource.Attribute.itemPadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.itemTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.itemTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.itemTextColor = global::MyJobDiary.Droid.Resource.Attribute.itemTextColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.keylines = global::MyJobDiary.Droid.Resource.Attribute.keylines;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout = global::MyJobDiary.Droid.Resource.Attribute.layout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layoutManager = global::MyJobDiary.Droid.Resource.Attribute.layoutManager;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout_anchor = global::MyJobDiary.Droid.Resource.Attribute.layout_anchor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout_anchorGravity = global::MyJobDiary.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout_behavior = global::MyJobDiary.Droid.Resource.Attribute.layout_behavior;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout_collapseMode = global::MyJobDiary.Droid.Resource.Attribute.layout_collapseMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout_collapseParallaxMultiplier = global::MyJobDiary.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout_dodgeInsetEdges = global::MyJobDiary.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout_insetEdge = global::MyJobDiary.Droid.Resource.Attribute.layout_insetEdge;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout_keyline = global::MyJobDiary.Droid.Resource.Attribute.layout_keyline;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout_scrollFlags = global::MyJobDiary.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Xamarin.Droid.Utils.Resource.Attribute.layout_scrollInterpolator = global::MyJobDiary.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listChoiceBackgroundIndicator = global::MyJobDiary.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listDividerAlertDialog = global::MyJobDiary.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listItemLayout = global::MyJobDiary.Droid.Resource.Attribute.listItemLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listLayout = global::MyJobDiary.Droid.Resource.Attribute.listLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listMenuViewStyle = global::MyJobDiary.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listPopupWindowStyle = global::MyJobDiary.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listPreferredItemHeight = global::MyJobDiary.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listPreferredItemHeightLarge = global::MyJobDiary.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listPreferredItemHeightSmall = global::MyJobDiary.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listPreferredItemPaddingLeft = global::MyJobDiary.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Xamarin.Droid.Utils.Resource.Attribute.listPreferredItemPaddingRight = global::MyJobDiary.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Xamarin.Droid.Utils.Resource.Attribute.logo = global::MyJobDiary.Droid.Resource.Attribute.logo;
+			global::Xamarin.Droid.Utils.Resource.Attribute.logoDescription = global::MyJobDiary.Droid.Resource.Attribute.logoDescription;
+			global::Xamarin.Droid.Utils.Resource.Attribute.maxActionInlineWidth = global::MyJobDiary.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Xamarin.Droid.Utils.Resource.Attribute.maxButtonHeight = global::MyJobDiary.Droid.Resource.Attribute.maxButtonHeight;
+			global::Xamarin.Droid.Utils.Resource.Attribute.measureWithLargestChild = global::MyJobDiary.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteAudioTrackDrawable = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteButtonTint = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteButtonTint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteCloseDrawable = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteCloseDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteDefaultIconDrawable = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRoutePauseDrawable = global::MyJobDiary.Droid.Resource.Attribute.mediaRoutePauseDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRoutePlayDrawable = global::MyJobDiary.Droid.Resource.Attribute.mediaRoutePlayDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteStopDrawable = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteStopDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteTheme = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteTheme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.mediaRouteTvIconDrawable = global::MyJobDiary.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.menu = global::MyJobDiary.Droid.Resource.Attribute.menu;
+			global::Xamarin.Droid.Utils.Resource.Attribute.multiChoiceItemLayout = global::MyJobDiary.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.navigationContentDescription = global::MyJobDiary.Droid.Resource.Attribute.navigationContentDescription;
+			global::Xamarin.Droid.Utils.Resource.Attribute.navigationIcon = global::MyJobDiary.Droid.Resource.Attribute.navigationIcon;
+			global::Xamarin.Droid.Utils.Resource.Attribute.navigationMode = global::MyJobDiary.Droid.Resource.Attribute.navigationMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.numericModifiers = global::MyJobDiary.Droid.Resource.Attribute.numericModifiers;
+			global::Xamarin.Droid.Utils.Resource.Attribute.overlapAnchor = global::MyJobDiary.Droid.Resource.Attribute.overlapAnchor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.paddingBottomNoButtons = global::MyJobDiary.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Xamarin.Droid.Utils.Resource.Attribute.paddingEnd = global::MyJobDiary.Droid.Resource.Attribute.paddingEnd;
+			global::Xamarin.Droid.Utils.Resource.Attribute.paddingStart = global::MyJobDiary.Droid.Resource.Attribute.paddingStart;
+			global::Xamarin.Droid.Utils.Resource.Attribute.paddingTopNoTitle = global::MyJobDiary.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.panelBackground = global::MyJobDiary.Droid.Resource.Attribute.panelBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.panelMenuListTheme = global::MyJobDiary.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.panelMenuListWidth = global::MyJobDiary.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Xamarin.Droid.Utils.Resource.Attribute.passwordToggleContentDescription = global::MyJobDiary.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Xamarin.Droid.Utils.Resource.Attribute.passwordToggleDrawable = global::MyJobDiary.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Xamarin.Droid.Utils.Resource.Attribute.passwordToggleEnabled = global::MyJobDiary.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Xamarin.Droid.Utils.Resource.Attribute.passwordToggleTint = global::MyJobDiary.Droid.Resource.Attribute.passwordToggleTint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.passwordToggleTintMode = global::MyJobDiary.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.popupMenuStyle = global::MyJobDiary.Droid.Resource.Attribute.popupMenuStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.popupTheme = global::MyJobDiary.Droid.Resource.Attribute.popupTheme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.popupWindowStyle = global::MyJobDiary.Droid.Resource.Attribute.popupWindowStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.preserveIconSpacing = global::MyJobDiary.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Xamarin.Droid.Utils.Resource.Attribute.pressedTranslationZ = global::MyJobDiary.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Xamarin.Droid.Utils.Resource.Attribute.progressBarPadding = global::MyJobDiary.Droid.Resource.Attribute.progressBarPadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.progressBarStyle = global::MyJobDiary.Droid.Resource.Attribute.progressBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.queryBackground = global::MyJobDiary.Droid.Resource.Attribute.queryBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.queryHint = global::MyJobDiary.Droid.Resource.Attribute.queryHint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.radioButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.radioButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.ratingBarStyle = global::MyJobDiary.Droid.Resource.Attribute.ratingBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.ratingBarStyleIndicator = global::MyJobDiary.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Xamarin.Droid.Utils.Resource.Attribute.ratingBarStyleSmall = global::MyJobDiary.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Xamarin.Droid.Utils.Resource.Attribute.reverseLayout = global::MyJobDiary.Droid.Resource.Attribute.reverseLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.rippleColor = global::MyJobDiary.Droid.Resource.Attribute.rippleColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.scrimAnimationDuration = global::MyJobDiary.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Xamarin.Droid.Utils.Resource.Attribute.scrimVisibleHeightTrigger = global::MyJobDiary.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Xamarin.Droid.Utils.Resource.Attribute.searchHintIcon = global::MyJobDiary.Droid.Resource.Attribute.searchHintIcon;
+			global::Xamarin.Droid.Utils.Resource.Attribute.searchIcon = global::MyJobDiary.Droid.Resource.Attribute.searchIcon;
+			global::Xamarin.Droid.Utils.Resource.Attribute.searchViewStyle = global::MyJobDiary.Droid.Resource.Attribute.searchViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.seekBarStyle = global::MyJobDiary.Droid.Resource.Attribute.seekBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.selectableItemBackground = global::MyJobDiary.Droid.Resource.Attribute.selectableItemBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.selectableItemBackgroundBorderless = global::MyJobDiary.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Xamarin.Droid.Utils.Resource.Attribute.showAsAction = global::MyJobDiary.Droid.Resource.Attribute.showAsAction;
+			global::Xamarin.Droid.Utils.Resource.Attribute.showDividers = global::MyJobDiary.Droid.Resource.Attribute.showDividers;
+			global::Xamarin.Droid.Utils.Resource.Attribute.showText = global::MyJobDiary.Droid.Resource.Attribute.showText;
+			global::Xamarin.Droid.Utils.Resource.Attribute.showTitle = global::MyJobDiary.Droid.Resource.Attribute.showTitle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.singleChoiceItemLayout = global::MyJobDiary.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.spanCount = global::MyJobDiary.Droid.Resource.Attribute.spanCount;
+			global::Xamarin.Droid.Utils.Resource.Attribute.spinBars = global::MyJobDiary.Droid.Resource.Attribute.spinBars;
+			global::Xamarin.Droid.Utils.Resource.Attribute.spinnerDropDownItemStyle = global::MyJobDiary.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.spinnerStyle = global::MyJobDiary.Droid.Resource.Attribute.spinnerStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.splitTrack = global::MyJobDiary.Droid.Resource.Attribute.splitTrack;
+			global::Xamarin.Droid.Utils.Resource.Attribute.srcCompat = global::MyJobDiary.Droid.Resource.Attribute.srcCompat;
+			global::Xamarin.Droid.Utils.Resource.Attribute.stackFromEnd = global::MyJobDiary.Droid.Resource.Attribute.stackFromEnd;
+			global::Xamarin.Droid.Utils.Resource.Attribute.state_above_anchor = global::MyJobDiary.Droid.Resource.Attribute.state_above_anchor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.state_collapsed = global::MyJobDiary.Droid.Resource.Attribute.state_collapsed;
+			global::Xamarin.Droid.Utils.Resource.Attribute.state_collapsible = global::MyJobDiary.Droid.Resource.Attribute.state_collapsible;
+			global::Xamarin.Droid.Utils.Resource.Attribute.statusBarBackground = global::MyJobDiary.Droid.Resource.Attribute.statusBarBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.statusBarScrim = global::MyJobDiary.Droid.Resource.Attribute.statusBarScrim;
+			global::Xamarin.Droid.Utils.Resource.Attribute.subMenuArrow = global::MyJobDiary.Droid.Resource.Attribute.subMenuArrow;
+			global::Xamarin.Droid.Utils.Resource.Attribute.submitBackground = global::MyJobDiary.Droid.Resource.Attribute.submitBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.subtitle = global::MyJobDiary.Droid.Resource.Attribute.subtitle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.subtitleTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.subtitleTextColor = global::MyJobDiary.Droid.Resource.Attribute.subtitleTextColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.subtitleTextStyle = global::MyJobDiary.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.suggestionRowLayout = global::MyJobDiary.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Xamarin.Droid.Utils.Resource.Attribute.switchMinWidth = global::MyJobDiary.Droid.Resource.Attribute.switchMinWidth;
+			global::Xamarin.Droid.Utils.Resource.Attribute.switchPadding = global::MyJobDiary.Droid.Resource.Attribute.switchPadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.switchStyle = global::MyJobDiary.Droid.Resource.Attribute.switchStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.switchTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.switchTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabBackground = global::MyJobDiary.Droid.Resource.Attribute.tabBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabContentStart = global::MyJobDiary.Droid.Resource.Attribute.tabContentStart;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabGravity = global::MyJobDiary.Droid.Resource.Attribute.tabGravity;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabIndicatorColor = global::MyJobDiary.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabIndicatorHeight = global::MyJobDiary.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabMaxWidth = global::MyJobDiary.Droid.Resource.Attribute.tabMaxWidth;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabMinWidth = global::MyJobDiary.Droid.Resource.Attribute.tabMinWidth;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabMode = global::MyJobDiary.Droid.Resource.Attribute.tabMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabPadding = global::MyJobDiary.Droid.Resource.Attribute.tabPadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabPaddingBottom = global::MyJobDiary.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabPaddingEnd = global::MyJobDiary.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabPaddingStart = global::MyJobDiary.Droid.Resource.Attribute.tabPaddingStart;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabPaddingTop = global::MyJobDiary.Droid.Resource.Attribute.tabPaddingTop;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabSelectedTextColor = global::MyJobDiary.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.tabTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tabTextColor = global::MyJobDiary.Droid.Resource.Attribute.tabTextColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textAllCaps = global::MyJobDiary.Droid.Resource.Attribute.textAllCaps;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textAppearanceLargePopupMenu = global::MyJobDiary.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textAppearanceListItem = global::MyJobDiary.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textAppearanceListItemSecondary = global::MyJobDiary.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textAppearanceListItemSmall = global::MyJobDiary.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textAppearancePopupMenuHeader = global::MyJobDiary.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textAppearanceSearchResultSubtitle = global::MyJobDiary.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textAppearanceSearchResultTitle = global::MyJobDiary.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textAppearanceSmallPopupMenu = global::MyJobDiary.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textColorAlertDialogListItem = global::MyJobDiary.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textColorError = global::MyJobDiary.Droid.Resource.Attribute.textColorError;
+			global::Xamarin.Droid.Utils.Resource.Attribute.textColorSearchUrl = global::MyJobDiary.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Xamarin.Droid.Utils.Resource.Attribute.theme = global::MyJobDiary.Droid.Resource.Attribute.theme;
+			global::Xamarin.Droid.Utils.Resource.Attribute.thickness = global::MyJobDiary.Droid.Resource.Attribute.thickness;
+			global::Xamarin.Droid.Utils.Resource.Attribute.thumbTextPadding = global::MyJobDiary.Droid.Resource.Attribute.thumbTextPadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.thumbTint = global::MyJobDiary.Droid.Resource.Attribute.thumbTint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.thumbTintMode = global::MyJobDiary.Droid.Resource.Attribute.thumbTintMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tickMark = global::MyJobDiary.Droid.Resource.Attribute.tickMark;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tickMarkTint = global::MyJobDiary.Droid.Resource.Attribute.tickMarkTint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tickMarkTintMode = global::MyJobDiary.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tint = global::MyJobDiary.Droid.Resource.Attribute.tint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tintMode = global::MyJobDiary.Droid.Resource.Attribute.tintMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.title = global::MyJobDiary.Droid.Resource.Attribute.title;
+			global::Xamarin.Droid.Utils.Resource.Attribute.titleEnabled = global::MyJobDiary.Droid.Resource.Attribute.titleEnabled;
+			global::Xamarin.Droid.Utils.Resource.Attribute.titleMargin = global::MyJobDiary.Droid.Resource.Attribute.titleMargin;
+			global::Xamarin.Droid.Utils.Resource.Attribute.titleMarginBottom = global::MyJobDiary.Droid.Resource.Attribute.titleMarginBottom;
+			global::Xamarin.Droid.Utils.Resource.Attribute.titleMarginEnd = global::MyJobDiary.Droid.Resource.Attribute.titleMarginEnd;
+			global::Xamarin.Droid.Utils.Resource.Attribute.titleMarginStart = global::MyJobDiary.Droid.Resource.Attribute.titleMarginStart;
+			global::Xamarin.Droid.Utils.Resource.Attribute.titleMarginTop = global::MyJobDiary.Droid.Resource.Attribute.titleMarginTop;
+			global::Xamarin.Droid.Utils.Resource.Attribute.titleMargins = global::MyJobDiary.Droid.Resource.Attribute.titleMargins;
+			global::Xamarin.Droid.Utils.Resource.Attribute.titleTextAppearance = global::MyJobDiary.Droid.Resource.Attribute.titleTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Attribute.titleTextColor = global::MyJobDiary.Droid.Resource.Attribute.titleTextColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.titleTextStyle = global::MyJobDiary.Droid.Resource.Attribute.titleTextStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.toolbarId = global::MyJobDiary.Droid.Resource.Attribute.toolbarId;
+			global::Xamarin.Droid.Utils.Resource.Attribute.toolbarNavigationButtonStyle = global::MyJobDiary.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.toolbarStyle = global::MyJobDiary.Droid.Resource.Attribute.toolbarStyle;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tooltipForegroundColor = global::MyJobDiary.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tooltipFrameBackground = global::MyJobDiary.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::Xamarin.Droid.Utils.Resource.Attribute.tooltipText = global::MyJobDiary.Droid.Resource.Attribute.tooltipText;
+			global::Xamarin.Droid.Utils.Resource.Attribute.track = global::MyJobDiary.Droid.Resource.Attribute.track;
+			global::Xamarin.Droid.Utils.Resource.Attribute.trackTint = global::MyJobDiary.Droid.Resource.Attribute.trackTint;
+			global::Xamarin.Droid.Utils.Resource.Attribute.trackTintMode = global::MyJobDiary.Droid.Resource.Attribute.trackTintMode;
+			global::Xamarin.Droid.Utils.Resource.Attribute.useCompatPadding = global::MyJobDiary.Droid.Resource.Attribute.useCompatPadding;
+			global::Xamarin.Droid.Utils.Resource.Attribute.voiceIcon = global::MyJobDiary.Droid.Resource.Attribute.voiceIcon;
+			global::Xamarin.Droid.Utils.Resource.Attribute.windowActionBar = global::MyJobDiary.Droid.Resource.Attribute.windowActionBar;
+			global::Xamarin.Droid.Utils.Resource.Attribute.windowActionBarOverlay = global::MyJobDiary.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Xamarin.Droid.Utils.Resource.Attribute.windowActionModeOverlay = global::MyJobDiary.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Xamarin.Droid.Utils.Resource.Attribute.windowFixedHeightMajor = global::MyJobDiary.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.windowFixedHeightMinor = global::MyJobDiary.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.windowFixedWidthMajor = global::MyJobDiary.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.windowFixedWidthMinor = global::MyJobDiary.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.windowMinWidthMajor = global::MyJobDiary.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.windowMinWidthMinor = global::MyJobDiary.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Xamarin.Droid.Utils.Resource.Attribute.windowNoTitle = global::MyJobDiary.Droid.Resource.Attribute.windowNoTitle;
+			global::Xamarin.Droid.Utils.Resource.Boolean.abc_action_bar_embed_tabs = global::MyJobDiary.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Xamarin.Droid.Utils.Resource.Boolean.abc_allow_stacked_button_bar = global::MyJobDiary.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Xamarin.Droid.Utils.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::MyJobDiary.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Xamarin.Droid.Utils.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::MyJobDiary.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::Xamarin.Droid.Utils.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::MyJobDiary.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_background_cache_hint_selector_material_dark = global::MyJobDiary.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_background_cache_hint_selector_material_light = global::MyJobDiary.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_btn_colored_borderless_text_material = global::MyJobDiary.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_btn_colored_text_material = global::MyJobDiary.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_color_highlight_material = global::MyJobDiary.Droid.Resource.Color.abc_color_highlight_material;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_hint_foreground_material_dark = global::MyJobDiary.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_hint_foreground_material_light = global::MyJobDiary.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_input_method_navigation_guard = global::MyJobDiary.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_primary_text_disable_only_material_dark = global::MyJobDiary.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_primary_text_disable_only_material_light = global::MyJobDiary.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_primary_text_material_dark = global::MyJobDiary.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_primary_text_material_light = global::MyJobDiary.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_search_url_text = global::MyJobDiary.Droid.Resource.Color.abc_search_url_text;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_search_url_text_normal = global::MyJobDiary.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_search_url_text_pressed = global::MyJobDiary.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_search_url_text_selected = global::MyJobDiary.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_secondary_text_material_dark = global::MyJobDiary.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_secondary_text_material_light = global::MyJobDiary.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_tint_btn_checkable = global::MyJobDiary.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_tint_default = global::MyJobDiary.Droid.Resource.Color.abc_tint_default;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_tint_edittext = global::MyJobDiary.Droid.Resource.Color.abc_tint_edittext;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_tint_seek_thumb = global::MyJobDiary.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_tint_spinner = global::MyJobDiary.Droid.Resource.Color.abc_tint_spinner;
+			global::Xamarin.Droid.Utils.Resource.Color.abc_tint_switch_track = global::MyJobDiary.Droid.Resource.Color.abc_tint_switch_track;
+			global::Xamarin.Droid.Utils.Resource.Color.accent_material_dark = global::MyJobDiary.Droid.Resource.Color.accent_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.accent_material_light = global::MyJobDiary.Droid.Resource.Color.accent_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.background_floating_material_dark = global::MyJobDiary.Droid.Resource.Color.background_floating_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.background_floating_material_light = global::MyJobDiary.Droid.Resource.Color.background_floating_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.background_material_dark = global::MyJobDiary.Droid.Resource.Color.background_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.background_material_light = global::MyJobDiary.Droid.Resource.Color.background_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.bright_foreground_disabled_material_dark = global::MyJobDiary.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.bright_foreground_disabled_material_light = global::MyJobDiary.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.bright_foreground_inverse_material_dark = global::MyJobDiary.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.bright_foreground_inverse_material_light = global::MyJobDiary.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.bright_foreground_material_dark = global::MyJobDiary.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.bright_foreground_material_light = global::MyJobDiary.Droid.Resource.Color.bright_foreground_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.button_material_dark = global::MyJobDiary.Droid.Resource.Color.button_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.button_material_light = global::MyJobDiary.Droid.Resource.Color.button_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.cardview_dark_background = global::MyJobDiary.Droid.Resource.Color.cardview_dark_background;
+			global::Xamarin.Droid.Utils.Resource.Color.cardview_light_background = global::MyJobDiary.Droid.Resource.Color.cardview_light_background;
+			global::Xamarin.Droid.Utils.Resource.Color.cardview_shadow_end_color = global::MyJobDiary.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Xamarin.Droid.Utils.Resource.Color.cardview_shadow_start_color = global::MyJobDiary.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Xamarin.Droid.Utils.Resource.Color.design_bottom_navigation_shadow_color = global::MyJobDiary.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Xamarin.Droid.Utils.Resource.Color.design_error = global::MyJobDiary.Droid.Resource.Color.design_error;
+			global::Xamarin.Droid.Utils.Resource.Color.design_fab_shadow_end_color = global::MyJobDiary.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Xamarin.Droid.Utils.Resource.Color.design_fab_shadow_mid_color = global::MyJobDiary.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Xamarin.Droid.Utils.Resource.Color.design_fab_shadow_start_color = global::MyJobDiary.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Xamarin.Droid.Utils.Resource.Color.design_fab_stroke_end_inner_color = global::MyJobDiary.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Xamarin.Droid.Utils.Resource.Color.design_fab_stroke_end_outer_color = global::MyJobDiary.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Xamarin.Droid.Utils.Resource.Color.design_fab_stroke_top_inner_color = global::MyJobDiary.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Xamarin.Droid.Utils.Resource.Color.design_fab_stroke_top_outer_color = global::MyJobDiary.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Xamarin.Droid.Utils.Resource.Color.design_snackbar_background_color = global::MyJobDiary.Droid.Resource.Color.design_snackbar_background_color;
+			global::Xamarin.Droid.Utils.Resource.Color.design_tint_password_toggle = global::MyJobDiary.Droid.Resource.Color.design_tint_password_toggle;
+			global::Xamarin.Droid.Utils.Resource.Color.dim_foreground_disabled_material_dark = global::MyJobDiary.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.dim_foreground_disabled_material_light = global::MyJobDiary.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.dim_foreground_material_dark = global::MyJobDiary.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.dim_foreground_material_light = global::MyJobDiary.Droid.Resource.Color.dim_foreground_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.error_color_material = global::MyJobDiary.Droid.Resource.Color.error_color_material;
+			global::Xamarin.Droid.Utils.Resource.Color.foreground_material_dark = global::MyJobDiary.Droid.Resource.Color.foreground_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.foreground_material_light = global::MyJobDiary.Droid.Resource.Color.foreground_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.highlighted_text_material_dark = global::MyJobDiary.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.highlighted_text_material_light = global::MyJobDiary.Droid.Resource.Color.highlighted_text_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.material_blue_grey_800 = global::MyJobDiary.Droid.Resource.Color.material_blue_grey_800;
+			global::Xamarin.Droid.Utils.Resource.Color.material_blue_grey_900 = global::MyJobDiary.Droid.Resource.Color.material_blue_grey_900;
+			global::Xamarin.Droid.Utils.Resource.Color.material_blue_grey_950 = global::MyJobDiary.Droid.Resource.Color.material_blue_grey_950;
+			global::Xamarin.Droid.Utils.Resource.Color.material_deep_teal_200 = global::MyJobDiary.Droid.Resource.Color.material_deep_teal_200;
+			global::Xamarin.Droid.Utils.Resource.Color.material_deep_teal_500 = global::MyJobDiary.Droid.Resource.Color.material_deep_teal_500;
+			global::Xamarin.Droid.Utils.Resource.Color.material_grey_100 = global::MyJobDiary.Droid.Resource.Color.material_grey_100;
+			global::Xamarin.Droid.Utils.Resource.Color.material_grey_300 = global::MyJobDiary.Droid.Resource.Color.material_grey_300;
+			global::Xamarin.Droid.Utils.Resource.Color.material_grey_50 = global::MyJobDiary.Droid.Resource.Color.material_grey_50;
+			global::Xamarin.Droid.Utils.Resource.Color.material_grey_600 = global::MyJobDiary.Droid.Resource.Color.material_grey_600;
+			global::Xamarin.Droid.Utils.Resource.Color.material_grey_800 = global::MyJobDiary.Droid.Resource.Color.material_grey_800;
+			global::Xamarin.Droid.Utils.Resource.Color.material_grey_850 = global::MyJobDiary.Droid.Resource.Color.material_grey_850;
+			global::Xamarin.Droid.Utils.Resource.Color.material_grey_900 = global::MyJobDiary.Droid.Resource.Color.material_grey_900;
+			global::Xamarin.Droid.Utils.Resource.Color.notification_action_color_filter = global::MyJobDiary.Droid.Resource.Color.notification_action_color_filter;
+			global::Xamarin.Droid.Utils.Resource.Color.notification_icon_bg_color = global::MyJobDiary.Droid.Resource.Color.notification_icon_bg_color;
+			global::Xamarin.Droid.Utils.Resource.Color.notification_material_background_media_default_color = global::MyJobDiary.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Xamarin.Droid.Utils.Resource.Color.primary_dark_material_dark = global::MyJobDiary.Droid.Resource.Color.primary_dark_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.primary_dark_material_light = global::MyJobDiary.Droid.Resource.Color.primary_dark_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.primary_material_dark = global::MyJobDiary.Droid.Resource.Color.primary_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.primary_material_light = global::MyJobDiary.Droid.Resource.Color.primary_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.primary_text_default_material_dark = global::MyJobDiary.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.primary_text_default_material_light = global::MyJobDiary.Droid.Resource.Color.primary_text_default_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.primary_text_disabled_material_dark = global::MyJobDiary.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.primary_text_disabled_material_light = global::MyJobDiary.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.ripple_material_dark = global::MyJobDiary.Droid.Resource.Color.ripple_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.ripple_material_light = global::MyJobDiary.Droid.Resource.Color.ripple_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.secondary_text_default_material_dark = global::MyJobDiary.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.secondary_text_default_material_light = global::MyJobDiary.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.secondary_text_disabled_material_dark = global::MyJobDiary.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.secondary_text_disabled_material_light = global::MyJobDiary.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.switch_thumb_disabled_material_dark = global::MyJobDiary.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.switch_thumb_disabled_material_light = global::MyJobDiary.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.switch_thumb_material_dark = global::MyJobDiary.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.switch_thumb_material_light = global::MyJobDiary.Droid.Resource.Color.switch_thumb_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.switch_thumb_normal_material_dark = global::MyJobDiary.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.switch_thumb_normal_material_light = global::MyJobDiary.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Xamarin.Droid.Utils.Resource.Color.tooltip_background_dark = global::MyJobDiary.Droid.Resource.Color.tooltip_background_dark;
+			global::Xamarin.Droid.Utils.Resource.Color.tooltip_background_light = global::MyJobDiary.Droid.Resource.Color.tooltip_background_light;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_content_inset_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_default_height_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_default_padding_end_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_default_padding_start_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_elevation_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_progress_bar_size = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_stacked_max_height = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_button_min_height_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_button_min_width_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_action_button_min_width_overflow_material = global::MyJobDiary.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_alert_dialog_button_bar_height = global::MyJobDiary.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_button_inset_horizontal_material = global::MyJobDiary.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_button_inset_vertical_material = global::MyJobDiary.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_button_padding_horizontal_material = global::MyJobDiary.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_button_padding_vertical_material = global::MyJobDiary.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::MyJobDiary.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_config_prefDialogWidth = global::MyJobDiary.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_control_corner_material = global::MyJobDiary.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_control_inset_material = global::MyJobDiary.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_control_padding_material = global::MyJobDiary.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_fixed_height_major = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_fixed_height_minor = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_fixed_width_major = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_fixed_width_minor = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_min_width_major = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_min_width_minor = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_padding_material = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_padding_top_material = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dialog_title_divider_material = global::MyJobDiary.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_disabled_alpha_material_dark = global::MyJobDiary.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_disabled_alpha_material_light = global::MyJobDiary.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dropdownitem_icon_width = global::MyJobDiary.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dropdownitem_text_padding_left = global::MyJobDiary.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_dropdownitem_text_padding_right = global::MyJobDiary.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_edit_text_inset_bottom_material = global::MyJobDiary.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::MyJobDiary.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_edit_text_inset_top_material = global::MyJobDiary.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_floating_window_z = global::MyJobDiary.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_list_item_padding_horizontal_material = global::MyJobDiary.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_panel_menu_list_width = global::MyJobDiary.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_progress_bar_height_material = global::MyJobDiary.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_search_view_preferred_height = global::MyJobDiary.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_search_view_preferred_width = global::MyJobDiary.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_seekbar_track_background_height_material = global::MyJobDiary.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_seekbar_track_progress_height_material = global::MyJobDiary.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_select_dialog_padding_start_material = global::MyJobDiary.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_switch_padding = global::MyJobDiary.Droid.Resource.Dimension.abc_switch_padding;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_body_1_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_body_2_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_button_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_caption_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_display_1_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_display_2_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_display_3_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_display_4_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_headline_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_large_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_medium_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_menu_header_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_menu_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_small_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_subhead_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_title_material = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.abc_text_size_title_material_toolbar = global::MyJobDiary.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Xamarin.Droid.Utils.Resource.Dimension.cardview_compat_inset_shadow = global::MyJobDiary.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Xamarin.Droid.Utils.Resource.Dimension.cardview_default_elevation = global::MyJobDiary.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Xamarin.Droid.Utils.Resource.Dimension.cardview_default_radius = global::MyJobDiary.Droid.Resource.Dimension.cardview_default_radius;
+			global::Xamarin.Droid.Utils.Resource.Dimension.compat_button_inset_horizontal_material = global::MyJobDiary.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.compat_button_inset_vertical_material = global::MyJobDiary.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.compat_button_padding_horizontal_material = global::MyJobDiary.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.compat_button_padding_vertical_material = global::MyJobDiary.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.compat_control_corner_material = global::MyJobDiary.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_appbar_elevation = global::MyJobDiary.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_navigation_active_text_size = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_navigation_elevation = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_navigation_height = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_navigation_item_max_width = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_navigation_item_min_width = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_navigation_margin = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_navigation_shadow_height = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_navigation_text_size = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_sheet_modal_elevation = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_bottom_sheet_peek_height_min = global::MyJobDiary.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_fab_border_width = global::MyJobDiary.Droid.Resource.Dimension.design_fab_border_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_fab_elevation = global::MyJobDiary.Droid.Resource.Dimension.design_fab_elevation;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_fab_image_size = global::MyJobDiary.Droid.Resource.Dimension.design_fab_image_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_fab_size_mini = global::MyJobDiary.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_fab_size_normal = global::MyJobDiary.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_fab_translation_z_pressed = global::MyJobDiary.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_navigation_elevation = global::MyJobDiary.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_navigation_icon_padding = global::MyJobDiary.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_navigation_icon_size = global::MyJobDiary.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_navigation_max_width = global::MyJobDiary.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_navigation_padding_bottom = global::MyJobDiary.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_navigation_separator_vertical_padding = global::MyJobDiary.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_snackbar_action_inline_max_width = global::MyJobDiary.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_snackbar_background_corner_radius = global::MyJobDiary.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_snackbar_elevation = global::MyJobDiary.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::MyJobDiary.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_snackbar_max_width = global::MyJobDiary.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_snackbar_min_width = global::MyJobDiary.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_snackbar_padding_horizontal = global::MyJobDiary.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_snackbar_padding_vertical = global::MyJobDiary.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::MyJobDiary.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_snackbar_text_size = global::MyJobDiary.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_tab_max_width = global::MyJobDiary.Droid.Resource.Dimension.design_tab_max_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_tab_scrollable_min_width = global::MyJobDiary.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_tab_text_size = global::MyJobDiary.Droid.Resource.Dimension.design_tab_text_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.design_tab_text_size_2line = global::MyJobDiary.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Xamarin.Droid.Utils.Resource.Dimension.disabled_alpha_material_dark = global::MyJobDiary.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Dimension.disabled_alpha_material_light = global::MyJobDiary.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Xamarin.Droid.Utils.Resource.Dimension.fastscroll_default_thickness = global::MyJobDiary.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::Xamarin.Droid.Utils.Resource.Dimension.fastscroll_margin = global::MyJobDiary.Droid.Resource.Dimension.fastscroll_margin;
+			global::Xamarin.Droid.Utils.Resource.Dimension.fastscroll_minimum_range = global::MyJobDiary.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::Xamarin.Droid.Utils.Resource.Dimension.highlight_alpha_material_colored = global::MyJobDiary.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Xamarin.Droid.Utils.Resource.Dimension.highlight_alpha_material_dark = global::MyJobDiary.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Dimension.highlight_alpha_material_light = global::MyJobDiary.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Xamarin.Droid.Utils.Resource.Dimension.hint_alpha_material_dark = global::MyJobDiary.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Dimension.hint_alpha_material_light = global::MyJobDiary.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Xamarin.Droid.Utils.Resource.Dimension.hint_pressed_alpha_material_dark = global::MyJobDiary.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Xamarin.Droid.Utils.Resource.Dimension.hint_pressed_alpha_material_light = global::MyJobDiary.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Xamarin.Droid.Utils.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::MyJobDiary.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Xamarin.Droid.Utils.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::MyJobDiary.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Xamarin.Droid.Utils.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::MyJobDiary.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Xamarin.Droid.Utils.Resource.Dimension.mr_controller_volume_group_list_item_height = global::MyJobDiary.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
+			global::Xamarin.Droid.Utils.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::MyJobDiary.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.mr_controller_volume_group_list_max_height = global::MyJobDiary.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
+			global::Xamarin.Droid.Utils.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::MyJobDiary.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
+			global::Xamarin.Droid.Utils.Resource.Dimension.mr_dialog_fixed_width_major = global::MyJobDiary.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
+			global::Xamarin.Droid.Utils.Resource.Dimension.mr_dialog_fixed_width_minor = global::MyJobDiary.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_action_icon_size = global::MyJobDiary.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_action_text_size = global::MyJobDiary.Droid.Resource.Dimension.notification_action_text_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_big_circle_margin = global::MyJobDiary.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_content_margin_start = global::MyJobDiary.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_large_icon_height = global::MyJobDiary.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_large_icon_width = global::MyJobDiary.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_main_column_padding_top = global::MyJobDiary.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_media_narrow_margin = global::MyJobDiary.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_right_icon_size = global::MyJobDiary.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_right_side_padding_top = global::MyJobDiary.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_small_icon_background_padding = global::MyJobDiary.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_small_icon_size_as_large = global::MyJobDiary.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_subtext_size = global::MyJobDiary.Droid.Resource.Dimension.notification_subtext_size;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_top_pad = global::MyJobDiary.Droid.Resource.Dimension.notification_top_pad;
+			global::Xamarin.Droid.Utils.Resource.Dimension.notification_top_pad_large_text = global::MyJobDiary.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Xamarin.Droid.Utils.Resource.Dimension.tooltip_corner_radius = global::MyJobDiary.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::Xamarin.Droid.Utils.Resource.Dimension.tooltip_horizontal_padding = global::MyJobDiary.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::Xamarin.Droid.Utils.Resource.Dimension.tooltip_margin = global::MyJobDiary.Droid.Resource.Dimension.tooltip_margin;
+			global::Xamarin.Droid.Utils.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::MyJobDiary.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Xamarin.Droid.Utils.Resource.Dimension.tooltip_precise_anchor_threshold = global::MyJobDiary.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Xamarin.Droid.Utils.Resource.Dimension.tooltip_vertical_padding = global::MyJobDiary.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::Xamarin.Droid.Utils.Resource.Dimension.tooltip_y_offset_non_touch = global::MyJobDiary.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Xamarin.Droid.Utils.Resource.Dimension.tooltip_y_offset_touch = global::MyJobDiary.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_action_bar_item_background_material = global::MyJobDiary.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_borderless_material = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_check_material = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_colored_material = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_default_mtrl_shape = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_radio_material = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::MyJobDiary.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_cab_background_internal_bg = global::MyJobDiary.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_cab_background_top_material = global::MyJobDiary.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_control_background_material = global::MyJobDiary.Droid.Resource.Drawable.abc_control_background_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_dialog_material_background = global::MyJobDiary.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_edit_text_material = global::MyJobDiary.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_ab_back_material = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_clear_material = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_go_search_api_material = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_menu_overflow_material = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_search_api_material = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_star_black_16dp = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_star_black_36dp = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_star_black_48dp = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_star_half_black_16dp = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_star_half_black_36dp = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_star_half_black_48dp = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ic_voice_search_api_material = global::MyJobDiary.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_item_background_holo_dark = global::MyJobDiary.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_item_background_holo_light = global::MyJobDiary.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_divider_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_focused_holo = global::MyJobDiary.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_longpressed_holo = global::MyJobDiary.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_pressed_holo_dark = global::MyJobDiary.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_pressed_holo_light = global::MyJobDiary.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::MyJobDiary.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::MyJobDiary.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::MyJobDiary.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_selector_disabled_holo_light = global::MyJobDiary.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_selector_holo_dark = global::MyJobDiary.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_list_selector_holo_light = global::MyJobDiary.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::MyJobDiary.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_popup_background_mtrl_mult = global::MyJobDiary.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ratingbar_indicator_material = global::MyJobDiary.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ratingbar_material = global::MyJobDiary.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_ratingbar_small_material = global::MyJobDiary.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::MyJobDiary.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::MyJobDiary.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_seekbar_thumb_material = global::MyJobDiary.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_seekbar_tick_mark_material = global::MyJobDiary.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_seekbar_track_material = global::MyJobDiary.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_spinner_textfield_background_material = global::MyJobDiary.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_switch_thumb_material = global::MyJobDiary.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_switch_track_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_tab_indicator_material = global::MyJobDiary.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_text_cursor_material = global::MyJobDiary.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::MyJobDiary.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::MyJobDiary.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::MyJobDiary.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::MyJobDiary.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::MyJobDiary.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::MyJobDiary.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::MyJobDiary.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_textfield_search_material = global::MyJobDiary.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Xamarin.Droid.Utils.Resource.Drawable.abc_vector_test = global::MyJobDiary.Droid.Resource.Drawable.abc_vector_test;
+			global::Xamarin.Droid.Utils.Resource.Drawable.avd_hide_password = global::MyJobDiary.Droid.Resource.Drawable.avd_hide_password;
+			global::Xamarin.Droid.Utils.Resource.Drawable.avd_hide_password_1 = global::MyJobDiary.Droid.Resource.Drawable.avd_hide_password_1;
+			global::Xamarin.Droid.Utils.Resource.Drawable.avd_hide_password_2 = global::MyJobDiary.Droid.Resource.Drawable.avd_hide_password_2;
+			global::Xamarin.Droid.Utils.Resource.Drawable.avd_hide_password_3 = global::MyJobDiary.Droid.Resource.Drawable.avd_hide_password_3;
+			global::Xamarin.Droid.Utils.Resource.Drawable.avd_show_password = global::MyJobDiary.Droid.Resource.Drawable.avd_show_password;
+			global::Xamarin.Droid.Utils.Resource.Drawable.avd_show_password_1 = global::MyJobDiary.Droid.Resource.Drawable.avd_show_password_1;
+			global::Xamarin.Droid.Utils.Resource.Drawable.avd_show_password_2 = global::MyJobDiary.Droid.Resource.Drawable.avd_show_password_2;
+			global::Xamarin.Droid.Utils.Resource.Drawable.avd_show_password_3 = global::MyJobDiary.Droid.Resource.Drawable.avd_show_password_3;
+			global::Xamarin.Droid.Utils.Resource.Drawable.design_bottom_navigation_item_background = global::MyJobDiary.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Xamarin.Droid.Utils.Resource.Drawable.design_fab_background = global::MyJobDiary.Droid.Resource.Drawable.design_fab_background;
+			global::Xamarin.Droid.Utils.Resource.Drawable.design_ic_visibility = global::MyJobDiary.Droid.Resource.Drawable.design_ic_visibility;
+			global::Xamarin.Droid.Utils.Resource.Drawable.design_ic_visibility_off = global::MyJobDiary.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Xamarin.Droid.Utils.Resource.Drawable.design_password_eye = global::MyJobDiary.Droid.Resource.Drawable.design_password_eye;
+			global::Xamarin.Droid.Utils.Resource.Drawable.design_snackbar_background = global::MyJobDiary.Droid.Resource.Drawable.design_snackbar_background;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_arrow_back = global::MyJobDiary.Droid.Resource.Drawable.ic_arrow_back;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_audiotrack_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_audiotrack_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_audiotrack_light = global::MyJobDiary.Droid.Resource.Drawable.ic_audiotrack_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_dialog_close_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_dialog_close_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_dialog_close_light = global::MyJobDiary.Droid.Resource.Drawable.ic_dialog_close_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_00 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_00;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_01 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_01;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_02 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_02;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_03 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_03;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_04 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_04;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_05 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_05;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_06 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_06;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_07 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_07;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_08 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_08;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_09 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_09;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_10 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_10;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_11 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_11;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_12 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_12;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_13 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_13;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_14 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_14;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_collapse_15 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_collapse_15;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_00 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_00;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_01 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_01;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_02 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_02;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_03 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_03;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_04 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_04;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_05 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_05;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_06 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_06;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_07 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_07;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_08 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_08;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_09 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_09;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_10 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_10;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_11 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_11;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_12 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_12;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_13 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_13;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_14 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_14;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_group_expand_15 = global::MyJobDiary.Droid.Resource.Drawable.ic_group_expand_15;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_media_pause_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_media_pause_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_media_pause_light = global::MyJobDiary.Droid.Resource.Drawable.ic_media_pause_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_media_play_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_media_play_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_media_play_light = global::MyJobDiary.Droid.Resource.Drawable.ic_media_play_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_media_stop_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_media_stop_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_media_stop_light = global::MyJobDiary.Droid.Resource.Drawable.ic_media_stop_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_00_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_00_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_00_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_00_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_01_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_01_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_01_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_01_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_02_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_02_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_02_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_02_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_03_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_03_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_03_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_03_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_04_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_04_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_04_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_04_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_05_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_05_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_05_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_05_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_06_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_06_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_06_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_06_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_07_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_07_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_07_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_07_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_08_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_08_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_08_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_08_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_09_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_09_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_09_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_09_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_10_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_10_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_10_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_10_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_11_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_11_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_11_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_11_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_12_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_12_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_12_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_12_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_13_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_13_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_13_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_13_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_14_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_14_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_14_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_14_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_15_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_15_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_15_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_15_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_16_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_16_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_16_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_16_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_17_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_17_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_17_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_17_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_18_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_18_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_18_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_18_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_19_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_19_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_19_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_19_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_20_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_20_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_20_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_20_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_21_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_21_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_21_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_21_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_22_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_22_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_22_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_22_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_23_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_23_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_23_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_23_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_24_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_24_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_24_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_24_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_25_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_25_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_25_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_25_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_26_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_26_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_26_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_26_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_27_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_27_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_27_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_27_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_28_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_28_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_28_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_28_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_29_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_29_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_29_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_29_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_30_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_30_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connected_30_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connected_30_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_00_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_00_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_00_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_01_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_01_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_01_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_02_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_02_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_02_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_03_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_03_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_03_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_04_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_04_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_04_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_05_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_05_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_05_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_06_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_06_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_06_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_07_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_07_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_07_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_08_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_08_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_08_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_09_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_09_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_09_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_10_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_10_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_10_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_11_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_11_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_11_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_12_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_12_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_12_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_13_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_13_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_13_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_14_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_14_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_14_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_15_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_15_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_15_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_16_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_16_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_16_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_17_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_17_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_17_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_18_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_18_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_18_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_19_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_19_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_19_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_20_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_20_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_20_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_21_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_21_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_21_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_22_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_22_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_22_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_23_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_23_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_23_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_24_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_24_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_24_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_25_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_25_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_25_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_26_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_26_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_26_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_27_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_27_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_27_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_28_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_28_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_28_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_29_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_29_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_29_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_30_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_connecting_30_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_connecting_30_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_disabled_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_disabled_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_disabled_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_disabled_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_disconnected_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_disconnected_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_disconnected_light = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_disconnected_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_mr_button_grey = global::MyJobDiary.Droid.Resource.Drawable.ic_mr_button_grey;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_vol_type_speaker_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_vol_type_speaker_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_vol_type_speaker_group_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_vol_type_speaker_group_light = global::MyJobDiary.Droid.Resource.Drawable.ic_vol_type_speaker_group_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_vol_type_speaker_light = global::MyJobDiary.Droid.Resource.Drawable.ic_vol_type_speaker_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_vol_type_tv_dark = global::MyJobDiary.Droid.Resource.Drawable.ic_vol_type_tv_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.ic_vol_type_tv_light = global::MyJobDiary.Droid.Resource.Drawable.ic_vol_type_tv_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_button_connected_dark = global::MyJobDiary.Droid.Resource.Drawable.mr_button_connected_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_button_connected_light = global::MyJobDiary.Droid.Resource.Drawable.mr_button_connected_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_button_connecting_dark = global::MyJobDiary.Droid.Resource.Drawable.mr_button_connecting_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_button_connecting_light = global::MyJobDiary.Droid.Resource.Drawable.mr_button_connecting_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_button_dark = global::MyJobDiary.Droid.Resource.Drawable.mr_button_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_button_light = global::MyJobDiary.Droid.Resource.Drawable.mr_button_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_dialog_close_dark = global::MyJobDiary.Droid.Resource.Drawable.mr_dialog_close_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_dialog_close_light = global::MyJobDiary.Droid.Resource.Drawable.mr_dialog_close_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_dialog_material_background_dark = global::MyJobDiary.Droid.Resource.Drawable.mr_dialog_material_background_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_dialog_material_background_light = global::MyJobDiary.Droid.Resource.Drawable.mr_dialog_material_background_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_group_collapse = global::MyJobDiary.Droid.Resource.Drawable.mr_group_collapse;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_group_expand = global::MyJobDiary.Droid.Resource.Drawable.mr_group_expand;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_media_pause_dark = global::MyJobDiary.Droid.Resource.Drawable.mr_media_pause_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_media_pause_light = global::MyJobDiary.Droid.Resource.Drawable.mr_media_pause_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_media_play_dark = global::MyJobDiary.Droid.Resource.Drawable.mr_media_play_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_media_play_light = global::MyJobDiary.Droid.Resource.Drawable.mr_media_play_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_media_stop_dark = global::MyJobDiary.Droid.Resource.Drawable.mr_media_stop_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_media_stop_light = global::MyJobDiary.Droid.Resource.Drawable.mr_media_stop_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_vol_type_audiotrack_dark = global::MyJobDiary.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.mr_vol_type_audiotrack_light = global::MyJobDiary.Droid.Resource.Drawable.mr_vol_type_audiotrack_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.navigation_empty_icon = global::MyJobDiary.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_action_background = global::MyJobDiary.Droid.Resource.Drawable.notification_action_background;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_bg = global::MyJobDiary.Droid.Resource.Drawable.notification_bg;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_bg_low = global::MyJobDiary.Droid.Resource.Drawable.notification_bg_low;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_bg_low_normal = global::MyJobDiary.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_bg_low_pressed = global::MyJobDiary.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_bg_normal = global::MyJobDiary.Droid.Resource.Drawable.notification_bg_normal;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_bg_normal_pressed = global::MyJobDiary.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_icon_background = global::MyJobDiary.Droid.Resource.Drawable.notification_icon_background;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_template_icon_bg = global::MyJobDiary.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_template_icon_low_bg = global::MyJobDiary.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notification_tile_bg = global::MyJobDiary.Droid.Resource.Drawable.notification_tile_bg;
+			global::Xamarin.Droid.Utils.Resource.Drawable.notify_panel_notification_icon_bg = global::MyJobDiary.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Droid.Utils.Resource.Drawable.tooltip_frame_dark = global::MyJobDiary.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::Xamarin.Droid.Utils.Resource.Drawable.tooltip_frame_light = global::MyJobDiary.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Xamarin.Droid.Utils.Resource.Drawable.xamarin_utils_facebook_white = global::MyJobDiary.Droid.Resource.Drawable.xamarin_utils_facebook_white;
+			global::Xamarin.Droid.Utils.Resource.Drawable.xamarin_utils_google_white = global::MyJobDiary.Droid.Resource.Drawable.xamarin_utils_google_white;
+			global::Xamarin.Droid.Utils.Resource.Id.ALT = global::MyJobDiary.Droid.Resource.Id.ALT;
+			global::Xamarin.Droid.Utils.Resource.Id.CTRL = global::MyJobDiary.Droid.Resource.Id.CTRL;
+			global::Xamarin.Droid.Utils.Resource.Id.FUNCTION = global::MyJobDiary.Droid.Resource.Id.FUNCTION;
+			global::Xamarin.Droid.Utils.Resource.Id.META = global::MyJobDiary.Droid.Resource.Id.META;
+			global::Xamarin.Droid.Utils.Resource.Id.SHIFT = global::MyJobDiary.Droid.Resource.Id.SHIFT;
+			global::Xamarin.Droid.Utils.Resource.Id.SYM = global::MyJobDiary.Droid.Resource.Id.SYM;
+			global::Xamarin.Droid.Utils.Resource.Id.action0 = global::MyJobDiary.Droid.Resource.Id.action0;
+			global::Xamarin.Droid.Utils.Resource.Id.action_bar = global::MyJobDiary.Droid.Resource.Id.action_bar;
+			global::Xamarin.Droid.Utils.Resource.Id.action_bar_activity_content = global::MyJobDiary.Droid.Resource.Id.action_bar_activity_content;
+			global::Xamarin.Droid.Utils.Resource.Id.action_bar_container = global::MyJobDiary.Droid.Resource.Id.action_bar_container;
+			global::Xamarin.Droid.Utils.Resource.Id.action_bar_root = global::MyJobDiary.Droid.Resource.Id.action_bar_root;
+			global::Xamarin.Droid.Utils.Resource.Id.action_bar_spinner = global::MyJobDiary.Droid.Resource.Id.action_bar_spinner;
+			global::Xamarin.Droid.Utils.Resource.Id.action_bar_subtitle = global::MyJobDiary.Droid.Resource.Id.action_bar_subtitle;
+			global::Xamarin.Droid.Utils.Resource.Id.action_bar_title = global::MyJobDiary.Droid.Resource.Id.action_bar_title;
+			global::Xamarin.Droid.Utils.Resource.Id.action_container = global::MyJobDiary.Droid.Resource.Id.action_container;
+			global::Xamarin.Droid.Utils.Resource.Id.action_context_bar = global::MyJobDiary.Droid.Resource.Id.action_context_bar;
+			global::Xamarin.Droid.Utils.Resource.Id.action_divider = global::MyJobDiary.Droid.Resource.Id.action_divider;
+			global::Xamarin.Droid.Utils.Resource.Id.action_image = global::MyJobDiary.Droid.Resource.Id.action_image;
+			global::Xamarin.Droid.Utils.Resource.Id.action_menu_divider = global::MyJobDiary.Droid.Resource.Id.action_menu_divider;
+			global::Xamarin.Droid.Utils.Resource.Id.action_menu_presenter = global::MyJobDiary.Droid.Resource.Id.action_menu_presenter;
+			global::Xamarin.Droid.Utils.Resource.Id.action_mode_bar = global::MyJobDiary.Droid.Resource.Id.action_mode_bar;
+			global::Xamarin.Droid.Utils.Resource.Id.action_mode_bar_stub = global::MyJobDiary.Droid.Resource.Id.action_mode_bar_stub;
+			global::Xamarin.Droid.Utils.Resource.Id.action_mode_close_button = global::MyJobDiary.Droid.Resource.Id.action_mode_close_button;
+			global::Xamarin.Droid.Utils.Resource.Id.action_text = global::MyJobDiary.Droid.Resource.Id.action_text;
+			global::Xamarin.Droid.Utils.Resource.Id.actions = global::MyJobDiary.Droid.Resource.Id.actions;
+			global::Xamarin.Droid.Utils.Resource.Id.activity_chooser_view_content = global::MyJobDiary.Droid.Resource.Id.activity_chooser_view_content;
+			global::Xamarin.Droid.Utils.Resource.Id.add = global::MyJobDiary.Droid.Resource.Id.add;
+			global::Xamarin.Droid.Utils.Resource.Id.alertTitle = global::MyJobDiary.Droid.Resource.Id.alertTitle;
+			global::Xamarin.Droid.Utils.Resource.Id.all = global::MyJobDiary.Droid.Resource.Id.all;
+			global::Xamarin.Droid.Utils.Resource.Id.always = global::MyJobDiary.Droid.Resource.Id.always;
+			global::Xamarin.Droid.Utils.Resource.Id.async = global::MyJobDiary.Droid.Resource.Id.async;
+			global::Xamarin.Droid.Utils.Resource.Id.auto = global::MyJobDiary.Droid.Resource.Id.auto;
+			global::Xamarin.Droid.Utils.Resource.Id.beginning = global::MyJobDiary.Droid.Resource.Id.beginning;
+			global::Xamarin.Droid.Utils.Resource.Id.blocking = global::MyJobDiary.Droid.Resource.Id.blocking;
+			global::Xamarin.Droid.Utils.Resource.Id.bottom = global::MyJobDiary.Droid.Resource.Id.bottom;
+			global::Xamarin.Droid.Utils.Resource.Id.buttonPanel = global::MyJobDiary.Droid.Resource.Id.buttonPanel;
+			global::Xamarin.Droid.Utils.Resource.Id.cancel_action = global::MyJobDiary.Droid.Resource.Id.cancel_action;
+			global::Xamarin.Droid.Utils.Resource.Id.center = global::MyJobDiary.Droid.Resource.Id.center;
+			global::Xamarin.Droid.Utils.Resource.Id.center_horizontal = global::MyJobDiary.Droid.Resource.Id.center_horizontal;
+			global::Xamarin.Droid.Utils.Resource.Id.center_vertical = global::MyJobDiary.Droid.Resource.Id.center_vertical;
+			global::Xamarin.Droid.Utils.Resource.Id.checkbox = global::MyJobDiary.Droid.Resource.Id.checkbox;
+			global::Xamarin.Droid.Utils.Resource.Id.chronometer = global::MyJobDiary.Droid.Resource.Id.chronometer;
+			global::Xamarin.Droid.Utils.Resource.Id.clip_horizontal = global::MyJobDiary.Droid.Resource.Id.clip_horizontal;
+			global::Xamarin.Droid.Utils.Resource.Id.clip_vertical = global::MyJobDiary.Droid.Resource.Id.clip_vertical;
+			global::Xamarin.Droid.Utils.Resource.Id.collapseActionView = global::MyJobDiary.Droid.Resource.Id.collapseActionView;
+			global::Xamarin.Droid.Utils.Resource.Id.container = global::MyJobDiary.Droid.Resource.Id.container;
+			global::Xamarin.Droid.Utils.Resource.Id.contentPanel = global::MyJobDiary.Droid.Resource.Id.contentPanel;
+			global::Xamarin.Droid.Utils.Resource.Id.coordinator = global::MyJobDiary.Droid.Resource.Id.coordinator;
+			global::Xamarin.Droid.Utils.Resource.Id.custom = global::MyJobDiary.Droid.Resource.Id.custom;
+			global::Xamarin.Droid.Utils.Resource.Id.customPanel = global::MyJobDiary.Droid.Resource.Id.customPanel;
+			global::Xamarin.Droid.Utils.Resource.Id.decor_content_parent = global::MyJobDiary.Droid.Resource.Id.decor_content_parent;
+			global::Xamarin.Droid.Utils.Resource.Id.default_activity_button = global::MyJobDiary.Droid.Resource.Id.default_activity_button;
+			global::Xamarin.Droid.Utils.Resource.Id.design_bottom_sheet = global::MyJobDiary.Droid.Resource.Id.design_bottom_sheet;
+			global::Xamarin.Droid.Utils.Resource.Id.design_menu_item_action_area = global::MyJobDiary.Droid.Resource.Id.design_menu_item_action_area;
+			global::Xamarin.Droid.Utils.Resource.Id.design_menu_item_action_area_stub = global::MyJobDiary.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Xamarin.Droid.Utils.Resource.Id.design_menu_item_text = global::MyJobDiary.Droid.Resource.Id.design_menu_item_text;
+			global::Xamarin.Droid.Utils.Resource.Id.design_navigation_view = global::MyJobDiary.Droid.Resource.Id.design_navigation_view;
+			global::Xamarin.Droid.Utils.Resource.Id.disableHome = global::MyJobDiary.Droid.Resource.Id.disableHome;
+			global::Xamarin.Droid.Utils.Resource.Id.edit_query = global::MyJobDiary.Droid.Resource.Id.edit_query;
+			global::Xamarin.Droid.Utils.Resource.Id.end = global::MyJobDiary.Droid.Resource.Id.end;
+			global::Xamarin.Droid.Utils.Resource.Id.end_padder = global::MyJobDiary.Droid.Resource.Id.end_padder;
+			global::Xamarin.Droid.Utils.Resource.Id.enterAlways = global::MyJobDiary.Droid.Resource.Id.enterAlways;
+			global::Xamarin.Droid.Utils.Resource.Id.enterAlwaysCollapsed = global::MyJobDiary.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Xamarin.Droid.Utils.Resource.Id.exitUntilCollapsed = global::MyJobDiary.Droid.Resource.Id.exitUntilCollapsed;
+			global::Xamarin.Droid.Utils.Resource.Id.expand_activities_button = global::MyJobDiary.Droid.Resource.Id.expand_activities_button;
+			global::Xamarin.Droid.Utils.Resource.Id.expanded_menu = global::MyJobDiary.Droid.Resource.Id.expanded_menu;
+			global::Xamarin.Droid.Utils.Resource.Id.fill = global::MyJobDiary.Droid.Resource.Id.fill;
+			global::Xamarin.Droid.Utils.Resource.Id.fill_horizontal = global::MyJobDiary.Droid.Resource.Id.fill_horizontal;
+			global::Xamarin.Droid.Utils.Resource.Id.fill_vertical = global::MyJobDiary.Droid.Resource.Id.fill_vertical;
+			global::Xamarin.Droid.Utils.Resource.Id.@fixed = global::MyJobDiary.Droid.Resource.Id.@fixed;
+			global::Xamarin.Droid.Utils.Resource.Id.forever = global::MyJobDiary.Droid.Resource.Id.forever;
+			global::Xamarin.Droid.Utils.Resource.Id.ghost_view = global::MyJobDiary.Droid.Resource.Id.ghost_view;
+			global::Xamarin.Droid.Utils.Resource.Id.home = global::MyJobDiary.Droid.Resource.Id.home;
+			global::Xamarin.Droid.Utils.Resource.Id.homeAsUp = global::MyJobDiary.Droid.Resource.Id.homeAsUp;
+			global::Xamarin.Droid.Utils.Resource.Id.icon = global::MyJobDiary.Droid.Resource.Id.icon;
+			global::Xamarin.Droid.Utils.Resource.Id.icon_group = global::MyJobDiary.Droid.Resource.Id.icon_group;
+			global::Xamarin.Droid.Utils.Resource.Id.ifRoom = global::MyJobDiary.Droid.Resource.Id.ifRoom;
+			global::Xamarin.Droid.Utils.Resource.Id.image = global::MyJobDiary.Droid.Resource.Id.image;
+			global::Xamarin.Droid.Utils.Resource.Id.info = global::MyJobDiary.Droid.Resource.Id.info;
+			global::Xamarin.Droid.Utils.Resource.Id.italic = global::MyJobDiary.Droid.Resource.Id.italic;
+			global::Xamarin.Droid.Utils.Resource.Id.item_touch_helper_previous_elevation = global::MyJobDiary.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Xamarin.Droid.Utils.Resource.Id.largeLabel = global::MyJobDiary.Droid.Resource.Id.largeLabel;
+			global::Xamarin.Droid.Utils.Resource.Id.left = global::MyJobDiary.Droid.Resource.Id.left;
+			global::Xamarin.Droid.Utils.Resource.Id.line1 = global::MyJobDiary.Droid.Resource.Id.line1;
+			global::Xamarin.Droid.Utils.Resource.Id.line3 = global::MyJobDiary.Droid.Resource.Id.line3;
+			global::Xamarin.Droid.Utils.Resource.Id.listMode = global::MyJobDiary.Droid.Resource.Id.listMode;
+			global::Xamarin.Droid.Utils.Resource.Id.list_item = global::MyJobDiary.Droid.Resource.Id.list_item;
+			global::Xamarin.Droid.Utils.Resource.Id.masked = global::MyJobDiary.Droid.Resource.Id.masked;
+			global::Xamarin.Droid.Utils.Resource.Id.media_actions = global::MyJobDiary.Droid.Resource.Id.media_actions;
+			global::Xamarin.Droid.Utils.Resource.Id.message = global::MyJobDiary.Droid.Resource.Id.message;
+			global::Xamarin.Droid.Utils.Resource.Id.middle = global::MyJobDiary.Droid.Resource.Id.middle;
+			global::Xamarin.Droid.Utils.Resource.Id.mini = global::MyJobDiary.Droid.Resource.Id.mini;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_art = global::MyJobDiary.Droid.Resource.Id.mr_art;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_chooser_list = global::MyJobDiary.Droid.Resource.Id.mr_chooser_list;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_chooser_route_desc = global::MyJobDiary.Droid.Resource.Id.mr_chooser_route_desc;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_chooser_route_icon = global::MyJobDiary.Droid.Resource.Id.mr_chooser_route_icon;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_chooser_route_name = global::MyJobDiary.Droid.Resource.Id.mr_chooser_route_name;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_chooser_title = global::MyJobDiary.Droid.Resource.Id.mr_chooser_title;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_close = global::MyJobDiary.Droid.Resource.Id.mr_close;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_control_divider = global::MyJobDiary.Droid.Resource.Id.mr_control_divider;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_control_playback_ctrl = global::MyJobDiary.Droid.Resource.Id.mr_control_playback_ctrl;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_control_subtitle = global::MyJobDiary.Droid.Resource.Id.mr_control_subtitle;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_control_title = global::MyJobDiary.Droid.Resource.Id.mr_control_title;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_control_title_container = global::MyJobDiary.Droid.Resource.Id.mr_control_title_container;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_custom_control = global::MyJobDiary.Droid.Resource.Id.mr_custom_control;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_default_control = global::MyJobDiary.Droid.Resource.Id.mr_default_control;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_dialog_area = global::MyJobDiary.Droid.Resource.Id.mr_dialog_area;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_expandable_area = global::MyJobDiary.Droid.Resource.Id.mr_expandable_area;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_group_expand_collapse = global::MyJobDiary.Droid.Resource.Id.mr_group_expand_collapse;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_media_main_control = global::MyJobDiary.Droid.Resource.Id.mr_media_main_control;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_name = global::MyJobDiary.Droid.Resource.Id.mr_name;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_playback_control = global::MyJobDiary.Droid.Resource.Id.mr_playback_control;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_title_bar = global::MyJobDiary.Droid.Resource.Id.mr_title_bar;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_volume_control = global::MyJobDiary.Droid.Resource.Id.mr_volume_control;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_volume_group_list = global::MyJobDiary.Droid.Resource.Id.mr_volume_group_list;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_volume_item_icon = global::MyJobDiary.Droid.Resource.Id.mr_volume_item_icon;
+			global::Xamarin.Droid.Utils.Resource.Id.mr_volume_slider = global::MyJobDiary.Droid.Resource.Id.mr_volume_slider;
+			global::Xamarin.Droid.Utils.Resource.Id.multiply = global::MyJobDiary.Droid.Resource.Id.multiply;
+			global::Xamarin.Droid.Utils.Resource.Id.navigation_header_container = global::MyJobDiary.Droid.Resource.Id.navigation_header_container;
+			global::Xamarin.Droid.Utils.Resource.Id.never = global::MyJobDiary.Droid.Resource.Id.never;
+			global::Xamarin.Droid.Utils.Resource.Id.none = global::MyJobDiary.Droid.Resource.Id.none;
+			global::Xamarin.Droid.Utils.Resource.Id.normal = global::MyJobDiary.Droid.Resource.Id.normal;
+			global::Xamarin.Droid.Utils.Resource.Id.notification_background = global::MyJobDiary.Droid.Resource.Id.notification_background;
+			global::Xamarin.Droid.Utils.Resource.Id.notification_main_column = global::MyJobDiary.Droid.Resource.Id.notification_main_column;
+			global::Xamarin.Droid.Utils.Resource.Id.notification_main_column_container = global::MyJobDiary.Droid.Resource.Id.notification_main_column_container;
+			global::Xamarin.Droid.Utils.Resource.Id.parallax = global::MyJobDiary.Droid.Resource.Id.parallax;
+			global::Xamarin.Droid.Utils.Resource.Id.parentPanel = global::MyJobDiary.Droid.Resource.Id.parentPanel;
+			global::Xamarin.Droid.Utils.Resource.Id.parent_matrix = global::MyJobDiary.Droid.Resource.Id.parent_matrix;
+			global::Xamarin.Droid.Utils.Resource.Id.pin = global::MyJobDiary.Droid.Resource.Id.pin;
+			global::Xamarin.Droid.Utils.Resource.Id.progress_circular = global::MyJobDiary.Droid.Resource.Id.progress_circular;
+			global::Xamarin.Droid.Utils.Resource.Id.progress_horizontal = global::MyJobDiary.Droid.Resource.Id.progress_horizontal;
+			global::Xamarin.Droid.Utils.Resource.Id.radio = global::MyJobDiary.Droid.Resource.Id.radio;
+			global::Xamarin.Droid.Utils.Resource.Id.right = global::MyJobDiary.Droid.Resource.Id.right;
+			global::Xamarin.Droid.Utils.Resource.Id.right_icon = global::MyJobDiary.Droid.Resource.Id.right_icon;
+			global::Xamarin.Droid.Utils.Resource.Id.right_side = global::MyJobDiary.Droid.Resource.Id.right_side;
+			global::Xamarin.Droid.Utils.Resource.Id.save_image_matrix = global::MyJobDiary.Droid.Resource.Id.save_image_matrix;
+			global::Xamarin.Droid.Utils.Resource.Id.save_non_transition_alpha = global::MyJobDiary.Droid.Resource.Id.save_non_transition_alpha;
+			global::Xamarin.Droid.Utils.Resource.Id.save_scale_type = global::MyJobDiary.Droid.Resource.Id.save_scale_type;
+			global::Xamarin.Droid.Utils.Resource.Id.screen = global::MyJobDiary.Droid.Resource.Id.screen;
+			global::Xamarin.Droid.Utils.Resource.Id.scroll = global::MyJobDiary.Droid.Resource.Id.scroll;
+			global::Xamarin.Droid.Utils.Resource.Id.scrollIndicatorDown = global::MyJobDiary.Droid.Resource.Id.scrollIndicatorDown;
+			global::Xamarin.Droid.Utils.Resource.Id.scrollIndicatorUp = global::MyJobDiary.Droid.Resource.Id.scrollIndicatorUp;
+			global::Xamarin.Droid.Utils.Resource.Id.scrollView = global::MyJobDiary.Droid.Resource.Id.scrollView;
+			global::Xamarin.Droid.Utils.Resource.Id.scrollable = global::MyJobDiary.Droid.Resource.Id.scrollable;
+			global::Xamarin.Droid.Utils.Resource.Id.search_badge = global::MyJobDiary.Droid.Resource.Id.search_badge;
+			global::Xamarin.Droid.Utils.Resource.Id.search_bar = global::MyJobDiary.Droid.Resource.Id.search_bar;
+			global::Xamarin.Droid.Utils.Resource.Id.search_button = global::MyJobDiary.Droid.Resource.Id.search_button;
+			global::Xamarin.Droid.Utils.Resource.Id.search_close_btn = global::MyJobDiary.Droid.Resource.Id.search_close_btn;
+			global::Xamarin.Droid.Utils.Resource.Id.search_edit_frame = global::MyJobDiary.Droid.Resource.Id.search_edit_frame;
+			global::Xamarin.Droid.Utils.Resource.Id.search_go_btn = global::MyJobDiary.Droid.Resource.Id.search_go_btn;
+			global::Xamarin.Droid.Utils.Resource.Id.search_mag_icon = global::MyJobDiary.Droid.Resource.Id.search_mag_icon;
+			global::Xamarin.Droid.Utils.Resource.Id.search_plate = global::MyJobDiary.Droid.Resource.Id.search_plate;
+			global::Xamarin.Droid.Utils.Resource.Id.search_src_text = global::MyJobDiary.Droid.Resource.Id.search_src_text;
+			global::Xamarin.Droid.Utils.Resource.Id.search_voice_btn = global::MyJobDiary.Droid.Resource.Id.search_voice_btn;
+			global::Xamarin.Droid.Utils.Resource.Id.select_dialog_listview = global::MyJobDiary.Droid.Resource.Id.select_dialog_listview;
+			global::Xamarin.Droid.Utils.Resource.Id.shortcut = global::MyJobDiary.Droid.Resource.Id.shortcut;
+			global::Xamarin.Droid.Utils.Resource.Id.showCustom = global::MyJobDiary.Droid.Resource.Id.showCustom;
+			global::Xamarin.Droid.Utils.Resource.Id.showHome = global::MyJobDiary.Droid.Resource.Id.showHome;
+			global::Xamarin.Droid.Utils.Resource.Id.showTitle = global::MyJobDiary.Droid.Resource.Id.showTitle;
+			global::Xamarin.Droid.Utils.Resource.Id.smallLabel = global::MyJobDiary.Droid.Resource.Id.smallLabel;
+			global::Xamarin.Droid.Utils.Resource.Id.snackbar_action = global::MyJobDiary.Droid.Resource.Id.snackbar_action;
+			global::Xamarin.Droid.Utils.Resource.Id.snackbar_text = global::MyJobDiary.Droid.Resource.Id.snackbar_text;
+			global::Xamarin.Droid.Utils.Resource.Id.snap = global::MyJobDiary.Droid.Resource.Id.snap;
+			global::Xamarin.Droid.Utils.Resource.Id.spacer = global::MyJobDiary.Droid.Resource.Id.spacer;
+			global::Xamarin.Droid.Utils.Resource.Id.split_action_bar = global::MyJobDiary.Droid.Resource.Id.split_action_bar;
+			global::Xamarin.Droid.Utils.Resource.Id.src_atop = global::MyJobDiary.Droid.Resource.Id.src_atop;
+			global::Xamarin.Droid.Utils.Resource.Id.src_in = global::MyJobDiary.Droid.Resource.Id.src_in;
+			global::Xamarin.Droid.Utils.Resource.Id.src_over = global::MyJobDiary.Droid.Resource.Id.src_over;
+			global::Xamarin.Droid.Utils.Resource.Id.start = global::MyJobDiary.Droid.Resource.Id.start;
+			global::Xamarin.Droid.Utils.Resource.Id.status_bar_latest_event_content = global::MyJobDiary.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Xamarin.Droid.Utils.Resource.Id.submenuarrow = global::MyJobDiary.Droid.Resource.Id.submenuarrow;
+			global::Xamarin.Droid.Utils.Resource.Id.submit_area = global::MyJobDiary.Droid.Resource.Id.submit_area;
+			global::Xamarin.Droid.Utils.Resource.Id.tabMode = global::MyJobDiary.Droid.Resource.Id.tabMode;
+			global::Xamarin.Droid.Utils.Resource.Id.tag_transition_group = global::MyJobDiary.Droid.Resource.Id.tag_transition_group;
+			global::Xamarin.Droid.Utils.Resource.Id.text = global::MyJobDiary.Droid.Resource.Id.text;
+			global::Xamarin.Droid.Utils.Resource.Id.text2 = global::MyJobDiary.Droid.Resource.Id.text2;
+			global::Xamarin.Droid.Utils.Resource.Id.textSpacerNoButtons = global::MyJobDiary.Droid.Resource.Id.textSpacerNoButtons;
+			global::Xamarin.Droid.Utils.Resource.Id.textSpacerNoTitle = global::MyJobDiary.Droid.Resource.Id.textSpacerNoTitle;
+			global::Xamarin.Droid.Utils.Resource.Id.text_input_password_toggle = global::MyJobDiary.Droid.Resource.Id.text_input_password_toggle;
+			global::Xamarin.Droid.Utils.Resource.Id.textinput_counter = global::MyJobDiary.Droid.Resource.Id.textinput_counter;
+			global::Xamarin.Droid.Utils.Resource.Id.textinput_error = global::MyJobDiary.Droid.Resource.Id.textinput_error;
+			global::Xamarin.Droid.Utils.Resource.Id.time = global::MyJobDiary.Droid.Resource.Id.time;
+			global::Xamarin.Droid.Utils.Resource.Id.title = global::MyJobDiary.Droid.Resource.Id.title;
+			global::Xamarin.Droid.Utils.Resource.Id.titleDividerNoCustom = global::MyJobDiary.Droid.Resource.Id.titleDividerNoCustom;
+			global::Xamarin.Droid.Utils.Resource.Id.title_template = global::MyJobDiary.Droid.Resource.Id.title_template;
+			global::Xamarin.Droid.Utils.Resource.Id.top = global::MyJobDiary.Droid.Resource.Id.top;
+			global::Xamarin.Droid.Utils.Resource.Id.topPanel = global::MyJobDiary.Droid.Resource.Id.topPanel;
+			global::Xamarin.Droid.Utils.Resource.Id.touch_outside = global::MyJobDiary.Droid.Resource.Id.touch_outside;
+			global::Xamarin.Droid.Utils.Resource.Id.transition_current_scene = global::MyJobDiary.Droid.Resource.Id.transition_current_scene;
+			global::Xamarin.Droid.Utils.Resource.Id.transition_layout_save = global::MyJobDiary.Droid.Resource.Id.transition_layout_save;
+			global::Xamarin.Droid.Utils.Resource.Id.transition_position = global::MyJobDiary.Droid.Resource.Id.transition_position;
+			global::Xamarin.Droid.Utils.Resource.Id.transition_scene_layoutid_cache = global::MyJobDiary.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Xamarin.Droid.Utils.Resource.Id.transition_transform = global::MyJobDiary.Droid.Resource.Id.transition_transform;
+			global::Xamarin.Droid.Utils.Resource.Id.uniform = global::MyJobDiary.Droid.Resource.Id.uniform;
+			global::Xamarin.Droid.Utils.Resource.Id.up = global::MyJobDiary.Droid.Resource.Id.up;
+			global::Xamarin.Droid.Utils.Resource.Id.useLogo = global::MyJobDiary.Droid.Resource.Id.useLogo;
+			global::Xamarin.Droid.Utils.Resource.Id.view_offset_helper = global::MyJobDiary.Droid.Resource.Id.view_offset_helper;
+			global::Xamarin.Droid.Utils.Resource.Id.visible = global::MyJobDiary.Droid.Resource.Id.visible;
+			global::Xamarin.Droid.Utils.Resource.Id.volume_item_container = global::MyJobDiary.Droid.Resource.Id.volume_item_container;
+			global::Xamarin.Droid.Utils.Resource.Id.webview = global::MyJobDiary.Droid.Resource.Id.webview;
+			global::Xamarin.Droid.Utils.Resource.Id.withText = global::MyJobDiary.Droid.Resource.Id.withText;
+			global::Xamarin.Droid.Utils.Resource.Id.wrap_content = global::MyJobDiary.Droid.Resource.Id.wrap_content;
+			global::Xamarin.Droid.Utils.Resource.Integer.abc_config_activityDefaultDur = global::MyJobDiary.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Xamarin.Droid.Utils.Resource.Integer.abc_config_activityShortDur = global::MyJobDiary.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Xamarin.Droid.Utils.Resource.Integer.app_bar_elevation_anim_duration = global::MyJobDiary.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Xamarin.Droid.Utils.Resource.Integer.bottom_sheet_slide_duration = global::MyJobDiary.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Xamarin.Droid.Utils.Resource.Integer.cancel_button_image_alpha = global::MyJobDiary.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Xamarin.Droid.Utils.Resource.Integer.config_tooltipAnimTime = global::MyJobDiary.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::Xamarin.Droid.Utils.Resource.Integer.design_snackbar_text_max_lines = global::MyJobDiary.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Xamarin.Droid.Utils.Resource.Integer.hide_password_duration = global::MyJobDiary.Droid.Resource.Integer.hide_password_duration;
+			global::Xamarin.Droid.Utils.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::MyJobDiary.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
+			global::Xamarin.Droid.Utils.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::MyJobDiary.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
+			global::Xamarin.Droid.Utils.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::MyJobDiary.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
+			global::Xamarin.Droid.Utils.Resource.Integer.show_password_duration = global::MyJobDiary.Droid.Resource.Integer.show_password_duration;
+			global::Xamarin.Droid.Utils.Resource.Integer.status_bar_notification_info_maxnum = global::MyJobDiary.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.Droid.Utils.Resource.Interpolator.mr_fast_out_slow_in = global::MyJobDiary.Droid.Resource.Interpolator.mr_fast_out_slow_in;
+			global::Xamarin.Droid.Utils.Resource.Interpolator.mr_linear_out_slow_in = global::MyJobDiary.Droid.Resource.Interpolator.mr_linear_out_slow_in;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_action_bar_title_item = global::MyJobDiary.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_action_bar_up_container = global::MyJobDiary.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_action_menu_item_layout = global::MyJobDiary.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_action_menu_layout = global::MyJobDiary.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_action_mode_bar = global::MyJobDiary.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_action_mode_close_item_material = global::MyJobDiary.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_activity_chooser_view = global::MyJobDiary.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_activity_chooser_view_list_item = global::MyJobDiary.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_alert_dialog_button_bar_material = global::MyJobDiary.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_alert_dialog_material = global::MyJobDiary.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_alert_dialog_title_material = global::MyJobDiary.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_dialog_title_material = global::MyJobDiary.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_expanded_menu_layout = global::MyJobDiary.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_list_menu_item_checkbox = global::MyJobDiary.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_list_menu_item_icon = global::MyJobDiary.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_list_menu_item_layout = global::MyJobDiary.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_list_menu_item_radio = global::MyJobDiary.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_popup_menu_header_item_layout = global::MyJobDiary.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_popup_menu_item_layout = global::MyJobDiary.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_screen_content_include = global::MyJobDiary.Droid.Resource.Layout.abc_screen_content_include;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_screen_simple = global::MyJobDiary.Droid.Resource.Layout.abc_screen_simple;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_screen_simple_overlay_action_mode = global::MyJobDiary.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_screen_toolbar = global::MyJobDiary.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_search_dropdown_item_icons_2line = global::MyJobDiary.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_search_view = global::MyJobDiary.Droid.Resource.Layout.abc_search_view;
+			global::Xamarin.Droid.Utils.Resource.Layout.abc_select_dialog_material = global::MyJobDiary.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Xamarin.Droid.Utils.Resource.Layout.activity_webview = global::MyJobDiary.Droid.Resource.Layout.activity_webview;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_bottom_navigation_item = global::MyJobDiary.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_bottom_sheet_dialog = global::MyJobDiary.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_layout_snackbar = global::MyJobDiary.Droid.Resource.Layout.design_layout_snackbar;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_layout_snackbar_include = global::MyJobDiary.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_layout_tab_icon = global::MyJobDiary.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_layout_tab_text = global::MyJobDiary.Droid.Resource.Layout.design_layout_tab_text;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_menu_item_action_area = global::MyJobDiary.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_navigation_item = global::MyJobDiary.Droid.Resource.Layout.design_navigation_item;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_navigation_item_header = global::MyJobDiary.Droid.Resource.Layout.design_navigation_item_header;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_navigation_item_separator = global::MyJobDiary.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_navigation_item_subheader = global::MyJobDiary.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_navigation_menu = global::MyJobDiary.Droid.Resource.Layout.design_navigation_menu;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_navigation_menu_item = global::MyJobDiary.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Xamarin.Droid.Utils.Resource.Layout.design_text_input_password_icon = global::MyJobDiary.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Xamarin.Droid.Utils.Resource.Layout.mr_chooser_dialog = global::MyJobDiary.Droid.Resource.Layout.mr_chooser_dialog;
+			global::Xamarin.Droid.Utils.Resource.Layout.mr_chooser_list_item = global::MyJobDiary.Droid.Resource.Layout.mr_chooser_list_item;
+			global::Xamarin.Droid.Utils.Resource.Layout.mr_controller_material_dialog_b = global::MyJobDiary.Droid.Resource.Layout.mr_controller_material_dialog_b;
+			global::Xamarin.Droid.Utils.Resource.Layout.mr_controller_volume_item = global::MyJobDiary.Droid.Resource.Layout.mr_controller_volume_item;
+			global::Xamarin.Droid.Utils.Resource.Layout.mr_playback_control = global::MyJobDiary.Droid.Resource.Layout.mr_playback_control;
+			global::Xamarin.Droid.Utils.Resource.Layout.mr_volume_control = global::MyJobDiary.Droid.Resource.Layout.mr_volume_control;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_action = global::MyJobDiary.Droid.Resource.Layout.notification_action;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_action_tombstone = global::MyJobDiary.Droid.Resource.Layout.notification_action_tombstone;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_media_action = global::MyJobDiary.Droid.Resource.Layout.notification_media_action;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_media_cancel_action = global::MyJobDiary.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_big_media = global::MyJobDiary.Droid.Resource.Layout.notification_template_big_media;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_big_media_custom = global::MyJobDiary.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_big_media_narrow = global::MyJobDiary.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_big_media_narrow_custom = global::MyJobDiary.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_custom_big = global::MyJobDiary.Droid.Resource.Layout.notification_template_custom_big;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_icon_group = global::MyJobDiary.Droid.Resource.Layout.notification_template_icon_group;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_lines_media = global::MyJobDiary.Droid.Resource.Layout.notification_template_lines_media;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_media = global::MyJobDiary.Droid.Resource.Layout.notification_template_media;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_media_custom = global::MyJobDiary.Droid.Resource.Layout.notification_template_media_custom;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_part_chronometer = global::MyJobDiary.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Xamarin.Droid.Utils.Resource.Layout.notification_template_part_time = global::MyJobDiary.Droid.Resource.Layout.notification_template_part_time;
+			global::Xamarin.Droid.Utils.Resource.Layout.select_dialog_item_material = global::MyJobDiary.Droid.Resource.Layout.select_dialog_item_material;
+			global::Xamarin.Droid.Utils.Resource.Layout.select_dialog_multichoice_material = global::MyJobDiary.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Xamarin.Droid.Utils.Resource.Layout.select_dialog_singlechoice_material = global::MyJobDiary.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Xamarin.Droid.Utils.Resource.Layout.support_simple_spinner_dropdown_item = global::MyJobDiary.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Xamarin.Droid.Utils.Resource.Layout.tooltip = global::MyJobDiary.Droid.Resource.Layout.tooltip;
+			global::Xamarin.Droid.Utils.Resource.String.ApplicationName = global::MyJobDiary.Droid.Resource.String.ApplicationName;
+			global::Xamarin.Droid.Utils.Resource.String.Hello = global::MyJobDiary.Droid.Resource.String.Hello;
+			global::Xamarin.Droid.Utils.Resource.String.abc_action_bar_home_description = global::MyJobDiary.Droid.Resource.String.abc_action_bar_home_description;
+			global::Xamarin.Droid.Utils.Resource.String.abc_action_bar_up_description = global::MyJobDiary.Droid.Resource.String.abc_action_bar_up_description;
+			global::Xamarin.Droid.Utils.Resource.String.abc_action_menu_overflow_description = global::MyJobDiary.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Xamarin.Droid.Utils.Resource.String.abc_action_mode_done = global::MyJobDiary.Droid.Resource.String.abc_action_mode_done;
+			global::Xamarin.Droid.Utils.Resource.String.abc_activity_chooser_view_see_all = global::MyJobDiary.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Xamarin.Droid.Utils.Resource.String.abc_activitychooserview_choose_application = global::MyJobDiary.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Xamarin.Droid.Utils.Resource.String.abc_capital_off = global::MyJobDiary.Droid.Resource.String.abc_capital_off;
+			global::Xamarin.Droid.Utils.Resource.String.abc_capital_on = global::MyJobDiary.Droid.Resource.String.abc_capital_on;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_body_1_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_body_1_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_body_2_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_body_2_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_button_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_button_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_caption_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_caption_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_display_1_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_display_1_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_display_2_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_display_2_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_display_3_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_display_3_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_display_4_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_display_4_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_headline_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_headline_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_menu_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_menu_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_subhead_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_subhead_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_font_family_title_material = global::MyJobDiary.Droid.Resource.String.abc_font_family_title_material;
+			global::Xamarin.Droid.Utils.Resource.String.abc_search_hint = global::MyJobDiary.Droid.Resource.String.abc_search_hint;
+			global::Xamarin.Droid.Utils.Resource.String.abc_searchview_description_clear = global::MyJobDiary.Droid.Resource.String.abc_searchview_description_clear;
+			global::Xamarin.Droid.Utils.Resource.String.abc_searchview_description_query = global::MyJobDiary.Droid.Resource.String.abc_searchview_description_query;
+			global::Xamarin.Droid.Utils.Resource.String.abc_searchview_description_search = global::MyJobDiary.Droid.Resource.String.abc_searchview_description_search;
+			global::Xamarin.Droid.Utils.Resource.String.abc_searchview_description_submit = global::MyJobDiary.Droid.Resource.String.abc_searchview_description_submit;
+			global::Xamarin.Droid.Utils.Resource.String.abc_searchview_description_voice = global::MyJobDiary.Droid.Resource.String.abc_searchview_description_voice;
+			global::Xamarin.Droid.Utils.Resource.String.abc_shareactionprovider_share_with = global::MyJobDiary.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Xamarin.Droid.Utils.Resource.String.abc_shareactionprovider_share_with_application = global::MyJobDiary.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Xamarin.Droid.Utils.Resource.String.abc_toolbar_collapse_description = global::MyJobDiary.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Xamarin.Droid.Utils.Resource.String.app_name = global::MyJobDiary.Droid.Resource.String.app_name;
+			global::Xamarin.Droid.Utils.Resource.String.appbar_scrolling_view_behavior = global::MyJobDiary.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Xamarin.Droid.Utils.Resource.String.bottom_sheet_behavior = global::MyJobDiary.Droid.Resource.String.bottom_sheet_behavior;
+			global::Xamarin.Droid.Utils.Resource.String.character_counter_pattern = global::MyJobDiary.Droid.Resource.String.character_counter_pattern;
+			global::Xamarin.Droid.Utils.Resource.String.hello = global::MyJobDiary.Droid.Resource.String.hello;
+			global::Xamarin.Droid.Utils.Resource.String.mr_button_content_description = global::MyJobDiary.Droid.Resource.String.mr_button_content_description;
+			global::Xamarin.Droid.Utils.Resource.String.mr_cast_button_connected = global::MyJobDiary.Droid.Resource.String.mr_cast_button_connected;
+			global::Xamarin.Droid.Utils.Resource.String.mr_cast_button_connecting = global::MyJobDiary.Droid.Resource.String.mr_cast_button_connecting;
+			global::Xamarin.Droid.Utils.Resource.String.mr_cast_button_disconnected = global::MyJobDiary.Droid.Resource.String.mr_cast_button_disconnected;
+			global::Xamarin.Droid.Utils.Resource.String.mr_chooser_searching = global::MyJobDiary.Droid.Resource.String.mr_chooser_searching;
+			global::Xamarin.Droid.Utils.Resource.String.mr_chooser_title = global::MyJobDiary.Droid.Resource.String.mr_chooser_title;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_album_art = global::MyJobDiary.Droid.Resource.String.mr_controller_album_art;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_casting_screen = global::MyJobDiary.Droid.Resource.String.mr_controller_casting_screen;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_close_description = global::MyJobDiary.Droid.Resource.String.mr_controller_close_description;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_collapse_group = global::MyJobDiary.Droid.Resource.String.mr_controller_collapse_group;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_disconnect = global::MyJobDiary.Droid.Resource.String.mr_controller_disconnect;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_expand_group = global::MyJobDiary.Droid.Resource.String.mr_controller_expand_group;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_no_info_available = global::MyJobDiary.Droid.Resource.String.mr_controller_no_info_available;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_no_media_selected = global::MyJobDiary.Droid.Resource.String.mr_controller_no_media_selected;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_pause = global::MyJobDiary.Droid.Resource.String.mr_controller_pause;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_play = global::MyJobDiary.Droid.Resource.String.mr_controller_play;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_stop = global::MyJobDiary.Droid.Resource.String.mr_controller_stop;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_stop_casting = global::MyJobDiary.Droid.Resource.String.mr_controller_stop_casting;
+			global::Xamarin.Droid.Utils.Resource.String.mr_controller_volume_slider = global::MyJobDiary.Droid.Resource.String.mr_controller_volume_slider;
+			global::Xamarin.Droid.Utils.Resource.String.mr_system_route_name = global::MyJobDiary.Droid.Resource.String.mr_system_route_name;
+			global::Xamarin.Droid.Utils.Resource.String.mr_user_route_category_name = global::MyJobDiary.Droid.Resource.String.mr_user_route_category_name;
+			global::Xamarin.Droid.Utils.Resource.String.password_toggle_content_description = global::MyJobDiary.Droid.Resource.String.password_toggle_content_description;
+			global::Xamarin.Droid.Utils.Resource.String.path_password_eye = global::MyJobDiary.Droid.Resource.String.path_password_eye;
+			global::Xamarin.Droid.Utils.Resource.String.path_password_eye_mask_strike_through = global::MyJobDiary.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Xamarin.Droid.Utils.Resource.String.path_password_eye_mask_visible = global::MyJobDiary.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Xamarin.Droid.Utils.Resource.String.path_password_strike_through = global::MyJobDiary.Droid.Resource.String.path_password_strike_through;
+			global::Xamarin.Droid.Utils.Resource.String.search_menu_title = global::MyJobDiary.Droid.Resource.String.search_menu_title;
+			global::Xamarin.Droid.Utils.Resource.String.status_bar_notification_info_overflow = global::MyJobDiary.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Xamarin.Droid.Utils.Resource.String.title_activity_webview = global::MyJobDiary.Droid.Resource.String.title_activity_webview;
+			global::Xamarin.Droid.Utils.Resource.Style.AlertDialog_AppCompat = global::MyJobDiary.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.AlertDialog_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Animation_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Animation_AppCompat_DropDownUp = global::MyJobDiary.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Xamarin.Droid.Utils.Resource.Style.Animation_AppCompat_Tooltip = global::MyJobDiary.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Xamarin.Droid.Utils.Resource.Style.Animation_Design_BottomSheetDialog = global::MyJobDiary.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_AlertDialog_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_AlertDialog_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Animation_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::MyJobDiary.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Animation_AppCompat_Tooltip = global::MyJobDiary.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_CardView = global::MyJobDiary.Droid.Resource.Style.Base_CardView;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_DialogWindowTitle_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Button = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Large = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Small = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Title = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::MyJobDiary.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::MyJobDiary.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_ThemeOverlay_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::MyJobDiary.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::MyJobDiary.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::MyJobDiary.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::MyJobDiary.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::MyJobDiary.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::MyJobDiary.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V14_Widget_Design_AppBarLayout = global::MyJobDiary.Droid.Resource.Style.Base_V14_Widget_Design_AppBarLayout;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V21_Theme_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V21_Theme_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V21_Widget_Design_AppBarLayout = global::MyJobDiary.Droid.Resource.Style.Base_V21_Widget_Design_AppBarLayout;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V22_Theme_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V22_Theme_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V23_Theme_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V23_Theme_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V26_Theme_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V26_Theme_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::MyJobDiary.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V26_Widget_Design_AppBarLayout = global::MyJobDiary.Droid.Resource.Style.Base_V26_Widget_Design_AppBarLayout;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V7_Theme_AppCompat = global::MyJobDiary.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V7_Theme_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::MyJobDiary.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::MyJobDiary.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::MyJobDiary.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ActionBar = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ActionButton = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ActionMode = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Button = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Button_Small = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_EditText = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ImageButton = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ListView = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_RatingBar = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_SearchView = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_SeekBar = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Spinner = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Toolbar = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::MyJobDiary.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_Design_AppBarLayout = global::MyJobDiary.Droid.Resource.Style.Base_Widget_Design_AppBarLayout;
+			global::Xamarin.Droid.Utils.Resource.Style.Base_Widget_Design_TabLayout = global::MyJobDiary.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Xamarin.Droid.Utils.Resource.Style.CardView = global::MyJobDiary.Droid.Resource.Style.CardView;
+			global::Xamarin.Droid.Utils.Resource.Style.CardView_Dark = global::MyJobDiary.Droid.Resource.Style.CardView_Dark;
+			global::Xamarin.Droid.Utils.Resource.Style.CardView_Light = global::MyJobDiary.Droid.Resource.Style.CardView_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_AppCompat = global::MyJobDiary.Droid.Resource.Style.Platform_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_ThemeOverlay_AppCompat = global::MyJobDiary.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::MyJobDiary.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_V11_AppCompat = global::MyJobDiary.Droid.Resource.Style.Platform_V11_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_V11_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Platform_V11_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_V14_AppCompat = global::MyJobDiary.Droid.Resource.Style.Platform_V14_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_V14_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Platform_V14_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_V21_AppCompat = global::MyJobDiary.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_V21_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_V25_AppCompat = global::MyJobDiary.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_V25_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Platform_Widget_AppCompat_Spinner = global::MyJobDiary.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::MyJobDiary.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::MyJobDiary.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Xamarin.Droid.Utils.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::MyJobDiary.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Body1 = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Body2 = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Button = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Caption = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Display1 = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Display2 = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Display3 = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Display4 = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Headline = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Large = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Medium = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Menu = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Small = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Subhead = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Title = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Tooltip = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::MyJobDiary.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Compat_Notification = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Compat_Notification_Info = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Compat_Notification_Media = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Compat_Notification_Time = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Compat_Notification_Title = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Design_Counter = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Design_Counter_Overflow = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Design_Error = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Design_Hint = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Design_Snackbar_Message = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Design_Tab = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::MyJobDiary.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::MyJobDiary.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_MediaRouter_Title = global::MyJobDiary.Droid.Resource.Style.TextAppearance_MediaRouter_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Xamarin.Droid.Utils.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::MyJobDiary.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_CompactMenu = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_DayNight = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_Dialog_Alert = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_Light_Dialog = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_AppCompat_NoActionBar = global::MyJobDiary.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_Design = global::MyJobDiary.Droid.Resource.Style.Theme_Design;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_Design_BottomSheetDialog = global::MyJobDiary.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_Design_Light = global::MyJobDiary.Droid.Resource.Style.Theme_Design_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::MyJobDiary.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_Design_Light_NoActionBar = global::MyJobDiary.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_Design_NoActionBar = global::MyJobDiary.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_MediaRouter = global::MyJobDiary.Droid.Resource.Style.Theme_MediaRouter;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_MediaRouter_Light = global::MyJobDiary.Droid.Resource.Style.Theme_MediaRouter_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::MyJobDiary.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
+			global::Xamarin.Droid.Utils.Resource.Style.Theme_MediaRouter_LightControlPanel = global::MyJobDiary.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
+			global::Xamarin.Droid.Utils.Resource.Style.ThemeOverlay_AppCompat = global::MyJobDiary.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Xamarin.Droid.Utils.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::MyJobDiary.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.ThemeOverlay_AppCompat_Dark = global::MyJobDiary.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Xamarin.Droid.Utils.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::MyJobDiary.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::MyJobDiary.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.Droid.Utils.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::MyJobDiary.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Xamarin.Droid.Utils.Resource.Style.ThemeOverlay_AppCompat_Light = global::MyJobDiary.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::MyJobDiary.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
+			global::Xamarin.Droid.Utils.Resource.Style.ThemeOverlay_MediaRouter_Light = global::MyJobDiary.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ActionBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ActionButton = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ActionMode = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ActivityChooserView = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Button = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Button_Borderless = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Button_Colored = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Button_Small = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ButtonBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_EditText = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ImageButton = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionButton = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_SearchView = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ListMenuView = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ListPopupWindow = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ListView = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ListView_DropDown = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ListView_Menu = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_PopupMenu = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_PopupWindow = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ProgressBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_RatingBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_RatingBar_Small = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_SearchView = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_SeekBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Spinner = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Toolbar = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::MyJobDiary.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Compat_NotificationActionContainer = global::MyJobDiary.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Compat_NotificationActionText = global::MyJobDiary.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_AppBarLayout = global::MyJobDiary.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_BottomNavigationView = global::MyJobDiary.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_BottomSheet_Modal = global::MyJobDiary.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_CollapsingToolbar = global::MyJobDiary.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_CoordinatorLayout = global::MyJobDiary.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_FloatingActionButton = global::MyJobDiary.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_NavigationView = global::MyJobDiary.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::MyJobDiary.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_Snackbar = global::MyJobDiary.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_TabLayout = global::MyJobDiary.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_Design_TextInputLayout = global::MyJobDiary.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::MyJobDiary.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::Xamarin.Droid.Utils.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::MyJobDiary.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar = global::MyJobDiary.Droid.Resource.Styleable.ActionBar;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_background = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_background;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_backgroundSplit = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_backgroundStacked = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_contentInsetEnd = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_contentInsetLeft = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_contentInsetRight = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_contentInsetStart = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_customNavigationLayout = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_displayOptions = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_divider = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_divider;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_elevation = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_height = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_height;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_hideOnContentScroll = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_homeAsUpIndicator = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_homeLayout = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_icon = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_icon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_itemPadding = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_logo = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_logo;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_navigationMode = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_popupTheme = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_progressBarPadding = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_progressBarStyle = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_subtitle = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_subtitleTextStyle = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_title = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_title;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBar_titleTextStyle = global::MyJobDiary.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBarLayout = global::MyJobDiary.Droid.Resource.Styleable.ActionBarLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::MyJobDiary.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionMenuItemView = global::MyJobDiary.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionMenuItemView_android_minWidth = global::MyJobDiary.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionMenuView = global::MyJobDiary.Droid.Resource.Styleable.ActionMenuView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionMode = global::MyJobDiary.Droid.Resource.Styleable.ActionMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionMode_background = global::MyJobDiary.Droid.Resource.Styleable.ActionMode_background;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionMode_backgroundSplit = global::MyJobDiary.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionMode_closeItemLayout = global::MyJobDiary.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionMode_height = global::MyJobDiary.Droid.Resource.Styleable.ActionMode_height;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionMode_subtitleTextStyle = global::MyJobDiary.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActionMode_titleTextStyle = global::MyJobDiary.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActivityChooserView = global::MyJobDiary.Droid.Resource.Styleable.ActivityChooserView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::MyJobDiary.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ActivityChooserView_initialActivityCount = global::MyJobDiary.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AlertDialog = global::MyJobDiary.Droid.Resource.Styleable.AlertDialog;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AlertDialog_android_layout = global::MyJobDiary.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::MyJobDiary.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AlertDialog_listItemLayout = global::MyJobDiary.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AlertDialog_listLayout = global::MyJobDiary.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::MyJobDiary.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AlertDialog_showTitle = global::MyJobDiary.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::MyJobDiary.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayout = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayout_android_background = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayout_elevation = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayout_expanded = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayoutStates = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayout_Layout = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::MyJobDiary.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatImageView = global::MyJobDiary.Droid.Resource.Styleable.AppCompatImageView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatImageView_android_src = global::MyJobDiary.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatImageView_srcCompat = global::MyJobDiary.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatImageView_tint = global::MyJobDiary.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatImageView_tintMode = global::MyJobDiary.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatSeekBar = global::MyJobDiary.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatSeekBar_android_thumb = global::MyJobDiary.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatSeekBar_tickMark = global::MyJobDiary.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::MyJobDiary.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::MyJobDiary.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextHelper = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextView = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextView_android_textAppearance = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextView_fontFamily = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTextView_textAllCaps = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarDivider = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarSize = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarTheme = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeBackground = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_buttonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_checkboxStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_colorAccent = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_colorControlActivated = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_colorControlNormal = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_colorError = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_colorPrimary = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_controlBackground = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_dialogTheme = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_dividerVertical = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_editTextBackground = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_editTextColor = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_editTextStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_panelBackground = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_searchViewStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_seekBarStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_spinnerStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_switchStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_toolbarStyle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_windowActionBar = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.AppCompatTheme_windowNoTitle = global::MyJobDiary.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.BottomNavigationView = global::MyJobDiary.Droid.Resource.Styleable.BottomNavigationView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.BottomNavigationView_elevation = global::MyJobDiary.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.BottomNavigationView_itemBackground = global::MyJobDiary.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.BottomNavigationView_itemIconTint = global::MyJobDiary.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.BottomNavigationView_itemTextColor = global::MyJobDiary.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.BottomNavigationView_menu = global::MyJobDiary.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Xamarin.Droid.Utils.Resource.Styleable.BottomSheetBehavior_Layout = global::MyJobDiary.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::MyJobDiary.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::MyJobDiary.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::MyJobDiary.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ButtonBarLayout = global::MyJobDiary.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ButtonBarLayout_allowStacking = global::MyJobDiary.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView = global::MyJobDiary.Droid.Resource.Styleable.CardView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_android_minHeight = global::MyJobDiary.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_android_minWidth = global::MyJobDiary.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_cardBackgroundColor = global::MyJobDiary.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_cardCornerRadius = global::MyJobDiary.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_cardElevation = global::MyJobDiary.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_cardMaxElevation = global::MyJobDiary.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_cardPreventCornerOverlap = global::MyJobDiary.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_cardUseCompatPadding = global::MyJobDiary.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_contentPadding = global::MyJobDiary.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_contentPaddingBottom = global::MyJobDiary.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_contentPaddingLeft = global::MyJobDiary.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_contentPaddingRight = global::MyJobDiary.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CardView_contentPaddingTop = global::MyJobDiary.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_title = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_Layout = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::MyJobDiary.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ColorStateListItem = global::MyJobDiary.Droid.Resource.Styleable.ColorStateListItem;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ColorStateListItem_alpha = global::MyJobDiary.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ColorStateListItem_android_alpha = global::MyJobDiary.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ColorStateListItem_android_color = global::MyJobDiary.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CompoundButton = global::MyJobDiary.Droid.Resource.Styleable.CompoundButton;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CompoundButton_android_button = global::MyJobDiary.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CompoundButton_buttonTint = global::MyJobDiary.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CompoundButton_buttonTintMode = global::MyJobDiary.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout_keylines = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout_Layout = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Xamarin.Droid.Utils.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::MyJobDiary.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DesignTheme = global::MyJobDiary.Droid.Resource.Styleable.DesignTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::MyJobDiary.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DesignTheme_bottomSheetStyle = global::MyJobDiary.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DesignTheme_textColorError = global::MyJobDiary.Droid.Resource.Styleable.DesignTheme_textColorError;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DrawerArrowToggle = global::MyJobDiary.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::MyJobDiary.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::MyJobDiary.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DrawerArrowToggle_barLength = global::MyJobDiary.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DrawerArrowToggle_color = global::MyJobDiary.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DrawerArrowToggle_drawableSize = global::MyJobDiary.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::MyJobDiary.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DrawerArrowToggle_spinBars = global::MyJobDiary.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Xamarin.Droid.Utils.Resource.Styleable.DrawerArrowToggle_thickness = global::MyJobDiary.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton_backgroundTint = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton_borderWidth = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton_elevation = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton_fabSize = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton_rippleColor = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton_useCompatPadding = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::MyJobDiary.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamily = global::MyJobDiary.Droid.Resource.Styleable.FontFamily;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamily_fontProviderAuthority = global::MyJobDiary.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamily_fontProviderCerts = global::MyJobDiary.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::MyJobDiary.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::MyJobDiary.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamily_fontProviderPackage = global::MyJobDiary.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamily_fontProviderQuery = global::MyJobDiary.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamilyFont = global::MyJobDiary.Droid.Resource.Styleable.FontFamilyFont;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamilyFont_android_font = global::MyJobDiary.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamilyFont_android_fontStyle = global::MyJobDiary.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamilyFont_android_fontWeight = global::MyJobDiary.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamilyFont_font = global::MyJobDiary.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamilyFont_fontStyle = global::MyJobDiary.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.FontFamilyFont_fontWeight = global::MyJobDiary.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ForegroundLinearLayout = global::MyJobDiary.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::MyJobDiary.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::MyJobDiary.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::MyJobDiary.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_android_gravity = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_android_orientation = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_divider = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_showDividers = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_Layout = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::MyJobDiary.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ListPopupWindow = global::MyJobDiary.Droid.Resource.Styleable.ListPopupWindow;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::MyJobDiary.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::MyJobDiary.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MediaRouteButton = global::MyJobDiary.Droid.Resource.Styleable.MediaRouteButton;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MediaRouteButton_android_minHeight = global::MyJobDiary.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MediaRouteButton_android_minWidth = global::MyJobDiary.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::MyJobDiary.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint = global::MyJobDiary.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuGroup = global::MyJobDiary.Droid.Resource.Styleable.MenuGroup;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuGroup_android_checkableBehavior = global::MyJobDiary.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuGroup_android_enabled = global::MyJobDiary.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuGroup_android_id = global::MyJobDiary.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuGroup_android_menuCategory = global::MyJobDiary.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuGroup_android_orderInCategory = global::MyJobDiary.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuGroup_android_visible = global::MyJobDiary.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem = global::MyJobDiary.Droid.Resource.Styleable.MenuItem;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_actionLayout = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_actionProviderClass = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_actionViewClass = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_alphabeticModifiers = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_checkable = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_checked = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_enabled = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_icon = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_id = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_menuCategory = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_numericShortcut = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_onClick = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_orderInCategory = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_title = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_titleCondensed = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_android_visible = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_contentDescription = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_iconTint = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_iconTintMode = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_numericModifiers = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_showAsAction = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuItem_tooltipText = global::MyJobDiary.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuView = global::MyJobDiary.Droid.Resource.Styleable.MenuView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuView_android_headerBackground = global::MyJobDiary.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuView_android_horizontalDivider = global::MyJobDiary.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuView_android_itemBackground = global::MyJobDiary.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::MyJobDiary.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuView_android_itemTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuView_android_verticalDivider = global::MyJobDiary.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuView_android_windowAnimationStyle = global::MyJobDiary.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuView_preserveIconSpacing = global::MyJobDiary.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Xamarin.Droid.Utils.Resource.Styleable.MenuView_subMenuArrow = global::MyJobDiary.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView = global::MyJobDiary.Droid.Resource.Styleable.NavigationView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView_android_background = global::MyJobDiary.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::MyJobDiary.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView_android_maxWidth = global::MyJobDiary.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView_elevation = global::MyJobDiary.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView_headerLayout = global::MyJobDiary.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView_itemBackground = global::MyJobDiary.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView_itemIconTint = global::MyJobDiary.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView_itemTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView_itemTextColor = global::MyJobDiary.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.NavigationView_menu = global::MyJobDiary.Droid.Resource.Styleable.NavigationView_menu;
+			global::Xamarin.Droid.Utils.Resource.Styleable.PopupWindow = global::MyJobDiary.Droid.Resource.Styleable.PopupWindow;
+			global::Xamarin.Droid.Utils.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::MyJobDiary.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.PopupWindow_android_popupBackground = global::MyJobDiary.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.PopupWindow_overlapAnchor = global::MyJobDiary.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.PopupWindowBackgroundState = global::MyJobDiary.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Xamarin.Droid.Utils.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::MyJobDiary.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecycleListView = global::MyJobDiary.Droid.Resource.Styleable.RecycleListView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::MyJobDiary.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::MyJobDiary.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_android_descendantFocusability = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_android_orientation = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_fastScrollEnabled = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_layoutManager = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_reverseLayout = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_spanCount = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Xamarin.Droid.Utils.Resource.Styleable.RecyclerView_stackFromEnd = global::MyJobDiary.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ScrimInsetsFrameLayout = global::MyJobDiary.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::MyJobDiary.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ScrollingViewBehavior_Layout = global::MyJobDiary.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::MyJobDiary.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView = global::MyJobDiary.Droid.Resource.Styleable.SearchView;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_android_focusable = global::MyJobDiary.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_android_imeOptions = global::MyJobDiary.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_android_inputType = global::MyJobDiary.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_android_maxWidth = global::MyJobDiary.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_closeIcon = global::MyJobDiary.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_commitIcon = global::MyJobDiary.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_defaultQueryHint = global::MyJobDiary.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_goIcon = global::MyJobDiary.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_iconifiedByDefault = global::MyJobDiary.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_layout = global::MyJobDiary.Droid.Resource.Styleable.SearchView_layout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_queryBackground = global::MyJobDiary.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_queryHint = global::MyJobDiary.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_searchHintIcon = global::MyJobDiary.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_searchIcon = global::MyJobDiary.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_submitBackground = global::MyJobDiary.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_suggestionRowLayout = global::MyJobDiary.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SearchView_voiceIcon = global::MyJobDiary.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SnackbarLayout = global::MyJobDiary.Droid.Resource.Styleable.SnackbarLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SnackbarLayout_android_maxWidth = global::MyJobDiary.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SnackbarLayout_elevation = global::MyJobDiary.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::MyJobDiary.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Spinner = global::MyJobDiary.Droid.Resource.Styleable.Spinner;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Spinner_android_dropDownWidth = global::MyJobDiary.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Spinner_android_entries = global::MyJobDiary.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Spinner_android_popupBackground = global::MyJobDiary.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Spinner_android_prompt = global::MyJobDiary.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Spinner_popupTheme = global::MyJobDiary.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_android_textOff = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_android_textOn = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_android_thumb = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_showText = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_splitTrack = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_switchMinWidth = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_switchPadding = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_switchTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_thumbTextPadding = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_thumbTint = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_thumbTintMode = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_track = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_trackTint = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.SwitchCompat_trackTintMode = global::MyJobDiary.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabItem = global::MyJobDiary.Droid.Resource.Styleable.TabItem;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabItem_android_icon = global::MyJobDiary.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabItem_android_layout = global::MyJobDiary.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabItem_android_text = global::MyJobDiary.Droid.Resource.Styleable.TabItem_android_text;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout = global::MyJobDiary.Droid.Resource.Styleable.TabLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabBackground = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabContentStart = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabGravity = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabIndicatorColor = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabIndicatorHeight = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabMaxWidth = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabMinWidth = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabMode = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabPadding = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabPaddingBottom = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabPaddingEnd = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabPaddingStart = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabPaddingTop = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabSelectedTextColor = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TabLayout_tabTextColor = global::MyJobDiary.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_fontFamily = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_shadowColor = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_shadowDx = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_shadowDy = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_shadowRadius = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_textColor = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_textColorHint = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_textColorLink = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_textSize = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_textStyle = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_android_typeface = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_fontFamily = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextAppearance_textAllCaps = global::MyJobDiary.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_android_hint = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_android_textColorHint = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_counterEnabled = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_counterMaxLength = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_counterTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_errorEnabled = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_errorTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_hintEnabled = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_hintTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_passwordToggleTint = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::MyJobDiary.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar = global::MyJobDiary.Droid.Resource.Styleable.Toolbar;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_android_gravity = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_android_minHeight = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_buttonGravity = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_collapseContentDescription = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_collapseIcon = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_contentInsetEnd = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_contentInsetLeft = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_contentInsetRight = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_contentInsetStart = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_logo = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_logo;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_logoDescription = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_maxButtonHeight = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_navigationContentDescription = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_navigationIcon = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_popupTheme = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_subtitle = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_subtitleTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_subtitleTextColor = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_title = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_title;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_titleMargin = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_titleMarginBottom = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_titleMarginEnd = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_titleMarginStart = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_titleMarginTop = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_titleMargins = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_titleTextAppearance = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Xamarin.Droid.Utils.Resource.Styleable.Toolbar_titleTextColor = global::MyJobDiary.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Xamarin.Droid.Utils.Resource.Styleable.View = global::MyJobDiary.Droid.Resource.Styleable.View;
+			global::Xamarin.Droid.Utils.Resource.Styleable.View_android_focusable = global::MyJobDiary.Droid.Resource.Styleable.View_android_focusable;
+			global::Xamarin.Droid.Utils.Resource.Styleable.View_android_theme = global::MyJobDiary.Droid.Resource.Styleable.View_android_theme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.View_paddingEnd = global::MyJobDiary.Droid.Resource.Styleable.View_paddingEnd;
+			global::Xamarin.Droid.Utils.Resource.Styleable.View_paddingStart = global::MyJobDiary.Droid.Resource.Styleable.View_paddingStart;
+			global::Xamarin.Droid.Utils.Resource.Styleable.View_theme = global::MyJobDiary.Droid.Resource.Styleable.View_theme;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ViewBackgroundHelper = global::MyJobDiary.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ViewBackgroundHelper_android_background = global::MyJobDiary.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::MyJobDiary.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::MyJobDiary.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ViewStubCompat = global::MyJobDiary.Droid.Resource.Styleable.ViewStubCompat;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ViewStubCompat_android_id = global::MyJobDiary.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ViewStubCompat_android_inflatedId = global::MyJobDiary.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Xamarin.Droid.Utils.Resource.Styleable.ViewStubCompat_android_layout = global::MyJobDiary.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::MyJobDiary.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -2492,26 +4768,26 @@ namespace MyJobDiary.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f02015a
-			public const int avd_hide_password_1 = 2130837850;
-			
-			// aapt resource value: 0x7f02015b
-			public const int avd_hide_password_2 = 2130837851;
-			
 			// aapt resource value: 0x7f02015c
-			public const int avd_hide_password_3 = 2130837852;
+			public const int avd_hide_password_1 = 2130837852;
+			
+			// aapt resource value: 0x7f02015d
+			public const int avd_hide_password_2 = 2130837853;
+			
+			// aapt resource value: 0x7f02015e
+			public const int avd_hide_password_3 = 2130837854;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02015d
-			public const int avd_show_password_1 = 2130837853;
-			
-			// aapt resource value: 0x7f02015e
-			public const int avd_show_password_2 = 2130837854;
-			
 			// aapt resource value: 0x7f02015f
-			public const int avd_show_password_3 = 2130837855;
+			public const int avd_show_password_1 = 2130837855;
+			
+			// aapt resource value: 0x7f020160
+			public const int avd_show_password_2 = 2130837856;
+			
+			// aapt resource value: 0x7f020161
+			public const int avd_show_password_3 = 2130837857;
 			
 			// aapt resource value: 0x7f020056
 			public const int blue_bars_32 = 2130837590;
@@ -3209,11 +5485,11 @@ namespace MyJobDiary.Droid
 			// aapt resource value: 0x7f02013d
 			public const int notification_icon_background = 2130837821;
 			
-			// aapt resource value: 0x7f020158
-			public const int notification_template_icon_bg = 2130837848;
+			// aapt resource value: 0x7f02015a
+			public const int notification_template_icon_bg = 2130837850;
 			
-			// aapt resource value: 0x7f020159
-			public const int notification_template_icon_low_bg = 2130837849;
+			// aapt resource value: 0x7f02015b
+			public const int notification_template_icon_low_bg = 2130837851;
 			
 			// aapt resource value: 0x7f02013e
 			public const int notification_tile_bg = 2130837822;
@@ -3292,6 +5568,12 @@ namespace MyJobDiary.Droid
 			
 			// aapt resource value: 0x7f020157
 			public const int white_work_20 = 2130837847;
+			
+			// aapt resource value: 0x7f020158
+			public const int xamarin_utils_facebook_white = 2130837848;
+			
+			// aapt resource value: 0x7f020159
+			public const int xamarin_utils_google_white = 2130837849;
 			
 			static Drawable()
 			{
@@ -4232,197 +6514,203 @@ namespace MyJobDiary.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f08003e
-			public const int ApplicationName = 2131230782;
-			
-			// aapt resource value: 0x7f08003d
-			public const int Hello = 2131230781;
-			
-			// aapt resource value: 0x7f080016
-			public const int abc_action_bar_home_description = 2131230742;
-			
-			// aapt resource value: 0x7f080017
-			public const int abc_action_bar_up_description = 2131230743;
-			
-			// aapt resource value: 0x7f080018
-			public const int abc_action_menu_overflow_description = 2131230744;
-			
-			// aapt resource value: 0x7f080019
-			public const int abc_action_mode_done = 2131230745;
-			
-			// aapt resource value: 0x7f08001a
-			public const int abc_activity_chooser_view_see_all = 2131230746;
-			
-			// aapt resource value: 0x7f08001b
-			public const int abc_activitychooserview_choose_application = 2131230747;
-			
-			// aapt resource value: 0x7f08001c
-			public const int abc_capital_off = 2131230748;
-			
-			// aapt resource value: 0x7f08001d
-			public const int abc_capital_on = 2131230749;
-			
-			// aapt resource value: 0x7f080028
-			public const int abc_font_family_body_1_material = 2131230760;
-			
-			// aapt resource value: 0x7f080029
-			public const int abc_font_family_body_2_material = 2131230761;
-			
-			// aapt resource value: 0x7f08002a
-			public const int abc_font_family_button_material = 2131230762;
-			
-			// aapt resource value: 0x7f08002b
-			public const int abc_font_family_caption_material = 2131230763;
-			
-			// aapt resource value: 0x7f08002c
-			public const int abc_font_family_display_1_material = 2131230764;
-			
-			// aapt resource value: 0x7f08002d
-			public const int abc_font_family_display_2_material = 2131230765;
-			
-			// aapt resource value: 0x7f08002e
-			public const int abc_font_family_display_3_material = 2131230766;
-			
-			// aapt resource value: 0x7f08002f
-			public const int abc_font_family_display_4_material = 2131230767;
-			
-			// aapt resource value: 0x7f080030
-			public const int abc_font_family_headline_material = 2131230768;
-			
-			// aapt resource value: 0x7f080031
-			public const int abc_font_family_menu_material = 2131230769;
-			
-			// aapt resource value: 0x7f080032
-			public const int abc_font_family_subhead_material = 2131230770;
-			
-			// aapt resource value: 0x7f080033
-			public const int abc_font_family_title_material = 2131230771;
-			
-			// aapt resource value: 0x7f08001e
-			public const int abc_search_hint = 2131230750;
-			
-			// aapt resource value: 0x7f08001f
-			public const int abc_searchview_description_clear = 2131230751;
-			
-			// aapt resource value: 0x7f080020
-			public const int abc_searchview_description_query = 2131230752;
-			
-			// aapt resource value: 0x7f080021
-			public const int abc_searchview_description_search = 2131230753;
-			
-			// aapt resource value: 0x7f080022
-			public const int abc_searchview_description_submit = 2131230754;
-			
-			// aapt resource value: 0x7f080023
-			public const int abc_searchview_description_voice = 2131230755;
-			
-			// aapt resource value: 0x7f080024
-			public const int abc_shareactionprovider_share_with = 2131230756;
-			
-			// aapt resource value: 0x7f080025
-			public const int abc_shareactionprovider_share_with_application = 2131230757;
-			
-			// aapt resource value: 0x7f080026
-			public const int abc_toolbar_collapse_description = 2131230758;
-			
-			// aapt resource value: 0x7f080034
-			public const int appbar_scrolling_view_behavior = 2131230772;
-			
-			// aapt resource value: 0x7f080035
-			public const int bottom_sheet_behavior = 2131230773;
-			
-			// aapt resource value: 0x7f080036
-			public const int character_counter_pattern = 2131230774;
+			// aapt resource value: 0x7f080040
+			public const int ApplicationName = 2131230784;
 			
 			// aapt resource value: 0x7f08003f
-			public const int library_name = 2131230783;
+			public const int Hello = 2131230783;
 			
-			// aapt resource value: 0x7f080001
-			public const int mr_button_content_description = 2131230721;
+			// aapt resource value: 0x7f080018
+			public const int abc_action_bar_home_description = 2131230744;
 			
-			// aapt resource value: 0x7f080002
-			public const int mr_cast_button_connected = 2131230722;
+			// aapt resource value: 0x7f080019
+			public const int abc_action_bar_up_description = 2131230745;
 			
-			// aapt resource value: 0x7f080003
-			public const int mr_cast_button_connecting = 2131230723;
+			// aapt resource value: 0x7f08001a
+			public const int abc_action_menu_overflow_description = 2131230746;
 			
-			// aapt resource value: 0x7f080004
-			public const int mr_cast_button_disconnected = 2131230724;
+			// aapt resource value: 0x7f08001b
+			public const int abc_action_mode_done = 2131230747;
 			
-			// aapt resource value: 0x7f080005
-			public const int mr_chooser_searching = 2131230725;
+			// aapt resource value: 0x7f08001c
+			public const int abc_activity_chooser_view_see_all = 2131230748;
 			
-			// aapt resource value: 0x7f080006
-			public const int mr_chooser_title = 2131230726;
+			// aapt resource value: 0x7f08001d
+			public const int abc_activitychooserview_choose_application = 2131230749;
 			
-			// aapt resource value: 0x7f080007
-			public const int mr_controller_album_art = 2131230727;
+			// aapt resource value: 0x7f08001e
+			public const int abc_capital_off = 2131230750;
 			
-			// aapt resource value: 0x7f080008
-			public const int mr_controller_casting_screen = 2131230728;
+			// aapt resource value: 0x7f08001f
+			public const int abc_capital_on = 2131230751;
 			
-			// aapt resource value: 0x7f080009
-			public const int mr_controller_close_description = 2131230729;
+			// aapt resource value: 0x7f08002a
+			public const int abc_font_family_body_1_material = 2131230762;
 			
-			// aapt resource value: 0x7f08000a
-			public const int mr_controller_collapse_group = 2131230730;
+			// aapt resource value: 0x7f08002b
+			public const int abc_font_family_body_2_material = 2131230763;
 			
-			// aapt resource value: 0x7f08000b
-			public const int mr_controller_disconnect = 2131230731;
+			// aapt resource value: 0x7f08002c
+			public const int abc_font_family_button_material = 2131230764;
 			
-			// aapt resource value: 0x7f08000c
-			public const int mr_controller_expand_group = 2131230732;
+			// aapt resource value: 0x7f08002d
+			public const int abc_font_family_caption_material = 2131230765;
 			
-			// aapt resource value: 0x7f08000d
-			public const int mr_controller_no_info_available = 2131230733;
+			// aapt resource value: 0x7f08002e
+			public const int abc_font_family_display_1_material = 2131230766;
 			
-			// aapt resource value: 0x7f08000e
-			public const int mr_controller_no_media_selected = 2131230734;
+			// aapt resource value: 0x7f08002f
+			public const int abc_font_family_display_2_material = 2131230767;
 			
-			// aapt resource value: 0x7f08000f
-			public const int mr_controller_pause = 2131230735;
+			// aapt resource value: 0x7f080030
+			public const int abc_font_family_display_3_material = 2131230768;
 			
-			// aapt resource value: 0x7f080010
-			public const int mr_controller_play = 2131230736;
+			// aapt resource value: 0x7f080031
+			public const int abc_font_family_display_4_material = 2131230769;
 			
-			// aapt resource value: 0x7f080011
-			public const int mr_controller_stop = 2131230737;
+			// aapt resource value: 0x7f080032
+			public const int abc_font_family_headline_material = 2131230770;
 			
-			// aapt resource value: 0x7f080012
-			public const int mr_controller_stop_casting = 2131230738;
+			// aapt resource value: 0x7f080033
+			public const int abc_font_family_menu_material = 2131230771;
 			
-			// aapt resource value: 0x7f080013
-			public const int mr_controller_volume_slider = 2131230739;
+			// aapt resource value: 0x7f080034
+			public const int abc_font_family_subhead_material = 2131230772;
 			
-			// aapt resource value: 0x7f080014
-			public const int mr_system_route_name = 2131230740;
+			// aapt resource value: 0x7f080035
+			public const int abc_font_family_title_material = 2131230773;
 			
-			// aapt resource value: 0x7f080015
-			public const int mr_user_route_category_name = 2131230741;
+			// aapt resource value: 0x7f080020
+			public const int abc_search_hint = 2131230752;
 			
-			// aapt resource value: 0x7f080037
-			public const int password_toggle_content_description = 2131230775;
+			// aapt resource value: 0x7f080021
+			public const int abc_searchview_description_clear = 2131230753;
 			
-			// aapt resource value: 0x7f080038
-			public const int path_password_eye = 2131230776;
+			// aapt resource value: 0x7f080022
+			public const int abc_searchview_description_query = 2131230754;
 			
-			// aapt resource value: 0x7f080039
-			public const int path_password_eye_mask_strike_through = 2131230777;
+			// aapt resource value: 0x7f080023
+			public const int abc_searchview_description_search = 2131230755;
 			
-			// aapt resource value: 0x7f08003a
-			public const int path_password_eye_mask_visible = 2131230778;
+			// aapt resource value: 0x7f080024
+			public const int abc_searchview_description_submit = 2131230756;
 			
-			// aapt resource value: 0x7f08003b
-			public const int path_password_strike_through = 2131230779;
+			// aapt resource value: 0x7f080025
+			public const int abc_searchview_description_voice = 2131230757;
+			
+			// aapt resource value: 0x7f080026
+			public const int abc_shareactionprovider_share_with = 2131230758;
 			
 			// aapt resource value: 0x7f080027
-			public const int search_menu_title = 2131230759;
+			public const int abc_shareactionprovider_share_with_application = 2131230759;
 			
-			// aapt resource value: 0x7f08003c
-			public const int status_bar_notification_info_overflow = 2131230780;
+			// aapt resource value: 0x7f080028
+			public const int abc_toolbar_collapse_description = 2131230760;
+			
+			// aapt resource value: 0x7f080001
+			public const int app_name = 2131230721;
+			
+			// aapt resource value: 0x7f080036
+			public const int appbar_scrolling_view_behavior = 2131230774;
+			
+			// aapt resource value: 0x7f080037
+			public const int bottom_sheet_behavior = 2131230775;
+			
+			// aapt resource value: 0x7f080038
+			public const int character_counter_pattern = 2131230776;
 			
 			// aapt resource value: 0x7f080000
-			public const int title_activity_webview = 2131230720;
+			public const int hello = 2131230720;
+			
+			// aapt resource value: 0x7f080041
+			public const int library_name = 2131230785;
+			
+			// aapt resource value: 0x7f080003
+			public const int mr_button_content_description = 2131230723;
+			
+			// aapt resource value: 0x7f080004
+			public const int mr_cast_button_connected = 2131230724;
+			
+			// aapt resource value: 0x7f080005
+			public const int mr_cast_button_connecting = 2131230725;
+			
+			// aapt resource value: 0x7f080006
+			public const int mr_cast_button_disconnected = 2131230726;
+			
+			// aapt resource value: 0x7f080007
+			public const int mr_chooser_searching = 2131230727;
+			
+			// aapt resource value: 0x7f080008
+			public const int mr_chooser_title = 2131230728;
+			
+			// aapt resource value: 0x7f080009
+			public const int mr_controller_album_art = 2131230729;
+			
+			// aapt resource value: 0x7f08000a
+			public const int mr_controller_casting_screen = 2131230730;
+			
+			// aapt resource value: 0x7f08000b
+			public const int mr_controller_close_description = 2131230731;
+			
+			// aapt resource value: 0x7f08000c
+			public const int mr_controller_collapse_group = 2131230732;
+			
+			// aapt resource value: 0x7f08000d
+			public const int mr_controller_disconnect = 2131230733;
+			
+			// aapt resource value: 0x7f08000e
+			public const int mr_controller_expand_group = 2131230734;
+			
+			// aapt resource value: 0x7f08000f
+			public const int mr_controller_no_info_available = 2131230735;
+			
+			// aapt resource value: 0x7f080010
+			public const int mr_controller_no_media_selected = 2131230736;
+			
+			// aapt resource value: 0x7f080011
+			public const int mr_controller_pause = 2131230737;
+			
+			// aapt resource value: 0x7f080012
+			public const int mr_controller_play = 2131230738;
+			
+			// aapt resource value: 0x7f080013
+			public const int mr_controller_stop = 2131230739;
+			
+			// aapt resource value: 0x7f080014
+			public const int mr_controller_stop_casting = 2131230740;
+			
+			// aapt resource value: 0x7f080015
+			public const int mr_controller_volume_slider = 2131230741;
+			
+			// aapt resource value: 0x7f080016
+			public const int mr_system_route_name = 2131230742;
+			
+			// aapt resource value: 0x7f080017
+			public const int mr_user_route_category_name = 2131230743;
+			
+			// aapt resource value: 0x7f080039
+			public const int password_toggle_content_description = 2131230777;
+			
+			// aapt resource value: 0x7f08003a
+			public const int path_password_eye = 2131230778;
+			
+			// aapt resource value: 0x7f08003b
+			public const int path_password_eye_mask_strike_through = 2131230779;
+			
+			// aapt resource value: 0x7f08003c
+			public const int path_password_eye_mask_visible = 2131230780;
+			
+			// aapt resource value: 0x7f08003d
+			public const int path_password_strike_through = 2131230781;
+			
+			// aapt resource value: 0x7f080029
+			public const int search_menu_title = 2131230761;
+			
+			// aapt resource value: 0x7f08003e
+			public const int status_bar_notification_info_overflow = 2131230782;
+			
+			// aapt resource value: 0x7f080002
+			public const int title_activity_webview = 2131230722;
 			
 			static String()
 			{
